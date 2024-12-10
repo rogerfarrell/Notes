@@ -1,0 +1,9 @@
+.DS_Store
+
+# For private notes
+local/
+
+# Ignore vim files:
+*~
+*.swp
+*.swo
