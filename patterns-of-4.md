@@ -1,4 +1,4 @@
-- [[Cold, hot, moist, dry]]
-- [[Cold, hot, moist, dry#The elements|Water, earth, air, fire ]]
-- [[Cold, hot, moist, dry#The humors|Phlegm, Sanguine, melancholy, Choler]]
+- Cold, hot, moist, dry
+- Water, earth, air, fire
+- Phlegm, Sanguine, melancholy, Choler
 - Pishon, Gihon, Tigris, Euphrates
