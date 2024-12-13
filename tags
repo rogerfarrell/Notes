@@ -4,7 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-macos	macos.md	/^tags: ##macos$/;"	t
-symbolism	symbolism.md	/^tags: ##symbolism$/;"	t
-vim	vim.md	/^tags: ##vim$/;"	t
-zettelkasten	zettelkasten.md	/^tags: ##zettelkasten$/;"	t
+macos	macos.md	/^topic: macos$/;"	t
+symbolism	symbolism.md	/^topic: symbolism$/;"	t
+vim	vim.md	/^topic: vim$/;"	t
+zettelkasten	zettelkasten.md	/^topic: zettelkasten$/;"	t

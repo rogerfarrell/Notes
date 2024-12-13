@@ -1,5 +1,5 @@
 ---
-tags: #symbolism
+tags: symbolism
 ---
 
 - Cold, hot, moist, dry

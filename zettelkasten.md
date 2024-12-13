@@ -1,5 +1,5 @@
 ---
-tags: ##zettelkasten
+topic: zettelkasten
 ---
 
 - [my-personal-zettelkasten-workflow](my-personal-zettelkasten-workflow.md)

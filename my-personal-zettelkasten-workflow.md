@@ -1,5 +1,5 @@
 ---
-tags: #zettelkasten
+tags: zettelkasten
 ---
 
 - On mobile, all note-taking goes into the inbox. Later, they are sanitized and organized in Vim.

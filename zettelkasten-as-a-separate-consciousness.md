@@ -1,5 +1,5 @@
 ---
-tags: #zettelkasten
+tags: zettelkasten
 ---
 
 It is better to think of a zettelkasten as a separate consciousness, not an extension of one's brain. According to this principle, it is important to consider whether the information at-hand belongs in your own mind.

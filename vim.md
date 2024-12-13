@@ -1,5 +1,5 @@
 ---
-tags: ##vim
+topic: vim
 ---
 
 - [vim-tips](vim-tips.md)

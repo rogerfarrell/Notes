@@ -1,5 +1,5 @@
 ---
-tags: #macos
+tags: macos
 ---
 
 

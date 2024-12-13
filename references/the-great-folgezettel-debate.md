@@ -1,5 +1,5 @@
 ---
-tags: #reference
+tags: reference
 source: https://zettelkasten.de/folgezettel/
 ---
 
