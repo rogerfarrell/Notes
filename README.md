@@ -1,0 +1,1 @@
+These are my personal notes. I am writing them in Vim with the help of [Vimwiki](https://github.com/vimwiki/vimwiki). They are published to [my website](https://rogerfarrell.net) using [MDwiki](https://dynalon.github.io/mdwiki/#!index.md)
