@@ -1,3 +1,0 @@
-:topic:bible:
-
-- [All Cretans are liars](All Cretans are liars.md).
