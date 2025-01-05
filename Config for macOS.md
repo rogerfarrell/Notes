@@ -1,4 +1,4 @@
-:macos:
+`macos`
 
 These are the 3rd party apps I am currently using to extend macOS.
 

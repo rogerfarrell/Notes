@@ -1,3 +1,3 @@
-:topic:macos:
+:macos:
 
 - [Config for macOS](Config for macOS.md)

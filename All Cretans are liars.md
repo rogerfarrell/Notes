@@ -1,4 +1,4 @@
-tags: bible
+`bible`
 
 # Leads for further study
 

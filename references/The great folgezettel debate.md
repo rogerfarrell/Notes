@@ -1,4 +1,4 @@
-:reference:
+`reference`
 
 https://zettelkasten.de/folgezettel/
 
