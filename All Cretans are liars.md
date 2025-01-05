@@ -1,6 +1,4 @@
----
-topics: bible
----
+tags: bible
 
 # Leads for further study
 
