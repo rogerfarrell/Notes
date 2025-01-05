@@ -4,4 +4,4 @@
 - [macOS](macOS.md)
 - [Symbolism](Symbolism.md)
 - [Vim](Vim.md)
-- [zettelkasten](zettelkasten.md)
+- [Zettelkasten](Zettelkasten.md)
