@@ -1,6 +1,4 @@
----
-topic: vim
----
+:topic:vim:
 
-- [vim-tips](vim-tips.md)
-- [taking-notes-in-vim](taking-notes-in-vim.md)
+- [Vim tips](Vim tips.md)
+- [Taking notes in Vim](Taking notes in Vim.md)

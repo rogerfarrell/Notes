@@ -1,6 +1,4 @@
----
-tags: symbolism
----
+:symbolism:
 
 - Cold, hot, moist, dry
 - Water, earth, air, fire

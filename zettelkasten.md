@@ -1,6 +1,4 @@
----
-topic: zettelkasten
----
+:topic:zettelkasten:
 
-- [my-personal-zettelkasten-workflow](my-personal-zettelkasten-workflow.md)
-- [zettelkasten-as-a-separate-consciousness](zettelkasten-as-a-separate-consciousness.md)
+- [My personal zettelkasten workflow](My personal zettelkasten workflow.md)
+- [Zettelkasten as a separate consciousness](Zettelkasten as a separate consciousness.md)

@@ -1,7 +1,7 @@
 # This is the entry point for my notes
 
-- [bible](bible.md)
-- [macos](macos.md)
-- [symbolism](symbolism.md)
-- [vim](vim.md)
+- [Bible](Bible.md)
+- [macOS](macOS.md)
+- [Symbolism](Symbolism.md)
+- [Vim](Vim.md)
 - [zettelkasten](zettelkasten.md)

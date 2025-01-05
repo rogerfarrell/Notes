@@ -1,5 +1,3 @@
----
-topic: bible
----
+:topic:bible:
 
-- [all-cretans-are-liars](all-cretans-are-liars.md)
+- [All Cretans are liars](All Cretans are liars.md).

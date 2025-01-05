@@ -1,10 +1,8 @@
----
-tags: vim
----
+:vim:
 
 # Multiplexing
 
-Vanilla Vim is adequate for basic multiplexing: [vanilla-vim-multiplexing](vanilla-vim-multiplexing.md)
+Vanilla Vim is adequate for basic multiplexing: [Multiplexing in vanilla Vim](Multiplexing in vanilla Vim.md)
 
 # Navigating `:help`
 

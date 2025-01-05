@@ -1,5 +1,3 @@
----
-topic: macos
----
+:topic:macos:
 
-- [config-for-macos](config-for-macos.md)
+- [Config for macOS](Config for macOS.md)

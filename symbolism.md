@@ -1,5 +1,3 @@
----
-topic: symbolism
----
+:topic:symbolism:
 
-- [patterns-of-4](patterns-of-4.md)
+- [Patterns of 4](Patterns of 4.md)

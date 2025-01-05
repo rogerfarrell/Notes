@@ -1,0 +1,24 @@
+!_TAG_FILE_FORMAT	2
+!_TAG_FILE_SORTED	1
+!_TAG_OUTPUT_MODE	vimwiki-tags
+!_TAG_PROGRAM_AUTHOR	Vimwiki
+!_TAG_PROGRAM_NAME	Vimwiki Tags
+!_TAG_PROGRAM_URL	https://github.com/vimwiki/vimwiki
+!_TAG_PROGRAM_VERSION	2024.01.24
+bible	Bible.md	1;"	vimwiki:Bible\tBible\tBible
+macos	Config for macOS.md	1;"	vimwiki:Config for macOS\tConfig for macOS\tConfig for macOS
+macos	macOS.md	1;"	vimwiki:macOS\tmacOS\tmacOS
+reference	references/The great folgezettel debate.md	1;"	vimwiki:references/The great folgezettel debate\treferences/The great folgezettel debate\treferences/The great folgezettel debate
+symbolism	Patterns of 4.md	1;"	vimwiki:Patterns of 4\tPatterns of 4\tPatterns of 4
+symbolism	Symbolism.md	1;"	vimwiki:Symbolism\tSymbolism\tSymbolism
+topic	Bible.md	1;"	vimwiki:Bible\tBible\tBible
+topic	Symbolism.md	1;"	vimwiki:Symbolism\tSymbolism\tSymbolism
+topic	Vim.md	1;"	vimwiki:Vim\tVim\tVim
+topic	macOS.md	1;"	vimwiki:macOS\tmacOS\tmacOS
+topic	zettelkasten.md	1;"	vimwiki:zettelkasten\tzettelkasten\tzettelkasten
+vim	Multiplexing in vanilla Vim.md	1;"	vimwiki:Multiplexing in vanilla Vim\tMultiplexing in vanilla Vim\tMultiplexing in vanilla Vim
+vim	Vim tips.md	1;"	vimwiki:Vim tips\tVim tips\tVim tips
+vim	Vim.md	1;"	vimwiki:Vim\tVim\tVim
+zettelkasten	My personal zettelkasten workflow.md	1;"	vimwiki:My personal zettelkasten workflow\tMy personal zettelkasten workflow\tMy personal zettelkasten workflow
+zettelkasten	Zettelkasten as a separate consciousness.md	1;"	vimwiki:Zettelkasten as a separate consciousness\tZettelkasten as a separate consciousness\tZettelkasten as a separate consciousness
+zettelkasten	zettelkasten.md	1;"	vimwiki:zettelkasten\tzettelkasten\tzettelkasten
