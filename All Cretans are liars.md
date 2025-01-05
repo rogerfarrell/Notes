@@ -1,4 +1,6 @@
-:bible:
+---
+topics: bible
+---
 
 # Leads for further study
 
