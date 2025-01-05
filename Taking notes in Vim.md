@@ -10,5 +10,5 @@ Markdown is the de facto standard for note-taking, it lacks a single definitive 
 
 I will be using two separate tag formats.
 
-- I will use the `:tag:` format to list topics contained within a regular note.
-- Over time, I will want to create hub notes for every tag (the tag definitions, if you will). Each of these hubs will be be tagged with `:topic:name-of-topic:`, enumerating the tag for which it is a hub.
+- I will use the `` `tag` `` format to list topics contained within a regular note.
+- Over time, I will want to create hub notes for every tag (the tag definitions, if you will). Each of these hubs will be be tagged with `:name-of-topic:`, enumerating the tag for which it is a hub.
