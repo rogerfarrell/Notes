@@ -4,5 +4,5 @@
 
 [gimmick:themechooser](Choose theme)
 
-[gimmick:theme (inverse: true)](bootstrap) <--- sets the default theme is not visible --->
+[gimmick:theme (inverse: true)](cyborg) <--- sets the default theme is not visible --->
 
