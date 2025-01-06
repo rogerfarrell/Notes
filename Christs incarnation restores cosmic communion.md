@@ -1,4 +1,4 @@
-[Symbolism](Symbolism.md) [Theology](Theology.md)
+[Symbolism](Symbolism.md), [Theology](Theology.md)
 
 # Christ's incarnation restores cosmic communion
 
