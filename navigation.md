@@ -2,7 +2,7 @@
 
 # Roger Farrell's notes
 
-[Github](https://github.com/rogerfarrell/Notes)
+[GitHub](https://github.com/rogerfarrell/Notes)
 
 [gimmick:themechooser](Choose theme)
 
