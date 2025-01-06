@@ -1,4 +1,4 @@
-`vim`
+[Vim](Vim.md)
 
 # Multiplexing
 

@@ -1,4 +1,4 @@
-`bible`
+[Bible](Bible.md)
 
 # Leads for further study
 

@@ -1,4 +1,4 @@
-`zettelkasten`
+[Zettelkasten](Zettelkasten.md)
 
 - On mobile, all note-taking goes into the inbox. Later, they are sanitized and organized in Vim.
 

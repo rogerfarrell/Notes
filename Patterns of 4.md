@@ -1,4 +1,4 @@
-`symbolism`
+[Symbolism](Symbolism.md)
 
 - Cold, hot, moist, dry
 - Water, earth, air, fire

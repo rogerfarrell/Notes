@@ -1,4 +1,4 @@
-`vim`
+[Vim](Vim.md)
 
 Vim is a great platform for taking notes. However, some constraints are necessary to maximize efficiency for real-time thought-capture.
 
