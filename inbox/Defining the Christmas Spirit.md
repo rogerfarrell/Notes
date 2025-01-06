@@ -1,0 +1,13 @@
+- Christ's advent can be viewed chronologically and kairotically
+  - Chronologically, advent is a historical past reality.
+  - Kairotically, advent is a present, annual occurence.
+- In the present, we participate in both these dimensions of Christmas.
+- Chronologically
+  - Reading the Christmas story
+  - Christmas pageants
+  - Nativity sets
+- Kairotically
+  - The Chronological Christmas narrative is a direct analog to present Christmas traditions
+  - Christ brings "peace on earth, goodwill toward men"
+  - This phrase is the central idea behind the charactaristic generosity and charity of the Christmas season
+  - The *Christmas Spirit* is the natural human response to the noumenous experience of kairotic participation in Christ's advent.
