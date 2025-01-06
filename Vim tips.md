@@ -1,5 +1,7 @@
 [Vim](Vim.md)
 
+# Vim tips
+
 ## Multiplexing
 
 Vanilla Vim is adequate for basic multiplexing: [Multiplexing in vanilla Vim](Multiplexing in vanilla Vim.md)

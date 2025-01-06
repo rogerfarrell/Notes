@@ -1,5 +1,7 @@
 [Bible](Bible.md)
 
+# All Cretans are liars
+
 ## Leads for further study
 
 - [Epimenides paradox](https://en.wikipedia.org/wiki/Epimenides_paradox)

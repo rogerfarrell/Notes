@@ -1,5 +1,7 @@
 [Zettelkasten](Zettelkasten.md)
 
+# My personal zettelkasten workflow
+
 - On mobile, all note-taking goes into the inbox. Later, they are sanitized and organized in Vim.
 
 The zettelkasten method yields a web of hyperlinked notes. A strategy for creating entrypoints into this web is essential to efficient navigation as memory fades. Many people employ the [folgezettel](references/The great folgezettel debate.md) schema for this purpose. However, I have chosen to do this via structure (or hub) notes.
