@@ -1,7 +1,10 @@
-# This is the entry point for my notes
+# Roger Farrell's notes
+
+Welcome to my personal notes. I am loosely following the [zettelkasten](https://zettelkasten.de/overview/) method to create a hyperlinked network of information, similar to a wiki. This is not a blog. You will quickly observe that this is intended firstly for my own reference. Notwithstanding, you are more than welcome to explore to your heart's content.
 
 - [Bible](Bible.md)
 - [macOS](macOS.md)
 - [Symbolism](Symbolism.md)
+- [Theology](Theology.md)
 - [Vim](Vim.md)
 - [Zettelkasten](Zettelkasten.md)
