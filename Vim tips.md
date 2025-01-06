@@ -1,14 +1,14 @@
 [Vim](Vim.md)
 
-# Multiplexing
+## Multiplexing
 
 Vanilla Vim is adequate for basic multiplexing: [Multiplexing in vanilla Vim](Multiplexing in vanilla Vim.md)
 
-# Navigating `:help`
+## Navigating `:help`
 
 - See `:help key-notation` for key abbreviations
 
-# Navigating files
+## Navigating files
 
 - go to file under cursor: `gf`
   - Go to previous cursor position (in the jumplist): `<C-o>`
@@ -18,12 +18,12 @@ Vanilla Vim is adequate for basic multiplexing: [Multiplexing in vanilla Vim](Mu
 
 - Clear highlighting till next search: `:nohlsearch` or `:noh`
 
-# Targeting nouns
+## Targeting nouns
 
 - Around (whole noun): `<verb> i <noun>`
 - Inside (inner content): `<verb> i <noun>`
 
-# Moving the cursor
+## Moving the cursor
 
 - Scroll up: `<C-u>`
 - Scroll down: `<C-d>`
