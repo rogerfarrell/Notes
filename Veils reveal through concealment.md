@@ -1,4 +1,4 @@
-[Symbolism](Symbolism.md)
+[Symbolism](Symbolism.md), [Veils](Veils.md)
 
 # Veils reveal through concealment
 
