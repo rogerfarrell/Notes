@@ -12,7 +12,7 @@ In Exodus, the manna from Heaven prefigured the virgin birth, being reaped where
 
 ### The Divine Tabernacle
 
-The tabernacle made without hands is [[@Christ]].
+The tabernacle made without hands is Christ.
 
 Hair is a symbol of death. It has no feeling. It is not alive.
 
