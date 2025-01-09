@@ -7,6 +7,7 @@ Welcome to my personal notes. I am loosely following the [zettelkasten](https://
 - [History](History.md)
 - [macOS](macOS.md)
 - [Mythology](Mythology.md)
+- [Poetry](Poetry.md)
 - [Symbolism](Symbolism.md)
 - [Theology](Theology.md)
 - [Vim](Vim.md)
