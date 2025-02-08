@@ -5,6 +5,7 @@ Welcome to my personal notes. I am loosely following the [zettelkasten](https://
 - [Bible](Bible.md)
 - [Development](Development.md)
 - [History](History.md)
+- [Typing](Typing.md)
 - [macOS](macOS.md)
 - [Mythology](Mythology.md)
 - [Poetry](Poetry.md)
