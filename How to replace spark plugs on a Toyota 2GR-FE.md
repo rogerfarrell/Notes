@@ -12,7 +12,7 @@
 - spark plugs ([Denso 3426 FK20HR-11 Iridium Long Life](https://www.densoproducts.com/denso-3426-fk20hr-11-iridium-long-life-spark-plug))
 - dielectric greese
 
-# Instructions
+## Instructions
 
 - [Video instructions](https://youtu.be/ExZ--18pFUw?si=Ox1U84M7M3NpOTr3)
 - [Step-by-step instructions with pictures](https://www.rav4world.com/posts/2602801/)
