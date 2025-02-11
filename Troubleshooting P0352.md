@@ -20,7 +20,7 @@ For more information about this code, see [this](https://www.identifix.com/blogs
 
 ## Potential causes
 
-- Defective ignition coil(s)
+- Defective ignition coil
 - Defective spark plug
 - Damaged/corroded/worn coil wiring 
 - Loose wiring connection or short
