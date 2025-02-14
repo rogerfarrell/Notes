@@ -16,4 +16,4 @@ Netrw can be used to great effect with no configuration. To navigate directories
 	...etc...
   ```
   
-In netrw filetree view, use `gn` to change root directory to the current selection.
+In Netrw filetree view, use `gn` to change root directory to the current selection.

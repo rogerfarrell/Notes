@@ -1,3 +1,5 @@
+[Computer](Computer.md)
+
 # Vim
 
 - [Vim tips](Vim tips.md)
