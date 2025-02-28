@@ -4,6 +4,12 @@
 
 Vim is a great platform for taking notes. However, some constraints are necessary to maximize efficiency for real-time thought-capture.
 
+**This note is a work in progress. It may be out-of-date or have incomplete information.**
+
+## Leads to explore
+
+- [ ] Write notes in VIMDOC and use Vim-native `:TOhtml` to convert them to HTML. (Possibly write a Lua filter for Pandoc to make the resulting HTML easily convertable to other formats while preserving features like tags.)
+
 ## Vimwiki plugin
 
 After some experimentation, I have decided to make use of [Vimwiki](https://github.com/vimwiki). It extends Vim's notetaking capability in many significant ways. Most importantly, it reduces the mental overhead of note composition. Some key features of Vimwiki include:
