@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>vim</title>
+  <title>Troubleshooting-P0352</title>
   <style>
 html {
 color: #1a1a1a;
@@ -168,9 +168,61 @@ vertical-align: middle;
 </style>
 </head>
 <body>
+<p><a href="Cars">Cars</a></p>
+<h1 id="troubleshooting-p0352">Troubleshooting P0352</h1>
+<p>OBD code P0352 indicates: Ignition Coil B Primary/Secondary Circuit
+Malfunction</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">P</td>
+<td style="text-align: left;">powertrain</td>
+</tr>
+<tr>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">generic (not manufacturer specific)</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">ignition system</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><em>unknown</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">cylinder 2</td>
+</tr>
+</tbody>
+</table>
+<p>Note the position of cylinder 2 on the below graph.</p>
+<p>For more information about this code, see <a href="https://www.identifix.com/blogs/code-p0352-the-diagnostic-and-repair-guide">this</a>.
+helpful article from identifix.com.</p>
+<figure>
+<img role="img" aria-label="Cylinder order" src="attachments/2gr-fe-cylinders.jpeg" alt="Cylinder order" />
+<figcaption aria-hidden="true">Cylinder order</figcaption>
+</figure>
+<h2 id="potential-causes">Potential causes</h2>
 <ul>
-<li><a href="vim-tips">vim-tips</a></li>
-<li><a href="taking-notes-in-vim">taking-notes-in-vim</a></li>
+<li>Defective ignition coil</li>
+<li>Defective spark plug</li>
+<li>Damaged/corroded/worn coil wiring</li>
+<li>Loose wiring connection or short</li>
+<li>Defective idle air control valve</li>
+<li>Carbon buildup in the throttle body</li>
 </ul>
+<p>A defective ignition coil is generally considered the most common
+cause of this error. However, ignition coils can fail due to bad spark
+plugs. Try swapping the suspect coil to a different cylinder to rule out
+spark plugs and faulty wiring. Check out <a href="How%20to%20replace%20spark%20plugs%20on%20a%20Toyota%202GR-FE">these
+instructions</a> on how to change spark plugs (and consequently ignition
+coils).</p>
 </body>
 </html>

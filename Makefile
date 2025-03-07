@@ -1,18 +1,20 @@
 MD_FILES := $(wildcard *.md)
-HTML_FILES := $(patsubst %.md, public/%.html, $(MD_FILES))
+HTML_FILES := $(patsubst %.md, docs/%.html, $(MD_FILES))
+$(info HTML_FILES = $(HTML_FILES))
 
 .PHONY: all clean
 
-all: $(HTML_FILES)
+all: | docs/ $(HTML_FILES)
+	@echo ✅ All files are up to date.
 
-public/%.html: %.md | public/
+docs/%.html: %.md | docs/
 	@echo ⏳ Converting $< → $@
-	@pandoc -s --embed-resources -o $@ $<
+	pandoc -s --embed-resources -o $@ $<
 
-public/:
-	@echo ⏳ Creating public directory
-	mkdir -p public/
+docs/:
+	@echo ⏳ Creating docs directory
+	mkdir -p docs/
 
 clean:
-	rm -rf public/
+	rm -rf docs/
 	@echo 🗑️ Cleaned output directory.
