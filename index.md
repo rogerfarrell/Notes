@@ -12,3 +12,5 @@ Welcome to my personal notes. I am loosely following the [zettelkasten](https://
 - [Symbolism](Symbolism.md)
 - [Theology](Theology.md)
 - [Zettelkasten](Zettelkasten.md)
+
+<a href="https://rogerfarrell.net/Vim>test</a>
