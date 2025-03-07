@@ -1,3 +1,3 @@
 # Development
 
-- [Functional programming](Functional programming.md)
+- [Functional programming](Functional programming)

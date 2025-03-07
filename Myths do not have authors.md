@@ -1,4 +1,4 @@
-[Mythology](Mythology.md)
+[Mythology](Mythology)
 
 # Myths do not have authors
 

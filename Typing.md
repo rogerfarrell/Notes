@@ -1,5 +1,5 @@
-[Computer](Computer.md)
+[Computer](Computer)
 
 # Typing
 
-- [My ZSA Voyager config](My ZSA Voyager config.md)
+- [My ZSA Voyager config](My ZSA Voyager config)

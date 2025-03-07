@@ -1,4 +1,4 @@
-[Zettelkasten](Zettelkasten.md)
+[Zettelkasten](Zettelkasten)
 
 # Zettelkasten rules
 

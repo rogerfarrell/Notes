@@ -1,4 +1,4 @@
-[Bible](Bible.md)
+[Bible](Bible)
 
 # All Cretans are liars
 

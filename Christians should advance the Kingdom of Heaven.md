@@ -1,4 +1,4 @@
-[Theology](Theology.md)
+[Theology](Theology)
 
 # Christians should advance the Kingdom of Heaven
 

@@ -1,6 +1,6 @@
-[Computer](Computer.md)
+[Computer](Computer)
 
 # Software
 
-- [Google Docs shortcuts](Google Docs shortcuts.md)
-- [Vim](Vim.md)
+- [Google Docs shortcuts](Google Docs shortcuts)
+- [Vim](Vim)

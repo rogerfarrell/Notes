@@ -1,4 +1,4 @@
-[Software](Software.md)
+[Software](Software)
 
 # Google Docs shortcuts
 

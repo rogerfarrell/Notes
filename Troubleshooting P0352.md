@@ -1,4 +1,4 @@
-[Cars](Cars.md)
+[Cars](Cars)
 
 # Troubleshooting P0352
 
@@ -27,4 +27,4 @@ For more information about this code, see [this](https://www.identifix.com/blogs
 - Defective idle air control valve 
 - Carbon buildup in the throttle body
 
-A defective ignition coil is generally considered the most common cause of this error. However, ignition coils can fail due to bad spark plugs. Try swapping the suspect coil to a different cylinder to rule out spark plugs and faulty wiring. Check out [these instructions](How to replace spark plugs on a Toyota 2GR-FE.md) on how to change spark plugs (and consequently ignition coils).
+A defective ignition coil is generally considered the most common cause of this error. However, ignition coils can fail due to bad spark plugs. Try swapping the suspect coil to a different cylinder to rule out spark plugs and faulty wiring. Check out [these instructions](How to replace spark plugs on a Toyota 2GR-FE) on how to change spark plugs (and consequently ignition coils).

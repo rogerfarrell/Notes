@@ -1,3 +1,3 @@
 # Bible
 
-- [All Cretans are liars](All Cretans are liars.md).
+- [All Cretans are liars](All Cretans are liars).

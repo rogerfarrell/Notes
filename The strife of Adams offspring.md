@@ -1,4 +1,4 @@
-[Symbolism](Symbolism.md)
+[Symbolism](Symbolism)
 
 # The strife of Adam's offspring
 

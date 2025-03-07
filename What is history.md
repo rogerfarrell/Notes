@@ -1,4 +1,4 @@
-[History](History.md)
+[History](History)
 
 # What is history?
 

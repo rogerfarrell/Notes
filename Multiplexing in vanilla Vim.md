@@ -1,4 +1,4 @@
-[Vim](Vim.md)
+[Vim](Vim)
 
 # Multiplexing in vanilla Vim
 

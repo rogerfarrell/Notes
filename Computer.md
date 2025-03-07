@@ -1,5 +1,5 @@
 # Computer
 
-- [macOS](macOS.md)
-- [Software](Software.md)
-- [Typing](Typing.md)
+- [macOS](macOS)
+- [Software](Software)
+- [Typing](Typing)

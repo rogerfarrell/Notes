@@ -1,4 +1,4 @@
-[Functional programming](Functional programming.md)
+[Functional programming](Functional programming)
 
 # Deriving recursive expressions
 

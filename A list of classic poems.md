@@ -1,4 +1,4 @@
-[Poetry](Poetry.md)
+[Poetry](Poetry)
 
 # A list of classic poems
 

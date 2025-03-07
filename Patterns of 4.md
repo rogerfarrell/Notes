@@ -1,4 +1,4 @@
-[Symbolism](Symbolism.md)
+[Symbolism](Symbolism)
 
 # Patterns of 4
 

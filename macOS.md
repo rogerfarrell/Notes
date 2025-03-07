@@ -1,6 +1,6 @@
-[Computer](Computer.md)
+[Computer](Computer)
 
 # macOS
 
-- [Config for macOS](Config for macOS.md)
-- [General naming conventions](General naming conventions.md)
+- [Config for macOS](Config for macOS)
+- [General naming conventions](General naming conventions)

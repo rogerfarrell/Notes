@@ -1,4 +1,4 @@
-[macOS](macOS.md)
+[macOS](macOS)
 
 # Config for macOS
 
