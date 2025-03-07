@@ -1,4 +1,4 @@
-[Poetry](Poetry)
+[[poetry]]
 
 # A list of classic poems
 

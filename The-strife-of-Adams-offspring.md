@@ -1,4 +1,4 @@
-[Symbolism](Symbolism)
+[Symbolism](symbolism)
 
 # The strife of Adam's offspring
 

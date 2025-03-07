@@ -1,4 +1,4 @@
-[Typing](Typing)
+[[typing]]
 
 # My ZSA Voyager config
 

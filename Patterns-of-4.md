@@ -1,4 +1,4 @@
-[Symbolism](Symbolism)
+[[symbolism]]
 
 # Patterns of 4
 

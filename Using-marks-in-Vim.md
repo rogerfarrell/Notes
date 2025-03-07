@@ -1,4 +1,4 @@
-[Vim](Vim)
+[[vim]]
 
 # Using marks in Vim
 

@@ -1,9 +1,9 @@
-[Computer](Computer)
+[[computer]]
 
 # Vim
 
-- [Avoiding visual mode in Vim](Avoiding visual mode in Vim)
-- [Vim tips](Vim tips)
-- [Taking notes in Vim](Taking notes in Vim)
-- [Netrw workflow](Netrw workflow)
-- [Using marks in Vim](Using marks in Vim)
+- [[avoiding-visual-mode-in-vim]]
+- [[vim-tips]]
+- [[taking-notes-in-vim]]
+- [[netrw-workflow]]
+- [[using-marks-in-vim]]

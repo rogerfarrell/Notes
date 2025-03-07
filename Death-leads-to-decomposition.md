@@ -1,5 +1,5 @@
-[Symbolism](Symbolism), [Theology](Theology)
+[[symbolism]], [[theology]]
 
 # Death leads to decomposition
 
-[In the absence of a unifying identity](Life is identity), the dead body slowly disintegrates.
+[[life-is-identity|In the absence of a unifying identity]], the dead body slowly disintegrates.

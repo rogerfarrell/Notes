@@ -1,4 +1,4 @@
 # Cars
 
-- [Troubleshooting P0352](Troubleshooting P0352)
-- [How to replace spark plugs on a Toyota 2GR-FE](How to replace spark plugs on a Toyota 2GR-FE)
+- [[troubleshooting-p0352]]
+- [[how-to-replace-spark-plugs-on-a-toyota-2gr-fe]]

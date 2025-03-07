@@ -1,3 +1,3 @@
 # Mythology
 
-- [Myths do not have authors](Myths do not have authors)
+- [[myths-do-not-have-authors]]

@@ -1,4 +1,4 @@
-[macOS](macOS)
+[[macos]]
 
 # General naming conventions
 

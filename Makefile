@@ -9,7 +9,7 @@ all: | docs/ $(HTML_FILES)
 
 docs/%.html: %.md | docs/
 	@echo ⏳ Converting $< → $@
-	pandoc -s --embed-resources -o $@ $<
+	pandoc  --from=markdown+wikilinks_title_after_pipe -s --embed-resources -o $@ $<
 
 docs/:
 	@echo ⏳ Creating docs directory

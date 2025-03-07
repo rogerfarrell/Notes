@@ -1,3 +1,3 @@
 # Development
 
-- [Functional programming](Functional programming)
+- [[functional-programming]]

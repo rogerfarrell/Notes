@@ -1,4 +1,4 @@
-[Vim](Vim)
+[[vim]]
 
 # Netrw workflow
 

@@ -1,4 +1,4 @@
-[Software](Software)
+[[software]]
 
 # Google Docs shortcuts
 

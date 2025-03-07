@@ -1,4 +1,4 @@
-[Mythology](Mythology)
+[[mythology]]
 
 # Myths do not have authors
 

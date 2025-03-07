@@ -1,5 +1,5 @@
-[Development](Development)
+[[development]]
 
 # Functional Programming
 
-- [Deriving recursive expressions](Deriving recursive expressions)
+- [[deriving-recursive-expressions]]

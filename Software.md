@@ -1,6 +1,6 @@
-[Computer](Computer)
+[[computer]]
 
 # Software
 
-- [Google Docs shortcuts](Google Docs shortcuts)
-- [Vim](Vim)
+- [[google-docs-shortcuts]]
+- [[vim]]

@@ -1,5 +1,5 @@
 # Computer
 
-- [macOS](macOS)
-- [Software](Software)
-- [Typing](Typing)
+- [[macos]]
+- [[software]]
+- [[typing]]

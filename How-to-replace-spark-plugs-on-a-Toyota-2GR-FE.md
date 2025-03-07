@@ -1,4 +1,4 @@
-[Cars](Cars)
+[[cars]]
 
 # How to replace spark plugs on a Toyota 2GR-FE
 

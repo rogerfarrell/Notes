@@ -1,4 +1,4 @@
-[Symbolism](Symbolism)
+[[symbolism]]
 
 # The Tower of Babel was blown down by the winds of Pentecost
 

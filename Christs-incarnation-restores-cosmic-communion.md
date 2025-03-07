@@ -1,5 +1,5 @@
-[Symbolism](Symbolism), [Theology](Theology)
+[[symbolism]]
 
 # Christ's incarnation restores cosmic communion
 
-Man was created to be the axis of creation, the mediator of divine life [through sacrifice](Existence as sacrifice). Upon man’s fall, the creation was left without a mediator. Through the incarnation, Christ becomes the New Adam, mankind’s own mediator. Thereby, he restores man to his original purpose and [restores the unity of Adam's offspring](The strife of Adams offspring).
+Man was created to be the axis of creation, the mediator of divine life [[existence-as-sacrifice|through sacrifice]]. Upon man’s fall, the creation was left without a mediator. Through the incarnation, Christ becomes the New Adam, mankind’s own mediator. Thereby, he restores man to his original purpose and [[the-strife-of-adams-offspring|restores the unity of Adam's offspring]].

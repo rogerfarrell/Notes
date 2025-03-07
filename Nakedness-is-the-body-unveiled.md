@@ -1,5 +1,5 @@
-[Symbolism](Symbolism), [Veils](Veils)
+[[symbolism]], [[veils]]
 
 # Nakedness is the body unveiled
 
-Nakedness is the the [unveiling](Veils reveal through concealment) of the body through the removal of garments. In so doing, [shame](Shame is the unveiling of death) is revealed.
+Nakedness is the the [[veils-reveal-through-concealment|unveiling]] of the body through the removal of garments. In so doing, [[shame-is-the-unveiling-of-death|shame]] is revealed.

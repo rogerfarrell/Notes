@@ -1,4 +1,4 @@
-[History](History)
+[[history]]
 
 # What is history?
 

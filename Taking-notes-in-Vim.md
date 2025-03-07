@@ -1,4 +1,4 @@
-[Vim](Vim)
+[[vim]]
 
 # Taking notes in Vim
 

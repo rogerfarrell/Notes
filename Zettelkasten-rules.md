@@ -1,4 +1,4 @@
-[Zettelkasten](Zettelkasten)
+[[zettelkasten]]
 
 # Zettelkasten rules
 

@@ -1,4 +1,4 @@
 # Theology
 
-- [Christ's incarnation restores cosmic communion](Christs incarnation restores cosmic communion)
-- [How Christians die for the sin of the world](How Christians die for the sin of the world)
+- [[christs-incarnation-restores-cosmic-communion]]
+- [[how-christians-die-for-the-sin-of-the-world]]

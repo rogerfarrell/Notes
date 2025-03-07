@@ -1,5 +1,5 @@
-[Symbolism](Symbolism), [Veils](Veils)
+[[symbolism]], [[veils]]
 
 # Shame is the unveiling of death
 
-Shame is the condition of a [dying](Life is identity) body that has no means to conceal its [decomposition](Death leads to decomposition).
+Shame is the condition of a [[life-is-identity|dying]] body that has no means to conceal its [[death-leads-to-decomposition|decomposition]].

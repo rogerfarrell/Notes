@@ -1,6 +1,6 @@
-[Computer](Computer)
+[[computer]]
 
 # macOS
 
-- [Config for macOS](Config for macOS)
-- [General naming conventions](General naming conventions)
+- [[config-for-macos]]
+- [[general-naming-conventions]]
