@@ -3,7 +3,7 @@
  MD_ATTACHMENTS   := $(wildcard attachments/*)
  
  HTML_NOTES       := $(patsubst %.md, docs/%.html, $(MD_NOTES))
- HTML_REFERENCES  := $(patsubst references/%, docs/references/%.md, $(MD_REFERENCES))
+ HTML_REFERENCES  := $(patsubst references/%.md, docs/references/%.html, $(MD_REFERENCES))
  HTML_ATTACHMENTS := $(patsubst attachments/%, docs/attachments/%, $(MD_ATTACHMENTS))
 
 .PHONY: all clean
