@@ -5,6 +5,7 @@
 ## Find/replace
 
 - Immediately after searching a pattern with `/` use `c//e` to replace the currently highlit match.
+
 ## Multiplexing
 
 Vanilla Vim is adequate for basic multiplexing: [[multiplexing-in-vanilla-vim]]
