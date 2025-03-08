@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>a-list-of-classic-poems</title>
+  <title>deriving-recursive-expressions</title>
   <style>
 html {
 color: #1a1a1a;
@@ -165,41 +165,112 @@ margin: 0 0.8em 0.2em -1.6em;
 vertical-align: middle;
 }
 .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
 </style>
 </head>
 <body>
-<p><a href="poetry" class="wikilink">poetry</a></p>
-<h1 id="a-list-of-classic-poems">A list of classic poems</h1>
-<p>I am woefully deficient in poetry. This is a list of classic poems
-that I intend to read. Notable excerpts are included for easy
-reference.</p>
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: left;">Read?</th>
-<th style="text-align: left;">Title</th>
-<th style="text-align: left;">Author</th>
-<th style="text-align: left;">Famous quotation</th>
-<th style="text-align: left;">Link</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Marmion</td>
-<td style="text-align: left;">Sir Walter Scott</td>
-<td style="text-align: left;">Oh what a tangled web we weave, When first
-we practice to deceive</td>
-<td style="text-align: left;">https://www.gutenberg.org/ebooks/4010</td>
-</tr>
-</tbody>
-</table>
+<p><a href="functional-programming" class="wikilink">functional-programming</a></p>
+<h1 id="deriving-recursive-expressions">Deriving recursive
+expressions</h1>
+<p>Every recursive solution is made up of two parts:</p>
+<ol type="1">
+<li>the recurrence relation</li>
+<li>the base cases</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ot">sumTo ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- the base case</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sumTo <span class="dv">0</span> <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- the recurrence relation</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>sumTo n <span class="ot">=</span> n <span class="op">+</span> sumTo (n <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
+<h2 id="deriving-the-recurrence-relation">Deriving the recurrence
+relation</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sumTo n <span class="ot">=</span> n <span class="op">+</span> sumTo (n <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
+<p>The recurrence relation is the recursive part of a recursive
+solution. To find the recursive relation for a give problem, assume your
+function already has a correct implementation. Using your imaginarily
+implemented function, solve the simplest subproblem. This is a problem
+which is only one step from your desired result. For a
+<code>sumTo</code> function which adds numbers from <code>1</code> to
+<code>n</code>, this is <code>sumTo (n - 1)</code>.</p>
+<p>Once we have expressed the subproblem, we can express the complete
+problem by adding the final step. In this case, we add <code>n</code> to
+<code>sumTo (n - 1)</code></p>
+<h2 id="finding-the-base-cases">Finding the base cases</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- the base case</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sumTo <span class="dv">0</span> <span class="ot">=</span> <span class="dv">0</span></span></code></pre></div>
+<p>Base cases are easier to find. We just need to determine the possible
+inputs for which no recursion is required. In our example,
+<code>0</code> is the only qualifying input (not accounting for negative
+inputs). The sum of 0 and all previous non-negative integers (there are
+none) is 0.</p>
+<hr />
+<ul>
+<li><a href="https://medium.com/@mukhopadhyaypushan42/how-to-solve-any-recursion-problem-master-of-solving-recursion-problems-7d55496a450a">How
+to solve any recursion problem</a></li>
+</ul>
 </body>
 </html>
