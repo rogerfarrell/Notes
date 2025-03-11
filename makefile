@@ -12,6 +12,9 @@ HTML_ATTACHMENTS := $(patsubst attachments/%, docs/attachments/%, $(MD_ATTACHMEN
 # trigger the corresponding match for every entry in my notes directories.
 all: | docs/ docs/references/ docs/attachments/ $(HTML_NOTES) $(HTML_REFERENCES) $(HTML_ATTACHMENTS)
 	@echo ✅ All files are up to date.
+	@git add .
+	@git commit -m "commit on $(date)"
+	@git push
 
 # Pattern rule for notes
 docs/%.html: %.md | docs/
