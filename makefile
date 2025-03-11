@@ -32,6 +32,8 @@ docs/attachments/%: attachments/% | docs/attachments/
 docs/:
 	@echo ⏳ Creating docs directory
 	@mkdir -p $@
+	@touch $@/CNAME
+	@echo "rogerfarrell.net" >> $@/CNAME
 
 docs/references/:
 	@echo ⏳ Creating docs/references/ directory
