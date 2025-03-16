@@ -17,14 +17,23 @@
 ## Transliterated
 
 > Páter hēmō̂n ho en toîs ouranoîs hagiasthḗtō tò ónomá sou
+>
 > elthétō hē basileía sou
+>
 > genēthḗtō tò thélēmá sou,
+>
 > hōs en ouranō̧̂ kaì epì tê̄s gê̄s:
+>
 > tòn árton hēmō̂n tòn epioúsion dòs hēmîn sḗmeron
+>
 > kaì áphes hēmîn tà opheilḗmata hēmō̂n,
+>
 > hōs kaì hēmeîs aphíemen toîs opheilétais hēmō̂n
+>
 > kaì mḕ eisenéngȩ̄s hēmâs eis peirasmón,
+>
 > allà rhŷsai hēmâs apò toû ponēroû.
+>
 > [hóti soû estin hē basileía kaì hē dýnamis kaì hē dóxa eis toùs aiō̂nas. amḗn.]
 
 ---
