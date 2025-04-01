@@ -170,10 +170,17 @@ vertical-align: middle;
 <body>
 <p><a href="vim" class="wikilink">vim</a></p>
 <h1 id="vim-tips">Vim tips</h1>
+<h2 id="to-do">To do</h2>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>Read and process this great article
+about GREP in Vim: <a href="https://thevaluable.dev/regular-expression-basics-vim-grep/" class="uri">https://thevaluable.dev/regular-expression-basics-vim-grep/</a></label></li>
+</ul>
 <h2 id="findreplace">Find/replace</h2>
 <ul>
 <li>Immediately after searching a pattern with <code>/</code> use
-<code>c//e</code> to replace the currently highlit match.</li>
+<code>c//e</code> to replace the currently highlighted match.</li>
+<li>Refer to <code>:help pattern-atoms</code> for some basic info about
+Vim’s default GREP flavor.</li>
 </ul>
 <h2 id="multiplexing">Multiplexing</h2>
 <p>Vanilla Vim is adequate for basic multiplexing: <a href="multiplexing-in-vanilla-vim" class="wikilink">multiplexing-in-vanilla-vim</a></p>
@@ -190,7 +197,7 @@ vertical-align: middle;
 <li>Go to next cursor position (in the jumplist):
 <code>&lt;C-i&gt;</code></li>
 </ul></li>
-<li><p>In netrw filetree view, use <code>gn</code> to change root
+<li><p>In Netrw file tree view, use <code>gn</code> to change root
 directory to selected</p></li>
 <li><p>Change root directory: <code>:cd path/to/new/root</code></p></li>
 <li><p>Clear highlighting till next search: <code>:nohlsearch</code> or
