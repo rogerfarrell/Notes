@@ -28,6 +28,8 @@ The zettelkasten method prefers curated entry points to notes over content searc
 
 I am building my notes using Pandoc via a makefile. Currently, I am only using one non-default Pandoc extension: [wikilinks_title_after_pipe](https://pandoc.org/MANUAL.html#extension-wikilinks_title_after_pipe). Wikilinks are simpler to write. I tried working with plain markdown links, but they interrupted my flow-state.
 
+---
+
 ## Previous solutions
 
 ### Vimwiki plugin

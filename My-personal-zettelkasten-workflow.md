@@ -2,7 +2,12 @@
 
 # My personal zettelkasten workflow
 
+## Realtime idea capture
+
 - On mobile, all note-taking goes into the inbox. Later, they are sanitized and organized in Vim.
+- I keep a learning log to track concepts I have explored: [[references/ecclesiastical-history]].
+
+# Navigating my notes
 
 The zettelkasten method yields a web of hyperlinked notes. A strategy for creating entrypoints into this web is essential to efficient navigation as memory fades. Many people employ the [[references/the-great-folgezettel-debate|folgezettel]] schema for this purpose. However, I have chosen to do this via structure (or hub) notes.
 
