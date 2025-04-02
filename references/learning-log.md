@@ -3,6 +3,8 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                                                                                 references
 -----------     -----------------------------------------------------------------------------------------------------------------------     --------------------------------------------------
+2025-04-02      Tufte CSS is a CSS styling philosophy derived from Edward Tufte's books and handouts. (It is very elegant.)                 <https://edwardtufte.github.io/tufte-css/>
+
 2025-04-02      `git checkout -b [<name-of-new-branch>]` is a composition of `git branch` and `git checkout`.                               <https://stackoverflow.com/questions/66882952/how-to-create-new-local-branch-and-switch-between-branches-in-git>
 
 2025-04-02      Pandoc multiline tables best fit my needs for note taking. NOTE: They still convert to single-line.                         <https://pandoc.org/MANUAL.html#extension-multiline_tables>
