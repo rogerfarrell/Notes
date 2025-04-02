@@ -5,7 +5,7 @@ date            description                                                     
 ------------    ----------------------------------------------------------------------------------------------------    ---------------------------------------------------------------------------
 2025-04-02      Pandoc multiline tables best fit my needs for note taking.                                              <https://pandoc.org/MANUAL.html#extension-multiline_tables>
 
-2025-04-02      In Vim, use `:echo expand("%:h)` to show the path of the current file.                                  `:help :echo`
+2025-04-02      In Vim, use `:echo expand("%:h)` to show the path of the current file.                                  `:help :echo`  
                                                                                                                         `:help expand()`
 
 2025-04-02      In Vim, `%` refers to the complete file path, `%:h` gets the head (path minus filename).                `:help %:h`
