@@ -5,7 +5,7 @@
 ## Realtime idea capture
 
 - On mobile, all note-taking goes into the inbox. Later, they are sanitized and organized in Vim.
-- I keep a learning log to track concepts I have explored: [[references/ecclesiastical-history]].
+- I keep a learning log of all ideas and techniques I have learned: [[references/learning-log]].
 
 # Navigating my notes
 
