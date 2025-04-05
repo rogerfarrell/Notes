@@ -1,6 +1,4 @@
-
-
-# inbox/Cultural Christianity is a good thing
+# Cultural Christianity is a good thing
 
 ## TODO
 
