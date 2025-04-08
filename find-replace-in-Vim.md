@@ -12,5 +12,7 @@ My preferred way to populate the QuickFix list is using `:vimgrep` (`:vim` for s
 
 There are two relevant commands: `:cdo` and `:cfdo`. `:cdo` runs a command for all QuickFix list entries. `:cfdo` runs a command for all files with entries in the QuickFix list. 
 
-- Using `:cdo`, you may find/replace only on lines in the QuickFix list: `:cdo s/searchpattern/replacepattern/`
+- Using `:cdo`, you may find/replace only on lines in the QuickFix list: `:cdo s/searchpattern/replacepattern/`[^1]
 - Using `:cfdo`, you may find/replace for all lines in any file with a QuickFix match: `:cfdo %s/searchpattern/replacepattern/`
+
+[^1]: <https://stackoverflow.com/a/38004355/28799158>
