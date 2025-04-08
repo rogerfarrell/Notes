@@ -6,10 +6,6 @@ Vim is a great platform for taking notes. However, some constraints are necessar
 
 **This note is a work in progress. It may be out-of-date or have incomplete information.**
 
-## Leads to explore
-
-- [x] Write notes in VIMDOC and use Vim-native `:TOhtml` to convert them to HTML. (Possibly write a Lua filter for Pandoc to make the resulting HTML easily convertible to other formats while preserving features like tags.)
-
 ## Current solution
 
 ### Configure Vim's handling of markdown files
