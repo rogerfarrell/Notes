@@ -1,5 +1,3 @@
-[[bible]]
-
 # The Lord's Prayer in Greek
 
 > Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς
@@ -22,7 +20,7 @@
 > 
 > [ὅτι σοῦ ἐστιν ἡ βασιλεία καὶ ἡ δύναμις καὶ ἡ δόξα εἰς τοὺς αἰῶνας. ἀμήν.]
 
-## Transliterated
+Transliterated:
 
 > Páter hēmō̂n ho en toîs ouranoîs
 >
