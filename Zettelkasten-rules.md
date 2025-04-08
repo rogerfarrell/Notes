@@ -6,7 +6,7 @@
 
 Each zettel should contain one single idea. Putting multiple thoughts in a single zettel effectively creates static links. It undermines the dynamic behavior that makes the method powerful.
 
-## Write _everything_ in your own words
+## Write *everything* in your own words
 
 Zettels are discreet personal thoughts, not citations. The goal is to have captured the thought you had when you encountered the thing you are citing.
 

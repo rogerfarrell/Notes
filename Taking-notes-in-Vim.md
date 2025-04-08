@@ -32,6 +32,57 @@ I am building my notes using Pandoc via a makefile. Currently, I am only using o
 
 ## Previous solutions
 
+### Vim help docs
+
+Vim supports writing your own custom help docs in the VIMDOC format. With some simple configuration, these can be accessed in exactly the same way as the built-in Vim help.
+
+Custom help docs should be added to `~/.vim/doc/`.
+
+In order for Vim to read the help files, VIMDOCs begin and end with special lines which contain metadata. The file must begin with a title line in the below format,[^1] and end with a modeline.[^2]
+
+[^1]: `:help help-writing`
+[^2]: `:help modeline`
+
+```vimdoc
+*filetitle.txt*	{short description of the plugin}
+```
+
+#### Configuring Vim
+
+Some minimal configuration is required to enable custom VIMDOCS. The following should be added to your *.vimrc*.
+
+```vim
+" USING VIM HELP DOCS FOR NOTES
+
+" enables modelines in custom help files (This is overriding the default macOS config at /usr/share/vim/vimrc)
+set modelines=1                                        
+
+" regenerate help tags for personal notes on file save
+autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc 
+```
+
+#### Making a template
+
+To reduce overhead when creating new notes a template like the one below is advisable. Note that I have set 'modifiable' and 'noreadonly' to enable editing.
+
+```vimdoc
+*n-template.txt*  Aliases: *n-tmp*  Created: YYYY-MM-DD
+
+
+your text here
+
+
+ vim:tw=78:ts=8:noet:ft=help:norl:modifiable:noreadonly:
+```
+
+#### Writing to dos
+
+VIMDOC has a native syntax for to dos (see below). Note that real tabs must be used for the syntax highlighting to work. If 'expandtabs' is enabled, tabs can be inserted by typing CTRL-V <Tab>. Also, the to do title must begin with a lower case letter.
+
+```vimdoc
+	*Todo	your to do (starting with a lower case letter)
+```
+
 ### Vimwiki plugin
 
 I tested [Vimwiki](https://github.com/vimwiki) for several months. It extends Vim's note taking capability in many significant ways. Most importantly, it reduces the mental overhead of note composition. Some key features of Vimwiki include:
