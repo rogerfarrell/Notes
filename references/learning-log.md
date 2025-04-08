@@ -3,6 +3,8 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                                                                                 references
 -----------     -----------------------------------------------------------------------------------------------------------------------     --------------------------------------------------
+2025-08-04      Pandoc will treat iframes and other plain HTML as code blocks if there are more than four spaces worth of indentation.      <https://github.com/jgm/pandoc/issues/2244>
+
 2025-08-04      In Vim, delete all but current buffer with `%bd | e#`                                                                       <https://stackoverflow.com/a/34050776/28799158>
 
 2025-08-04      Quickly create a PDF with a subset of the pages of another PDF by selecting the pages in the sidebar, right-clicking,
