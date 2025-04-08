@@ -207,7 +207,7 @@ same way as the built-in Vim help.</p>
 <p>In order for Vim to read the help files, VIMDOCs begin and end with
 special lines which contain metadata. The file must begin with a title
 line in the below format,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and end with a modeline.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<pre class="vimdoc"><code>*filetitle.txt* {short description of the plugin}</code></pre>
+<pre class="vim"><code>*filetitle.txt* {short description of the plugin}</code></pre>
 <h4 id="configuring-vim">Configuring Vim</h4>
 <p>Some minimal configuration is required to enable custom VIMDOCS. The
 following should be added to your <em>.vimrc</em>.</p>
@@ -222,7 +222,7 @@ autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc </code></pre>
 <p>To reduce overhead when creating new notes a template like the one
 below is advisable. Note that I have set ‘modifiable’ and ‘noreadonly’
 to enable editing.</p>
-<pre class="vimdoc"><code>*n-template.txt*  Aliases: *n-tmp*  Created: YYYY-MM-DD
+<pre class="vim"><code>*n-template.txt*  Aliases: *n-tmp*  Created: YYYY-MM-DD
 
 
 your text here
@@ -235,7 +235,7 @@ tabs must be used for the syntax highlighting to work. If ‘expandtabs’
 is enabled, tabs can be inserted by typing <kbd>Control</kbd> +
 <kbd>v</kbd> and then <kbd>Tab</kbd>. Also, the to do title must begin
 with a lower case letter.</p>
-<pre class="vimdoc"><code>    *Todo   your to do (starting with a lower case letter)</code></pre>
+<pre class="vim"><code>    *Todo   your to do (starting with a lower case letter)</code></pre>
 <h3 id="vimwiki-plugin">Vimwiki plugin</h3>
 <p>I tested <a href="https://github.com/vimwiki">Vimwiki</a> for several
 months. It extends Vim’s note taking capability in many significant

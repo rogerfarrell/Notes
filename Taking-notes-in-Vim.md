@@ -39,7 +39,7 @@ In order for Vim to read the help files, VIMDOCs begin and end with special line
 [^1]: `:help help-writing`
 [^2]: `:help modeline`
 
-```vimdoc
+```vim
 *filetitle.txt*	{short description of the plugin}
 ```
 
@@ -61,7 +61,7 @@ autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc
 
 To reduce overhead when creating new notes a template like the one below is advisable. Note that I have set 'modifiable' and 'noreadonly' to enable editing.
 
-```vimdoc
+```vim
 *n-template.txt*  Aliases: *n-tmp*  Created: YYYY-MM-DD
 
 
@@ -75,7 +75,7 @@ your text here
 
 VIMDOC has a native syntax for to dos (see below). Note that real tabs must be used for the syntax highlighting to work. If 'expandtabs' is enabled, tabs can be inserted by typing <kbd>Control</kbd> + <kbd>v</kbd> and then <kbd>Tab</kbd>. Also, the to do title must begin with a lower case letter.
 
-```vimdoc
+```vim
 	*Todo	your to do (starting with a lower case letter)
 ```
 
