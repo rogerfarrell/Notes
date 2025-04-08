@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>vim</title>
+  <title>find-replace-in-Vim</title>
   <style>
 html {
 color: #1a1a1a;
@@ -168,15 +168,32 @@ vertical-align: middle;
 </style>
 </head>
 <body>
-<p><a href="computer" class="wikilink">computer</a></p>
-<h1 id="vim">Vim</h1>
+<p><a href="vim" class="wikilink">vim</a></p>
+<h1 id="findreplace-in-vim">Find/replace in Vim</h1>
+<p>There are a couple ways to find/replace in Vim. The most vim-like way
+consists of populating the QuickFix list (<code>:help quickfix</code>)
+with all the files you intend to search across. You can then iterate
+through these files, applying any commands you desire.</p>
+<h2 id="populating-the-quickfix-list">Populating the QuickFix list</h2>
+<p>My preferred way to populate the QuickFix list is using
+<code>:vimgrep</code> (<code>:vim</code> for short). This uses Vim’s
+internal grep engine, which is consistent across systems. A typical
+command is as follows: <code>:vim /searchpattern/ pathtofiles</code>.
+See <code>:help :vimgrep</code> for more info. Note that this will
+populate the QuickFix list with all matches from all files at the
+specified path. This will be useful later.</p>
+<h2 id="running-a-findreplace-on-quickfix-entries">Running a
+find/replace on QuickFix entries</h2>
+<p>There are two relevant commands: <code>:cdo</code> and
+<code>:cfdo</code>. <code>:cdo</code> runs a command for all QuickFix
+list entries. <code>:cfdo</code> runs a command for all files with
+entries in the QuickFix list.</p>
 <ul>
-<li><a href="avoiding-visual-mode-in-vim" class="wikilink">avoiding-visual-mode-in-vim</a></li>
-<li><a href="find-replace-in-Vim" class="wikilink">find-replace-in-Vim</a></li>
-<li><a href="netrw-workflow" class="wikilink">netrw-workflow</a></li>
-<li><a href="taking-notes-in-vim" class="wikilink">taking-notes-in-vim</a></li>
-<li><a href="using-marks-in-vim" class="wikilink">using-marks-in-vim</a></li>
-<li><a href="vim-tips" class="wikilink">vim-tips</a></li>
+<li>Using <code>:cdo</code>, you may find/replace only on lines in the
+QuickFix list: <code>:cdo s/searchpattern/replacepattern/</code></li>
+<li>Using <code>:cfdo</code>, you may find/replace for all lines in any
+file with a QuickFix match:
+<code>:cfdo %s/searchpattern/replacepattern/</code></li>
 </ul>
 </body>
 </html>
