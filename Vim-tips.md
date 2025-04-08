@@ -21,6 +21,7 @@ Vanilla Vim is adequate for basic multiplexing: [[multiplexing-in-vanilla-vim]]
 
 ## Navigating files
 
+- Quickly open Netrw to the path of the current file: `:E`
 - go to file under cursor: `gf`
   - Go to previous cursor position (in the jumplist): `<C-o>`
   - Go to next cursor position (in the jumplist): `<C-i>`
