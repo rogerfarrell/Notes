@@ -77,7 +77,7 @@ your text here
 
 #### Writing to dos
 
-VIMDOC has a native syntax for to dos (see below). Note that real tabs must be used for the syntax highlighting to work. If 'expandtabs' is enabled, tabs can be inserted by typing CTRL-V <Tab>. Also, the to do title must begin with a lower case letter.
+VIMDOC has a native syntax for to dos (see below). Note that real tabs must be used for the syntax highlighting to work. If 'expandtabs' is enabled, tabs can be inserted by typing <kbd>Control</kbd> + <kbd>v</kbd> and then <kbd>Tab</kbd>. Also, the to do title must begin with a lower case letter.
 
 ```vimdoc
 	*Todo	your to do (starting with a lower case letter)
