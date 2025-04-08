@@ -3,6 +3,9 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                                                                                 references
 -----------     -----------------------------------------------------------------------------------------------------------------------     --------------------------------------------------
+2025-08-04      Quickly create a PDF with a subset of the pages of another PDF by selecting the pages in the sidebar, right-clicking,
+                and selecting *Extract Pages…*.
+
 2025-04-04      A joke about how deep the rabbit hole goes for solving computer problems.                                                   <https://people.willamette.edu/~fruehr/haskell/evolution.html>
 
 2025-04-03      The T2 chip on Apple computers can make installing Linux difficult.                                                         <https://wiki.t2linux.org>
