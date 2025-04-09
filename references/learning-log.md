@@ -3,11 +3,17 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                                                                                 references
 -----------     -----------------------------------------------------------------------------------------------------------------------     --------------------------------------------------
-2025-08-04      Pandoc will treat iframes and other plain HTML as code blocks if there are more than four spaces worth of indentation.      <https://github.com/jgm/pandoc/issues/2244>
+2025-04-09      In Git, use `git reset` to clear local changes since last commit.                                                           <https://stackoverflow.com/a/1146981/28799158>
 
-2025-08-04      In Vim, delete all but current buffer with `%bd | e#`                                                                       <https://stackoverflow.com/a/34050776/28799158>
+2025-04-09      In Vim, use `g&` to repeat last substitution.                                                                               `:help g&`, <https://vi.stackexchange.com/a/18107/54693>
 
-2025-08-04      Quickly create a PDF with a subset of the pages of another PDF by selecting the pages in the sidebar, right-clicking,
+2025-04-09      In Git, safely undo up to a prior commit without destroying history: `git revert --no-commit 0d1d7fc3..HEAD`                <https://stackoverflow.com/a/21718540/28799158>
+
+2025-04-08      Pandoc will treat iframes and other plain HTML as code blocks if there are more than four spaces worth of indentation.      <https://github.com/jgm/pandoc/issues/2244>
+
+2025-04-08      In Vim, delete all but current buffer with `%bd | e#`                                                                       <https://stackoverflow.com/a/34050776/28799158>
+
+2025-04-08      Quickly create a PDF with a subset of the pages of another PDF by selecting the pages in the sidebar, right-clicking,
                 and selecting *Extract Pages…*.
 
 2025-04-04      A joke about how deep the rabbit hole goes for solving computer problems.                                                   <https://people.willamette.edu/~fruehr/haskell/evolution.html>

@@ -3,6 +3,7 @@
 # Vim
 
 - [[avoiding-visual-mode-in-vim]]
+- [[batching-shell-commands-with-vim]]
 - [[find-replace-in-Vim]]
 - [[netrw-workflow]]
 - [[taking-notes-in-vim]]
