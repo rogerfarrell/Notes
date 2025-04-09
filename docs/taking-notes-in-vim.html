@@ -186,6 +186,13 @@ notes.</p>
 definitive spec. Since Pandoc is the best tool for Markdown conversion,
 I will be following the <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc Markdown
 spec</a>. If a fallback is required for further clarity, I will use <a href="https://github.github.com/gfm">Github Flavored Markdown</a>.</p>
+<h3 id="representing-keystrokes">Representing keystrokes</h3>
+<p>Since I spend a lot of time in the Vim help docs, I have decided to
+use Vim’s notation for keystrokes and special characters. In practice,
+this means I am representing keystrokes using markdown inline code
+segments instead of the HTML <code>&lt;kbd&gt;</code> tag. For more
+information about Vim’s notation syntax, see
+<code>:help notation</code>.</p>
 <h3 id="links-instead-of-tags">Links instead of tags</h3>
 <p>The zettelkasten method prefers curated entry points to notes over
 content searches. In the spirit of this convention, I have elected to
@@ -232,9 +239,9 @@ your text here
 <h4 id="writing-to-dos">Writing to dos</h4>
 <p>VIMDOC has a native syntax for to dos (see below). Note that real
 tabs must be used for the syntax highlighting to work. If ‘expandtabs’
-is enabled, tabs can be inserted by typing <kbd>Control</kbd> +
-<kbd>v</kbd> and then <kbd>Tab</kbd>. Also, the to do title must begin
-with a lower case letter.</p>
+is enabled, tabs can be inserted by typing <code>&lt;C-V&gt;</code> and
+then <code>&lt;Tab&gt;</code>. Also, the to do title must begin with a
+lower case letter.</p>
 <pre class="vim"><code>    *Todo   your to do (starting with a lower case letter)</code></pre>
 <h3 id="vimwiki-plugin">Vimwiki plugin</h3>
 <p>I tested <a href="https://github.com/vimwiki">Vimwiki</a> for several

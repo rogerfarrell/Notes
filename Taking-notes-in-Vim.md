@@ -16,6 +16,10 @@ I have a file type plugin at `~/.vim/ftplugin/markdown.vim`. There are several s
 
 Markdown is the de facto standard for note-taking, it lacks a single definitive spec. Since Pandoc is the best tool for Markdown conversion, I will be following the [Pandoc Markdown spec](https://pandoc.org/MANUAL.html#pandocs-markdown). If a fallback is required for further clarity, I will use [Github Flavored Markdown](https://github.github.com/gfm).
 
+### Representing keystrokes
+
+Since I spend a lot of time in the Vim help docs, I have decided to use Vim's notation for keystrokes and special characters. In practice, this means I am representing keystrokes using markdown inline code segments instead of the HTML `<kbd>` tag. For more information about Vim's notation syntax, see `:help notation`.
+
 ### Links instead of tags
 
 The zettelkasten method prefers curated entry points to notes over content searches. In the spirit of this convention, I have elected to forgo querying by tags. Navigation will be handled entirely by links. This has the added benefit of being fully supported by base Markdown syntax.
@@ -73,7 +77,7 @@ your text here
 
 #### Writing to dos
 
-VIMDOC has a native syntax for to dos (see below). Note that real tabs must be used for the syntax highlighting to work. If 'expandtabs' is enabled, tabs can be inserted by typing <kbd>Control</kbd> + <kbd>v</kbd> and then <kbd>Tab</kbd>. Also, the to do title must begin with a lower case letter.
+VIMDOC has a native syntax for to dos (see below). Note that real tabs must be used for the syntax highlighting to work. If 'expandtabs' is enabled, tabs can be inserted by typing `<C-V>` and then `<Tab>`. Also, the to do title must begin with a lower case letter.
 
 ```vim
 	*Todo	your to do (starting with a lower case letter)
