@@ -18,7 +18,7 @@ Suppose you have a group of markdown files in a directory with spaces in the fil
 
 `\ls` runs the default *ls* regardless of any aliases you may have. This ensures clean output. `vim -` opens vim with the standard input. The result will be a new vim buffer with a list of filenames as plain text:
 
-```txt
+```zsh
 a file with spaces in the name.md
 another file.md
 why would anyone use spaces in filenames.md
@@ -26,7 +26,7 @@ why would anyone use spaces in filenames.md
 
 Now you may manipulate the filenames to create a list of shell commands. For example, you may use block selection and substitution to create the following.
 
-```txt
+```zsh
 mv a\ file\ with\ spaces\ in\ the\ name.md	a-file-with-spaces-in-the-name.md
 mv another\ file.md	another-file.md
 mv why\ would\ anyone\ use\ spaces\ in\ filenames.md	why-would-anyone-use-spaces-in-filenames.md

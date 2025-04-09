@@ -250,15 +250,15 @@ in the filenames.…<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-no
 aliases you may have. This ensures clean output. <code>vim -</code>
 opens vim with the standard input. The result will be a new vim buffer
 with a list of filenames as plain text:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode txt"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a file with spaces in the name.md</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>another file.md</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>why would anyone use spaces in filenames.md</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">a</span> file with spaces in the name.md</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">another</span> file.md</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">why</span> would anyone use spaces in filenames.md</span></code></pre></div>
 <p>Now you may manipulate the filenames to create a list of shell
 commands. For example, you may use block selection and substitution to
 create the following.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode txt"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mv a\ file\ with\ spaces\ in\ the\ name.md  a-file-with-spaces-in-the-name.md</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mv another\ file.md another-file.md</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>mv why\ would\ anyone\ use\ spaces\ in\ filenames.md    why-would-anyone-use-spaces-in-filenames.md</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> a<span class="dt">\ </span>file<span class="dt">\ </span>with<span class="dt">\ </span>spaces<span class="dt">\ </span>in<span class="dt">\ </span>the<span class="dt">\ </span>name.md  a-file-with-spaces-in-the-name.md</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> another<span class="dt">\ </span>file.md another-file.md</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> why<span class="dt">\ </span>would<span class="dt">\ </span>anyone<span class="dt">\ </span>use<span class="dt">\ </span>spaces<span class="dt">\ </span>in<span class="dt">\ </span>filenames.md    why-would-anyone-use-spaces-in-filenames.md</span></code></pre></div>
 <p>Finally, to run these commands line by line run the following Vim
 command.</p>
 <pre class="vim"><code>:w !sh</code></pre>
