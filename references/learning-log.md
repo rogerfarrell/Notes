@@ -3,6 +3,8 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                                                                                 references
 -----------     -----------------------------------------------------------------------------------------------------------------------     --------------------------------------------------
+2025-04-09      In Vim, open file under the cursor in a new split with `CTRL-W_f`.                                                          `:help CTRL-W_f`, <https://vimtricks.com/p/open-file-in-a-split/>
+
 2025-04-09      In Vim, quickly switch to  a one-time shell with `:shell` or `:sh`.                                                         `:help :shell`
 
 2025-04-09      In Git, use `git reset` to clear local changes since last commit.                                                           <https://stackoverflow.com/a/1146981/28799158>
