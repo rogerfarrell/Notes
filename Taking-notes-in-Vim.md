@@ -1,3 +1,7 @@
+---
+toc: true
+---
+
 [[vim]]
 
 # Taking notes in Vim
