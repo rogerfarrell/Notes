@@ -6,13 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>config-for-macos</title>
   <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">:root
+{
+--txt-color: color-mix(in srgb, CanvasText, Canvas 45%);
+}
 html {
-color: #1a1a1a;
-background-color: #fdfdfd;
+color: var(--txt-color);
+background-color: Canvas;
+color-scheme: light dark;
 }
 body {
+max-width: 45em;
+}
+a {
+color: var(--txt-color);
+}
+a:visited {
+color: var(--txt-color);
+}
+hr {
+border-top: 1px solid var(--txt-color);
+opacity: 0.75;
+}
+
+
+body {
 margin: 0 auto;
-max-width: 36em;
+
 padding-left: 50px;
 padding-right: 50px;
 padding-top: 50px;
@@ -51,12 +86,7 @@ page-break-after: avoid;
 p {
 margin: 1em 0;
 }
-a {
-color: #1a1a1a;
-}
-a:visited {
-color: #1a1a1a;
-}
+
 img {
 max-width: 100%;
 }
@@ -108,7 +138,7 @@ overflow: visible;
 }
 hr {
 border: none;
-border-top: 1px solid #1a1a1a;
+
 height: 1px;
 margin: 1em 0;
 }
@@ -156,7 +186,6 @@ span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
 div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-
 ul.task-list[class]{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 font-size: inherit;
