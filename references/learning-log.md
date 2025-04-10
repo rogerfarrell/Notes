@@ -3,6 +3,8 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                                                                                 references
 -----------     -----------------------------------------------------------------------------------------------------------------------     --------------------------------------------------
+2025-04-10      SVG favicons are now a thing.                                                                                               <https://css-tricks.com/svg-favicons-and-all-the-fun-things-we-can-do-with-them/>
+
 2025-04-10      In CSS, use `display: flow-root;` to ensure parent elements min size accounts for floated elements.                         <https://www.digitalocean.com/community/tutorials/css-no-more-clearfix-flow-root>
 
 2025-04-09      In Vim insert mode, evaluate expressions (e.g. math) by typing `<C-R>=yourexpression<CR>`.                                  `:help c_CTRL-R_=`, <https://vimtricks.com/p/vim-calculator/>
