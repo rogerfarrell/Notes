@@ -22,6 +22,7 @@ docs/%.html: %.md | docs/
 	@pandoc --from=markdown+wikilinks_title_after_pipe \
 					--standalone \
 					--embed-resources \
+					--toc \
 					--highlight-style=zenburn \
 					--include-in-header=template/styles.html \
 					--include-before-body=template/header.html \
@@ -33,6 +34,7 @@ docs/references/%.html: references/%.md | docs/references/
 	@pandoc --from=markdown+wikilinks_title_after_pipe \
 					--standalone \
 					--embed-resources \
+					--toc \
 					--highlight-style=zenburn \
 					--include-in-header=template/styles.html \
 					--include-before-body=template/header.html \
