@@ -208,9 +208,14 @@ nav {
 display: flow-root;
 font-size: 0.75em;
 border-bottom: 1px solid var(--color-accent);
+padding-bottom: 5px;
+a {
+text-decoration: none;
+}
 }
 .site-title {
 font-style: italic;
+float: left;
 }
 .github-link {
 float: right;
@@ -241,6 +246,13 @@ float: right;
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align: left;">2025-04-10</td>
+<td style="text-align: left;">In CSS, use
+<code>display: flow-root;</code> to ensure parent elements min size
+accounts for floated elements.</td>
+<td style="text-align: left;"><a href="https://www.digitalocean.com/community/tutorials/css-no-more-clearfix-flow-root" class="uri">https://www.digitalocean.com/community/tutorials/css-no-more-clearfix-flow-root</a></td>
+</tr>
 <tr>
 <td style="text-align: left;">2025-04-09</td>
 <td style="text-align: left;">In Vim insert mode, evaluate expressions
