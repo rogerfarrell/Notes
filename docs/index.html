@@ -186,7 +186,7 @@ color: var(--color-txt);
 a:visited {
 color: var(--color-txt);
 }
-a[href^="http"]:after{
+a[href^="http"]:not([href^="https://rogerfarrell.com"]):after{
 content:"\2B08"; 
 font-size: 0.8em;
 line-height: 0.8em;
@@ -230,7 +230,7 @@ float: right;
 <body>
 <nav class="running-header">
   <div class="site-title">
-    <a href="index.html">Roger Farrell’s notes</a>
+    <a href="https://rogerfarrell.com">Roger Farrell’s notes</a>
   </div>
   <div class="github-link">
     <a href="https://github.com/rogerfarrell/Notes/">GitHub</a>
