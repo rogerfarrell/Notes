@@ -6,61 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>development</title>
   <style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-
-ul.task-list[class]{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-font-size: inherit;
-width: 0.8em;
-margin: 0 0.8em 0.2em -1.6em;
-vertical-align: middle;
-}
-.display.math{display: block; text-align: center; margin: 0.5rem auto;}
-</style>
-  <style type="text/css">:root
-{
---color-txt: color-mix(in srgb, CanvasText, Canvas 45%);
---color-accent: color-mix(in srgb, CanvasText, Canvas 80%);
-}
 html {
-color: var(--color-txt);
-background-color: Canvas;
-color-scheme: light dark;
+color: #1a1a1a;
+background-color: #fdfdfd;
 }
-body {
-max-width: 45em;
-}
-a {
-color: var(--color-txt);
-}
-a:visited {
-color: var(--color-txt);
-}
-th {
-border-top: 1px solid var(--color-accent);
-}
-tbody {
-border-top: 1px solid var(--color-accent);
-border-bottom: 1px solid var(--color-accent);
-}
-div.sourceCode {
-background-color: var(--color-accent);
-padding: 0.5em;
-border-radius: 2px;
-}
-hr {
-border-top: 1px solid var(--color-accent);
-opacity: 0.75;
-}
-
-
 body {
 margin: 0 auto;
-
+max-width: 36em;
 padding-left: 50px;
 padding-right: 50px;
 padding-top: 50px;
@@ -99,7 +51,12 @@ page-break-after: avoid;
 p {
 margin: 1em 0;
 }
-
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
 img {
 max-width: 100%;
 }
@@ -151,7 +108,7 @@ overflow: visible;
 }
 hr {
 border: none;
-
+border-top: 1px solid #1a1a1a;
 height: 1px;
 margin: 1em 0;
 }
@@ -168,10 +125,11 @@ margin-bottom: 0.75em;
 }
 tbody {
 margin-top: 0.5em;
-
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
 }
 th {
-
+border-top: 1px solid #1a1a1a;
 padding: 0.25em 0.5em 0.25em 0.5em;
 }
 td {
@@ -198,6 +156,7 @@ span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
 div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
 ul.task-list[class]{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 font-size: inherit;
@@ -207,8 +166,63 @@ vertical-align: middle;
 }
 .display.math{display: block; text-align: center; margin: 0.5rem auto;}
 </style>
+  <style>
+:root
+{
+--color-txt: color-mix(in srgb, CanvasText, Canvas 45%);
+--color-accent: color-mix(in srgb, CanvasText, Canvas 80%);
+}
+html {
+color: var(--color-txt);
+background-color: Canvas;
+color-scheme: light dark;
+}
+body {
+max-width: 45em;
+}
+a {
+color: var(--color-txt);
+}
+a:visited {
+color: var(--color-txt);
+}
+th {
+border-top: 1px solid var(--color-accent);
+}
+tbody {
+border-top: 1px solid var(--color-accent);
+border-bottom: 1px solid var(--color-accent);
+}
+div.sourceCode {
+background-color: var(--color-accent);
+padding: 0.5em;
+border-radius: 2px;
+}
+hr {
+border: none;
+border-top: 1px solid var(--color-accent);
+opacity: 0.75;
+}
+
+nav {
+font-size: 0.75em;
+border-bottom: 1px solid var(--color-accent);
+}
+.site-title {
+font-style: italic;
+}
+.github-link {
+float: right;
+}
+</style>
 </head>
 <body>
+<nav>
+  <div class="site-title">Roger Farrell&#39;s notes</div>
+  <div class="github-link">
+    <a href="https://github.com/rogerfarrell/Notes/">GitHub</a>
+  </div>
+</nav>
 <h1 id="development">Development</h1>
 <ul>
 <li><a href="functional-programming" class="wikilink">functional-programming</a></li>

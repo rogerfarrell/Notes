@@ -19,12 +19,22 @@ all: | docs/ docs/references/ docs/attachments/ $(HTML_NOTES) $(HTML_REFERENCES)
 # Pattern rule for notes
 docs/%.html: %.md | docs/
 	@echo ⏳ Converting $< → $@
-	@pandoc --from=markdown+wikilinks_title_after_pipe -s --embed-resources --css styles.css -o $@ $<
+	@pandoc --from=markdown+wikilinks_title_after_pipe \
+					--standalone \
+					--embed-resources \
+					--include-in-header=template/styles.html \
+					--include-before-body=template/header.html \
+					--output $@ $<
 
 # Pattern rule for reference files
 docs/references/%.html: references/%.md | docs/references/
 	@echo ⏳ Converting $< → $@
-	@pandoc --from=markdown+wikilinks_title_after_pipe -s --embed-resources --css styles.css -o $@ $<
+	@pandoc --from=markdown+wikilinks_title_after_pipe \
+					--standalone \
+					--embed-resources \
+					--include-in-header=template/styles.html \
+					--include-before-body=template/header.html \
+					--output $@ $<
 
 # Pattern rule for attachments
 docs/attachments/%: attachments/% | docs/attachments/
