@@ -20,6 +20,21 @@ a:visited {
   color: var(--txt-color);
 }
 
+th {
+  border-top: 1px solid color-mix(in srgb, CanvasText, Canvas 80%);
+}
+
+tbody {
+  border-top: 1px solid color-mix(in srgb, CanvasText, Canvas 80%);
+  border-bottom:: 1px solid color-mix(in srgb, CanvasText, Canvas 80%);
+}
+
+div.sourceCode {
+  background-color: color-mix(in srgb, CanvasText, Canvas 80%);
+  padding: 0.5em;
+  border-radius: 2px;
+}
+
 hr {
   border-top: 1px solid var(--txt-color);
   opacity: 0.75;
@@ -151,11 +166,11 @@ table caption {
 }
 tbody {
   margin-top: 0.5em;
-  border-top: 1px solid #1a1a1a;
-  border-bottom: 1px solid #1a1a1a;
+/*border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;*/
 }
 th {
-  border-top: 1px solid #1a1a1a;
+/*border-top: 1px solid #1a1a1a;*/
   padding: 0.25em 0.5em 0.25em 0.5em;
 }
 td {
