@@ -1,6 +1,6 @@
 [[vim]]
 
-# Batching shell commands with vim
+# Batching shell commands with Vim
 
 Many default shell commands lack elegant implementations for working with multiple files. The typical workaround is to pipe *ls* to the standard input of an intermediate command, which effectively converts the list of filenames to a one-time shell script.[^1] While not optimal. This workflow does enable some interesting manipulations via Vim.
 

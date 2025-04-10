@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>batching-shell-commands-with-vim</title>
+  <title>simplest-possible-CSS-dark-mode</title>
   <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -274,40 +274,20 @@ vertical-align: middle;
 </style>
 </head>
 <body>
-<p><a href="vim" class="wikilink">vim</a></p>
-<h1 id="batching-shell-commands-with-vim">Batching shell commands with
-Vim</h1>
-<p>Many default shell commands lack elegant implementations for working
-with multiple files. The typical workaround is to pipe <em>ls</em> to
-the standard input of an intermediate command, which effectively
-converts the list of filenames to a one-time shell script.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
-While not optimal. This workflow does enable some interesting
-manipulations via Vim.</p>
-<h2 id="example-renaming-files">Example: renaming files</h2>
-<p>Suppose you have a group of markdown files in a directory with spaces
-in the filenames.…<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">\ls</span> <span class="pp">*</span>.md <span class="kw">|</span> <span class="ex">vim</span> <span class="at">-</span></span></code></pre></div>
-<p><code>\ls</code> runs the default <em>ls</em> regardless of any
-aliases you may have. This ensures clean output. <code>vim -</code>
-opens vim with the standard input. The result will be a new vim buffer
-with a list of filenames as plain text:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">a</span> file with spaces in the name.md</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">another</span> file.md</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">why</span> would anyone use spaces in filenames.md</span></code></pre></div>
-<p>Now you may manipulate the filenames to create a list of shell
-commands. For example, you may use block selection and substitution to
-create the following.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> a<span class="dt">\ </span>file<span class="dt">\ </span>with<span class="dt">\ </span>spaces<span class="dt">\ </span>in<span class="dt">\ </span>the<span class="dt">\ </span>name.md  a-file-with-spaces-in-the-name.md</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> another<span class="dt">\ </span>file.md another-file.md</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> why<span class="dt">\ </span>would<span class="dt">\ </span>anyone<span class="dt">\ </span>use<span class="dt">\ </span>spaces<span class="dt">\ </span>in<span class="dt">\ </span>filenames.md    why-would-anyone-use-spaces-in-filenames.md</span></code></pre></div>
-<p>Finally, to run these commands line by line run the following Vim
-command.</p>
-<pre class="vim"><code>:w !sh</code></pre>
+<p><a href="development" class="wikilink">development</a></p>
+<h1 id="simplest-possible-css-dark-mode">Simplest possible CSS dark
+mode</h1>
+<p>The following three lines are all that is required to enable
+responsive default dark mode support.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>body {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color-scheme</span><span class="ch">:</span> <span class="dv">light</span> <span class="dv">dark</span><span class="op">;</span> <span class="co">/* tells the browse that the page supports both light and dark modes */</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">CanvasText</span><span class="op">;</span> <span class="co">/* sets the default text color to the browser&#39;s responsive default */</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">Canvas</span><span class="op">;</span> <span class="co">/* sets the default background color to the browser&#39;s responsive default */</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p><a href="https://stackoverflow.com/a/2372739/28799158" class="uri">https://stackoverflow.com/a/2372739/28799158</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><a href="https://vim.fandom.com/wiki/Bulk_rename_files_with_Vim#:~:text=You%20can%20use%20Vim%20to,in%2Dmemory%20simplistic%20shell%20script." class="uri">https://vim.fandom.com/wiki/Bulk_rename_files_with_Vim#:~:text=You%20can%20use%20Vim%20to,in%2Dmemory%20simplistic%20shell%20script.</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p><a href="https://dev.to/madsstoumann/dark-mode-in-3-lines-of-css-and-other-adventures-1ljj" class="uri">https://dev.to/madsstoumann/dark-mode-in-3-lines-of-css-and-other-adventures-1ljj</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 </body>
