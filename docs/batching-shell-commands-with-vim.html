@@ -88,10 +88,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
 </style>
   <style type="text/css">:root
 {
---txt-color: color-mix(in srgb, CanvasText, Canvas 45%);
+--color-txt: color-mix(in srgb, CanvasText, Canvas 45%);
+--color-accent: color-mix(in srgb, CanvasText, Canvas 80%);
 }
 html {
-color: var(--txt-color);
+color: var(--color-txt);
 background-color: Canvas;
 color-scheme: light dark;
 }
@@ -99,25 +100,25 @@ body {
 max-width: 45em;
 }
 a {
-color: var(--txt-color);
+color: var(--color-txt);
 }
 a:visited {
-color: var(--txt-color);
+color: var(--color-txt);
 }
 th {
-border-top: 1px solid color-mix(in srgb, CanvasText, Canvas 80%);
+border-top: 1px solid var(--color-accent);
 }
 tbody {
-border-top: 1px solid color-mix(in srgb, CanvasText, Canvas 80%);
-border-bottom:: 1px solid color-mix(in srgb, CanvasText, Canvas 80%);
+border-top: 1px solid var(--color-accent);
+border-bottom: 1px solid var(--color-accent);
 }
 div.sourceCode {
-background-color: color-mix(in srgb, CanvasText, Canvas 80%);
+background-color: var(--color-accent);
 padding: 0.5em;
 border-radius: 2px;
 }
 hr {
-border-top: 1px solid var(--txt-color);
+border-top: 1px solid var(--color-accent);
 opacity: 0.75;
 }
 
