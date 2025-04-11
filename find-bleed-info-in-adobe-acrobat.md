@@ -1,5 +1,5 @@
 ---
-include-before: '[[software]]'
+include-before-body: '[[software]]'
 title: Find bleed info in Adobe Acrobat
 ---
 

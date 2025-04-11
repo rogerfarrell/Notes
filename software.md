@@ -1,5 +1,5 @@
 ---
-include-before: '[[computer]]'
+include-before-body: '[[computer]]'
 title: Software
 ---
 

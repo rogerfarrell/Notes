@@ -1,5 +1,5 @@
 ---
-include-before: '[[typing]]'
+include-before-body: '[[typing]]'
 title: My ZSA Voyager config
 ---
 

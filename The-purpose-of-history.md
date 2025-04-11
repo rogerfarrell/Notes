@@ -1,5 +1,5 @@
 ---
-include-before: '[[history]]'
+include-before-body: '[[history]]'
 title: The purpose of history
 ---
 

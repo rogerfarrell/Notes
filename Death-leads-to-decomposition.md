@@ -1,5 +1,5 @@
 ---
-include-before: '[[symbolism]], [[theology]]'
+include-before-body: '[[symbolism]], [[theology]]'
 title: Death leads to decomposition
 ---
 

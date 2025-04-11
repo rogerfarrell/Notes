@@ -1,5 +1,5 @@
 ---
-include-before: '[[vim]]'
+include-before-body: '[[vim]]'
 title: Avoiding visual mode in Vim
 ---
 

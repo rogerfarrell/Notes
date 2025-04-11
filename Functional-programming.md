@@ -1,5 +1,5 @@
 ---
-include-before: '[[development]]'
+include-before-body: '[[development]]'
 title: Functional Programming
 ---
 

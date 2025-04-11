@@ -1,5 +1,5 @@
 ---
-include-before: '[[functional-programming]]'
+include-before-body: '[[functional-programming]]'
 title: Deriving recursive expressions
 ---
 

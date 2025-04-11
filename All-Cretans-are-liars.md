@@ -1,5 +1,5 @@
 ---
-include-before: '[[bible]]'
+include-before-body: '[[bible]]'
 title: All Cretans are liars
 ---
 

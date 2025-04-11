@@ -1,5 +1,5 @@
 ---
-include-before: '[[vim]]'
+include-before-body: '[[vim]]'
 title: Writing personal notes in Vim help docs
 ---
 

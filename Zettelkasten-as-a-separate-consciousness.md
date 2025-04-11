@@ -1,5 +1,5 @@
 ---
-include-before: '[[zettelkasten]]'
+include-before-body: '[[zettelkasten]]'
 title: Zettelkasten as a separate consciousness
 ---
 

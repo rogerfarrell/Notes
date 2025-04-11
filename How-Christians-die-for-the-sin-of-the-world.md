@@ -1,5 +1,5 @@
 ---
-include-before: '[[theology]]'
+include-before-body: '[[theology]]'
 title: How Christians die for the sin of the world
 ---
 

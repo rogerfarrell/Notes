@@ -1,5 +1,5 @@
 ---
-include-before: '[[cars]]'
+include-before-body: '[[cars]]'
 title: How to replace spark plugs on a Toyota 2GR-FE
 ---
 

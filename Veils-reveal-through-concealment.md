@@ -1,5 +1,5 @@
 ---
-include-before: '[[symbolism]], [[veils]]'
+include-before-body: '[[symbolism]], [[veils]]'
 title: Veils reveal through concealment
 ---
 

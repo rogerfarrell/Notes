@@ -1,5 +1,5 @@
 ---
-include-before: '[[symbolism]]'
+include-before-body: '[[symbolism]]'
 title: Veils
 ---
 

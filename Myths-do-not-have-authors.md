@@ -1,5 +1,5 @@
 ---
-include-before: '[[mythology]]'
+include-before-body: '[[mythology]]'
 title: Myths do not have authors
 ---
 
