@@ -41,4 +41,4 @@ a:not(.wikilink):not([href^="https://rogerfarrell.net"]):after {
 }
 ```
 
-The `^=` in the href attribute denotes that the href begins with the following string. `\2B08` is the CSS representation of [⬈](https://www.compart.com/en/unicode/U+2B08).
+The `^=` in the href attribute denotes that the href begins with the following string. [`\2B08` ](https://www.compart.com/en/unicode/U+2B08) is the CSS representation of ⬈.
