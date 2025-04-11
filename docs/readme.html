@@ -209,11 +209,11 @@ border-top: 1px solid var(--color-accent);
 opacity: 0.75;
 }
 
-nav.running-header {
+nav.running-footer {
 display: flow-root;
 font-size: 0.75em;
-border-bottom: 1px solid var(--color-accent);
-padding-bottom: 5px;
+border-top: 1px solid var(--color-accent);
+padding-top: 5px;
 a {
 text-decoration: none;
 }
@@ -228,7 +228,9 @@ float: right;
 </style>
 </head>
 <body>
-<nav class="running-header">
+<p>These are my personal notes. I am writing them in Vim. They are
+converted to HTML via Pandoc and published to <a href="https://rogerfarrell.net">my website</a> with GitHub Pages.</p>
+<nav class="running-footer">
   <div class="site-title">
     <a href="https://rogerfarrell.net">Roger Farrell’s notes</a>
   </div>
@@ -236,7 +238,5 @@ float: right;
     <a href="https://github.com/rogerfarrell/Notes/">GitHub</a>
   </div>
 </nav>
-<p>These are my personal notes. I am writing them in Vim. They are
-converted to HTML via Pandoc and published to <a href="https://rogerfarrell.net">my website</a> with GitHub Pages.</p>
 </body>
 </html>

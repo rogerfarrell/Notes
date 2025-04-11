@@ -24,7 +24,7 @@ docs/%.html: %.md | docs/
 					--embed-resources \
 					--highlight-style=zenburn \
 					--include-in-header=template/styles.html \
-					--include-before-body=template/header.html \
+					--include-after-body=template/footer.html \
 					--output $@ $<
 
 # Pattern rule for reference files
@@ -35,7 +35,7 @@ docs/references/%.html: references/%.md | docs/references/
 					--embed-resources \
 					--highlight-style=zenburn \
 					--include-in-header=template/styles.html \
-					--include-before-body=template/header.html \
+					--include-after-body=template/footer.html \
 					--output $@ $<
 
 # Pattern rule for attachments
