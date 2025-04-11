@@ -1,7 +1,6 @@
-https://books.apple.com/us/book/the-divine-comedy/id357913986
-
 ---
 title: The Divine Comedy
+subtitle: '<https://books.apple.com/us/book/the-divine-comedy/id357913986>'
 ---
 
 by Dante Alighieri (Author), John Ciardi (Translator)

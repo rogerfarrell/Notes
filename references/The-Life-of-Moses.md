@@ -1,7 +1,6 @@
-https://books.apple.com/us/book/the-life-of-moses/id1331647672
-
 ---
 title: The Life of Moses
+subtitle: '<https://books.apple.com/us/book/the-life-of-moses/id1331647672>'
 ---
 
 by St Gregory of Nyssa

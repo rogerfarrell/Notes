@@ -1,5 +1,6 @@
 ---
 title: The Lord's Prayer in Greek
+subtitle: '<https://wikisource.org/wiki/Πάτερ_ἡμῶν>'
 ---
 
 > Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς
@@ -43,7 +44,3 @@ Transliterated:
 > allà rhŷsai hēmâs apò toû ponēroû.
 >
 > [hóti soû estin hē basileía kaì hē dýnamis kaì hē dóxa eis toùs aiō̂nas. amḗn.]
-
----
-
-- <https://wikisource.org/wiki/Πάτερ_ἡμῶν>
