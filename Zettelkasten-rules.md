@@ -1,6 +1,5 @@
-[[zettelkasten]]
-
 ---
+include-before: '[[zettelkasten]]'
 title: Zettelkasten rules
 ---
 

@@ -1,6 +1,5 @@
-[[poetry]]
-
 ---
+include-before: '[[poetry]]'
 title: A list of classic poems
 ---
 

@@ -1,6 +1,5 @@
-[[vim]]
-
 ---
+include-before: '[[vim]]'
 title: Taking notes in Vim
 ---
 

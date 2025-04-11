@@ -1,6 +1,5 @@
-[[vim]]
-
 ---
+include-before: '[[vim]]'
 title: Netrw workflow
 ---
 

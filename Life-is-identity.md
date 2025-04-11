@@ -1,6 +1,5 @@
-[[symbolism]]
-
 ---
+include-before: '[[symbolism]]'
 title: Life is identity
 ---
 

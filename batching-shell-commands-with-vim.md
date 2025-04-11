@@ -1,6 +1,5 @@
-[[vim]]
-
 ---
+include-before: '[[vim]]'
 title: Batching shell commands with Vim
 ---
 

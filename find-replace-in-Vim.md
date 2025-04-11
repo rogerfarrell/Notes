@@ -1,6 +1,5 @@
-[[vim]]
-
 ---
+include-before: '[[vim]]'
 title: Find/replace in Vim
 ---
 

@@ -1,6 +1,5 @@
-[[symbolism]]
-
 ---
+include-before: '[[symbolism]]'
 title: Creation is judged by its fruit
 ---
 

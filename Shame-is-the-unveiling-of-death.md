@@ -1,6 +1,5 @@
-[[symbolism]], [[veils]]
-
 ---
+include-before: '[[symbolism]], [[veils]]'
 title: Shame is the unveiling of death
 ---
 

@@ -1,6 +1,5 @@
-[[software]]
-
 ---
+include-before: '[[software]]'
 title: What is a Makefile?
 ---
 

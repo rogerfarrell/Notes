@@ -1,6 +1,5 @@
-[[history]]
-
 ---
+include-before: '[[history]]'
 title: The purpose of history
 ---
 

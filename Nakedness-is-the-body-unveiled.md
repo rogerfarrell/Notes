@@ -1,6 +1,5 @@
-[[symbolism]], [[veils]]
-
 ---
+include-before: '[[symbolism]], [[veils]]'
 title: Nakedness is the body unveiled
 ---
 

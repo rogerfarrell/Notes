@@ -1,6 +1,5 @@
-[[macos]]
-
 ---
+include-before: '[[macos]]'
 title: General naming conventions
 ---
 

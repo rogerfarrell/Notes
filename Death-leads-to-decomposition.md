@@ -1,6 +1,5 @@
-[[symbolism]], [[theology]]
-
 ---
+include-before: '[[symbolism]], [[theology]]'
 title: Death leads to decomposition
 ---
 

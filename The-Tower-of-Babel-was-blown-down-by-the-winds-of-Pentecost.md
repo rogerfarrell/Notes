@@ -1,6 +1,5 @@
-[[symbolism]]
-
 ---
+include-before: '[[symbolism]]'
 title: The Tower of Babel was blown down by the winds of Pentecost
 ---
 
