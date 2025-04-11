@@ -30,11 +30,11 @@ Internal link rendered to HTML via Pandoc:
 <a href="taking-notes-in-vim" class="wikilink">taking-notes-in-vim</a>
 ```
 
-Only internal links will have the `wikilink` class. Here is how we target them with CSS:
+Here is how we target them with CSS:
 
 ```css
-a:not(.wikilink):not([href^="https://rogerfarrell.net"]):after {
-  content: "\2B08";
+a[href^="http"]:not([href^="https://rogerfarrell.net"]):after {
+  content:"\2B08"; /* this is a Northeast-pointed arrow to signify external links */
   font-size: 0.8em;
   line-height: 0.8em;
   vertical-align: super;
