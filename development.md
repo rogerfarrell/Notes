@@ -2,6 +2,6 @@
 title: Development
 ---
 
-- [[functional-programming]]
 - [[flag-external-links-with-css]]
+- [[functional-programming]]
 - [[simplest-possible-css-dark-mode]]

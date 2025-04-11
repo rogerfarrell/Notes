@@ -7,6 +7,7 @@ subtitle: '[[computer]]'
 - [[batching-shell-commands-with-vim]]
 - [[find-replace-in-Vim]]
 - [[netrw-workflow]]
+- [[running-pandoc-on-a-selection-within-a-file-in-vim]]
 - [[taking-notes-in-vim]]
 - [[using-marks-in-vim]]
 - [[vim-tips]]
