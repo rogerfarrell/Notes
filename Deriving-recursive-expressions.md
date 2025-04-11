@@ -21,9 +21,9 @@ sumTo n = n + sumTo (n - 1)
 sumTo n = n + sumTo (n - 1)
 ```
 
-The recurrence relation is the recursive part of a recursive solution. To find the recursive relation for a give problem, assume your function already has a correct implementation. Using your imaginarily implemented function, solve the simplest subproblem. This is a problem which is only one step from your desired result. For a `sumTo` function which adds numbers from `1` to `n`, this is `sumTo (n - 1)`.
+The recurrence relation is the recursive part of a recursive solution. To find the recursive relation for a give problem, assume your function already has a correct implementation. Using your imaginarily implemented function, solve the simplest sub problem. This is a problem which is only one step from your desired result. For a `sumTo` function which adds numbers from `1` to `n`, this is `sumTo (n - 1)`.
 
-Once we have expressed the subproblem, we can express the complete problem by adding the final step. In this case, we add `n` to `sumTo (n - 1)`
+Once we have expressed the sub problem, we can express the complete problem by adding the final step. In this case, we add `n` to `sumTo (n - 1)`
 
 ## Finding the base cases
 

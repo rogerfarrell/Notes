@@ -3,6 +3,8 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                                                                                 references
 -----------     -----------------------------------------------------------------------------------------------------------------------     --------------------------------------------------
+2025-04-10      Zenburn is a Vim color scheme used natively for Pandoc syntax highlighting. It is so good, I am using it in my .vimrc.      <https://github.com/jnurmine/Zenburn>
+
 2025-04-10      SVG favicons are now a thing.                                                                                               <https://css-tricks.com/svg-favicons-and-all-the-fun-things-we-can-do-with-them/>
 
 2025-04-10      In CSS, use `display: flow-root;` to ensure parent elements min size accounts for floated elements.                         <https://www.digitalocean.com/community/tutorials/css-no-more-clearfix-flow-root>
