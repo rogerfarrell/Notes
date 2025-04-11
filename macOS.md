@@ -1,6 +1,8 @@
 [[computer]]
 
-# macOS
+---
+title: macOS
+---
 
 - [[config-for-macos]]
 - [[general-naming-conventions]]

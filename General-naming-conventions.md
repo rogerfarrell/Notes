@@ -1,6 +1,8 @@
 [[macos]]
 
-# General naming conventions
+---
+title: General naming conventions
+---
 
 - prefer lowercase unless there is a clear reason for capitalization
 - avoid abbreviations unless clearly warranted

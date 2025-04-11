@@ -1,4 +1,6 @@
-# Internalized vs externalized config
+---
+title: Internalized vs externalized config
+---
 
 Configuration files are a form of active externalism. There is a trade-off:
 

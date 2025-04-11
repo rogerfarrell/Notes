@@ -1,4 +1,6 @@
-# Cultural Christianity is a good thing
+---
+title: Cultural Christianity is a good thing
+---
 
 ## TODO
 

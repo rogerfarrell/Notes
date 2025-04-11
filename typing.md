@@ -1,5 +1,7 @@
 [[computer]]
 
-# Typing
+---
+title: Typing
+---
 
 - [[my-zsa-voyager-config]]

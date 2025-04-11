@@ -1,6 +1,8 @@
 [[bible]]
 
-# All Cretans are liars
+---
+title: All Cretans are liars
+---
 
 ## Leads for further study
 

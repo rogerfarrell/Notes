@@ -1,6 +1,8 @@
 [[symbolism]]
 
-# Patterns of 4
+---
+title: Patterns of 4
+---
 
 - Cold, hot, moist, dry
 - Water, earth, air, fire

@@ -1,6 +1,8 @@
 [[computer]]
 
-# Software
+---
+title: Software
+---
 
 - [[find-bleed-info-in-adobe-acrobat]]
 - [[google-docs-shortcuts]]

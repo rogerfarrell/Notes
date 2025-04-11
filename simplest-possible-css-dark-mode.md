@@ -1,6 +1,8 @@
 [[development]]
 
-# Simplest possible CSS dark mode
+---
+title: Simplest possible CSS dark mode
+---
 
 The following three lines are all that is required to enable responsive default dark mode support.[^1]
 

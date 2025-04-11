@@ -1,6 +1,8 @@
 [[mythology]]
 
-# Myths do not have authors
+---
+title: Myths do not have authors
+---
 
 Myths emerge from culture through time. They have no authors. *Mythic* stories are like myths, but not the same.[^1] (E.g. Tolkien wrote a *mythic* story.)
 

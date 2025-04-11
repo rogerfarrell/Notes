@@ -1,6 +1,8 @@
 [[symbolism]]
 
-# Veils
+---
+title: Veils
+---
 
 - [[veils-reveal-through-concealment]]
 - [[virtue-is-a-covering]]

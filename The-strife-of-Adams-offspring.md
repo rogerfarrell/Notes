@@ -1,6 +1,8 @@
 [Symbolism](symbolism)
 
-# The strife of Adam's offspring
+---
+title: The strife of Adam's offspring
+---
 
 - Adam is the prototype of man’s fallen nature.
 - The offspring of man’s fallen nature is twofold.

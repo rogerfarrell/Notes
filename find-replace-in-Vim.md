@@ -1,6 +1,8 @@
 [[vim]]
 
-# Find/replace in Vim
+---
+title: Find/replace in Vim
+---
 
 There are a couple ways to find/replace in Vim. The most vim-like way consists of populating the QuickFix list (`:help quickfix`) with all the files you intend to search across. You can then iterate through these files, applying any commands you desire.
 

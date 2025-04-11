@@ -1,4 +1,6 @@
-# Computer
+---
+title: Computer
+---
 
 - [[macos]]
 - [[software]]

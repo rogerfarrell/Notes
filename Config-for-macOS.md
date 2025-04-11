@@ -1,6 +1,8 @@
 [[macos]]
 
-# Config for macOS
+---
+title: Config for macOS
+---
 
 These are the 3rd party apps I am currently using to extend macOS.
 

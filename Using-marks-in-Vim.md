@@ -1,6 +1,8 @@
 [[vim]]
 
-# Using marks in Vim
+---
+title: Using marks in Vim
+---
 
 Marks enable rapid navigation between common (and arbitrary) destinations in any file. See `:help mark-motions` for the complete documentation. Below are some practical takeaways.
 

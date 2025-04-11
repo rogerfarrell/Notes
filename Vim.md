@@ -1,6 +1,8 @@
 [[computer]]
 
-# Vim
+---
+title: Vim
+---
 
 - [[avoiding-visual-mode-in-vim]]
 - [[batching-shell-commands-with-vim]]

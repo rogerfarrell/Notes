@@ -1,6 +1,8 @@
 [[zettelkasten]]
 
-# Zettelkasten rules
+---
+title: Zettelkasten rules
+---
 
 ## Atomize thoughts
 

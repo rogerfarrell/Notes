@@ -1,4 +1,6 @@
-# Symbolism
+---
+title: Symbolism
+---
 
 - [[christs-incarnation-restores-cosmic-communion]]
 - [[existence-as-sacrifice]]

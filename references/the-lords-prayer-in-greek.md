@@ -1,4 +1,6 @@
-# The Lord's Prayer in Greek
+---
+title: The Lord's Prayer in Greek
+---
 
 > Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς
 >

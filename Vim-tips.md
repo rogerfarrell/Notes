@@ -1,6 +1,8 @@
 [[vim]]
 
-# Vim tips
+---
+title: Vim tips
+---
 
 ## To do
 

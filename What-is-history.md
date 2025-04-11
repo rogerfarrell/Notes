@@ -1,6 +1,8 @@
 [[history]]
 
-# What is history?
+---
+title: What is history?
+---
 
 - History is narrative composed of communal impressions of past events.[^1]
     - Impressions are lasting memories based on perception.

@@ -1,5 +1,7 @@
 [[development]]
 
-# Functional Programming
+---
+title: Functional Programming
+---
 
 - [[deriving-recursive-expressions]]

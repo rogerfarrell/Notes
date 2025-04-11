@@ -1,6 +1,8 @@
 [[zettelkasten]]
 
-# My personal zettelkasten workflow
+---
+title: My personal zettelkasten workflow
+---
 
 ## Realtime idea capture
 

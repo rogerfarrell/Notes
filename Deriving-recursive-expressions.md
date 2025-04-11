@@ -1,6 +1,8 @@
 [[functional-programming]]
 
-# Deriving recursive expressions
+---
+title: Deriving recursive expressions
+---
 
 Every recursive solution is made up of two parts:
 

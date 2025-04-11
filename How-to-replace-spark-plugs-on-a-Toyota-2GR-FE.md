@@ -1,6 +1,8 @@
 [[cars]]
 
-# How to replace spark plugs on a Toyota 2GR-FE
+---
+title: How to replace spark plugs on a Toyota 2GR-FE
+---
 
 ## Tools and supplies required
 

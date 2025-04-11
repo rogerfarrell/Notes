@@ -1,6 +1,8 @@
 [[cars]]
 
-# Troubleshooting P0352
+---
+title: Troubleshooting P0352
+---
 
 OBD code P0352 indicates: Ignition Coil B Primary/Secondary Circuit Malfunction
 
