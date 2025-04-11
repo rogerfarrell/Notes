@@ -2,7 +2,6 @@
 
 ---
 title: Taking notes in Vim
-toc: true
 ---
 
 Vim is a great platform for taking notes. However, some constraints are necessary to maximize efficiency for real-time thought-capture.
