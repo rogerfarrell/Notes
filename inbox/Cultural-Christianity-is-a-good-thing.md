@@ -2,7 +2,7 @@
 title: Cultural Christianity is a good thing
 ---
 
-## TODO
+# TODO
 
 - [ ] Find a suitable link to some preexisting note
 

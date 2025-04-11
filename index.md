@@ -8,7 +8,7 @@ As per zettelkasten methodology, these notes are not organized in a hierarchy. T
 
 To see a frequently-updated history of stuff I am currently learning about, check out my learning log: [[references/learning-log]].
 
-# The registry
+ The registry
 
 - [[bible]]
 - [[cars]]

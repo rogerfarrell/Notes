@@ -6,12 +6,12 @@ title: The Divine Comedy
 
 by Dante Alighieri (Author), John Ciardi (Translator)
 
-## The Inferno
+# The Inferno
 
-### Canto I
+## Canto I
 
 The opening scene of *Over the Garden Wall* is earily similar to Dante's *Dark Wood of Error*.
 
-## The Purgatorio
+# The Purgatorio
 
-## The Paradiso
+# The Paradiso

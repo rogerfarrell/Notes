@@ -4,24 +4,24 @@
 title: Vim tips
 ---
 
-## To do
+# To do
 
 - [ ] Read and process this great article about GREP in Vim: <https://thevaluable.dev/regular-expression-basics-vim-grep/>
 
-## Find/replace
+# Find/replace
 
 - Immediately after searching a pattern with `/` use `c//e` to replace the currently highlighted match.
 - Refer to `:help pattern-atoms` for some basic info about Vim's default GREP flavor.
 
-## Multiplexing
+# Multiplexing
 
 Vanilla Vim is adequate for basic multiplexing: [[multiplexing-in-vanilla-vim]]
 
-## Navigating `:help`
+# Navigating `:help`
 
 - See `:help key-notation` for key abbreviations
 
-## Navigating files
+# Navigating files
 
 - Quickly open Netrw to the path of the current file: `:E`
 - go to file under cursor: `gf`
@@ -32,12 +32,12 @@ Vanilla Vim is adequate for basic multiplexing: [[multiplexing-in-vanilla-vim]]
 
 - Clear highlighting till next search: `:nohlsearch` or `:noh`
 
-## Targeting nouns
+# Targeting nouns
 
 - Around (whole noun): `<verb> i <noun>`
 - Inside (inner content): `<verb> i <noun>`
 
-## Moving the cursor
+# Moving the cursor
 
 - Scroll up: `<C-u>`
 - Scroll down: `<C-d>`

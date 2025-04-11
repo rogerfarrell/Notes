@@ -4,7 +4,7 @@
 title: How to replace spark plugs on a Toyota 2GR-FE
 ---
 
-## Tools and supplies required
+# Tools and supplies required
 
 - torque wrench (capable of 15 ft lbs)
 - 5/8" spark plug socket
@@ -15,7 +15,7 @@ title: How to replace spark plugs on a Toyota 2GR-FE
 - spark plugs ([Denso 3426 FK20HR-11 Iridium Long Life](https://www.densoproducts.com/denso-3426-fk20hr-11-iridium-long-life-spark-plug))
 - dielectric greese
 
-## Instructions
+# Instructions
 
 - [Video instructions](https://youtu.be/ExZ--18pFUw?si=Ox1U84M7M3NpOTr3)
 - [Step-by-step instructions with pictures](https://www.rav4world.com/posts/2602801/)

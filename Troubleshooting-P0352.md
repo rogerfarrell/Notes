@@ -20,7 +20,7 @@ For more information about this code, see [this](https://www.identifix.com/blogs
 
 ![Cylinder order](attachments/2gr-fe-cylinders.jpeg)
 
-## Potential causes
+# Potential causes
 
 - Defective ignition coil
 - Defective spark plug

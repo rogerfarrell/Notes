@@ -8,7 +8,7 @@ Many default shell commands lack elegant implementations for working with multip
 
 [^1]: <https://stackoverflow.com/a/2372739/28799158>
 
-## Example: renaming files
+# Example: renaming files
 
 Suppose you have a group of markdown files in a directory with spaces in the filenames.…[^2]
 

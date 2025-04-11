@@ -244,7 +244,7 @@ float: right;
 consists of populating the QuickFix list (<code>:help quickfix</code>)
 with all the files you intend to search across. You can then iterate
 through these files, applying any commands you desire.</p>
-<h2 id="populating-the-quickfix-list">Populating the QuickFix list</h2>
+<h1 id="populating-the-quickfix-list">Populating the QuickFix list</h1>
 <p>My preferred way to populate the QuickFix list is using
 <code>:vimgrep</code> (<code>:vim</code> for short). This uses Vim’s
 internal grep engine, which is consistent across systems. A typical
@@ -252,8 +252,8 @@ command is as follows: <code>:vim /searchpattern/ pathtofiles</code>.
 See <code>:help :vimgrep</code> for more info. Note that this will
 populate the QuickFix list with all matches from all files at the
 specified path. This will be useful later.</p>
-<h2 id="running-a-findreplace-on-quickfix-entries">Running a
-find/replace on QuickFix entries</h2>
+<h1 id="running-a-findreplace-on-quickfix-entries">Running a
+find/replace on QuickFix entries</h1>
 <p>There are two relevant commands: <code>:cdo</code> and
 <code>:cfdo</code>. <code>:cdo</code> runs a command for all QuickFix
 list entries. <code>:cfdo</code> runs a command for all files with

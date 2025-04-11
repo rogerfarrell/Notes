@@ -17,7 +17,7 @@ sumTo 0 = 0
 sumTo n = n + sumTo (n - 1)
 ```
 
-## Deriving the recurrence relation
+# Deriving the recurrence relation
 
 ```haskell
 sumTo n = n + sumTo (n - 1)
@@ -27,7 +27,7 @@ The recurrence relation is the recursive part of a recursive solution. To find t
 
 Once we have expressed the sub problem, we can express the complete problem by adding the final step. In this case, we add `n` to `sumTo (n - 1)`
 
-## Finding the base cases
+# Finding the base cases
 
 ```haskell
 -- the base case

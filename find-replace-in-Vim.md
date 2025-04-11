@@ -6,11 +6,11 @@ title: Find/replace in Vim
 
 There are a couple ways to find/replace in Vim. The most vim-like way consists of populating the QuickFix list (`:help quickfix`) with all the files you intend to search across. You can then iterate through these files, applying any commands you desire.
 
-## Populating the QuickFix list
+# Populating the QuickFix list
 
 My preferred way to populate the QuickFix list is using `:vimgrep` (`:vim` for short). This uses Vim's internal grep engine, which is consistent across systems. A typical command is as follows: `:vim /searchpattern/ pathtofiles`. See `:help :vimgrep` for more info. Note that this will populate the QuickFix list with all matches from all files at the specified path. This will be useful later.
 
-## Running a find/replace on QuickFix entries
+# Running a find/replace on QuickFix entries
 
 There are two relevant commands: `:cdo` and `:cfdo`. `:cdo` runs a command for all QuickFix list entries. `:cfdo` runs a command for all files with entries in the QuickFix list. 
 

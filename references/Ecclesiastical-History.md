@@ -6,6 +6,6 @@ title: Ecclesiastical History, A History of the Church in 5 Books from A.D.322 t
 
 By Theodoretus (Bishop of Cyrus)
 
-## Chapter XXVI
+# Chapter XXVI
 
 The monk Telemachus jumped into the arena (presumed the colosseum) to stop the fighting. He was subsequently stoned by the audience. However, his display moved the emperor to abolish the games.
