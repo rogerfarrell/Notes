@@ -1,6 +1,6 @@
 ---
-include-before: '[[macos]]'
 title: General naming conventions
+subtitle: '[[macos]]'
 ---
 
 - prefer lowercase unless there is a clear reason for capitalization

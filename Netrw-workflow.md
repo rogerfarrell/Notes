@@ -1,6 +1,6 @@
 ---
-include-before: '[[vim]]'
 title: Netrw workflow
+subtitle: '[[vim]]'
 ---
 
 Netrw can be used to great effect with no configuration. To navigate directories mid-editing, use the following workflow from the Netrw help docs (see `:help netrw-i`).

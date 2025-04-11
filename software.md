@@ -1,6 +1,6 @@
 ---
-include-before: '[[computer]]'
 title: Software
+subtitle: '[[computer]]'
 ---
 
 - [[find-bleed-info-in-adobe-acrobat]]

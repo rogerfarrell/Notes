@@ -1,6 +1,6 @@
 ---
-include-before: '[[bible]]'
 title: All Cretans are liars
+subtitle: '[[bible]]'
 ---
 
 # Leads for further study

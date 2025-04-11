@@ -1,6 +1,6 @@
 ---
-include-before: '[[symbolism]]'
 title: Veils
+subtitle: '[[symbolism]]'
 ---
 
 - [[veils-reveal-through-concealment]]

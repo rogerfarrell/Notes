@@ -1,6 +1,6 @@
 ---
-include-before: '[[software]]'
 title: Google Docs shortcuts
+subtitle: '[[software]]'
 ---
 
 Here are some useful keyboard shortcuts that I use regularly (when I use Google Docs). For the complete list, see [support.google.com](https://support.google.com/docs/answer/179738?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Cmac-shortcuts).

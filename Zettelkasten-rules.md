@@ -1,6 +1,6 @@
 ---
-include-before: '[[zettelkasten]]'
 title: Zettelkasten rules
+subtitle: '[[zettelkasten]]'
 ---
 
 # Atomize thoughts

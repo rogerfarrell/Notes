@@ -1,6 +1,6 @@
 ---
-include-before: '[[symbolism]]'
 title: Existence as sacrifice
+subtitle: '[[symbolism]]'
 ---
 
 For an identity to exist (participate in being), it must sacrifice itself to its appropriate place in the identity hierarchy.[^1] This happens in two parts:

@@ -1,6 +1,6 @@
 ---
-include-before: '[[history]]'
 title: What is history?
+subtitle: '[[history]]'
 ---
 
 - History is narrative composed of communal impressions of past events.[^1]

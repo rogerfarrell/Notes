@@ -1,6 +1,6 @@
 ---
-include-before: '[[computer]]'
 title: Vim
+subtitle: '[[computer]]'
 ---
 
 - [[avoiding-visual-mode-in-vim]]

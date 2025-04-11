@@ -1,6 +1,6 @@
 ---
-include-before: '[[vim]]'
 title: Multiplexing in vanilla Vim
+subtitle: '[[vim]]'
 ---
 
 Vim comes standard with basic multiplexing functionality. See the below comparison to a common terminal multiplexer called tmux. Note that Vim supports only one session at a time.

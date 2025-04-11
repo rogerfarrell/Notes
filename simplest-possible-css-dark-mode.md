@@ -1,6 +1,6 @@
 ---
-include-before: '[[development]]'
 title: Simplest possible CSS dark mode
+subtitle: '[[development]]'
 ---
 
 The following three lines are all that is required to enable responsive default dark mode support.[^1]

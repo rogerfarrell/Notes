@@ -1,6 +1,6 @@
 ---
-include-before: '[[computer]]'
 title: macOS
+subtitle: '[[computer]]'
 ---
 
 - [[config-for-macos]]

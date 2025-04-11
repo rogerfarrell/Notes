@@ -1,6 +1,6 @@
 ---
-include-before: '[[symbolism]]'
 title: Patterns of 4
+subtitle: '[[symbolism]]'
 ---
 
 - Cold, hot, moist, dry

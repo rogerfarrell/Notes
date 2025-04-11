@@ -1,6 +1,6 @@
 ---
-include-before: '[[macos]]'
 title: Config for macOS
+subtitle: '[[macos]]'
 ---
 
 These are the 3rd party apps I am currently using to extend macOS.

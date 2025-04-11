@@ -1,6 +1,6 @@
 ---
-include-before: '[[vim]]'
 title: Vim tips
+subtitle: '[[vim]]'
 ---
 
 # To do

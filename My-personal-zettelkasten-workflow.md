@@ -1,6 +1,6 @@
 ---
-include-before: '[[zettelkasten]]'
 title: My personal zettelkasten workflow
+subtitle: '[[zettelkasten]]'
 ---
 
 # Realtime idea capture

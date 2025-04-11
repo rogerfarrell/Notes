@@ -1,6 +1,6 @@
 ---
-include-before: '[[functional-programming]]'
 title: Deriving recursive expressions
+subtitle: '[[functional-programming]]'
 ---
 
 Every recursive solution is made up of two parts:

@@ -1,6 +1,6 @@
 ---
-include-before: '[[symbolism]], [[veils]]'
 title: Virtue is a covering
+subtitle: '[[symbolism]], [[veils]]'
 ---
 
 According to St Basil the Great, the virtuous man does not want a garment. For such a man, virtue serves as a garment.[^1] [[nakedness-is-the-body-unveiled|He has no need to veil his body to cover shame.]]

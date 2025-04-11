@@ -1,6 +1,6 @@
 ---
-include-before: '[[cars]]'
 title: Troubleshooting P0352
+subtitle: '[[cars]]'
 ---
 
 OBD code P0352 indicates: Ignition Coil B Primary/Secondary Circuit Malfunction

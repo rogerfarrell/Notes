@@ -1,6 +1,6 @@
 ---
-include-before: '[[vim]]'
 title: Avoiding visual mode in Vim
+subtitle: '[[vim]]'
 ---
 
 Visual mode is an excellent tool in the Vim toolbox. In fact, it may be one of Vim's most powerful tools. However, it can quickly get in the way of best practices because of its versatility. It is rather like an adjustable wrench. You can use it for almost everything, but it is generally preferred to find the appropriate size wrench for the job. I think of visual mode as Vim's adjustable wrench for text objects.
