@@ -1,5 +1,5 @@
 ---
-include-before-body: '[[symbolism]]'
+include-before: '[[symbolism]]'
 title: Christ's incarnation restores cosmic communion
 ---
 

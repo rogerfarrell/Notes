@@ -1,5 +1,5 @@
 ---
-include-before-body: '[[theology]]'
+include-before: '[[theology]]'
 title: Christians should advance the Kingdom of Heaven
 ---
 

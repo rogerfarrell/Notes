@@ -1,5 +1,5 @@
 ---
-include-before-body: '[[computer]]'
+include-before: '[[computer]]'
 title: Vim
 ---
 

@@ -1,5 +1,5 @@
 ---
-include-before-body: '[[macos]]'
+include-before: '[[macos]]'
 title: Config for macOS
 ---
 

@@ -1,5 +1,5 @@
 ---
-include-before-body: '[[software]]'
+include-before: '[[software]]'
 title: Google Docs shortcuts
 ---
 

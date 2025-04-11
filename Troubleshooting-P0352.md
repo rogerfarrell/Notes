@@ -1,5 +1,5 @@
 ---
-include-before-body: '[[cars]]'
+include-before: '[[cars]]'
 title: Troubleshooting P0352
 ---
 

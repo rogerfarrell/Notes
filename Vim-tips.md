@@ -1,5 +1,5 @@
 ---
-include-before-body: '[[vim]]'
+include-before: '[[vim]]'
 title: Vim tips
 ---
 

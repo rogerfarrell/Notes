@@ -1,5 +1,5 @@
 ---
-include-before-body: '[[symbolism]], [[veils]]'
+include-before: '[[symbolism]], [[veils]]'
 title: Virtue is a covering
 ---
 

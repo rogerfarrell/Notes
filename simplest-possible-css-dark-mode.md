@@ -1,5 +1,5 @@
 ---
-include-before-body: '[[development]]'
+include-before: '[[development]]'
 title: Simplest possible CSS dark mode
 ---
 

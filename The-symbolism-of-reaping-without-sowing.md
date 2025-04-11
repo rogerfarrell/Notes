@@ -1,5 +1,5 @@
 ---
-include-before-body: '[[symbolism]]'
+include-before: '[[symbolism]]'
 title: The symbolism of reaping without sowing
 ---
 

@@ -1,5 +1,5 @@
 ---
-include-before-body: '[[zettelkasten]]'
+include-before: '[[zettelkasten]]'
 title: Zettelkasten rules
 ---
 
