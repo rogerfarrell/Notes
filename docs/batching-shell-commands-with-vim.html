@@ -244,6 +244,9 @@ color-scheme: light dark;
 body {
 max-width: 45em;
 }
+header {
+align: left;
+}
 a {
 color: var(--color-txt);
 }
@@ -273,11 +276,12 @@ border-top: 1px solid var(--color-accent);
 opacity: 0.75;
 }
 
-nav.running-footer {
+footer.running-footer {
 display: flow-root;
 font-size: 0.75em;
 border-top: 1px solid var(--color-accent);
 padding-top: 5px;
+margin-top: 4em;
 a {
 text-decoration: none;
 }
@@ -302,7 +306,7 @@ the standard input of an intermediate command, which effectively
 converts the list of filenames to a one-time shell script.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
 While not optimal. This workflow does enable some interesting
 manipulations via Vim.</p>
-<h1 id="example-renaming-files">Example: renaming files</h1>
+<h2 id="example-renaming-files">Example: renaming files</h2>
 <p>Suppose you have a group of markdown files in a directory with spaces
 in the filenames.…<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">\ls</span> <span class="pp">*</span>.md <span class="kw">|</span> <span class="ex">vim</span> <span class="at">-</span></span></code></pre></div>
@@ -329,13 +333,13 @@ command.</p>
 <li id="fn2"><p><a href="https://vim.fandom.com/wiki/Bulk_rename_files_with_Vim#:~:text=You%20can%20use%20Vim%20to,in%2Dmemory%20simplistic%20shell%20script." class="uri">https://vim.fandom.com/wiki/Bulk_rename_files_with_Vim#:~:text=You%20can%20use%20Vim%20to,in%2Dmemory%20simplistic%20shell%20script.</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
-<nav class="running-footer">
+<footer class="running-footer">
   <div class="site-title">
     <a href="https://rogerfarrell.net">Roger Farrell’s notes</a>
   </div>
   <div class="github-link">
     <a href="https://github.com/rogerfarrell/Notes/">GitHub</a>
   </div>
-</nav>
+</footer>
 </body>
 </html>

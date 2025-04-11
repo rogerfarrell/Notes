@@ -244,6 +244,9 @@ color-scheme: light dark;
 body {
 max-width: 45em;
 }
+header {
+align: left;
+}
 a {
 color: var(--color-txt);
 }
@@ -273,11 +276,12 @@ border-top: 1px solid var(--color-accent);
 opacity: 0.75;
 }
 
-nav.running-footer {
+footer.running-footer {
 display: flow-root;
 font-size: 0.75em;
 border-top: 1px solid var(--color-accent);
 padding-top: 5px;
+margin-top: 4em;
 a {
 text-decoration: none;
 }
@@ -306,8 +310,8 @@ float: right;
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sumTo <span class="dv">0</span> <span class="ot">=</span> <span class="dv">0</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- the recurrence relation</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>sumTo n <span class="ot">=</span> n <span class="op">+</span> sumTo (n <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
-<h1 id="deriving-the-recurrence-relation">Deriving the recurrence
-relation</h1>
+<h2 id="deriving-the-recurrence-relation">Deriving the recurrence
+relation</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sumTo n <span class="ot">=</span> n <span class="op">+</span> sumTo (n <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
 <p>The recurrence relation is the recursive part of a recursive
 solution. To find the recursive relation for a give problem, assume your
@@ -319,7 +323,7 @@ which is only one step from your desired result. For a
 <p>Once we have expressed the sub problem, we can express the complete
 problem by adding the final step. In this case, we add <code>n</code> to
 <code>sumTo (n - 1)</code></p>
-<h1 id="finding-the-base-cases">Finding the base cases</h1>
+<h2 id="finding-the-base-cases">Finding the base cases</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- the base case</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sumTo <span class="dv">0</span> <span class="ot">=</span> <span class="dv">0</span></span></code></pre></div>
 <p>Base cases are easier to find. We just need to determine the possible
@@ -332,13 +336,13 @@ none) is 0.</p>
 <li><a href="https://medium.com/@mukhopadhyaypushan42/how-to-solve-any-recursion-problem-master-of-solving-recursion-problems-7d55496a450a">How
 to solve any recursion problem</a></li>
 </ul>
-<nav class="running-footer">
+<footer class="running-footer">
   <div class="site-title">
     <a href="https://rogerfarrell.net">Roger Farrell’s notes</a>
   </div>
   <div class="github-link">
     <a href="https://github.com/rogerfarrell/Notes/">GitHub</a>
   </div>
-</nav>
+</footer>
 </body>
 </html>

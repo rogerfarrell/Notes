@@ -244,6 +244,9 @@ color-scheme: light dark;
 body {
 max-width: 45em;
 }
+header {
+align: left;
+}
 a {
 color: var(--color-txt);
 }
@@ -273,11 +276,12 @@ border-top: 1px solid var(--color-accent);
 opacity: 0.75;
 }
 
-nav.running-footer {
+footer.running-footer {
 display: flow-root;
 font-size: 0.75em;
 border-top: 1px solid var(--color-accent);
 padding-top: 5px;
+margin-top: 4em;
 a {
 text-decoration: none;
 }
@@ -310,13 +314,13 @@ docs (see <code>:help netrw-i</code>).</p>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>...etc...</span></code></pre></div>
 <p>In Netrw filetree view, use <code>gn</code> to change root directory
 to the current selection.</p>
-<nav class="running-footer">
+<footer class="running-footer">
   <div class="site-title">
     <a href="https://rogerfarrell.net">Roger Farrell’s notes</a>
   </div>
   <div class="github-link">
     <a href="https://github.com/rogerfarrell/Notes/">GitHub</a>
   </div>
-</nav>
+</footer>
 </body>
 </html>

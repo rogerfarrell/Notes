@@ -180,6 +180,9 @@ color-scheme: light dark;
 body {
 max-width: 45em;
 }
+header {
+align: left;
+}
 a {
 color: var(--color-txt);
 }
@@ -209,11 +212,12 @@ border-top: 1px solid var(--color-accent);
 opacity: 0.75;
 }
 
-nav.running-footer {
+footer.running-footer {
 display: flow-root;
 font-size: 0.75em;
 border-top: 1px solid var(--color-accent);
 padding-top: 5px;
+margin-top: 4em;
 a {
 text-decoration: none;
 }
@@ -232,25 +236,25 @@ float: right;
 <header id="title-block-header">
 <h1 class="title">Vim tips</h1>
 </header>
-<h1 id="to-do">To do</h1>
+<h2 id="to-do">To do</h2>
 <ul class="task-list">
 <li><label><input type="checkbox"></input>Read and process this great article
 about GREP in Vim: <a href="https://thevaluable.dev/regular-expression-basics-vim-grep/" class="uri">https://thevaluable.dev/regular-expression-basics-vim-grep/</a></label></li>
 </ul>
-<h1 id="findreplace">Find/replace</h1>
+<h2 id="findreplace">Find/replace</h2>
 <ul>
 <li>Immediately after searching a pattern with <code>/</code> use
 <code>c//e</code> to replace the currently highlighted match.</li>
 <li>Refer to <code>:help pattern-atoms</code> for some basic info about
 Vim’s default GREP flavor.</li>
 </ul>
-<h1 id="multiplexing">Multiplexing</h1>
+<h2 id="multiplexing">Multiplexing</h2>
 <p>Vanilla Vim is adequate for basic multiplexing: <a href="multiplexing-in-vanilla-vim" class="wikilink">multiplexing-in-vanilla-vim</a></p>
-<h1 id="navigating-help">Navigating <code>:help</code></h1>
+<h2 id="navigating-help">Navigating <code>:help</code></h2>
 <ul>
 <li>See <code>:help key-notation</code> for key abbreviations</li>
 </ul>
-<h1 id="navigating-files">Navigating files</h1>
+<h2 id="navigating-files">Navigating files</h2>
 <ul>
 <li><p>Quickly open Netrw to the path of the current file:
 <code>:E</code></p></li>
@@ -267,26 +271,26 @@ directory to selected</p></li>
 <li><p>Clear highlighting till next search: <code>:nohlsearch</code> or
 <code>:noh</code></p></li>
 </ul>
-<h1 id="targeting-nouns">Targeting nouns</h1>
+<h2 id="targeting-nouns">Targeting nouns</h2>
 <ul>
 <li>Around (whole noun): <code>&lt;verb&gt; i &lt;noun&gt;</code></li>
 <li>Inside (inner content):
 <code>&lt;verb&gt; i &lt;noun&gt;</code></li>
 </ul>
-<h1 id="moving-the-cursor">Moving the cursor</h1>
+<h2 id="moving-the-cursor">Moving the cursor</h2>
 <ul>
 <li>Scroll up: <code>&lt;C-u&gt;</code></li>
 <li>Scroll down: <code>&lt;C-d&gt;</code></li>
 <li>Go to previous <code>{</code>: <code>[{</code></li>
 <li>Go to next <code>}</code>: <code>]}</code></li>
 </ul>
-<nav class="running-footer">
+<footer class="running-footer">
   <div class="site-title">
     <a href="https://rogerfarrell.net">Roger Farrell’s notes</a>
   </div>
   <div class="github-link">
     <a href="https://github.com/rogerfarrell/Notes/">GitHub</a>
   </div>
-</nav>
+</footer>
 </body>
 </html>

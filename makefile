@@ -23,6 +23,7 @@ docs/%.html: %.md | docs/
 					--standalone \
 					--embed-resources \
 					--highlight-style=zenburn \
+					--shift-heading-level-by=1 \
 					--include-in-header=template/styles.html \
 					--include-after-body=template/footer.html \
 					--output $@ $<
@@ -34,6 +35,7 @@ docs/references/%.html: references/%.md | docs/references/
 					--standalone \
 					--embed-resources \
 					--highlight-style=zenburn \
+					--shift-heading-level-by=1 \
 					--include-in-header=template/styles.html \
 					--include-after-body=template/footer.html \
 					--output $@ $<
