@@ -1,6 +1,6 @@
 ---
 title: Flag external links with css
-subtitle: '[[Development]]'
+subtitle: '[[development]]'
 ---
 
 # Background
