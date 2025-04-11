@@ -1,7 +1,6 @@
-[Symbolism](symbolism)
-
 ---
 title: The strife of Adam's offspring
+subtitle: '[[symbolism]]'
 ---
 
 - Adam is the prototype of man’s fallen nature.
