@@ -1,6 +1,5 @@
 ---
 title: The Life of Moses
-subtitle: '<https://books.apple.com/us/book/the-life-of-moses/id1331647672>'
 ---
 
 by St Gregory of Nyssa
@@ -24,3 +23,7 @@ Corruption is the dissolution of unity within complexity. As a simple being, God
 ## The Bronze Serpent
 
 The serpent is a symbol of sin.
+
+---
+
+- <https://books.apple.com/us/book/the-life-of-moses/id1331647672>
