@@ -15,7 +15,7 @@ OBD code P0352 indicates: Ignition Coil B Primary/Secondary Circuit Malfunction
 
 Note the position of cylinder 2 on the below graph.
 
-For more information about this code, see [this](https://www.identifix.com/blogs/code-p0352-the-diagnostic-and-repair-guide). helpful article from identifix.com.
+For more information about this code, see [this](https://www.identifix.com/blogs/code-p0352-the-diagnostic-and-repair-guide) helpful article from identifix.com.
 
 ![Cylinder order](attachments/2gr-fe-cylinders.jpeg)
 
