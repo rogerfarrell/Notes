@@ -5,7 +5,9 @@ subtitle: '[[vim]]'
 
 # To do
 
-- [ ] Read and process this great article about GREP in Vim: <https://thevaluable.dev/regular-expression-basics-vim-grep/>
+- [ ] Write a note about Vim GREP, referring to this superb article: <https://thevaluable.dev/regular-expression-basics-vim-grep/>
+
+---
 
 # Find/replace
 

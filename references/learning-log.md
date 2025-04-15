@@ -5,6 +5,8 @@ title: Learning log
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                                                                                 references
 -----------     -----------------------------------------------------------------------------------------------------------------------     --------------------------------------------------
+2025-04-15      InDesign's GREP supports word boundaries: `\b`. (It also supports the opening/closing boundaries: `\<` and `\>`.)           <https://www.oreilly.com/library/view/grep-in-indesign/9780596157173/ch04.html>
+
 2025-04-10      Zenburn is a Vim color scheme used natively for Pandoc syntax highlighting. It is so good, I am using it in my .vimrc.      <https://github.com/jnurmine/Zenburn>
 
 2025-04-10      SVG favicons are now a thing.                                                                                               <https://css-tricks.com/svg-favicons-and-all-the-fun-things-we-can-do-with-them/>

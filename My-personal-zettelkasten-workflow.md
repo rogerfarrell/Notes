@@ -5,8 +5,10 @@ subtitle: '[[zettelkasten]]'
 
 # Realtime idea capture
 
-- On mobile, all note-taking goes into the inbox. Later, they are sanitized and organized in Vim.
-- I keep a learning log of all ideas and techniques I have learned: [[references/learning-log]].
+I find that I am rarely ready to take a note when the idea first strikes. The first encounter is messy. It takes time and some digestion for the idea to take shape and start to show how it is connected to other related ideas. During this period, I try to make an entry in [[references/learning-log]]. Logging the thought prevents it from being lost forever. Once an idea has become sufficiently mature to write about, I write an initial note in my inbox folder. The note will stay here until two conditions are met:
+
+- The idea has been clearly represented in a way that is compliant with my note taking conventions and is accessible to my future self.
+- I have linked to the note from at least one pre-existing note.
 
 # Navigating my notes
 
