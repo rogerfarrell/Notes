@@ -1,5 +1,6 @@
 ---
 title: Theology
+subtitle: '[[religion]]'
 ---
 
 - [[christs-incarnation-restores-cosmic-communion]]
