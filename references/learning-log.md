@@ -5,6 +5,8 @@ title: Learning log
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                                                                                 references
 -----------     -----------------------------------------------------------------------------------------------------------------------     --------------------------------------------------
+2025-04-16      API keys are not a part of the ChatGPT Plus subscription. They are served by the OpenAI API platform.                       <https://community.openai.com/t/api-access-as-a-chatgpt-plus-subscriber/573409/2>
+
 2025-04-15      InDesign's GREP supports word boundaries: `\b`. (It also supports the opening/closing boundaries: `\<` and `\>`.)           <https://www.oreilly.com/library/view/grep-in-indesign/9780596157173/ch04.html>
 
 2025-04-10      Zenburn is a Vim color scheme used natively for Pandoc syntax highlighting. It is so good, I am using it in my .vimrc.      <https://github.com/jnurmine/Zenburn>
@@ -42,7 +44,7 @@ date            description                                                     
 
 2025-04-02      Pandoc multiline tables best fit my needs for note taking. NOTE: They still convert to single-line.                         <https://pandoc.org/MANUAL.html#extension-multiline_tables>
 
-2025-04-02      In Vim, use `:echo expand("%:h)` to show the path of the current file.                                                      `:help :echo`, `:help expand()`
+2025-04-02      In Vim, use `:echo expand("%:h")` to show the path of the current file.                                                      `:help :echo`, `:help expand()`
 
 2025-04-02      In Vim, `%` refers to the complete file path, `%:h` gets the head (path minus filename).                                    `:help %:h`
 

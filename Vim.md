@@ -10,4 +10,5 @@ subtitle: '[[computer]]'
 - [[running-pandoc-on-a-selection-within-a-file-in-vim]]
 - [[taking-notes-in-vim]]
 - [[using-marks-in-vim]]
+- [[vim-config]]
 - [[vim-tips]]
