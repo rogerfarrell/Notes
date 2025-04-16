@@ -1,5 +1,6 @@
 ---
 title: Defining the Christmas Spirit
+subtitle: '[[religion]]'
 ---
 
 **The *Christmas Spirit* is the condition of abiding in the numinous experience of kairotic participation in Christ's advent.**
