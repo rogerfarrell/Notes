@@ -10,13 +10,12 @@ To see a frequently-updated history of stuff I am currently learning about, chec
 
 # The registry
 
-- [[bible]]
 - [[cars]]
 - [[computer]]
 - [[development]]
 - [[history]]
 - [[mythology]]
 - [[poetry]]
+- [[religion]]
 - [[symbolism]]
-- [[theology]]
 - [[zettelkasten]]
