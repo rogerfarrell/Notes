@@ -1,5 +1,5 @@
 ---
-title: Find/replace in Vim
+title: Substitute across multiple files in Vim
 subtitle: '[[vim]]'
 ---
 
