@@ -8,7 +8,7 @@ subtitle: '[[vim]]'
 - Immediately after searching a pattern with `/` use `c//e` to replace the currently highlighted match.
 - Refer to `:help pattern-atoms` for some basic info about Vim's default GREP flavor.[^1]
 
-[^1]: Write a note about Vim GREP, referring to this superb article: <https://thevaluable.dev/regular-expression-basics-vim-grep/>
+[^1]: ***TODO*** Write a note about Vim GREP, referring to this superb article: <https://thevaluable.dev/regular-expression-basics-vim-grep/>
 
 # Multiplexing
 
