@@ -5,6 +5,16 @@ title: Learning log
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   date         description                                    references
   ------------ ---------------------------------------------- ------------------------------------------------------------------------------------------------------------------
+  2025-04-18   In Vim GREP, the `\%V` atom restricts the      `help /\%V`, <https://vim.fandom.com/wiki/Search_and_replace_in_a_visual_selection#Substituting_in_a_visual_selection>
+               search to the last visual mode selection.
+
+  2025-04-18   In Vim command mode, use `<Up>` and `<Down>`   `:help c_<Up>`, `:help c_<Down>`
+               to scroll through history just like in the 
+               shell.
+
+  2025-04-18   In Vim, use `:new` to begin editing a new      `:help :new` 
+               file in the pwd.
+
   2025-04-17   I finally remembered where I bought my         <https://www.fytoo.com/product/FT0969?id=2239>
                favorite round thick-rimmed glasses.
 
