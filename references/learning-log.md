@@ -5,6 +5,8 @@ title: Learning log
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                                                                                 references
 -----------     -----------------------------------------------------------------------------------------------------------------------     --------------------------------------------------
+2025-04-16      GitHub CLI extension leaves much to be desired. Currently, it can only process shell commands.                              <https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line>
+
 2025-04-16      API keys are not a part of the ChatGPT Plus subscription. They are served by the OpenAI API platform.                       <https://community.openai.com/t/api-access-as-a-chatgpt-plus-subscriber/573409/2>
 
 2025-04-15      InDesign's GREP supports word boundaries: `\b`. (It also supports the opening/closing boundaries: `\<` and `\>`.)           <https://www.oreilly.com/library/view/grep-in-indesign/9780596157173/ch04.html>
