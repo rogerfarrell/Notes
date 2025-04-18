@@ -5,6 +5,9 @@ title: Learning log
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   date         description                                    references
   ------------ ---------------------------------------------- ------------------------------------------------------------------------------------------------------------------
+  2025-04-17   I finally remembered where I bought my         <https://www.fytoo.com/product/FT0969?id=2239>
+               favorite round thick-rimmed glasses.
+
   2025-04-17   Language is provably ambiguous.                <https://youtu.be/rWjUS2h2BfU?si=pITI0xi3Fq0LUz8p>
 
   2025-04-17   The *royal order of adjectives* is a standard  <https://dictionary.cambridge.org/us/grammar/british-grammar/adjectives-order>,
