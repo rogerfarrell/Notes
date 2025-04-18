@@ -1,6 +1,6 @@
 ---
 title: Vim
-subtitle: '[[computer]]'
+subtitle: '[[development]], [[software]]'
 ---
 
 - [[avoiding-visual-mode-in-vim]]
