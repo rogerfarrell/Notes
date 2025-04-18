@@ -5,6 +5,10 @@ title: Learning log
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   date         description                                    references
   ------------ ---------------------------------------------- ------------------------------------------------------------------------------------------------------------------
+  2025-04-18   Lilypond is a musical markup language based    <https://lilypond.org>, <https://abcnotation.com>, <https://github.com/pandoc/lua-filters/tree/master/lilypond>
+               on ABC and LaTeX. There is a (depreciated) 
+               Pandoc Lua filter for it already.
+
   2025-04-18   In Vim GREP, the `\%V` atom restricts the      `help /\%V`, <https://vim.fandom.com/wiki/Search_and_replace_in_a_visual_selection#Substituting_in_a_visual_selection>
                search to the last visual mode selection.
 
