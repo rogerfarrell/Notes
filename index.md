@@ -13,6 +13,7 @@ To see a frequently-updated history of stuff I am currently learning about, chec
 - [[cars]]
 - [[computer]]
 - [[development]]
+- [[education]]
 - [[history]]
 - [[mythology]]
 - [[poetry]]

@@ -1,6 +1,6 @@
 ---
 title: Learning begins with exposure
-subtitle: '[[zettelkasten]]'
+subtitle: '[[education]], [[zettelkasten]]'
 ---
 
 It seems to be a common assumption that learning begins with the explicit formalization of a subject's first principles. Building incrementally from fundamentals, one's intellectual understanding becomes increasingly complex, culminating in so-called comprehension or mastery. This is indeed the progression of deliberate study, but learning does not begin as a deliberate exercise.
