@@ -5,6 +5,9 @@ title: Learning log
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   date         description                                    references
   ------------ ---------------------------------------------- ------------------------------------------------------------------------------------------------------------------
+  2025-04-18   In Vim command mode, `<cfile>` is replaced     `:help <cfile>`
+               with the filename under the cursor.
+
   2025-04-18   Lilypond is a musical markup language based    <https://lilypond.org>, <https://abcnotation.com>, <https://github.com/pandoc/lua-filters/tree/master/lilypond>
                on ABC and LaTeX. There is a (depreciated) 
                Pandoc Lua filter for it already.
