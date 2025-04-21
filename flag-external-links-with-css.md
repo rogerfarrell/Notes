@@ -5,18 +5,27 @@ subtitle: '[[development]]'
 
 # Background
 
-It turns out the developer of Obsidian is a smart guy. (What a surprise!) Despite adopting different tools ([Vim](https://github.com/vim/vim) and [Pandoc](https://pandoc.org)), I find myself guided to a very similar style of markdown. For example, I have chosen to use `[[wikilinks]]` for internal links.
+It turns out the developer of Obsidian is a smart guy. (What a
+surprise!) Despite adopting different tools,[^1] I find myself guided to
+a very similar style of markdown. For example, I have chosen to use
+`[[wikilinks]]` for internal links. This serves two purposes:
 
-This serves two purposes:
+[^1]: [Vim](https://github.com/vim/vim) and [Pandoc](https://pandoc.org)
 
 - Internal links are visible at-a-glance in Vim and other text editors.
-- The overhead of creating internal links during stream-of-consciousness is reduced.
+- The overhead of creating internal links during stream-of-consciousness
+  is reduced.
 
-In reading mode, Obsidian automatically postfixes [external links](https://help.obsidian.md/syntax#External+links) with a special icon. This is handy when you are jumping around in old notes with lots of hyperlinks. It is a feature worth imitating.
+Once again taking inspiration from Obsidian, I have decided to flag
+external links with a special character. This is handy when you are
+jumping around in old notes with lots of hyperlinks. It is a feature
+worth imitating.
 
 # Implementing the feature
 
-For my reading mode, I host my notes at [rogerfarrell.net](https://rogerfarrell.net). They are converted to HTML via Pandoc and deployed with [GitHub Pages](https://pages.github.com).
+For my reading mode, I host my notes at <https://rogerfarrell.net>. They
+are converted to HTML via Pandoc and deployed with [GitHub
+Pages](https://pages.github.com).
 
 Internal link in markdown:
 
@@ -41,4 +50,5 @@ a[href^="http"]:not([href^="https://rogerfarrell.net"]):after {
 }
 ```
 
-The `^=` in the href attribute denotes that the href begins with the following string. [`\2B08` ](https://www.compart.com/en/unicode/U+2B08) is the CSS representation of ⬈.
+The `^=` in the href attribute denotes that the href *begins* with the
+specified string. `\2B08` is the CSS representation of ⬈.

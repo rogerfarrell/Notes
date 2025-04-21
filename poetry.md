@@ -2,4 +2,4 @@
 title: Poetry
 ---
 
-- [[a-list-of-classic-poems]]
+- [[references/a-list-of-classic-poems]]

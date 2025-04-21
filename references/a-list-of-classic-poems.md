@@ -1,9 +1,9 @@
 ---
 title: A list of classic poems
-subtitle: '[[poetry]]'
 ---
 
-I am woefully deficient in poetry. This is a list of classic poems that I intend to read. Notable excerpts are included for easy reference.
+I am woefully deficient in poetry. This is a list of classic poems that
+I intend to read. Notable excerpts are included for easy reference.
 
   -----------------------------------------------------------------------------------------------------------------
   Read?   Title     Author             Famous quotation                   Link

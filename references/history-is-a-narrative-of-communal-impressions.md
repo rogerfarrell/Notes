@@ -1,5 +1,5 @@
 ---
-title: What is history?
+title: History is a narrative of communal impressions
 subtitle: '[[history]]'
 ---
 

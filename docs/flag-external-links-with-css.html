@@ -315,22 +315,24 @@ float: right;
 </header>
 <h2 id="background">Background</h2>
 <p>It turns out the developer of Obsidian is a smart guy. (What a
-surprise!) Despite adopting different tools (<a href="https://github.com/vim/vim">Vim</a> and <a href="https://pandoc.org">Pandoc</a>), I find myself guided to a very
-similar style of markdown. For example, I have chosen to use
-<code>[[wikilinks]]</code> for internal links.</p>
-<p>This serves two purposes:</p>
+surprise!) Despite adopting different tools,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> I
+find myself guided to a very similar style of markdown. For example, I
+have chosen to use <code>[[wikilinks]]</code> for internal links. This
+serves two purposes:</p>
 <ul>
 <li>Internal links are visible at-a-glance in Vim and other text
 editors.</li>
 <li>The overhead of creating internal links during
 stream-of-consciousness is reduced.</li>
 </ul>
-<p>In reading mode, Obsidian automatically postfixes <a href="https://help.obsidian.md/syntax#External+links">external links</a>
-with a special icon. This is handy when you are jumping around in old
-notes with lots of hyperlinks. It is a feature worth imitating.</p>
+<p>Once again taking inspiration from Obsidian, I have decided to flag
+external links with a special character. This is handy when you are
+jumping around in old notes with lots of hyperlinks. It is a feature
+worth imitating.</p>
 <h2 id="implementing-the-feature">Implementing the feature</h2>
-<p>For my reading mode, I host my notes at <a href="https://rogerfarrell.net">rogerfarrell.net</a>. They are converted
-to HTML via Pandoc and deployed with <a href="https://pages.github.com">GitHub Pages</a>.</p>
+<p>For my reading mode, I host my notes at <a href="https://rogerfarrell.net" class="uri">https://rogerfarrell.net</a>. They are converted to HTML via
+Pandoc and deployed with <a href="https://pages.github.com">GitHub
+Pages</a>.</p>
 <p>Internal link in markdown:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[<span class="co">[</span><span class="ot">taking-notes-in-vim</span><span class="co">]</span>]</span></code></pre></div>
 <p>Internal link rendered to HTML via Pandoc:</p>
@@ -343,7 +345,13 @@ to HTML via Pandoc and deployed with <a href="https://pages.github.com">GitHub P
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">super</span><span class="op">;</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>The <code>^=</code> in the href attribute denotes that the href
-begins with the following string. <a href="https://www.compart.com/en/unicode/U+2B08"><code>\2B08</code></a>
-is the CSS representation of ⬈.</p>
+<em>begins</em> with the specified string. <code>\2B08</code> is the CSS
+representation of ⬈.</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://github.com/vim/vim">Vim</a> and <a href="https://pandoc.org">Pandoc</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 </body>
 </html>
