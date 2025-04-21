@@ -20,7 +20,7 @@ understanding of Vim. It makes text editing a more subconscious
 activity.[^1]
 
 [^1]: Chris Toomey gave a great talk on this approach to
-  Vim:[[references/mastering-the-vim-language]]
+  Vim: [[references/mastering-the-vim-language]]
 
 Of course, there will always be rare occasions when you lack a practical
 means to make your desired selection. In such cases, visual mode has
