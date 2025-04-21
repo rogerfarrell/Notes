@@ -1,7 +1,6 @@
 ---
 title: Cultural Christianity is a good thing
-subtitle: >
- [[religion]]
+subtitle: '[[religion]]'
 ---
 
 A thriving church will have considerable social influence. This will extend to the point that the non-christian community will begin to take cues from (and eventually emulate) the church. Over the span of multiple generations, the result will be the outward christianization of the culture. 
