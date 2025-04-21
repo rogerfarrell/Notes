@@ -17,13 +17,13 @@ text object (or noun). With such motions, the precise location of the
 cursor is irrelevant. (`i` is an excellent example.) Using these
 techniques whenever possible helps continually push the limits of your
 understanding of Vim. It makes text editing a more subconscious
-activity. In [this
-video](https://youtu.be/wlR5gYd6um0?si=QIPzDS_mviuYylTo), Chris Toomey
-presents this approach with exceptional clarity.
+activity.[^1]
+
+[^1]: [[references/mastering-the-vim-language]]
 
 Of course, there will always be rare occasions when you lack a practical
 means to make your desired selection. In such cases, visual mode has
 your back. Though, you might try using [[using-marks-in-vim]] before
 resorting to the adjustable wrench. One occasion where visual mode is
-absolutely the correct tools is when
+absolutely the correct tool is when
 [[running-pandoc-on-a-selection-within-a-file-in-vim]].
