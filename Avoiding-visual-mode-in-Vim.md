@@ -23,7 +23,10 @@ activity.[^1]
 
 Of course, there will always be rare occasions when you lack a practical
 means to make your desired selection. In such cases, visual mode has
-your back. Though, you might try using [[using-marks-in-vim]] before
+your back. Though, you might try using using marks in Vim[^2] before
 resorting to the adjustable wrench. One occasion where visual mode is
-absolutely the correct tool is when
-[[running-pandoc-on-a-selection-within-a-file-in-vim]].
+absolutely the correct tool is when running a shell command on a
+selection within a file. (E.g. 
+[[running-pandoc-on-a-selection-within-a-file-in-vim]].)
+
+[^2]: [[references/using-marks-in-vim]]

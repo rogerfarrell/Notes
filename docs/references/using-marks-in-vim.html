@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Avoiding visual mode in Vim</title>
+  <meta name="author" content=":help mark-motions" />
+  <title>Using marks in Vim</title>
   <style>
 html {
 color: #1a1a1a;
@@ -246,34 +247,59 @@ float: right;
   </div>
 </nav>
 <header id="title-block-header">
-<h1 class="title">Avoiding visual mode in Vim</h1>
-<p class="subtitle"><a href="vim" class="wikilink">vim</a></p>
+<h1 class="title">Using marks in Vim</h1>
+<p class="author"><code>:help mark-motions</code></p>
 </header>
-<p>Visual mode is an excellent tool in the Vim toolbox. In fact, it may
-be one of Vim’s most powerful tools. However, it can quickly get in the
-way of best practices because of its versatility. It is rather like an
-adjustable wrench. You can use it for almost everything, but it is
-generally preferred to find the appropriate size wrench for the job. I
-think of visual mode as Vim’s adjustable wrench for text objects.</p>
-<p>Much of Vim’s power comes from the specificity of its commands.
-Nearly anything you can think of can be selected efficiently with the
-right combination of motions. Ideally, this combination will target a
-standard text object (or noun). With such motions, the precise location
-of the cursor is irrelevant. (<code>i</code> is an excellent example.)
-Using these techniques whenever possible helps continually push the
-limits of your understanding of Vim. It makes text editing a more
-subconscious activity.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>Of course, there will always be rare occasions when you lack a
-practical means to make your desired selection. In such cases, visual
-mode has your back. Though, you might try using using marks in Vim<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> before resorting to the adjustable
-wrench. One occasion where visual mode is absolutely the correct tool is
-when running a shell command on a selection within a file. (E.g. <a href="running-pandoc-on-a-selection-within-a-file-in-vim" class="wikilink">running-pandoc-on-a-selection-within-a-file-in-vim</a>.)</p>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p><a href="references/mastering-the-vim-language" class="wikilink">references/mastering-the-vim-language</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><a href="references/using-marks-in-vim" class="wikilink">references/using-marks-in-vim</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
+<p>Marks enable rapid navigation between common (and arbitrary)
+destinations in any file. Below are some practical takeaways.</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">command</th>
+<th style="text-align: left;">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>m{a-zA-Z}</code></td>
+<td style="text-align: left;">set mark <code>{a-zA-Z}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>`{a-z}</code></td>
+<td style="text-align: left;">jump to marker <code>{a-zA-Z}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&#39;{a-z}</code></td>
+<td style="text-align: left;">jump to line of marker
+<code>{a-zA-Z}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>`[</code></td>
+<td style="text-align: left;">jump to first character of the previously
+changed or yanked text</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&#39;[</code></td>
+<td style="text-align: left;">jump to first line of the previously
+changed or yanked text</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>`]</code></td>
+<td style="text-align: left;">jump to last character of the previously
+changed or yanked text</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&#39;]</code></td>
+<td style="text-align: left;">jump to last line of the previously
+changed or yanked text</td>
+</tr>
+</tbody>
+</table>
+<p>Marker motions can be combined with commands just like any other
+standard motion (e.g <code>d`a</code>).</p>
 </body>
 </html>

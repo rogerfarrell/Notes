@@ -1,11 +1,10 @@
 ---
 title: Using marks in Vim
-subtitle: '[[vim]]'
+author: '`:help mark-motions`'
 ---
 
 Marks enable rapid navigation between common (and arbitrary)
-destinations in any file. See `:help mark-motions` for the complete
-documentation. Below are some practical takeaways.
+destinations in any file. Below are some practical takeaways.
 
   -----------------------------------------------------------------------
   command        description
