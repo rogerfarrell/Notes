@@ -1,8 +1,6 @@
 ---
 title: Mastering the Vim language
 author: 'Chris Toomey, <https://youtu.be/wlR5gYd6um0?si=QIPzDS_mviuYylTo>' 
-keywords:
-  - '[[test]]'
 ---
 
 Vim's key feature is its editing-focused tooling. It has grammar that is
