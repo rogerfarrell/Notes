@@ -4,7 +4,6 @@ subtitle: '[[development]], [[software]]'
 ---
 
 - [[avoiding-visual-mode-in-vim]]
-- [[batching-shell-commands-with-vim]]
 - [[substitute-across-multiple-files-in-vim]]
 - [[netrw-workflow]]
 - [[reference-notes-are-important-for-vim-help-docs]]
@@ -13,3 +12,7 @@ subtitle: '[[development]], [[software]]'
 - [[using-marks-in-vim]]
 - [[vim-config]]
 - [[vim-tips]]
+
+---
+
+- [[references/batching-shell-commands-with-vim]]

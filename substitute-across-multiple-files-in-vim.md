@@ -19,13 +19,16 @@ files at the specified path. This will be useful later.
 
 # Running a find/replace on QuickFix entries
 
-There are two relevant commands: `:cdo` and `:cfdo`. `:cdo` runs a
-command for all QuickFix list entries. `:cfdo` runs a command for all
-files with entries in the QuickFix list. 
+Once the QuickFix list is populated, You can substitute across all files
+just like a single file. See the following command:
 
-- Using `:cdo`, you may find/replace only on lines in the QuickFix list:
-  `:cdo s/searchpattern/replacepattern/`[^1]
-- Using `:cfdo`, you may find/replace for all lines in any file with a
-  QuickFix match: `:cfdo %s/searchpattern/replacepattern/`
+```vim
+:cfdo %s/searchpatter/replacepattern/ | update
+```
 
-[^1]: <https://stackoverflow.com/a/38004355/28799158>
+- `:cfdo` runs the following command across all files.[^1]
+- `| update` is necessary to automatically save the file before the
+  search move to the next match.
+
+[^1]: `:cfdo` is generally preferred over `:cdo`:
+  [[references/cdo-vs-cfdo.md]]

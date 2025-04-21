@@ -263,21 +263,19 @@ populate the QuickFix list with all matches from all files at the
 specified path. This will be useful later.</p>
 <h2 id="running-a-findreplace-on-quickfix-entries">Running a
 find/replace on QuickFix entries</h2>
-<p>There are two relevant commands: <code>:cdo</code> and
-<code>:cfdo</code>. <code>:cdo</code> runs a command for all QuickFix
-list entries. <code>:cfdo</code> runs a command for all files with
-entries in the QuickFix list.</p>
+<p>Once the QuickFix list is populated, You can substitute across all
+files just like a single file. See the following command:</p>
+<pre class="vim"><code>:cfdo %s/searchpatter/replacepattern/ | update</code></pre>
 <ul>
-<li>Using <code>:cdo</code>, you may find/replace only on lines in the
-QuickFix list: <code>:cdo s/searchpattern/replacepattern/</code><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
-<li>Using <code>:cfdo</code>, you may find/replace for all lines in any
-file with a QuickFix match:
-<code>:cfdo %s/searchpattern/replacepattern/</code></li>
+<li><code>:cfdo</code> runs the following command across all files.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li><code>| update</code> is necessary to automatically save the file
+before the search move to the next match.</li>
 </ul>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p><a href="https://stackoverflow.com/a/38004355/28799158" class="uri">https://stackoverflow.com/a/38004355/28799158</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p><code>:cfdo</code> is generally preferred over
+<code>:cdo</code>: <a href="references/cdo-vs-cfdo.md" class="wikilink">references/cdo-vs-cfdo.md</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 </body>

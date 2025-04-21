@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Vim</title>
+  <title>:cdo vs :cfdo</title>
   <style>
 html {
 color: #1a1a1a;
@@ -246,23 +246,15 @@ float: right;
   </div>
 </nav>
 <header id="title-block-header">
-<h1 class="title">Vim</h1>
-<p class="subtitle"><a href="development" class="wikilink">development</a>, <a href="software" class="wikilink">software</a></p>
+<h1 class="title"><code>:cdo</code> vs <code>:cfdo</code></h1>
+<p class="subtitle">Stack Overflow, <a href="https://stackoverflow.com/a/38004355/28799158" class="uri">https://stackoverflow.com/a/38004355/28799158</a></p>
 </header>
-<ul>
-<li><a href="avoiding-visual-mode-in-vim" class="wikilink">avoiding-visual-mode-in-vim</a></li>
-<li><a href="substitute-across-multiple-files-in-vim" class="wikilink">substitute-across-multiple-files-in-vim</a></li>
-<li><a href="netrw-workflow" class="wikilink">netrw-workflow</a></li>
-<li><a href="reference-notes-are-important-for-vim-help-docs" class="wikilink">reference-notes-are-important-for-vim-help-docs</a></li>
-<li><a href="running-pandoc-on-a-selection-within-a-file-in-vim" class="wikilink">running-pandoc-on-a-selection-within-a-file-in-vim</a></li>
-<li><a href="taking-notes-in-vim" class="wikilink">taking-notes-in-vim</a></li>
-<li><a href="using-marks-in-vim" class="wikilink">using-marks-in-vim</a></li>
-<li><a href="vim-config" class="wikilink">vim-config</a></li>
-<li><a href="vim-tips" class="wikilink">vim-tips</a></li>
-</ul>
-<hr />
-<ul>
-<li><a href="references/batching-shell-commands-with-vim" class="wikilink">references/batching-shell-commands-with-vim</a></li>
-</ul>
+<p><code>:cdo</code> runs a command once for <em>every QuickFix
+entry</em>. <code>:cfdo</code> runs a command once for <em>every file
+with QuickFix entries</em>.</p>
+<p><strong>Important:</strong>* This means that the following command
+will run <code>:%s/</code> <em>multiple times</em> if the file has
+multiple QuickFix entries.</p>
+<pre class="vim"><code>:cdo %s/searchpatter/replacepattern/ | update</code></pre>
 </body>
 </html>

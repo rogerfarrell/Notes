@@ -1,22 +1,18 @@
 ---
 title: Batching shell commands with Vim
-subtitle: '[[vim]]'
+author: 'Vim Tips Wiki, <https://vim.fandom.com/wiki/Bulk_rename_files_with_Vim#:~:text=You%20can%20use%20Vim%20to,in%2Dmemory%20simplistic%20shell%20script.>'
 ---
 
 Many default shell commands lack elegant implementations for working
 with multiple files. The typical workaround is to pipe *ls* to the
 standard input of an intermediate command, which effectively converts
-the list of filenames to a one-time shell script.[^1] While not optimal.
+the list of filenames to a one-time shell script. While not optimal.
 This workflow does enable some interesting manipulations via Vim.
-
-[^1]: <https://stackoverflow.com/a/2372739/28799158>
 
 # Example: renaming files
 
 Suppose you have a group of markdown files in a directory with spaces in
 the filenames.…[^2]
-
-[^2]: <https://vim.fandom.com/wiki/Bulk_rename_files_with_Vim#:~:text=You%20can%20use%20Vim%20to,in%2Dmemory%20simplistic%20shell%20script.>
 
 ```zsh
 \ls *.md | vim -
