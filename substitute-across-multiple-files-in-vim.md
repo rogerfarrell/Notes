@@ -31,4 +31,4 @@ just like a single file. See the following command:
   search move to the next match.
 
 [^1]: `:cfdo` is generally preferred over `:cdo`:
-  [[references/cdo-vs-cfdo.md]]
+  [[references/cdo-vs-cfdo]]
