@@ -9,7 +9,6 @@ subtitle: '[[cars]]'
 - 5/8" spark plug socket
 - 6" socket extension
 - 10 mm wrench
-
 - (optional) ignition coils ([Denso
   673-1309](https://www.densoproducts.com/denso-673-1309-ignition-coil))
 - spark plugs ([Denso 3426 FK20HR-11 Iridium Long
