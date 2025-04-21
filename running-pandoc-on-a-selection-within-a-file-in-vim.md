@@ -29,14 +29,14 @@ You could select this table in visual mode and then run this command:
 :'<,'>! pandoc -t markdown_strict+grid_tables
 ```
 
-`:'<,'>!` runs a shell command, passing the selection as standard input.
-`-t`/`--to` sets the output format to `markdown_strict+grid_tables`:[^1]
-markdown with [grid
-tables](https://pandoc.org/MANUAL.html#extension-grid_tables).
+- `:'<,'>!` runs a shell command, passing the selection as standard
+  input.
+- `-t markdown_strict+grid_tables` sets the output format to markdown
+  with [grid
+  tables](https://pandoc.org/MANUAL.html#extension-grid_tables).[^1]
 
-[^1]: `markdown_strict` is necessary instead of just `markdown` since
-  `grid_tables` is a default extension:
-  <https://pandoc-discuss.narkive.com/WelKibjR/docx-to-markdown-how-to-set-table-format#post2>
+[^1]: `markdown_strict` is necessary because of the way Pandoc handles
+  table styles. [[references/pandoc-table-support-is-inclusive]]
 
 Here is the result:
 

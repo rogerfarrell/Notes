@@ -5,7 +5,6 @@ subtitle: '[[development]], [[software]]'
 
 - [[avoiding-visual-mode-in-vim]]
 - [[substitute-across-multiple-files-in-vim]]
-- [[netrw-workflow]]
 - [[reference-notes-are-important-for-vim-help-docs]]
 - [[running-pandoc-on-a-selection-within-a-file-in-vim]]
 - [[taking-notes-in-vim]]
@@ -16,3 +15,4 @@ subtitle: '[[development]], [[software]]'
 ---
 
 - [[references/batching-shell-commands-with-vim]]
+- [[references/netrw-workflow]]
