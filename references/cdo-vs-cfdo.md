@@ -1,6 +1,6 @@
 ---
 title: '`:cdo` vs `:cfdo`'
-subtitle: 'Stack Overflow, <https://stackoverflow.com/a/38004355/28799158>'
+author: 'Stack Overflow, <https://stackoverflow.com/a/38004355/28799158>'
 ---
 
 `:cdo` runs a command once for *every QuickFix entry*. `:cfdo` runs a
