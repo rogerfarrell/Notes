@@ -3,19 +3,28 @@ title: Troubleshooting P0352
 subtitle: '[[cars]]'
 ---
 
-OBD code P0352 indicates: Ignition Coil B Primary/Secondary Circuit Malfunction
+OBD code P0352 indicates: Ignition Coil B Primary/Secondary Circuit
+Malfunction
 
-|     | description                         |
-| :-- | :--                                 |
-| P   | powertrain                          |
-| 0   | generic (not manufacturer specific) |
-| 3   | ignition system                     |
-| 5   | *unknown*                           |
-| 2   | cylinder 2                          |
+  -----------------------------------------
+      description
+  --- -------------------------------------
+  P   powertrain
+
+  0   generic (not manufacturer specific)
+
+  3   ignition system
+
+  5   *unknown*
+
+  2   cylinder 2
+  -----------------------------------------
 
 Note the position of cylinder 2 on the below graph.
 
-For more information about this code, see [this](https://www.identifix.com/blogs/code-p0352-the-diagnostic-and-repair-guide) helpful article from identifix.com.
+For more information about this code, see
+[this](https://www.identifix.com/blogs/code-p0352-the-diagnostic-and-repair-guide)
+helpful article from identifix.com.
 
 ![Cylinder order](attachments/2gr-fe-cylinders.jpeg)
 
@@ -28,4 +37,9 @@ For more information about this code, see [this](https://www.identifix.com/blogs
 - Defective idle air control valve 
 - Carbon buildup in the throttle body
 
-A defective ignition coil is generally considered the most common cause of this error. However, ignition coils can fail due to bad spark plugs. Try swapping the suspect coil to a different cylinder to rule out spark plugs and faulty wiring. Check out [[how-to-replace-spark-plugs-on-a-toyota-2gr-fe]] on how to change spark plugs (and consequently ignition coils).
+A defective ignition coil is generally considered the most common cause
+of this error. However, ignition coils can fail due to bad spark plugs.
+Try swapping the suspect coil to a different cylinder to rule out spark
+plugs and faulty wiring. Check out
+[[how-to-replace-spark-plugs-on-a-toyota-2gr-fe]] on how to change spark
+plugs (and consequently ignition coils).
