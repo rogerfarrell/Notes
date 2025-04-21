@@ -12,7 +12,7 @@ This workflow does enable some interesting manipulations via Vim.
 # Example: renaming files
 
 Suppose you have a group of markdown files in a directory with spaces in
-the filenames.…[^2]
+the filenames.…
 
 ```zsh
 \ls *.md | vim -

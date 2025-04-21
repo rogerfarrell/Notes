@@ -4,7 +4,10 @@ subtitle: '[[cars]]'
 ---
 
 OBD code P0352 indicates: Ignition Coil B Primary/Secondary Circuit
-Malfunction
+Malfunction.[^1]
+
+[^1]: More information about this code:
+  <https://www.identifix.com/blogs/code-p0352-the-diagnostic-and-repair-guide>
 
   -----------------------------------------
       description
@@ -22,9 +25,6 @@ Malfunction
 
 Note the position of cylinder 2 on the below graph.
 
-For more information about this code, see
-[this](https://www.identifix.com/blogs/code-p0352-the-diagnostic-and-repair-guide)
-helpful article from identifix.com.
 
 ![Cylinder order](attachments/2gr-fe-cylinders.jpeg)
 
@@ -40,6 +40,7 @@ helpful article from identifix.com.
 A defective ignition coil is generally considered the most common cause
 of this error. However, ignition coils can fail due to bad spark plugs.
 Try swapping the suspect coil to a different cylinder to rule out spark
-plugs and faulty wiring. Check out
-[[how-to-replace-spark-plugs-on-a-toyota-2gr-fe]] on how to change spark
-plugs (and consequently ignition coils).
+plugs and faulty wiring.[^2]
+
+[^2]: To change spark plugs (and ignition coils) see:
+  [[how-to-replace-spark-plugs-on-a-toyota-2gr-fe]]
