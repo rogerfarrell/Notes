@@ -1,6 +1,6 @@
 ---
 title: Pandoc table support is inclusive
-subtitle: 'pandoc-discuss@googlegroups.com, <https://pandoc-discuss.narkive.com/WelKibjR/docx-to-markdown-how-to-set-table-format#post2>'
+author: 'pandoc-discuss@googlegroups.com, <https://pandoc-discuss.narkive.com/WelKibjR/docx-to-markdown-how-to-set-table-format#post2>'
 ---
 
 By default, Pandoc support all markdown table styles. This means any/all
