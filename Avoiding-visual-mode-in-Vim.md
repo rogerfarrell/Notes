@@ -19,14 +19,14 @@ techniques whenever possible helps continually push the limits of your
 understanding of Vim. It makes text editing a more subconscious
 activity.[^1]
 
-[^1]: [[references/mastering-the-vim-language]]
+[^1]: Chris Toomey gave a great talk on this approach to
+  Vim:[[references/mastering-the-vim-language]]
 
 Of course, there will always be rare occasions when you lack a practical
 means to make your desired selection. In such cases, visual mode has
-your back. Though, you might try using using marks in Vim[^2] before
-resorting to the adjustable wrench. One occasion where visual mode is
-absolutely the correct tool is when running a shell command on a
-selection within a file. (E.g. 
+your back.[^2] One occasion where visual mode is absolutely the correct
+tool is when running a shell command on a selection within a file. (E.g.
 [[running-pandoc-on-a-selection-within-a-file-in-vim]].)
 
-[^2]: [[references/using-marks-in-vim]]
+[^2]: Though, you might try using using marks in Vim before resorting to
+  the adjustable wrench: [[references/using-marks-in-vim]]
