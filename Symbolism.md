@@ -10,4 +10,4 @@ title: Symbolism
 - [[the-tower-of-babel-was-blown-down-by-the-winds-of-pentecost]]
 - [[veils]]
   - [[veils-reveal-through-concealment]]
-  - [[nakedness is-the-body-unveiled]]
+  - [[nakedness-is-the-body-unveiled]]
