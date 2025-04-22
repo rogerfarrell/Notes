@@ -5,6 +5,10 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-04-22      Vim has a built in print feature: `:hardcopy`                       `:help :hardcopy`, <https://stackoverflow.com/a/9693079>
+
+2025-04-22      lpr is a shell service for printing files.                          `man lpr`, <https://superuser.com/a/607380>
+
 2025-04-18      In Vim command mode, `<cfile>` is replaced with the filename under  `:help <cfile>`
                 the cursor.
 
