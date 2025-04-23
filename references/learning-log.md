@@ -5,6 +5,13 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-04-23      In Vim GREP, `\c` makes the selection case insensitive.             `:help /\c`, <https://superuser.com/a/713957>
+
+2025-04-23      In Vim, `_` is the *current line* motion.                           `:help _`, <https://stackoverflow.com/a/47864035/28799158>
+
+2025-04-22      This video explores the importance of                               <https://www.youtube.com/watch?v=bSDprg24pEA>
+                experience/familiarity/practice in learning at pace.
+
 2025-04-22      Vim has a built in print feature: `:hardcopy`                       `:help :hardcopy`, <https://stackoverflow.com/a/9693079>
 
 2025-04-22      lpr is a shell service for printing files.                          `man lpr`, <https://superuser.com/a/607380>
