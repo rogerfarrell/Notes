@@ -5,6 +5,11 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-04-23      In Vim `@%` is the register for the current file (absolute path).   `:h quote%`
+
+2025-04-23      In Vim, `:call delete(expand('%'))` deletes the current (but leaves `:h delete()`, <https://stackoverflow.com/a/16679182>
+                the buffer intact.
+
 2025-04-23      In Vim GREP, `\c` makes the selection case insensitive.             `:help /\c`, <https://superuser.com/a/713957>
 
 2025-04-23      In Vim, `_` is the *current line* motion.                           `:help _`, <https://stackoverflow.com/a/47864035/28799158>
