@@ -5,9 +5,16 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
-2025-04-23      In Vim `@%` is the register for the current file (absolute path).   `:h quote%`
+2025-04-28      Processing manuscripts as XML may dramatically reduce the InDesign  <https://helpx.adobe.com/indesign/using/importing-xml.html>,
+                workload.                                                           <https://carijansen.com/indesign-xml-reference-guide/>,
+                                                                                    <https://stackoverflow.com/a/66267474/28799158>
 
-2025-04-23      In Vim, `:call delete(expand('%'))` deletes the current (but leaves `:h delete()`, <https://stackoverflow.com/a/16679182>
+2025-04-24      In Vim, `gq{motion}` will format the text. This is                  `:help gq`
+                particularly useful for aligning text to a tab stop.
+
+2025-04-23      In Vim `@%` is the register for the current file (absolute path).   `:help quote%`
+
+2025-04-23      In Vim, `:call delete(expand('%'))` deletes the current (but leaves `:help delete()`, <https://stackoverflow.com/a/16679182>
                 the buffer intact.
 
 2025-04-23      In Vim GREP, `\c` makes the selection case insensitive.             `:help /\c`, <https://superuser.com/a/713957>
