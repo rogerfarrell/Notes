@@ -5,6 +5,13 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-04-28      In Vim GREP, `\_.` matches any character *including a newline*.     `:help /\_.`, <https://stackoverflow.com/a/784203/28799158>
+
+2025-04-28      In Vim, use `:%s//~/` to redo the last substitution.                `:help g&`, <https://vi.stackexchange.com/a/18107/54693>
+
+2025-04-28      Pandoc can translate markdown fenced divs to ICML paragraph and     <https://github.com/jgm/pandoc/wiki/Importing-Markdown-in-InDesign>
+                character styles.
+
 2025-04-28      Processing manuscripts as XML may dramatically reduce the InDesign  <https://helpx.adobe.com/indesign/using/importing-xml.html>,
                 workload.                                                           <https://carijansen.com/indesign-xml-reference-guide/>,
                                                                                     <https://stackoverflow.com/a/66267474/28799158>
