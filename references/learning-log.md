@@ -5,6 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-04-30      In Vim `R` replace mode, type `<C-r>"` to paste yanked contents.    <https://stackoverflow.com/a/25413808/28799158>
+
 2025-04-28      In Vim GREP, `\_.` matches any character *including a newline*.     `:help /\_.`, <https://stackoverflow.com/a/784203/28799158>
 
 2025-04-28      In Vim, use `:%s//~/` to redo the last substitution.                `:help g&`, <https://vi.stackexchange.com/a/18107/54693>
