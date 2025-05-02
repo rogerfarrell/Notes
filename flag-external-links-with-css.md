@@ -42,7 +42,8 @@ Internal link rendered to HTML via Pandoc:
 Here is how we target them with CSS:
 
 ```css
-a[href^="http"]:not([href^="https://rogerfarrell.net"]):after {
+a[href^="http"]:not([href^="https://rogerfarrell.net"]):after
+{
   content:"\2B08"; /* this is a Northeast-pointed arrow to signify external links */
   font-size: 0.8em;
   line-height: 0.8em;

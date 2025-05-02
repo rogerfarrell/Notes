@@ -5,6 +5,14 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-05-01      In Zsh use `setopt extended_glob; yourcmdhere (^negativepattern)`   <https://unix.stackexchange.com/a/541787/727998>
+                to apply a command via an exclusion.
+
+2025-04-30      In Vim insert mode, type `<C-v>160` to insert a no-break space.     <https://vimtricks.com/p/vimtrick-non-printable-characters/>
+
+2025-04-30      In Vim, you can set various white space characters and markers with `:help listchars`
+                `listchars`.
+
 2025-04-30      In Vim `R` replace mode, type `<C-r>"` to paste yanked contents.    <https://stackoverflow.com/a/25413808/28799158>
 
 2025-04-28      In Vim GREP, `\_.` matches any character *including a newline*.     `:help /\_.`, <https://stackoverflow.com/a/784203/28799158>
