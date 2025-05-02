@@ -20,3 +20,9 @@ better thought of as further reading.
 # To do
 
 - [ ] Explore the further reading concept
+
+---
+
+- Notes are only for original ideas
+- References are for everything else.
+- Notes can link to references, not vice versa.

@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-05-02      In Zsh use `bindkey -v` to enable Vi mode. (Insert mode is the 
+                default.
+
 2025-05-01      In Zsh use `setopt extended_glob; yourcmdhere (^negativepattern)`   <https://unix.stackexchange.com/a/541787/727998>
                 to apply a command via an exclusion.
 
