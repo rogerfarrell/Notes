@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-05-05      In double entry accounting, payments made with credit cards and     <https://www.reddit.com/r/plaintextaccounting/comments/eh9bz7/yet_another_question_about_credit_cards_and/>
+                other liabilities are represented as outgoing (negative) values. 
+
 2025-05-02      In Zsh use `bindkey -v` to enable Vi mode. (Insert mode is the 
                 default.
 

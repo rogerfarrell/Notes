@@ -9,3 +9,7 @@ subtitle: '[[computer]]'
 - [[internalized-vs-externalized-config]]
 - [[what-is-a-makefile]]
 - [[vim]]
+
+---
+
+- [[references/hledger-documentation]]

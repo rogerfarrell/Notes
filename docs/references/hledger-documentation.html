@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Software</title>
+  <title>hledger documentation</title>
   <style>
 html {
 color: #1a1a1a;
@@ -246,20 +246,43 @@ float: right;
   </div>
 </nav>
 <header id="title-block-header">
-<h1 class="title">Software</h1>
-<p class="subtitle"><a href="computer" class="wikilink">computer</a></p>
+<h1 class="title">hledger documentation</h1>
+<p class="subtitle"><a href="https://hledger.org" class="uri">https://hledger.org</a></p>
 </header>
-<ul>
-<li><a href="find-bleed-info-in-adobe-acrobat" class="wikilink">find-bleed-info-in-adobe-acrobat</a></li>
-<li><a href="google-docs-shortcuts" class="wikilink">google-docs-shortcuts</a></li>
-<li><a href="indesign-book-layout-checklist" class="wikilink">indesign-book-layout-checklist</a></li>
-<li><a href="internalized-vs-externalized-config" class="wikilink">internalized-vs-externalized-config</a></li>
-<li><a href="what-is-a-makefile" class="wikilink">what-is-a-makefile</a></li>
-<li><a href="vim" class="wikilink">vim</a></li>
-</ul>
-<hr />
-<ul>
-<li><a href="references/hledger-documentation" class="wikilink">references/hledger-documentation</a></li>
-</ul>
+<h2 id="home-httpshledger.org">Home <a href="https://hledger.org" class="uri">https://hledger.org</a></h2>
+<p>hledger is a plain text accounting tool built with Haskell. It
+embraces the LEDGER text format, which tracks cash flow using the double
+entry method.</p>
+<h2 id="minute-quick-start-httpshledger.org10-minute-quick-start.html">10
+minute quick start <a href="https://hledger.org/10-minute-quick-start.html" class="uri">https://hledger.org/10-minute-quick-start.html</a></h2>
+<h3 id="set-up-a-journal">Set up a journal</h3>
+<p>By default, hledger uses your <code>.hledger.journal</code> file in
+your home directory. This can be changed in your shellrc file or with a
+symlink.</p>
+<h3 id="enter-transactions">Enter transactions</h3>
+<p>A basic ledger looks like this example from the documentation:</p>
+<pre class="hledger"><code>2023-01-01 opening balances on january 1st
+    assets:checking         $1000  ; a posting, increasing assets:checking&#39;s balance by $1000
+    assets:cash              $100  ; write at least 2 spaces between account name and amount
+    liabilities                $0
+    equity                 $-1100  ; each transaction must sum to zero
+
+2023-03-05 client payment
+    assets:checking         $2000
+    revenues:consulting    $-2000  ; revenues/liabilities/equity normally appear negative
+
+2023-03-20 Sprouts
+    expenses:food:groceries  $100
+    assets:cash               $40
+    assets:checking                ; a missing amount will be inferred ($-140 here)</code></pre>
+<p>Per the double entry accounting method, every ledger entry must be a
+zero sum. You must list both the paying and receiving accounts.</p>
+<h3 id="import-transactions">Import transactions</h3>
+<p>Transactions can be imported via CSVs. In order to do so, you need a
+CSV rules file with the same name as the file you want to import.
+Notably, this feature seems to be optimized for scripting with a
+MAKEFILE over one-time imports. Imports can be re-run from the same
+file, as hledger keeps track of previously imported transactions in a
+<code>.latest.yourfile.csv</code>.</p>
 </body>
 </html>
