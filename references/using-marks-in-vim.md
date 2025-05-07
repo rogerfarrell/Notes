@@ -26,6 +26,14 @@ destinations in any file. Below are some practical takeaways.
 
   `']`           jump to last line of the previously changed or yanked
                  text
+
+  `` `< ``       jump to first character of last visual selection
+
+  `'<`           jump to first line of last visual selection
+
+  `` `> ``       jump to last character of last visual selection
+
+  `'>`           jump to last line of last visual selection
   -----------------------------------------------------------------------
 
 Marker motions can be combined with commands just like any other

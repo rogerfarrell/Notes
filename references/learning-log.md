@@ -5,6 +5,15 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-05-07      In Vim, use `` `< `` and `` `> `` to go to the beginning and end of `` :help `< ``, ``:help `> ``,
+                the previous visual selection.                                      <https://stackoverflow.com/questions/11176159/how-to-jump-to-the-start-or-the-end-of-visual-selection-in-vim>
+
+2025-05-06      In Vim, `<C-r><C-r>register` will paste from a register without     `:help i_CTRL-R_CTRL-R`, <https://vim.fandom.com/wiki/Pasting_registers>
+                executing special characters.
+
+2025-05-06      In Vim, you can execute arbitrary edits with                        `:help :g`, <https://learnvim.irian.to/basics/the_global_command>
+                `:g/pattern/normal somecommand`.
+
 2025-05-05      In double entry accounting, payments made with credit cards and     <https://www.reddit.com/r/plaintextaccounting/comments/eh9bz7/yet_another_question_about_credit_cards_and/>
                 other liabilities are represented as outgoing (negative) values. 
 
