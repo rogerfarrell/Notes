@@ -4,9 +4,10 @@ subtitle: '[[development]], [[software]]'
 ---
 
 - [[avoiding-visual-mode-in-vim]]
-- [[substitute-across-multiple-files-in-vim]]
+- [[prowse-a-vim-plugin-for-surfing-the-web-as-markdown]]
 - [[reference-notes-are-important-for-vim-help-docs]]
 - [[running-pandoc-on-a-selection-within-a-file-in-vim]]
+- [[substitute-across-multiple-files-in-vim]]
 - [[taking-notes-in-vim]]
 - [[vim-config]]
 - [[vim-tips]]

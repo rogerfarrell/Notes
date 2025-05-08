@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Vim</title>
+  <title>Prowse, a Vim plugin for surfing the web as markdown</title>
   <style>
 html {
 color: #1a1a1a;
@@ -246,24 +246,28 @@ float: right;
   </div>
 </nav>
 <header id="title-block-header">
-<h1 class="title">Vim</h1>
-<p class="subtitle"><a href="development" class="wikilink">development</a>, <a href="software" class="wikilink">software</a></p>
+<h1 class="title">Prowse, a Vim plugin for surfing the web as
+markdown</h1>
+<p class="subtitle"><a href="vim" class="wikilink">vim</a></p>
 </header>
-<ul>
-<li><a href="avoiding-visual-mode-in-vim" class="wikilink">avoiding-visual-mode-in-vim</a></li>
-<li><a href="prowse-a-vim-plugin-for-surfing-the-web-as-markdown" class="wikilink">prowse-a-vim-plugin-for-surfing-the-web-as-markdown</a></li>
-<li><a href="reference-notes-are-important-for-vim-help-docs" class="wikilink">reference-notes-are-important-for-vim-help-docs</a></li>
-<li><a href="running-pandoc-on-a-selection-within-a-file-in-vim" class="wikilink">running-pandoc-on-a-selection-within-a-file-in-vim</a></li>
-<li><a href="substitute-across-multiple-files-in-vim" class="wikilink">substitute-across-multiple-files-in-vim</a></li>
-<li><a href="taking-notes-in-vim" class="wikilink">taking-notes-in-vim</a></li>
-<li><a href="vim-config" class="wikilink">vim-config</a></li>
-<li><a href="vim-tips" class="wikilink">vim-tips</a></li>
-</ul>
-<hr />
-<ul>
-<li><a href="references/batching-shell-commands-with-vim" class="wikilink">references/batching-shell-commands-with-vim</a></li>
-<li><a href="references/netrw-workflow" class="wikilink">references/netrw-workflow</a></li>
-<li><a href="references/vim-mnemonics" class="wikilink">references/vim-mnemonics</a></li>
-</ul>
+<h2 id="prowse-a-vim-plugin-for-surfing-the-web-as-markdown">Prowse, a
+Vim plugin for surfing the web as markdown</h2>
+<p>The modern web is bloated and over-glamorous. In an effort to
+simplify my web browsing, I experimented with TUI browsers such as <a href="https://lynx.invisible-island.net">Lynx</a> and <a href="https://w3m.sourceforge.net">W3M</a>, but they did not feel
+second-nature.</p>
+<p>I spend so much time editing markdown in Vim that it is often more
+comfortable to read than even minimally rendered HTML. As it happens,
+this is also my favorite way to read webpages. The workflow is
+simple:</p>
+<ol type="1">
+<li>Open a plain HTML file from the web with Netrw (This is just like
+opening any other file in Vim.)</li>
+<li>Convert the current buffer to markdown with Pandoc</li>
+<li>Set the syntax highlighting to markdown</li>
+</ol>
+<p>The Vim commands to accomplish this are simple enough to type out
+manually, but that will get fatiguing quickly when following links
+repeatedly. I decided to write a plugin called <a href="https://github.com/rogerfarrell/prowse">Prowse</a> for the
+purpose.</p>
 </body>
 </html>
