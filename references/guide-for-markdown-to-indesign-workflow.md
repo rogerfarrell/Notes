@@ -31,7 +31,9 @@ Similarly, spans are supported like this:
 
 ## Custom styles
 
-Custom styles can be set as attributes for fenced divs and spans.
+Custom styles can be set as attributes for fenced divs and spans.[^2]
+
+[^2]: <https://pandoc.org/MANUAL.html#custom-styles>
 
 ``````markdown
 ``` {custom-style="myParagraphStyle"}
@@ -42,11 +44,13 @@ I am a paragraph. I have a special [character style.]{custom-style="myCharacterS
 ## Pandoc supports ICML
 
 Conveniently, Pandoc supports conversion to ICML (InCopy's native file
-type). Custom styles set using the above method are converted directly
+type).[^3] Custom styles set using the above method are converted directly
 to paragraph and character styles. The best part is that the styles are
 automatically created to reflect the semantic hierarchy of the
 Manuscript. If you are familiar with HTML, you will notice they resemble
 well-organized CSS selectors.
+
+[^3]: <https://pandoc.org/MANUAL.html#custom-styles>
 
 ```zsh
 pandoc manuscript.md --standalone --output=manuscript.icml

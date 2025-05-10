@@ -329,17 +329,17 @@ its perks.</p>
 <p>Similarly, spans are supported like this:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">I am a span.</span><span class="co">]</span>{some attributes}</span></code></pre></div>
 <h3 id="custom-styles">Custom styles</h3>
-<p>Custom styles can be set as attributes for fenced divs and spans.</p>
+<p>Custom styles can be set as attributes for fenced divs and spans.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">``` {custom-style=&quot;myParagraphStyle&quot;}</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in">I am a paragraph. I have a special [character style.]{custom-style=&quot;myCharacterStyle&quot;}</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <h3 id="pandoc-supports-icml">Pandoc supports ICML</h3>
 <p>Conveniently, Pandoc supports conversion to ICML (InCopy’s native
-file type). Custom styles set using the above method are converted
-directly to paragraph and character styles. The best part is that the
-styles are automatically created to reflect the semantic hierarchy of
-the Manuscript. If you are familiar with HTML, you will notice they
-resemble well-organized CSS selectors.</p>
+file type).<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Custom styles set using the above
+method are converted directly to paragraph and character styles. The
+best part is that the styles are automatically created to reflect the
+semantic hierarchy of the Manuscript. If you are familiar with HTML, you
+will notice they resemble well-organized CSS selectors.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> manuscript.md <span class="at">--standalone</span> <span class="at">--output</span><span class="op">=</span>manuscript.icml</span></code></pre></div>
 <p><em>Note: The <code>--standalone</code> flag is required for correct
 output.</em></p>
@@ -352,6 +352,8 @@ in InDesign.</p>
 <hr />
 <ol>
 <li id="fn1"><p><a href="https://pandoc.org/MANUAL.html#extension-fenced_divs" class="uri">https://pandoc.org/MANUAL.html#extension-fenced_divs</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://pandoc.org/MANUAL.html#custom-styles" class="uri">https://pandoc.org/MANUAL.html#custom-styles</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a href="https://pandoc.org/MANUAL.html#custom-styles" class="uri">https://pandoc.org/MANUAL.html#custom-styles</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 </body>
