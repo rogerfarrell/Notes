@@ -12,4 +12,5 @@ subtitle: '[[computer]]'
 
 ---
 
+- [[references/guide-for-markdown-to-indesign-workflow.md]]
 - [[references/hledger-documentation]]

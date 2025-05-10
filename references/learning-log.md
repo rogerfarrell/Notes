@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-05-10      In Vim visual modes, use `g<C-a>` to increment numbers on all       `:help v_g_CTRL-A`, <https://www.joshmorony.com/totw/28/>
+                lines.
+
 2025-05-07      In Vim, use `` `< `` and `` `> `` to go to the beginning and end of `` :help `< ``, ``:help `> ``,
                 the previous visual selection.                                      <https://stackoverflow.com/questions/11176159/how-to-jump-to-the-start-or-the-end-of-visual-selection-in-vim>
 
@@ -46,8 +49,8 @@ date            description                                                     
 
 2025-04-23      In Vim `@%` is the register for the current file (absolute path).   `:help quote%`
 
-2025-04-23      In Vim, `:call delete(expand('%'))` deletes the current (but leaves `:help delete()`, <https://stackoverflow.com/a/16679182>
-                the buffer intact.
+2025-04-23      In Vim, `:call delete(@%)` deletes the current (but leaves the      `:help delete()`, <https://stackoverflow.com/a/16679182>
+                buffer intact.
 
 2025-04-23      In Vim GREP, `\c` makes the selection case insensitive.             `:help /\c`, <https://superuser.com/a/713957>
 
