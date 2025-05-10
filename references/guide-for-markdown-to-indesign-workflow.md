@@ -48,7 +48,7 @@ automatically created to reflect the semantic hierarchy of the
 Manuscript. If you are familiar with HTML, you will notice they resemble
 well-organized CSS selectors.
 
-```
+```zsh
 pandoc manuscript.md --standalone --output=manuscript.icml
 ```
 
