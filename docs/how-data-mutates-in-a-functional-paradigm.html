@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Functional Programming</title>
+  <title>How data mutates in a functional paradigm</title>
   <style>
 html {
 color: #1a1a1a;
@@ -246,12 +246,12 @@ float: right;
   </div>
 </nav>
 <header id="title-block-header">
-<h1 class="title">Functional Programming</h1>
-<p class="subtitle"><a href="development" class="wikilink">development</a></p>
+<h1 class="title">How data mutates in a functional paradigm</h1>
+<p class="subtitle"><a href="functional-programming" class="wikilink">functional-programming</a></p>
 </header>
-<ul>
-<li><a href="deriving-recursive-expressions" class="wikilink">deriving-recursive-expressions</a></li>
-<li><a href="how-data-mutates-in-a-functional-paradigm" class="wikilink">how-data-mutates-in-a-functional-paradigm</a></li>
-</ul>
+<p>In a functional paradigm, all data structures are immutable. So, how
+does the data itself mutate as it passes through the app flow? Data
+mutates when a new data structure is initialized with the return value
+of a function which took the old data as an argument.</p>
 </body>
 </html>
