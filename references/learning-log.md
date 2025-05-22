@@ -5,6 +5,11 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-05-21      In Vim, `nrformats+=alpha` must be set to increment/decrement       `:help nrformats`
+                letters with the below two commands.
+
+2025-05-21      In Vim visual modes, use `g<C-x>` to decrement.                     `:help v_g_CTRL-A`
+
 2025-05-10      In Vim visual modes, use `g<C-a>` to increment numbers on all       `:help v_g_CTRL-A`, <https://www.joshmorony.com/totw/28/>
                 lines.
 
