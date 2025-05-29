@@ -20,7 +20,7 @@ directory. This can be changed in your shellrc file or with a symlink.
 
 A basic ledger looks like this example from the documentation:
 
-```hledger
+```
 2023-01-01 opening balances on january 1st
     assets:checking         $1000  ; a posting, increasing assets:checking's balance by $1000
     assets:cash              $100  ; write at least 2 spaces between account name and amount
