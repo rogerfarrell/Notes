@@ -5,6 +5,7 @@ subtitle: '[[computer]]'
 
 - [[internalized-vs-externalized-config]]
 - [[what-is-a-makefile]]
+- [[why-clis-are-better-for-humans]]
 - [[vim]]
 
 ---
