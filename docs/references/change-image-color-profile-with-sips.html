@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Batching shell commands with Vim</title>
+  <meta name="author" content="man sips" />
+  <title>Change image color profile with sips</title>
   <style>
 html {
 color: #1a1a1a;
@@ -310,41 +311,31 @@ float: right;
   </div>
 </nav>
 <header id="title-block-header">
-<h1 class="title">Batching shell commands with Vim</h1>
-<p class="subtitle"><a href="vim" class="wikilink">vim</a></p>
+<h1 class="title">Change image color profile with sips</h1>
+<p class="author"><code>man sips</code></p>
 </header>
-<p>Many default shell commands lack elegant implementations for working
-with multiple files. The typical workaround is to pipe <em>ls</em> to
-the standard input of an intermediate command, which effectively
-converts the list of filenames to a one-time shell script.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
-While not optimal. This workflow does enable some interesting
-manipulations via Vim.</p>
-<h2 id="example-renaming-files">Example: renaming files</h2>
-<p>Suppose you have a group of markdown files in a directory with spaces
-in the filenames.…<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">\ls</span> <span class="pp">*</span>.md <span class="kw">|</span> <span class="ex">vim</span> <span class="at">-</span></span></code></pre></div>
-<p><code>\ls</code> runs the default <em>ls</em> regardless of any
-aliases you may have. This ensures clean output. <code>vim -</code>
-opens vim with the standard input. The result will be a new vim buffer
-with a list of filenames as plain text:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">a</span> file with spaces in the name.md</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">another</span> file.md</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">why</span> would anyone use spaces in filenames.md</span></code></pre></div>
-<p>Now you may manipulate the filenames to create a list of shell
-commands. For example, you may use block selection and substitution to
-create the following.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> a<span class="dt">\ </span>file<span class="dt">\ </span>with<span class="dt">\ </span>spaces<span class="dt">\ </span>in<span class="dt">\ </span>the<span class="dt">\ </span>name.md              a-file-with-spaces-in-the-name.md</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> another<span class="dt">\ </span>file.md                                     another-file.md</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> why<span class="dt">\ </span>would<span class="dt">\ </span>anyone<span class="dt">\ </span>use<span class="dt">\ </span>spaces<span class="dt">\ </span>in<span class="dt">\ </span>filenames.md    why-would-anyone-use-spaces-in-filenames.md</span></code></pre></div>
-<p>Finally, to run these commands line by line run the following Vim
-command.</p>
-<pre class="vim"><code>:w !sh</code></pre>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p><a href="https://stackoverflow.com/a/2372739/28799158" class="uri">https://stackoverflow.com/a/2372739/28799158</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><a href="https://vim.fandom.com/wiki/Bulk_rename_files_with_Vim#:~:text=You%20can%20use%20Vim%20to,in%2Dmemory%20simplistic%20shell%20script." class="uri">https://vim.fandom.com/wiki/Bulk_rename_files_with_Vim#:~:text=You%20can%20use%20Vim%20to,in%2Dmemory%20simplistic%20shell%20script.</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
+<p>Changing image color profiles is a task I find myself doing a lot.
+Thankfully, advanced programs like Photoshop are not required to
+accomplish this. We can use sips. Sips is a simple macOS command line
+tool for manipulating images. Here we will use it to extract a color
+profile from an image and apply it to some other image.</p>
+<h2 id="extracting-a-color-profile-from-an-image">Extracting a color
+profile from an image</h2>
+<p>Sometimes, it can be difficult to locate the color profile you want
+to apply. One simple way to get around this is to convert a file in an
+editor with the desired profile, then extract it from the output image
+with sips.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sips</span> <span class="at">-x</span> profilename.icc inputimage.jpg</span></code></pre></div>
+<p>This is a really simple command.
+<code>-x</code>/<code>--extractProfile</code> sets the destination for
+the extracted profile.</p>
+<h2 id="applying-the-profile-to-an-image">Applying the profile to an
+image</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sips</span> <span class="at">-M</span> inputprofile.icc perceptual <span class="at">-o</span> outputimage.jpg inputimage.jpg</span></code></pre></div>
+<p>There is not too much to explain here either.
+<code>-M</code>/<code>--matchToWithIntent</code> takes two arguments: a
+profile and a rendering intent. The intent determines the way colors are
+converted to the new profile. Perceptual retains visual equivalence.
+<code>-o</code>/<code>--out</code> sets the output file destination.</p>
 </body>
 </html>
