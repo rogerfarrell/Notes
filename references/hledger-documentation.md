@@ -1,6 +1,6 @@
 ---
 title: hledger documentation
-subtitle: '<https://hledger.org>'
+author: '<https://hledger.org>'
 ---
 
 # Home <https://hledger.org>

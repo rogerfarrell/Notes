@@ -1,6 +1,6 @@
 ---
 title: Indesign book layout checklist
-subtitle: '[[indesign]]'
+author: Roger Farrell
 ---
 
 There are a lot of pieces to keep track of when finalizing a book layout

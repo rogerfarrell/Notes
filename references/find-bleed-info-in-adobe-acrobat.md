@@ -1,6 +1,6 @@
 ---
 title: Find bleed info in Adobe Acrobat
-subtitle: '[[software]]'
+author: Roger Farrell
 ---
 
 Unfortunately, Acrobat does not show document bleed information in its

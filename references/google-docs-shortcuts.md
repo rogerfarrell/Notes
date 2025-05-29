@@ -1,6 +1,6 @@
 ---
 title: Google Docs shortcuts
-subtitle: '[[software]]'
+author: Roger Farrell
 ---
 
 Here are some useful keyboard shortcuts that I use regularly (when I use
