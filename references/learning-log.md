@@ -5,8 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
-2025-05-21      In Vim, `nrformats+=alpha` must be set to increment/decrement       `:help nrformats`
-                letters with the below two commands.
+2025-05-30      top is way better than Activity Monitor.                            `man top`
+
+2025-05-21      In Vim, `nrformats+=alpha` must be set to increment/decrement       `:help nrformats` letters with the below two commands.
 
 2025-05-21      In Vim visual modes, use `g<C-x>` to decrement.                     `:help v_g_CTRL-A`
 

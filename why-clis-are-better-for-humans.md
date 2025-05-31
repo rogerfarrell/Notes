@@ -1,6 +1,6 @@
 ---
 title: Why CLIs are better for humans
-subtitle: '[[software]]'
+subtitle: '[[software]], [[zsh]]'
 ---
 
 It seems natural to perceive command line interfaces as primitive,

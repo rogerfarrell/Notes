@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="https://blog.meain.io/2023/navigating-around-in-shell/" />
+  <title>Navigating around in your shell</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+}
+pre.numberSource { margin-left: 3em; padding-left: 4px; }
+div.sourceCode
+{ color: #cccccc; background-color: #303030; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffcfaf; } 
+code span.an { color: #7f9f7f; font-weight: bold; } 
+code span.at { } 
+code span.bn { color: #dca3a3; } 
+code span.bu { } 
+code span.cf { color: #f0dfaf; } 
+code span.ch { color: #dca3a3; } 
+code span.cn { color: #dca3a3; font-weight: bold; } 
+code span.co { color: #7f9f7f; } 
+code span.cv { color: #7f9f7f; font-weight: bold; } 
+code span.do { color: #7f9f7f; } 
+code span.dt { color: #dfdfbf; } 
+code span.dv { color: #dcdccc; } 
+code span.er { color: #c3bf9f; } 
+code span.ex { } 
+code span.fl { color: #c0bed1; } 
+code span.fu { color: #efef8f; } 
+code span.im { } 
+code span.in { color: #7f9f7f; font-weight: bold; } 
+code span.kw { color: #f0dfaf; } 
+code span.op { color: #f0efd0; } 
+code span.ot { color: #efef8f; } 
+code span.pp { color: #ffcfaf; font-weight: bold; } 
+code span.sc { color: #dca3a3; } 
+code span.ss { color: #cc9393; } 
+code span.st { color: #cc9393; } 
+code span.va { } 
+code span.vs { color: #cc9393; } 
+code span.wa { color: #7f9f7f; font-weight: bold; } 
+</style>
+  <style>
+:root
+{
+--color-txt: color-mix(in srgb, CanvasText, Canvas 40%);
+--color-accent: color-mix(in srgb, CanvasText, Canvas 80%);
+}
+html {
+color: var(--color-txt);
+background-color: Canvas;
+color-scheme: light dark;
+}
+body {
+max-width: 45em;
+}
+header {
+text-align: left;
+}
+.subtitle:before {
+content: 'Tags: '
+}
+a {
+color: var(--color-txt);
+}
+a:visited {
+color: var(--color-txt);
+}
+a[href^="http"]:not([href^="https://rogerfarrell.net"]):after {
+content:"\2B08"; 
+font-size: 0.8em;
+line-height: 0.8em;
+vertical-align: super;
+}
+th {
+border-top: 1px solid var(--color-accent);
+}
+tbody {
+border-top: 1px solid var(--color-accent);
+border-bottom: 1px solid var(--color-accent);
+}
+blockquote {
+border-left: 2px solid var(--color-accent);
+}
+div.sourceCode {
+padding: 0.5em;
+border-radius: 2px;
+}
+hr {
+border: none;
+border-top: 1px solid var(--color-accent);
+opacity: 0.75;
+}
+
+nav.running-header {
+display: flow-root;
+font-size: 0.75em;
+padding-bottom: 5px;
+border-bottom: 1pt solid var(--color-accent);
+a {
+text-decoration: none;
+}
+}
+.site-title {
+font-style: italic;
+float: left;
+}
+.github-link {
+float: right;
+}
+</style>
+</head>
+<body>
+<nav class="running-header">
+  <div class="site-title">
+    <a href="https://rogerfarrell.net">Roger Farrell’s notes</a>
+  </div>
+  <div class="github-link">
+    <a href="https://github.com/rogerfarrell/Notes/">GitHub</a>
+  </div>
+</nav>
+<header id="title-block-header">
+<h1 class="title">Navigating around in your shell</h1>
+<p class="author"><a href="https://blog.meain.io/2023/navigating-around-in-shell/" class="uri">https://blog.meain.io/2023/navigating-around-in-shell/</a></p>
+</header>
+<p>The author shares many useful tips for navigating shell environments.
+Most of them were built-in. The following were particularly relevant to
+my interests.</p>
+<h2 id="go-to-previous-directory">Go to previous directory</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="at">-</span></span></code></pre></div>
+<p>This command takes you to the previously visited directory.</p>
+<h2 id="use-globs">Use globs</h2>
+<p>Cut out large sections of long paths with globs. E.g.
+<code>~/Downloads/**/mynestedproject</code>.</p>
+<h2 id="case-insensitivity-and-spellcheck">Case-insensitivity and
+spellcheck</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">setopt</span> nocaseglob <span class="co"># ignore case</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">setopt</span> correct <span class="co"># correct spelling mistakes</span></span></code></pre></div>
+<h2 id="pushd-and-popd"><code>pushd</code> and <code>popd</code></h2>
+<p><code>pushd</code> is like <code>cd</code> but it adds the current
+directory to the directory stack prior to the change. You can use
+<code>popd</code> to navigate back to the latest entry on the stack.</p>
+<h2 id="create-custom-hashes">Create custom hashes</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">hash</span> <span class="at">-d</span> yourprefixname=fullpathor</span></code></pre></div>
+<p>This lets you define custom prefixes such as <code>~projects</code>
+for relative paths. The author cited another source<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> for
+more info.</p>
+<h2 id="cdpath"><code>CDPATH</code></h2>
+<p>The <code>CDPATH</code> envirionment variable can be set to add
+autocompletion and relative path navigation. For example:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">CDPATH</span><span class="op">+=</span><span class="va">$HOME</span>/Downloads</span></code></pre></div>
+<p>Now I could <code>cd</code> into any subdirectory in
+<code>Downloads</code> from any directory.</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://til.hashrocket.com/posts/xsavbhlrz4-shortcuts-with-hash-d-in-zsh" class="uri">https://til.hashrocket.com/posts/xsavbhlrz4-shortcuts-with-hash-d-in-zsh</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

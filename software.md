@@ -10,9 +10,7 @@ subtitle: '[[computer]]'
 
 ---
 
-- [[references/change-image-color-profile-with-sips]]
 - [[references/find-bleed-info-in-adobe-acrobat]]
 - [[references/google-docs-shortcuts]]
 - [[references/guide-for-markdown-to-indesign-workflow]]
-- [[references/hledger-documentation]]
 - [[references/indesign-book-layout-checklist]]
