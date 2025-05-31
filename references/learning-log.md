@@ -5,6 +5,18 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-05-30      In Zsh, `$OLDPWD` stores the value of the previous pwd. This is
+                hugely useful for moving files around.
+
+2025-05-30      In Zsh, adding a glob to an expression makes the whole expression a
+                glob. Make sure you are postfixing `*` if you want to see all
+                matches for a that begin with the glob.
+
+2025-05-30      In Vim, use `<C-w>t` to move the current window to a new tab.       `CTRL-W_T`
+
+2025-05-30      In Zsh, use `exec zsh` to totally reload Zsh (including environment <https://batsov.com/articles/2022/09/15/reload-zsh-configuration/>
+                variables).
+
 2025-05-30      top is way better than Activity Monitor.                            `man top`
 
 2025-05-21      In Vim, `nrformats+=alpha` must be set to increment/decrement       `:help nrformats` letters with the below two commands.
