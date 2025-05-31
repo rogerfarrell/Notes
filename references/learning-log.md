@@ -12,7 +12,7 @@ date            description                                                     
                 glob. Make sure you are postfixing `*` if you want to see all
                 matches for a that begin with the glob.
 
-2025-05-30      In Vim, use `<C-w>t` to move the current window to a new tab.       `CTRL-W_T`
+2025-05-30      In Vim, use `<C-w>T` to move the current window to a new tab.       `CTRL-W_T`
 
 2025-05-30      In Zsh, use `exec zsh` to totally reload Zsh (including environment <https://batsov.com/articles/2022/09/15/reload-zsh-configuration/>
                 variables).
