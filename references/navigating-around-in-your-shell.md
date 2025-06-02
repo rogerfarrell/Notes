@@ -36,7 +36,7 @@ latest entry on the stack.
 # Create custom hashes
 
 ```zsh
-hash -d yourprefixname=fullpathor
+hash -d yourprefixname=fullpath
 ```
 
 This lets you define custom prefixes such as `~projects` for relative

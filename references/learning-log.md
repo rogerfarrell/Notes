@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-06-02      Literate programming is a way of documenting high-level code        <https://en.wikipedia.org/wiki/Literate_programming>
+                approaches by structuring the code files with prose.
+
 2025-05-30      In Zsh, `$OLDPWD` stores the value of the previous pwd. This is
                 hugely useful for moving files around.
 

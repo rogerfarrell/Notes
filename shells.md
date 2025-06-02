@@ -1,5 +1,5 @@
 ---
-title: Zsh
+title: Shells
 subtitle: '[[computer]]'
 ---
 
