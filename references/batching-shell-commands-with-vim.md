@@ -14,7 +14,7 @@ This workflow does enable some interesting manipulations via Vim.
 Suppose you have a group of markdown files in a directory with spaces in
 the filenames.…
 
-```zsh
+```bash
 \ls *.md | vim -
 ```
 
@@ -22,7 +22,7 @@ the filenames.…
 ensures clean output. `vim -` opens vim with the standard input. The
 result will be a new vim buffer with a list of filenames as plain text:
 
-```zsh
+```bash
 a file with spaces in the name.md
 another file.md
 why would anyone use spaces in filenames.md
@@ -32,7 +32,7 @@ Now you may manipulate the filenames to create a list of shell commands.
 For example, you may use block selection and substitution to create the
 following.
 
-```zsh
+```bash
 mv a\ file\ with\ spaces\ in\ the\ name.md              a-file-with-spaces-in-the-name.md
 mv another\ file.md	                                    another-file.md
 mv why\ would\ anyone\ use\ spaces\ in\ filenames.md    why-would-anyone-use-spaces-in-filenames.md
