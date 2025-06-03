@@ -5,6 +5,11 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-06-02      System Crafters is a great community with info about Guix and       <https://systemcrafters.net/>
+                Emacs.
+
+2025-06-02      Guix is a better, GNU clone of NixOS configured in Guile Scheme.    <https://guix.gnu.org/>
+
 2025-06-02      Literate programming is a way of documenting high-level code        <https://en.wikipedia.org/wiki/Literate_programming>
                 approaches by structuring the code files with prose.
 
