@@ -3,6 +3,7 @@ title: Software
 subtitle: '[[computer]]'
 ---
 
+- [[foss-compliments-functional-configuration]]
 - [[internalized-vs-externalized-config]]
 - [[what-is-a-makefile]]
 - [[why-clis-are-better-for-humans]]
