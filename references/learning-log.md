@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-06-12      In Vim, use `:helpg /pattern/` to search the Vim help via grep. Use `:help helpg`
+                `:cn` and `:cp` to navigate matches.
+
 2025-06-02      System Crafters is a great community with info about Guix and       <https://systemcrafters.net/>
                 Emacs.
 

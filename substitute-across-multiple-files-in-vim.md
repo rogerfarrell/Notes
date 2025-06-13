@@ -23,7 +23,7 @@ Once the QuickFix list is populated, You can substitute across all files
 just like a single file. See the following command:
 
 ```vim
-:cfdo %s/searchpatter/replacepattern/ | update
+:cfdo %s/searchpattern/replacepattern/ | update
 ```
 
 - `:cfdo` runs the following command across all files.[^1]
