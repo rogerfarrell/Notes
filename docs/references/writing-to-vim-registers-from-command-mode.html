@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Vim</title>
+  <meta name="author" content="Roger Farrell" />
+  <title>Writing to vim registers from command mode</title>
   <style>
 html {
 color: #1a1a1a;
@@ -246,25 +247,17 @@ float: right;
   </div>
 </nav>
 <header id="title-block-header">
-<h1 class="title">Vim</h1>
-<p class="subtitle"><a href="development" class="wikilink">development</a>, <a href="software" class="wikilink">software</a></p>
+<h1 class="title">Writing to vim registers from command mode</h1>
+<p class="author">Roger Farrell</p>
 </header>
-<ul>
-<li><a href="avoiding-visual-mode-in-vim" class="wikilink">avoiding-visual-mode-in-vim</a></li>
-<li><a href="prowse-a-vim-plugin-for-surfing-the-web-as-markdown" class="wikilink">prowse-a-vim-plugin-for-surfing-the-web-as-markdown</a></li>
-<li><a href="reference-notes-are-important-for-vim-help-docs" class="wikilink">reference-notes-are-important-for-vim-help-docs</a></li>
-<li><a href="running-pandoc-on-a-selection-within-a-file-in-vim" class="wikilink">running-pandoc-on-a-selection-within-a-file-in-vim</a></li>
-<li><a href="substitute-across-multiple-files-in-vim" class="wikilink">substitute-across-multiple-files-in-vim</a></li>
-<li><a href="taking-notes-in-vim" class="wikilink">taking-notes-in-vim</a></li>
-<li><a href="vim-config" class="wikilink">vim-config</a></li>
-<li><a href="vim-tips" class="wikilink">vim-tips</a></li>
-</ul>
-<hr />
-<ul>
-<li><a href="references/batching-shell-commands-with-vim" class="wikilink">references/batching-shell-commands-with-vim</a></li>
-<li><a href="references/netrw-workflow" class="wikilink">references/netrw-workflow</a></li>
-<li><a href="references/vim-mnemonics" class="wikilink">references/vim-mnemonics</a></li>
-<li><a href="references/writing-to-vim-registers-from-command-mode" class="wikilink">references/writing-to-vim-registers-from-command-mode</a></li>
-</ul>
+<p>Vim registers are super handy for quick access of various
+information. Most of the time, yanking into a register is the simplest
+way to write to a register. However, there are times when you may desire
+to write to a register from command mode. One such example is when you
+want to copy the contents of one register to another. This can be done
+very simply with the following.</p>
+<pre class="vim"><code>:let @b = @a</code></pre>
+<p>In this example the contents of register <code>a</code> are copied to
+register <code>b</code>.</p>
 </body>
 </html>

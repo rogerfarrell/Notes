@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-06-16      This is a great quick-start guide by the founder of Guix about      <https://guix.gnu.org/blog/2022/keeping-ones-home-tidy/>
+                using Guix Home.
+
 2025-06-12      In Vim, use `:helpg /pattern/` to search the Vim help via grep. Use `:help helpg`
                 `:cn` and `:cp` to navigate matches.
 

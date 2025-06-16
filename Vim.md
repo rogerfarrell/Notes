@@ -17,3 +17,4 @@ subtitle: '[[development]], [[software]]'
 - [[references/batching-shell-commands-with-vim]]
 - [[references/netrw-workflow]]
 - [[references/vim-mnemonics]]
+- [[references/writing-to-vim-registers-from-command-mode]]
