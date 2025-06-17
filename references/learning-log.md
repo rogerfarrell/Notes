@@ -5,6 +5,14 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-06-17      The man page for bash has a whole section about the readline.       `man bash`
+
+2025-06-17      In Vim, Netrw cannot copy directories.                              <https://vi.stackexchange.com/questions/12095/is-it-possible-to-clone-a-directory-with-netrw>,
+                                                                                    <https://stackoverflow.com/questions/26958059/vim-netrw-copy-commands>
+
+2025-06-17      Vim can be configured to run as a command server when GUI support   `:help clientserver`, <https://subvisual.com/blog/posts/119-open-files-on-existing-vim-sessions/>
+                is enabled.
+
 2025-06-16      This is a great quick-start guide by the founder of Guix about      <https://guix.gnu.org/blog/2022/keeping-ones-home-tidy/>
                 using Guix Home.
 
