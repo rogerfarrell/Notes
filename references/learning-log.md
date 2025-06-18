@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-06-17      Guix deploy is a built-in feature for managing Guix on remote       <https://guix.gnu.org/manual/en/html_node/Invoking-guix-deploy.html>
+                hardware.
+
 2025-06-17      Haunt is a static site generator written in Guile Scheme.           <https://dthompson.us/projects/haunt.html>
 
 2025-06-17      The man page for bash has a whole section about the readline.       `man bash`
