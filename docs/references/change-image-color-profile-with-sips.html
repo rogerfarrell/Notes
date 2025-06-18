@@ -325,13 +325,13 @@ profile from an image</h2>
 to apply. One simple way to get around this is to convert a file in an
 editor with the desired profile, then extract it from the output image
 with sips.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sips</span> <span class="at">-x</span> profilename.icc inputimage.jpg</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sips</span> <span class="at">-x</span> profilename.icc inputimage.jpg</span></code></pre></div>
 <p>This is a really simple command.
 <code>-x</code>/<code>--extractProfile</code> sets the destination for
 the extracted profile.</p>
 <h2 id="applying-the-profile-to-an-image">Applying the profile to an
 image</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sips</span> <span class="at">-M</span> inputprofile.icc perceptual <span class="at">-o</span> outputimage.jpg inputimage.jpg</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sips</span> <span class="at">-M</span> inputprofile.icc perceptual <span class="at">-o</span> outputimage.jpg inputimage.jpg</span></code></pre></div>
 <p>There is not too much to explain here either.
 <code>-M</code>/<code>--matchToWithIntent</code> takes two arguments: a
 profile and a rendering intent. The intent determines the way colors are

@@ -16,7 +16,7 @@ apply. One simple way to get around this is to convert a file in an
 editor with the desired profile, then extract it from the output image
 with sips.
 
-```zsh
+```bash
 sips -x profilename.icc inputimage.jpg
 ```
 
@@ -25,7 +25,7 @@ destination for the extracted profile.
 
 # Applying the profile to an image
 
-```zsh
+```bash
 sips -M inputprofile.icc perceptual -o outputimage.jpg inputimage.jpg
 ```
 
