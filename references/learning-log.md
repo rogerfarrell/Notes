@@ -12,7 +12,8 @@ date            description                                                     
 
 2025-06-17      Haunt is a static site generator written in Guile Scheme.           <https://dthompson.us/projects/haunt.html>
 
-2025-06-17      The man page for bash has a whole section about the readline.       `man bash`
+2025-06-17      The man page for bash has a whole section about the readline (with  `man bash`
+                keybinds.
 
 2025-06-17      In Vim, Netrw cannot copy directories.                              <https://vi.stackexchange.com/questions/12095/is-it-possible-to-clone-a-directory-with-netrw>,
                                                                                     <https://stackoverflow.com/questions/26958059/vim-netrw-copy-commands>
