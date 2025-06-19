@@ -15,3 +15,4 @@ subtitle: '[[computer]]'
 - [[references/google-docs-shortcuts]]
 - [[references/guide-for-markdown-to-indesign-workflow]]
 - [[references/indesign-book-layout-checklist]]
+- [[references/indesign-grep-snippets]]

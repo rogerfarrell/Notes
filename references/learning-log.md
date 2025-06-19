@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-06-19      In Vim command mode, type `:e <cfile>` to create a new file at the  `:help <cfile>`
+                path under the cursor.
+
 2025-06-18      This devlog has some helpful info about an initial Guix setup.      <https://simendsjo.me/blog/20240712085803-initial_guix_home_setup.html>
 
 2025-06-17      Guix deploy is a built-in feature for managing Guix on remote       <https://guix.gnu.org/manual/en/html_node/Invoking-guix-deploy.html>
