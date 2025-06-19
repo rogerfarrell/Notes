@@ -253,8 +253,15 @@ float: right;
 <p>InDesign uses a Perl flavor of regex.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The
 following are some useful expressions I have accumulated over the
 years.</p>
-<p>Page references:</p>
+<h2 id="find-page-references">Find page references</h2>
 <pre><code>\b(([Pp]age)|(p+\.))\s\d+</code></pre>
+<h2 id="remove-extra-white-space">Remove extra white space</h2>
+<p>This looks for contiguous white space characters and removes all but
+the last instance.</p>
+<p>Find:</p>
+<pre><code>(\s+)(\s)</code></pre>
+<p>Replace:</p>
+<pre><code>$2</code></pre>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr />
 <ol>
