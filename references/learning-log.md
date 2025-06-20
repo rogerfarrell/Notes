@@ -5,6 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-06-19      In Vim insert mode, type `<C-k>Co` for the copyright symbol: ©.     `:digraphs`, `:help digraph`
+
 2025-06-19      In Vim command mode, type `:e <cfile>` to create a new file at the  `:help <cfile>`
                 path under the cursor.
 

@@ -19,6 +19,8 @@ command     mnemonic                    notes
 
 `g`         go                          used as "leader" for many commands
 
+`g&`        global substitute           `:help g&`
+
 `h`         left                        only makes sense on the keyboard used by vi's author, same for jkl
 
 `i`         insert mode
