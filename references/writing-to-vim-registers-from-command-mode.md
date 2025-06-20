@@ -11,7 +11,13 @@ the contents of one register to another. This can be done very simply
 with the following.
 
 ```vim
-:let @b = @a
+:let @b=@a
 ```
 
 In this example the contents of register `a` are copied to register `b`.
+
+To write raw commands directly to the macro, use single quotes:
+
+```vim
+:let @d='SI am replacing the contents of this line.'
+```

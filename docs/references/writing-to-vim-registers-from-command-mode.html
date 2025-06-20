@@ -256,8 +256,10 @@ way to write to a register. However, there are times when you may desire
 to write to a register from command mode. One such example is when you
 want to copy the contents of one register to another. This can be done
 very simply with the following.</p>
-<pre class="vim"><code>:let @b = @a</code></pre>
+<pre class="vim"><code>:let @b=@a</code></pre>
 <p>In this example the contents of register <code>a</code> are copied to
 register <code>b</code>.</p>
+<p>To write raw commands directly to the macro, use single quotes:</p>
+<pre class="vim"><code>:let @d=&#39;SI am replacing the contents of this line.&#39;</code></pre>
 </body>
 </html>
