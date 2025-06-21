@@ -5,6 +5,17 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-06-20      GUI apps can be started from the Linux virtual terminal via a       <https://linuxconfig.org/how-to-run-x-applications-without-a-desktop-or-a-wm>,
+                number of methods.                                                  <https://superuser.com/q/550020>, <https://superuser.com/q/606811>
+
+2025-06-20      David Thompson, a Guix contributor, gives some helpful perspective  <https://dthompson.us/posts/installing-guix-on-a-10th-gen-thinkpad-x1.html>
+                on hardware compatibility with Guix's FOSS stance.
+
+2025-06-20      In Vim, type `g<C-g>` to see information about the cursor position. `:help g_CTRL-G`, `:help word-count`
+
+2025-06-20      In Vim, type `:set ruler` to enable line/column/relative position   `:help ruler`, <https://unix.stackexchange.com/a/335468/727998>
+                info for the cursor in the bottom left of the window.
+
 2025-06-19      In Vim insert mode, type `<C-k>Co` for the copyright symbol: ©.     `:digraphs`, `:help digraph`
 
 2025-06-19      In Vim command mode, type `:e <cfile>` to create a new file at the  `:help <cfile>`
