@@ -13,6 +13,7 @@ subtitle: '[[computer]]'
 
 - [[references/find-bleed-info-in-adobe-acrobat]]
 - [[references/google-docs-shortcuts]]
-- [[references/guide-for-markdown-to-indesign-workflow]]
+- [[references/guide-markdown-to-indesign-workflow]]
+- [[references/guide-docsflow-and-share-for-review]]
 - [[references/indesign-book-layout-checklist]]
 - [[references/indesign-grep-snippets]]
