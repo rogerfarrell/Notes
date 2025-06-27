@@ -54,6 +54,17 @@ As we established prior, content should be edited in Google Docs
 whenever possible. Other than that, the typsetting workflow is
 essentially unchanged.
 
+# Step 3: Handle corrections
+
+Once the INDD is ready for proofing, a preview link should be sent via
+[Share for
+Review](https://helpx.adobe.com/indesign/using/share-for-review.html).
+The corrections workflow is simple:
+
+1.  Share the preview URL
+2.  View comments directly in InDesign
+3.  Make corrections
+4.  Update preview link
 
 ---
 
