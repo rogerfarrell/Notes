@@ -17,3 +17,4 @@ subtitle: '[[computer]]'
 - [[references/guide-docsflow-and-share-for-review]]
 - [[references/indesign-book-layout-checklist]]
 - [[references/indesign-grep-snippets]]
+- [[references/the-lisp-machine-and-gnu]]
