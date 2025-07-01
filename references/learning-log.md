@@ -5,6 +5,15 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-06-27      In Vim, type `U` to toggle undo line.                               `:help U`
+
+2025-06-27      In Vim, `ZZ` is equivalent to `:x`.                                 `:help ZZ`
+
+2025-06-27      In Vim, `<C-d>` will show all matching help topics for an           `:help c_CTRL-D`
+                incomplete help command.
+
+2025-06-27      In Vim, type `<C-w>p` to go to the previous window.                 `:help CTRL-W_p`
+
 2025-06-20      GUI apps can be started from the Linux virtual terminal via a       <https://linuxconfig.org/how-to-run-x-applications-without-a-desktop-or-a-wm>,
                 number of methods.                                                  <https://superuser.com/q/550020>, <https://superuser.com/q/606811>
 
@@ -39,6 +48,9 @@ date            description                                                     
 
 2025-06-16      This is a great quick-start guide by the founder of Guix about      <https://guix.gnu.org/blog/2022/keeping-ones-home-tidy/>
                 using Guix Home.
+
+2025-06-13      This guy, Podiki, built a gaming rig with Guix System. He is also a <https://boilingsteam.com/how-i-built-my-new-linux-gaming-desktop-in-2021-with-amd-cpugpu-and-gnu-guix/>
+                major contributor to NonGuix.
 
 2025-06-12      In Vim, use `:helpg /pattern/` to search the Vim help via grep. Use `:help helpg`
                 `:cn` and `:cp` to navigate matches.
