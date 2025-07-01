@@ -68,7 +68,7 @@ The corrections workflow is simple:
 
 ---
 
-# References:
+# References
 
 - DocsFlow user guide:
   <https://emsoftware.com/products/docsflow/user-guide/>
