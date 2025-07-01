@@ -5,6 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-07-01      Gimp supports automated workflows via scripting in Scheme!          <https://www.gimp.org/tutorials/Basic_Batch/>
+
 2025-06-27      In Vim, type `U` to toggle undo line.                               `:help U`
 
 2025-06-27      In Vim, `ZZ` is equivalent to `:x`.                                 `:help ZZ`
