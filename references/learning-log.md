@@ -5,6 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-07-01      This is a great basic usage of Guix Deploy.                         <https://stumbles.id.au/getting-started-with-guix-deploy.html>
+
 2025-07-01      Gimp supports automated workflows via scripting in Scheme!          <https://www.gimp.org/tutorials/Basic_Batch/>
 
 2025-06-27      In Vim, type `U` to toggle undo line.                               `:help U`
