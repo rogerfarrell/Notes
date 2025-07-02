@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-07-02      These posts give the most detailed explanation of the InDesign      <https://indiscripts.com/post/2024/10/indesign-20-goes-to-mathml-1>,
+                MathML implementation than I have found to-date.                    <https://indiscripts.com/post/2025/03/indesign-20-goes-to-mathml-2>
+
 2025-07-01      This is a great basic usage of Guix Deploy.                         <https://stumbles.id.au/getting-started-with-guix-deploy.html>
 
 2025-07-01      Gimp supports automated workflows via scripting in Scheme!          <https://www.gimp.org/tutorials/Basic_Batch/>
