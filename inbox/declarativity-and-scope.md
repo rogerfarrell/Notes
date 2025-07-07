@@ -1,4 +1,5 @@
-There are two primary issues with duplicating code and documentation:
+There are at least two primary issues with duplicating code and
+documentation:
 
 1. It is difficult to keep many duplicates updated
 2. Finding what you need becomes much more difficult
