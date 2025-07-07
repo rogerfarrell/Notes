@@ -5,6 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-07-07      Guix has a handy reference card for frequent commands.              <https://guix.gnu.org/guix-refcard.pdf> 
+
 2025-07-04      LispKit is a library for developing Scheme on Apple devices. It has <https://www.lisppad.app/libraries/lispkit/lispkit-draw-chart-bar>
                 some interesting graphing capabilities.
 
