@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-07-04      LispKit is a library for developing Scheme on Apple devices. It has <https://www.lisppad.app/libraries/lispkit/lispkit-draw-chart-bar>
+                some interesting graphing capabilities.
+
 2025-07-02      These posts give the most detailed explanation of the InDesign      <https://indiscripts.com/post/2024/10/indesign-20-goes-to-mathml-1>,
                 MathML implementation than I have found to-date.                    <https://indiscripts.com/post/2025/03/indesign-20-goes-to-mathml-2>
 
