@@ -5,6 +5,7 @@ title: Religion
 - [[bible]]
 - [[defining-the-christmas-spirit]]
 - [[cultural-christianity-is-a-good-thing]]
+- [[piety-strives-not-for-perfection]]
 - [[theology]]
 
 ---
