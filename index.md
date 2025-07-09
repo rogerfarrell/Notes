@@ -19,13 +19,13 @@ about, check out my learning log: [[references/learning-log]].
 
 # The registry
 
+- [[art]]
 - [[cars]]
 - [[computer]]
 - [[development]]
 - [[education]]
 - [[history]]
 - [[mythology]]
-- [[poetry]]
 - [[religion]]
 - [[symbolism]]
 - [[zettelkasten]]
