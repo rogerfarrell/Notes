@@ -5,6 +5,12 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-07-10      This is a very provocative talk about interactive and visual        <https://jackrusher.com/strange-loop-2022/>
+                programming.
+
+2025-07-10      *Interactive programming* is what I have been looking for regarding <https://en.wikipedia.org/wiki/Interactive_programming>
+                the *correct* way to interface with computers.
+
 2025-07-09      In Vim insert mode, type `<C-o>` to use one normal mode command     `:help i_CTRL-O`
                 without leaving insert mode.
 
