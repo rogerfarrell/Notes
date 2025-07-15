@@ -18,7 +18,7 @@ generating product mockups.*
 
 First, I must convert each PDF to a high-quality JPG.[^1] I remove the
 alpha channel and set the background to white. Otherwise, transparent
-parts of the image may appear as other colors.
+parts of the image may appear as other colors.[^2]
 
 [^1]: See this thread on Stack Overflow for more info on converting PDFs
     to JPGs with ImageMagick:
