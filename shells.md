@@ -9,5 +9,6 @@ subtitle: '[[computer]]'
 ---
 
 - [[references/change-image-color-profile-with-sips]]
+- [[references/guide-batch-convert-pdfs-to-jpgs]]
 - [[references/navigating-around-in-your-shell]]
 - [[references/hledger-documentation]]
