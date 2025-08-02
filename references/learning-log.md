@@ -5,6 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-01      This is a great introduction into Vim-comparable motions in Emacs.  <https://www.masteringemacs.org/article/effective-editing-movement>
+
 2025-07-16      A potentially useful plugin for batching various InDesign exports.  <https://creativepro.com/files/kahrel/indesign/batch_convert.html>
 
 2025-07-10      This is a very provocative talk about interactive and visual        <https://jackrusher.com/strange-loop-2022/>

@@ -1,0 +1,19 @@
+---
+title: Breaking the 4th wall as the death pangs of modern myth
+subtitle: '[[symbolism]]'
+---
+
+Modern storytelling is obsessed with 4th wall breaking and parallel
+universes. This seems to be a symptom of the disconnect between modern
+stories and transcendent myth. Myth is the lifeblood of narrative. In
+its absence, stories are not anchored to patterns of cosmic symbolic
+coherence. They become self-referential totalities like the Tower of
+Babel: [[the-tower-of-babel-is-a-self-referential-totality]]. As the
+death knell tolls, contemporary stories are seeking a way to escape
+their dying universes.[^1] 4th wall breaking and parallel universes are
+like the distant shore of the undying lands, seducing mortals with the
+promise of immortality.
+
+[^1]: This fine artist's frame-breaking style is a palpable expression
+    of this sentiment:
+    <https://stowe-gallery.com/collections/andrew-scott>
