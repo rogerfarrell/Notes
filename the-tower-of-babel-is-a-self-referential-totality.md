@@ -15,7 +15,7 @@ displacing Him as the ordering principle of the cosmos.[^1] As the means
 of their unsanctioned ascent, the tower was an artificial totality whose
 top was man. The top reached into the heavens. It was intended to
 elevate man beyond the mortal plain into the divine realm. Of course,
-this was a fated endeavor. Mortal artifices crumble in the presence of
+this was a fated endeavor. Mortal handiwork crumbles in the presence of
 true divinity: [[the-tower-of-babel-is-a-self-referential-totality]].
 
 [^1]: This is the same pattern as the Numenorean war on Valinor.
