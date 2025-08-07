@@ -5,6 +5,11 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-07      In Emacs, `M-n` to access minibuffer future history moving files    <https://www.reddit.com/r/emacs/comments/1hevtrx/dired_faster_way_to_move_files/>,
+                between dired buffers.                                              <https://engineering.collbox.co/post/working-faster-in-emacs-by-reading-the-future/>
+
+2025-08-02      In Emacs, `C-x 4 0` closes the current window *and* buffer.         <https://superuser.com/q/1309765/2465866>
+
 2025-08-01      This is a great introduction into Vim-comparable motions in Emacs.  <https://www.masteringemacs.org/article/effective-editing-movement>
 
 2025-07-16      A potentially useful plugin for batching various InDesign exports.  <https://creativepro.com/files/kahrel/indesign/batch_convert.html>
