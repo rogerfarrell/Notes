@@ -1,6 +1,6 @@
 ---
-title: How to replace spark plugs on a Toyota 2GR-FE
-subtitle: '[[cars]]'
+title: 'Guide: replace spark plugs on a Toyota 2GR-FE'
+author: Roger Farrell
 ---
 
 # Tools and supplies required

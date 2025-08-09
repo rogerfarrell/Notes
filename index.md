@@ -20,9 +20,9 @@ about, check out my learning log: [[references/learning-log]].
 # The registry
 
 - [[art]]
-- [[cars]]
 - [[computer]]
 - [[development]]
+- [[diy]]
 - [[education]]
 - [[history]]
 - [[mythology]]

@@ -1,5 +1,5 @@
 ---
-title: 'Guide: AC condenser capacitor replacement'
+title: 'Guide: replace AC condenser capacitor'
 author: Roger Farrell
 ---
 
