@@ -5,6 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-08      In Bash, use `du -hs .` to get the size of the current directory.   `man du`, <https://stackoverflow.com/a/16662027>
+
 2025-08-07      In Emacs, `M-n` to access minibuffer future history moving files    <https://www.reddit.com/r/emacs/comments/1hevtrx/dired_faster_way_to_move_files/>,
                 between dired buffers.                                              <https://engineering.collbox.co/post/working-faster-in-emacs-by-reading-the-future/>
 
