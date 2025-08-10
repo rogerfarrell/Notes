@@ -19,14 +19,36 @@ fail: <https://youtu.be/1_VtPzWxpsA?si=iEnHuE-juLnTxYyY>.*
 
 Replacing the capacitor is a fairly straightforward process. Of course,
 one begins by disconnecting any electrical circuits that could be
-sending power to the AC. You should also disconnect power at the
-AC external contactor box. You can then remove the electrical access
-panel. Next, discharge the capacitor by shorting the leads with an
-insulated screw driver or other metal tool. Finally, replace the
-capacitor.
+sending power to the AC. You should also disconnect power at the AC
+external contactor box. You can then remove the electrical access panel.
+Next, discharge the capacitor by shorting the leads with an insulated
+screw driver or other metal tool. At this point, it is safe to remove
+the old capacitor. For a visual guide of the disassembly, check out this
+excellent video: <https://youtu.be/9ZGfvC-PMWU?si=iJDP0hqRHo8pnNtP>.
 
-*A step-by-step video instructional can be found here:
-<https://youtu.be/9ZGfvC-PMWU?si=iJDP0hqRHo8pnNtP>.*
+A compatible replacement must match the old capacitor in the following
+characteristics.
+
+**NOTE:** Writing on your capacitor may be illegible due to wear. You can
+typically get the required info off the stickers on the fan and
+compressor. Check out this video for more info:
+<https://youtu.be/ROH7CQNgwKw?si=H0hpMgYEQtxXMrSl>.
+
+## Single run vs. dual run
+
+Single run usually have only two leads. Dual run can have two or more.
+
+## Microfarad (MFD or μF) rating
+
+This is is the capacitance value. Dual run capacitors are basically
+double-units. They will have two separate ratings, one each for the fan
+and compressor.
+
+## Voltage
+
+Capacitors for this application typically come in one of two voltages:
+370 V or 440 V. 440 V is an acceptable replacement for 370 V, but not
+vice versa.
 
 # Further troubleshooting
 
