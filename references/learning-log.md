@@ -5,6 +5,11 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-11      This is a good place to start when learning Emacs.                  <https://protesilaos.com/codelog/2019-12-20-vlog-switch-emacs/>
+
+2025-08-11      Protesilaos Stavrou is a Greek thinker with potential insights on   <https://protesilaos.com/about/>
+                FOSS and Emacs.
+
 2025-08-10      This paper explains the rationale behind LAML.                      <https://archives.iw3c2.org/www2002/_normark/laml/papers/lugm-laml.pdf>
 
 2025-08-10      LAML is perhaps the nicest Lisp markup language.                    <https://people.cs.aau.dk/~normark/laml-distributions/laml/index.html>
