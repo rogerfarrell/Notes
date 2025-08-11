@@ -5,6 +5,16 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-10      This paper explains the rationale behind LAML.                      <https://archives.iw3c2.org/www2002/_normark/laml/papers/lugm-laml.pdf>
+
+2025-08-10      LAML is perhaps the nicest Lisp markup language.                    <https://people.cs.aau.dk/~normark/laml-distributions/laml/index.html>
+
+2025-08-10      I guess I should not be surprised that there are many attempts at   <https://www.cliki.net/Lisp+Markup+Languages>
+                Lisp-as-markup.
+
+2025-08-10      Guix channels may be embedded in the system and home config files.  <https://guix.gnu.org/manual/devel/en/html_node/Customizing-the-System_002dWide-Guix.html>,
+																					<https://guix.gnu.org/manual/en/html_node/Guix-Home-Services.html>
+
 2025-08-08      In Bash, use `du -hs .` to get the size of the current directory.   `man du`, <https://stackoverflow.com/a/16662027>
 
 2025-08-07      In Emacs, `M-n` to access minibuffer future history moving files    <https://www.reddit.com/r/emacs/comments/1hevtrx/dired_faster_way_to_move_files/>,
