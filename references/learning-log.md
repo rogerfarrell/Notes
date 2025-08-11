@@ -13,7 +13,7 @@ date            description                                                     
                 Lisp-as-markup.
 
 2025-08-10      Guix channels may be embedded in the system and home config files.  <https://guix.gnu.org/manual/devel/en/html_node/Customizing-the-System_002dWide-Guix.html>,
-																					<https://guix.gnu.org/manual/en/html_node/Guix-Home-Services.html>
+                                                                                    <https://guix.gnu.org/manual/en/html_node/Guix-Home-Services.html>
 
 2025-08-08      In Bash, use `du -hs .` to get the size of the current directory.   `man du`, <https://stackoverflow.com/a/16662027>
 
