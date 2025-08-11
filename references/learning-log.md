@@ -35,7 +35,7 @@ date            description                                                     
 2025-07-09      In Vim insert mode, type `<C-o>` to use one normal mode command     `:help i_CTRL-O`
                 without leaving insert mode.
 
-2025-07-07      Guix has a handy reference card for frequent commands.              <https://guix.gnu.org/guix-refcard.pdf> 
+2025-07-07      Guix has a handy reference card for frequent commands.              <https://guix.gnu.org/guix-refcard.pdf>
 
 2025-07-04      LispKit is a library for developing Scheme on Apple devices. It has <https://www.lisppad.app/libraries/lispkit/lispkit-draw-chart-bar>
                 some interesting graphing capabilities.
@@ -136,9 +136,9 @@ date            description                                                     
                 `:g/pattern/normal somecommand`.
 
 2025-05-05      In double entry accounting, payments made with credit cards and     <https://www.reddit.com/r/plaintextaccounting/comments/eh9bz7/yet_another_question_about_credit_cards_and/>
-                other liabilities are represented as outgoing (negative) values. 
+                other liabilities are represented as outgoing (negative) values.
 
-2025-05-02      In Zsh use `bindkey -v` to enable Vi mode. (Insert mode is the 
+2025-05-02      In Zsh use `bindkey -v` to enable Vi mode. (Insert mode is the
                 default.
 
 2025-05-01      In Zsh use `setopt extended_glob; yourcmdhere (^negativepattern)`   <https://unix.stackexchange.com/a/541787/727998>
@@ -193,7 +193,7 @@ date            description                                                     
 2025-04-18      In Vim command mode, use `<Up>` and `<Down>` to scroll through      `:help c_<Up>`, `:help c_<Down>`
                 history just like in the shell.
 
-2025-04-18      In Vim, use `:ene`/`:enew` to begin editing a new file in the pwd.  `:help :enew` 
+2025-04-18      In Vim, use `:ene`/`:enew` to begin editing a new file in the pwd.  `:help :enew`
 
 2025-04-17      I finally remembered where I bought my favorite round thick-rimmed  <https://www.fytoo.com/product/FT0969?id=2239>
                 glasses.
@@ -206,24 +206,24 @@ date            description                                                     
 2025-04-17      ShellCheck is a Haskell shell script validator.                     <https://hackage.haskell.org/package/ShellCheck>
 
 2025-04-16      GitHub CLI extension leaves much to be desired. Currently, it can   <https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line>
-                only process shell commands.                                                           
+                only process shell commands.
 
 2025-04-16      API keys are not a part of the ChatGPT Plus subscription. They are  <https://community.openai.com/t/api-access-as-a-chatgpt-plus-subscriber/573409/2>
-                served by the OpenAI API platform.                                                       
+                served by the OpenAI API platform.
 
 2025-04-15      InDesign’s GREP supports word boundaries: `\b`. (It also supports   <https://www.oreilly.com/library/view/grep-in-indesign/9780596157173/ch04.html>
-                the opening/closing boundaries: `\<` and `\>`.)                                         
+                the opening/closing boundaries: `\<` and `\>`.)
 
 2025-04-10      Zenburn is a Vim color scheme used natively for Pandoc syntax       <https://github.com/jnurmine/Zenburn>
-                highlighting. It is so good, I am using it in my .vimrc.                                         
+                highlighting. It is so good, I am using it in my .vimrc.
 
 2025-04-10      SVG favicons are now a thing.                                       <https://css-tricks.com/svg-favicons-and-all-the-fun-things-we-can-do-with-them/>
 
 2025-04-10      In CSS, use `display: flow-root;` to ensure parent elements min     <https://www.digitalocean.com/community/tutorials/css-no-more-clearfix-flow-root>
-                size accounts for floated elements.                                                           
+                size accounts for floated elements.
 
 2025-04-09      In Vim insert mode, evaluate expressions (e.g. math) by typing      `:help c_CTRL-R_=`, <https://vimtricks.com/p/vim-calculator/>
-                `<C-R>=yourexpression<CR>`.                                         
+                `<C-R>=yourexpression<CR>`.
 
 2025-04-09      In Vim, open file under the cursor in a new split with `CTRL-W_f`.  `:help CTRL-W_f`, <https://vimtricks.com/p/open-file-in-a-split/>
 
@@ -247,7 +247,7 @@ date            description                                                     
                 *Extract Pages…*.
 
 2025-04-04      A joke about how deep the rabbit hole goes for solving computer     <https://people.willamette.edu/~fruehr/haskell/evolution.html>
-                problems.                                          
+                problems.
 
 2025-04-03      The T2 chip on Apple computers can make installing Linux difficult. <https://wiki.t2linux.org>
 
