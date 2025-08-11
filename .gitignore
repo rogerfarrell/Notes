@@ -3,7 +3,10 @@
 # For private notes
 local/
 
-# Ignore vim files:
+# Ignore Vim files:
 *~
 *.swp
 *.swo
+
+# Ignore Emacs files:
+\#*\#	
