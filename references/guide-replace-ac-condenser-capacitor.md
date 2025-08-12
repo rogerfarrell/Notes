@@ -23,8 +23,10 @@ sending power to the AC. You should also disconnect power at the AC
 external contactor box. You can then remove the electrical access panel.
 Next, discharge the capacitor by shorting the leads with an insulated
 screw driver or other metal tool. At this point, it is safe to remove
-the old capacitor. For a visual guide of the disassembly, check out this
-excellent video: <https://youtu.be/9ZGfvC-PMWU?si=iJDP0hqRHo8pnNtP>.
+the old capacitor.
+
+*For a visual guide of the disassembly, check out this
+excellent video: <https://youtu.be/9ZGfvC-PMWU?si=iJDP0hqRHo8pnNtP>.*
 
 A compatible replacement must match the old capacitor in the following
 characteristics.

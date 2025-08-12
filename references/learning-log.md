@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-12      In Emacs ELisp buffers, tab autocompletion of procedures can be     <https://stackoverflow.com/a/7023515>
+                enabled.
+
 2025-08-11      This is a good place to start when learning Emacs.                  <https://protesilaos.com/codelog/2019-12-20-vlog-switch-emacs/>
 
 2025-08-11      Protesilaos Stavrou is a Greek thinker with potential insights on   <https://protesilaos.com/about/>
