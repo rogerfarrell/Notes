@@ -5,6 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-12      In Vim *and* Emacs evil-mode, `CTRL-B` is bound to `<PageUp>`.      `:help CTRL-B`, `C-h f evil-scroll-page-up`
+
 2025-08-12      In Emacs ELisp buffers, tab autocompletion of procedures can be     <https://stackoverflow.com/a/7023515>
                 enabled.
 
