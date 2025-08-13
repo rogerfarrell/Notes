@@ -5,6 +5,11 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-13      A potentially useful guide on setting up Gnus in Emacs.             <https://www.bounga.org/tips/2020/05/03/multiple-smtp-accounts-in-gnus-without-external-tools/>
+
+2025-08-13      50# offset (uncoated) paper stock has an average thickness of       <https://www.hollandlitho.com/paper_thickness_and_weight_cutting_through_the_confusion.html>
+                0.004 in.
+
 2025-08-12      In Vim *and* Emacs evil-mode, `CTRL-B` is bound to `<PageUp>`.      `:help CTRL-B`, `C-h f evil-scroll-page-up`
 
 2025-08-12      In Emacs ELisp buffers, tab autocompletion of procedures can be     <https://stackoverflow.com/a/7023515>
