@@ -5,6 +5,11 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-14      This author has an interesting perspective on prepress via CSS      <https://iangmcdowell.com/blog/posts/laying-out-a-book-with-css/>
+                paged media module.
+
+2025-08-14      SXML is a Guile Scheme standard for representing XML.               <https://www.gnu.org/software/guile/manual/html_node/SXML.html>
+
 2025-08-13      A potentially useful guide on setting up Gnus in Emacs.             <https://www.bounga.org/tips/2020/05/03/multiple-smtp-accounts-in-gnus-without-external-tools/>
 
 2025-08-13      50# offset (uncoated) paper stock has an average thickness of       <https://www.hollandlitho.com/paper_thickness_and_weight_cutting_through_the_confusion.html>
