@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-20      In Vim insert mode, `ga` will reveal information about the          `:help ga`
+                character under the cursor, including its Vim digraph.
+
 2025-08-14      This author has an interesting perspective on prepress via CSS      <https://iangmcdowell.com/blog/posts/laying-out-a-book-with-css/>
                 paged media module.
 
