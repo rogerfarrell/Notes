@@ -5,7 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
-2025-08-22      In Emacs, *god-mode* beautifully addresses modifier fatigue.        <https://github.com/emacsorphanage/god-mode>
+2025-08-22      In Emacs, *god-mode* beautifully addresses modifier fatigue.        <https://chrisdone.com/posts/god-mode/>,
+                                                                                    <https://github.com/emacsorphanage/god-mode>
 
 2025-08-20      In Vim insert mode, `ga` will reveal information about the          `:help ga`
                 character under the cursor, including its Vim digraph.
