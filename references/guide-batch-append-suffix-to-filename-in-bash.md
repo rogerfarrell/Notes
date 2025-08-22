@@ -10,7 +10,7 @@ prepending works much the same way.
 [^1]: This thread on Stack Overflow has some good ideas:
     <https://stackoverflow.com/a/208220>
 
-```
+```bash
 for name in *.extension
 do
 mv "$name" "${name%.extension}-suffix.extension"
