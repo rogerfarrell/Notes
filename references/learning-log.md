@@ -5,6 +5,16 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-22      In Emacs, type `C-q` to insert a literal character regardless of    `C-h k C-q`
+                bindings. (Think of it at the interactive equivalent of quoting
+                symbols in Lisp.)
+
+2025-08-22      In Emacs, evaluate `(insert (insert-time-string "%Y-%m-%d"))` to
+                insert the current date in *YYYY-MM-DD* format.
+
+2025-08-22      In Emacs, *devil-mode* may be the best modifier-less minor mode.    <https://github.com/susam/devil>,
+                                                                                    <https://susam.github.io/devil/>
+
 2025-08-22      In Emacs, *god-mode* beautifully addresses modifier fatigue.        <https://chrisdone.com/posts/god-mode/>,
                                                                                     <https://github.com/emacsorphanage/god-mode>
 
