@@ -32,3 +32,14 @@ An simpler, less-readable alternative representation:
    (chapter body indent-1
      (inlines ...))))
 ```
+
+# As a plaintext file?
+
+These ideas can be expressed in a straightforward plaintext format that is both human-readible/editable, and parsable.
+
+```
+chapter sidebar note    ; block-level classes
+This is a paragraph.    ; the content
+bbbb      iiiiiiiii     ; inline class map
+(b bold) (i italic)     ; inline-level classes
+```
