@@ -5,11 +5,14 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-25      In Lisp, comment convention recommends `;` for end-of-line comments <https://stackoverflow.com/a/6365579>,
+                and `;;` for comments on their own lines.                           <https://www.lispworks.com/documentation/HyperSpec/Body/02_ddb.htm>
+
 2025-08-22      In Emacs, type `C-q` to insert a literal character regardless of    `C-h k C-q`
                 bindings. (Think of it at the interactive equivalent of quoting
                 symbols in Lisp.)
 
-2025-08-22      In Emacs, evaluate `(insert (insert-time-string "%Y-%m-%d"))` to
+2025-08-22      In Emacs, evaluate `(insert (format-time-string "%Y-%m-%d"))` to
                 insert the current date in *YYYY-MM-DD* format.
 
 2025-08-22      In Emacs, *devil-mode* may be the best modifier-less minor mode.    <https://github.com/susam/devil>,
