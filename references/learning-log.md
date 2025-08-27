@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-27      In Guix, the *sops-guix* package is an interesting way to manage    <https://fishinthecalculator.me/blog/secrets-management-with-sops-guix.html>
+                secrets.
+
 2025-08-25      In Lisp, comment convention recommends `;` for end-of-line comments <https://stackoverflow.com/a/6365579>,
                 and `;;` for comments on their own lines.                           <https://www.lispworks.com/documentation/HyperSpec/Body/02_ddb.htm>
 
