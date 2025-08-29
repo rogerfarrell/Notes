@@ -5,6 +5,13 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-08-28      In Emacs, `C-o` *opens* a new line after the point. This is a close `C-h k C-o`
+                as Emacs gets to Vim's `C-o` and `C-O`.
+
+2025-08-28      In Emacs on macOS, the tile bar can be disabled for a cleaner look. <https://stackoverflow.com/a/72426586>
+
+2025-08-27      The Inscape CLI does great conversions from SVG to image formats.   <https://stackoverflow.com/a/14174624>
+
 2025-08-27      In Guix, the *sops-guix* package is an interesting way to manage    <https://fishinthecalculator.me/blog/secrets-management-with-sops-guix.html>
                 secrets.
 
