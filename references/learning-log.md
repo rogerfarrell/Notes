@@ -5,6 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-09-02      In Emacs, org-roam has an Obsidian-style graph visualization.       <https://github.com/org-roam/org-roam-ui?tab=readme-ov-file#usage>
+
 2025-08-28      In Emacs, `C-o` *opens* a new line after the point. This is a close `C-h k C-o`
                 as Emacs gets to Vim's `C-o` and `C-O`.
 
