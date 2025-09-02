@@ -5,6 +5,10 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-09-02      In Emacs, launch a new eshell from the current dired directory via  <https://stackoverflow.com/a/6533447>
+                `C-u M-x eshell`. Navigate between these eshells by number:
+                `C-3 M-x eshell` will open `*eshell*<3>`.
+
 2025-09-02      In Emacs, org-roam has an Obsidian-style graph visualization.       <https://github.com/org-roam/org-roam-ui?tab=readme-ov-file#usage>
 
 2025-08-28      In Emacs, `C-o` *opens* a new line after the point. This is a close `C-h k C-o`
