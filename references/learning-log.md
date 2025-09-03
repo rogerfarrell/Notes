@@ -5,6 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-09-03      Emacs has some text object marking capabilities by default.         `C-h i g (emacs)Marking Objects`
+
 2025-09-02      In Emacs, launch a new eshell from the current dired directory via  <https://stackoverflow.com/a/6533447>
                 `C-u M-x eshell`. Navigate between these eshells by number:
                 `C-3 M-x eshell` will open `*eshell*<3>`.
