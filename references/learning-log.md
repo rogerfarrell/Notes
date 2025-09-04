@@ -5,6 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-09-04      This is a great introduction to *xargs* in Bash.                    <https://stackoverflow.com/a/76130645/28799158>
+
 2025-09-03      Emacs has some text object marking capabilities by default.         `C-h i g (emacs)Marking Objects`
 
 2025-09-02      In Emacs, launch a new eshell from the current dired directory via  <https://stackoverflow.com/a/6533447>
