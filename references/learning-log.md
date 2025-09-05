@@ -5,6 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-09-05      Emacs has a native tab mode! Type `C-x t 2` to create a new tab.    `C-h i g (emacs)Tab Bars`
+
 2025-09-04      This is a great introduction to *xargs* in Bash.                    <https://stackoverflow.com/a/76130645/28799158>
 
 2025-09-03      Emacs has some text object marking capabilities by default.         `C-h i g (emacs)Marking Objects`
