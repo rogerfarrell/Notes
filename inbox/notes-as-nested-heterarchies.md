@@ -1,0 +1,28 @@
+In the real world, information is neither hierarchical nor
+heterarchical. Meaningful order emerges non-arbitrarily from every
+possible context. The same raw data will naturally reconfigure based on
+viewpoint. For example, the cycle of life, death, and rebirth is
+observed everywhere in nature. It takes on different nuances when
+applied to the contexts of science, religion, life experience,
+etc.. These contexts can be further split apart into the natural science
+of various creatures, the perspectives of different religions, and the
+life experiences of people at different life-stages.
+
+These contexts are real and no more arbitrary than they illicit. Of
+course, exhaustively representing the context from which a given ordered
+pattern is derived is impractical (and likely impossible). A more
+pragmatic approach is to capture the resulting contextual artifacts,
+distinguishing them from adjacent patterns by comparison. This produces
+a web of pairs in a *nested heterarchy*. For the purposes of
+note-taking, the resulting structures of information are entirely
+emergent. There are three potential relationships between a note and
+another comparison note: more specific, more general, or simply
+adjacent.[^1] A more specific will possess context which is a superset
+of its comparison note. A less specific note will likewise possess a
+contextual subset of its comparison. An adjacent note will possess a
+similar context which contains both omissions and additions to the
+context of its comparison note.
+
+[^1]: This organization is very similar to Ben Vallack's depth-driven
+    approach to Zettelkasten note taking, which notably lacks a concept
+    of adjacent notes: <https://youtu.be/Ck4TriLMR4s?si=miwPlLnfVdkvILuP>
