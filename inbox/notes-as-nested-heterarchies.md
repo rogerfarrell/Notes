@@ -8,15 +8,15 @@ etc.. These contexts can be further split apart into the natural science
 of various creatures, the perspectives of different religions, and the
 life experiences of people at different life-stages.
 
-These contexts are real and no more arbitrary than they illicit. Of
-course, exhaustively representing the context from which a given ordered
-pattern is derived is impractical (and likely impossible). A more
-pragmatic approach is to capture the resulting contextual artifacts,
-distinguishing them from adjacent patterns by comparison. This produces
-a web of pairs in a *nested heterarchy*. For the purposes of
-note-taking, the resulting structures of information are entirely
-emergent. There are three potential relationships between a note and
-another comparison note: more specific, more general, or simply
+These contexts are real and no more arbitrary than the patterns they
+illicit. Of course, exhaustively representing the context from which a
+given ordered pattern is derived is impractical (and likely
+impossible). A more pragmatic approach is to capture the resulting
+contextual artifacts, distinguishing them from adjacent patterns by
+comparison. This produces a web of pairs in a *nested heterarchy*. For
+the purposes of note-taking, the resulting structures of information are
+entirely emergent. There are three potential relationships between a
+note and another comparison note: more specific, more general, or simply
 adjacent.[^1] A more specific will possess context which is a superset
 of its comparison note. A less specific note will likewise possess a
 contextual subset of its comparison. An adjacent note will possess a
@@ -26,3 +26,8 @@ context of its comparison note.
 [^1]: This organization is very similar to Ben Vallack's depth-driven
     approach to Zettelkasten note taking, which notably lacks a concept
     of adjacent notes: <https://youtu.be/Ck4TriLMR4s?si=miwPlLnfVdkvILuP>
+
+A potential problem with this method is that it naturally favors
+vertical relationships over horizontal ones. This does make sense, as
+the relevance of vertical relationships is readily apparent. Horizontal
+relationships are far more difficult to judge.

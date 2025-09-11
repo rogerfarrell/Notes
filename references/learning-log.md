@@ -5,6 +5,19 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-09-11      This is a good introduction to completions in Emacs (with           <https://www.masteringemacs.org/article/understanding-minibuffer-completion>
+                keybinds).
+
+2025-09-11      macOS has massive overlap with Emacs keybindings.                   <https://jblevins.org/log/kbd>
+
+2025-09-09      Google Docs utilizes the *RE2* REGEX standard.                      <https://support.google.com/docs/answer/62754#regular_expressions&zippy=%2Csee-an-example>
+                                                                                    <https://github.com/google/re2/blob/main/doc/syntax.txt>
+
+2025-09-09      In Google Docs, `\v` is the REGEX pattern for soft returns.         <https://appiphony.com/blog/create-a-hard-or-soft-return-in-google-docs#:~:text=You%20can%20also%20quickly%20identify,returns%2C%20search%20for%20%5Cv.>
+
+2025-09-09      In InDesign, use a paragraph rule to add offset before the first    <https://graphicdesign.stackexchange.com/a/70460/211504>
+                paragraph in a text frame.
+
 2025-09-05      A some great instructions on loading *SICP* into Emacs info mode.   <https://zv.github.io/sicp-in-texinfo>
 
 2025-09-05      Emacs has a native tab mode! Type `C-x t 2` to create a new tab.    `C-h i g (emacs)Tab Bars`
