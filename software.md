@@ -11,6 +11,7 @@ subtitle: '[[computer]]'
 
 ---
 
+- [[references/emacs-reference]]
 - [[references/find-bleed-info-in-adobe-acrobat]]
 - [[references/google-docs-shortcuts]]
 - [[references/guide-markdown-to-indesign-workflow]]
