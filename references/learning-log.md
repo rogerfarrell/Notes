@@ -5,6 +5,13 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-09-16      Some useful references for future exploration of Gnus for email.    <https://baty.net/posts/2025/03/using-gnus-for-email/>,
+                                                                                    <https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org>,
+                                                                                    <https://github.com/jwiegley/dot-emacs/blob/master/init.org>
+
+2025-09-16      In Emacs, `C-x C-v` kills the current buffer, replacing it with the `C-h k C-x C-v`
+                new file/directory.
+
 2025-09-11      This is a good introduction to completions in Emacs (with           <https://www.masteringemacs.org/article/understanding-minibuffer-completion>
                 keybinds).
 
