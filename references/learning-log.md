@@ -5,6 +5,8 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-09-17      In Emacs, this is a simple workflow for find/replace across files.  <https://stackoverflow.com/a/271136/28799158>
+
 2025-09-16      Some useful references for future exploration of Gnus for email.    <https://baty.net/posts/2025/03/using-gnus-for-email/>,
                                                                                     <https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org>,
                                                                                     <https://github.com/jwiegley/dot-emacs/blob/master/init.org>
