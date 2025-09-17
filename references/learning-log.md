@@ -5,6 +5,9 @@ title: Learning log
 --------------------------------------------------------------------------------------------------------------------------------------
 date            description                                                         references
 --------------- ------------------------------------------------------------------- --------------------------------------------------
+2025-09-17      Some good pointers on publishing notes from *org-roam* via          <https://commonplace.doubleloop.net/how-i-publish-my-wiki-with-org-publish>
+                *org-publish*.
+
 2025-09-17      In Emacs, this is a simple workflow for find/replace across files.  <https://stackoverflow.com/a/271136/28799158>
 
 2025-09-16      Some useful references for future exploration of Gnus for email.    <https://baty.net/posts/2025/03/using-gnus-for-email/>,
