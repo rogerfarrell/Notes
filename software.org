@@ -1,0 +1,18 @@
+#+title: Software
+
+- [[file:foss-compliments-functional-configuration.org]]
+- [[file:internalized-vs-externalized-config.org]]
+- [[file:what-is-a-makefile.org]]
+- [[file:why-clis-are-better-for-humans.org]]
+- [[file:vim.org]]
+
+--------------
+
+- [[file:references/emacs-reference.org]]
+- [[file:references/find-bleed-info-in-adobe-acrobat.org]]
+- [[file:references/google-docs-shortcuts.org]]
+- [[file:references/guide-markdown-to-indesign-workflow.org]]
+- [[file:references/guide-docsflow-and-share-for-review.org]]
+- [[file:references/indesign-book-layout-checklist.org]]
+- [[file:references/indesign-grep-snippets.org]]
+- [[file:references/the-lisp-machine-and-gnu.org]]

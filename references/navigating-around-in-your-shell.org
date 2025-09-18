@@ -1,0 +1,67 @@
+#+title: Navigating around in your shell
+
+#+author: [[https://blog.meain.io/2023/navigating-around-in-shell/]]
+The author shares many useful tips for navigating shell environments.
+Most of them were built-in. The following were particularly relevant to
+my interests.
+
+* Go to previous directory
+:PROPERTIES:
+:CUSTOM_ID: go-to-previous-directory
+:END:
+#+begin_src zsh
+cd -
+#+end_src
+
+This command takes you to the previously visited directory.
+
+* Use globs
+:PROPERTIES:
+:CUSTOM_ID: use-globs
+:END:
+Cut out large sections of long paths with globs. E.g.
+=~/Downloads/**/mynestedproject=.
+
+* Case-insensitivity and spellcheck
+:PROPERTIES:
+:CUSTOM_ID: case-insensitivity-and-spellcheck
+:END:
+#+begin_src zsh
+setopt nocaseglob # ignore case
+setopt correct # correct spelling mistakes
+#+end_src
+
+* =pushd= and =popd=
+:PROPERTIES:
+:CUSTOM_ID: pushd-and-popd
+:END:
+=pushd= is like =cd= but it adds the current directory to the directory
+stack prior to the change. You can use =popd= to navigate back to the
+latest entry on the stack.
+
+* Create custom hashes
+:PROPERTIES:
+:CUSTOM_ID: create-custom-hashes
+:END:
+#+begin_src zsh
+hash -d yourprefixname=fullpath
+#+end_src
+
+This lets you define custom prefixes such as =~projects= for relative
+paths. The author cited another source[fn:1] for more info.
+
+* =CDPATH=
+:PROPERTIES:
+:CUSTOM_ID: cdpath
+:END:
+The =CDPATH= envirionment variable can be set to add autocompletion and
+relative path navigation. For example:
+
+#+begin_src zsh
+CDPATH+=$HOME/Downloads
+#+end_src
+
+Now I could =cd= into any subdirectory in =Downloads= from any
+directory.
+
+[fn:1] [[https://til.hashrocket.com/posts/xsavbhlrz4-shortcuts-with-hash-d-in-zsh]]

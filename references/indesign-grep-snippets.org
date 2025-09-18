@@ -1,0 +1,36 @@
+#+title: InDesign GREP snippets
+
+#+author: Roger Farrell
+InDesign uses a Perl flavor of regex.[fn:1] The following are some
+useful expressions I have accumulated over the years.
+
+* Find page references
+:PROPERTIES:
+:CUSTOM_ID: find-page-references
+:END:
+#+begin_example
+\b(([Pp]age)|(p+\.))\s\d+
+#+end_example
+
+* Remove extra white space
+:PROPERTIES:
+:CUSTOM_ID: remove-extra-white-space
+:END:
+This looks for contiguous white space characters and removes all but the
+last instance.
+
+Find:
+
+#+begin_example
+(\s+)(\s)
+#+end_example
+
+Replace:
+
+#+begin_example
+$2
+#+end_example
+
+[fn:1] As far as I know this is not documented by Adobe directly. See
+       [[https://graphicdesign.stackexchange.com/q/120440/211504][this
+       question]] on the graphic design Stack Exchange.

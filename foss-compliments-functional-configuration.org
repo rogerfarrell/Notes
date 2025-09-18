@@ -1,0 +1,8 @@
+#+title: FOSS compliments functional configuration
+
+The primary aim of functional configuration is reproducibility. This is
+made impossible by opaque binaries which are not audit-able. FOSS[fn:1]
+makes eliminates this scenario by guaranteeing that the source code is
+always available for reference.
+
+[fn:1] /FOSS/ stands for /free open source software/.

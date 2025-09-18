@@ -1,0 +1,9 @@
+#+title: The purpose of history
+
+As the narrative through-line,[fn:1] history unites our past, present,
+and future. It builds our present identity through ancestry. Who we are
+is dependent on where we came from. Likewise, history sets our future
+trajectory by framing it in the narrative of the past.
+
+[fn:1] History is a narrative through-line:
+       [[file:references/history-is-a-narrative-of-communal-impressions.org]]

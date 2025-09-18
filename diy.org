@@ -1,0 +1,14 @@
+#+title: DIY
+
+* Cars
+:PROPERTIES:
+:CUSTOM_ID: cars
+:END:
+- [[file:references/guide-replace-spark-plugs-on-a-toyota-2gr-fe.md.org]]
+- [[file:references/guide-troubleshooting-obd-code-p0352.org]]
+
+* Home appliances
+:PROPERTIES:
+:CUSTOM_ID: home-appliances
+:END:
+- [[file:references/guide-replace-ac-condenser-capacitor.org]]

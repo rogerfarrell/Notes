@@ -1,0 +1,6 @@
+#+title: Computer
+
+- [[file:macos.org]]
+- [[file:software.org]]
+- [[file:typing.org]]
+- [[file:shells.org]]

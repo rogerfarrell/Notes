@@ -1,0 +1,4 @@
+#+title: macOS
+
+- [[file:config-for-macos.org]]
+- [[file:general-naming-conventions.org]]

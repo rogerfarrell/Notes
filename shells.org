@@ -1,0 +1,13 @@
+#+title: Shells
+
+- [[file:why-clis-are-better-for-humans.org]]
+- [[file:vim.org]]
+
+--------------
+
+- [[file:references/change-image-color-profile-with-sips.org]]
+- [[file:references/guide-batch-convert-pdfs-to-jpgs.org]]
+- [[file:references/guide-batch-convert-svgs-to-pngs.org]]
+- [[file:references/guide-batch-append-suffix-to-filename-in-bash.org]]
+- [[file:references/navigating-around-in-your-shell.org]]
+- [[file:references/hledger-documentation.org]]

@@ -1,0 +1,39 @@
+A simple markup language for authorship (for normies).
+
+Sections:
+
+#+begin_example
+# section name
+
+Some paragraphs
+
+section name #
+#+end_example
+
+Inlines:
+
+#+begin_example
+This is a paragraph with #inlinename an inline inlinename#.
+Some more of the paragraph.
+#+end_example
+
+* An alternate syntax?
+:PROPERTIES:
+:CUSTOM_ID: an-alternate-syntax
+:END:
+Sections:
+
+#+begin_example
+section name >
+
+Some paragraphs
+
+< section name
+#+end_example
+
+Inlines:
+
+#+begin_example
+This is a paragraph with inlinename> an inline <inlinename.
+Some more of the paragraph.
+#+end_example

@@ -1,0 +1,18 @@
+#+title: Emacs reference
+
+#+author: Roger Farrell
+* Using the minibuffer
+:PROPERTIES:
+:CUSTOM_ID: using-the-minibuffer
+:END:
+| function                | key   | description                         |
+|-------------------------+-------+-------------------------------------|
+| =switch-to-completions= | =M-v= | opens and focuses completion window |
+
+* Spellcheck
+:PROPERTIES:
+:CUSTOM_ID: spellcheck
+:END:
+| function                             | key     | description               |
+|--------------------------------------+---------+---------------------------|
+| =flyspell-correct-word-before-point= | =C-c $= | correct word before point |

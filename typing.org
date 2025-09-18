@@ -1,0 +1,3 @@
+#+title: Typing
+
+- [[file:my-zsa-voyager-config.org]]

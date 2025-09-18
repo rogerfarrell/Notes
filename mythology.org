@@ -1,0 +1,3 @@
+#+title: Mythology
+
+- [[file:myths-do-not-have-authors.org]]

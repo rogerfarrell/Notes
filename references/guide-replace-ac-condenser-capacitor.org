@@ -1,0 +1,69 @@
+#+title: Guide: replace AC condenser capacitor
+
+#+author: Roger Farrell
+* Why the capacitor fails
+:PROPERTIES:
+:CUSTOM_ID: why-the-capacitor-fails
+:END:
+Apparently, the capacitors in household AC condensers have a limited
+lifespan. They are also susceptible to failure during heatwaves. When
+the condenser capacitor fails, there is insufficient electrical power to
+kick-start the compressor and condenser fan. The contactor will click,
+but the fan and compressor sounds will be replaced with a constant
+electrical hum.
+
+/See this great video for more information about why these capacitors
+fail: [[https://youtu.be/1_VtPzWxpsA?si=iEnHuE-juLnTxYyY]]./
+
+* How to replace the capacitor
+:PROPERTIES:
+:CUSTOM_ID: how-to-replace-the-capacitor
+:END:
+Replacing the capacitor is a fairly straightforward process. Of course,
+one begins by disconnecting any electrical circuits that could be
+sending power to the AC. You should also disconnect power at the AC
+external contactor box. You can then remove the electrical access panel.
+Next, discharge the capacitor by shorting the leads with an insulated
+screw driver or other metal tool. At this point, it is safe to remove
+the old capacitor.
+
+/For a visual guide of the disassembly, check out this excellent video:
+[[https://youtu.be/9ZGfvC-PMWU?si=iJDP0hqRHo8pnNtP]]./
+
+A compatible replacement must match the old capacitor in the following
+characteristics.
+
+*NOTE:* Writing on your capacitor may be illegible due to wear. You can
+typically get the required info off the stickers on the fan and
+compressor. Check out this video for more info:
+[[https://youtu.be/ROH7CQNgwKw?si=H0hpMgYEQtxXMrSl]].
+
+** Single run vs. dual run
+:PROPERTIES:
+:CUSTOM_ID: single-run-vs.-dual-run
+:END:
+Single run usually have only two leads. Dual run can have two or more.
+
+** Microfarad (MFD or μF) rating
+:PROPERTIES:
+:CUSTOM_ID: microfarad-mfd-or-μf-rating
+:END:
+This is is the capacitance value. Dual run capacitors are basically
+double-units. They will have two separate ratings, one each for the fan
+and compressor.
+
+** Voltage
+:PROPERTIES:
+:CUSTOM_ID: voltage
+:END:
+Capacitors for this application typically come in one of two voltages:
+370 V or 440 V. 440 V is an acceptable replacement for 370 V, but not
+vice versa.
+
+* Further troubleshooting
+:PROPERTIES:
+:CUSTOM_ID: further-troubleshooting
+:END:
+The capacitor may not be the issue. Check out this video for a rather
+exhaustive troubleshooting procedure for AC problems:
+[[https://youtu.be/wzAA4dlp_70?si=WO3Q-ihSdxp8ZMwk]].
