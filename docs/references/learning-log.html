@@ -1,1117 +1,1037 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Learning log</title>
-  <style>
-html {
-color: #1a1a1a;
-background-color: #fdfdfd;
-}
-body {
-margin: 0 auto;
-max-width: 36em;
-padding-left: 50px;
-padding-right: 50px;
-padding-top: 50px;
-padding-bottom: 50px;
-hyphens: auto;
-overflow-wrap: break-word;
-text-rendering: optimizeLegibility;
-font-kerning: normal;
-}
-@media (max-width: 600px) {
-body {
-font-size: 0.9em;
-padding: 12px;
-}
-h1 {
-font-size: 1.8em;
-}
-}
-@media print {
-html {
-background-color: white;
-}
-body {
-background-color: transparent;
-color: black;
-font-size: 12pt;
-}
-p, h2, h3 {
-orphans: 3;
-widows: 3;
-}
-h2, h3, h4 {
-page-break-after: avoid;
-}
-}
-p {
-margin: 1em 0;
-}
-a {
-color: #1a1a1a;
-}
-a:visited {
-color: #1a1a1a;
-}
-img {
-max-width: 100%;
-}
-svg {
-height: auto;
-max-width: 100%;
-}
-h1, h2, h3, h4, h5, h6 {
-margin-top: 1.4em;
-}
-h5, h6 {
-font-size: 1em;
-font-style: italic;
-}
-h6 {
-font-weight: normal;
-}
-ol, ul {
-padding-left: 1.7em;
-margin-top: 1em;
-}
-li > ol, li > ul {
-margin-top: 0;
-}
-blockquote {
-margin: 1em 0 1em 1.7em;
-padding-left: 1em;
-border-left: 2px solid #e6e6e6;
-color: #606060;
-}
-code {
-font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-font-size: 85%;
-margin: 0;
-hyphens: manual;
-}
-pre {
-margin: 1em 0;
-overflow: auto;
-}
-pre code {
-padding: 0;
-overflow: visible;
-overflow-wrap: normal;
-}
-.sourceCode {
-background-color: transparent;
-overflow: visible;
-}
-hr {
-border: none;
-border-top: 1px solid #1a1a1a;
-height: 1px;
-margin: 1em 0;
-}
-table {
-margin: 1em 0;
-border-collapse: collapse;
-width: 100%;
-overflow-x: auto;
-display: block;
-font-variant-numeric: lining-nums tabular-nums;
-}
-table caption {
-margin-bottom: 0.75em;
-}
-tbody {
-margin-top: 0.5em;
-border-top: 1px solid #1a1a1a;
-border-bottom: 1px solid #1a1a1a;
-}
-th {
-border-top: 1px solid #1a1a1a;
-padding: 0.25em 0.5em 0.25em 0.5em;
-}
-td {
-padding: 0.125em 0.5em 0.25em 0.5em;
-}
-header {
-margin-bottom: 4em;
-text-align: center;
-}
-#TOC li {
-list-style: none;
-}
-#TOC ul {
-padding-left: 1.3em;
-}
-#TOC > ul {
-padding-left: 0;
-}
-#TOC a:not(:hover) {
-text-decoration: none;
-}
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+<!-- 2025-09-18 Thu 13:51 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Learning log</title>
+<meta name="author" content="Roger Farrell" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
-ul.task-list[class]{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-font-size: inherit;
-width: 0.8em;
-margin: 0 0.8em 0.2em -1.6em;
-vertical-align: middle;
-}
-.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
 </style>
-  <style>
-:root
-{
---color-txt: color-mix(in srgb, CanvasText, Canvas 40%);
---color-accent: color-mix(in srgb, CanvasText, Canvas 80%);
-}
-html {
-color: var(--color-txt);
-background-color: Canvas;
-color-scheme: light dark;
-}
-body {
-max-width: 45em;
-}
-header {
-text-align: left;
-}
-.subtitle:before {
-content: 'Tags: '
-}
-a {
-color: var(--color-txt);
-}
-a:visited {
-color: var(--color-txt);
-}
-a[href^="http"]:not([href^="https://rogerfarrell.net"]):after {
-content:"\2B08"; 
-font-size: 0.8em;
-line-height: 0.8em;
-vertical-align: super;
-}
-th {
-border-top: 1px solid var(--color-accent);
-}
-tbody {
-border-top: 1px solid var(--color-accent);
-border-bottom: 1px solid var(--color-accent);
-}
-blockquote {
-border-left: 2px solid var(--color-accent);
-}
-div.sourceCode {
-padding: 0.5em;
-border-radius: 2px;
-}
-hr {
-border: none;
-border-top: 1px solid var(--color-accent);
-opacity: 0.75;
-}
-
-nav.running-header {
-display: flow-root;
-font-size: 0.75em;
-padding-bottom: 5px;
-border-bottom: 1pt solid var(--color-accent);
-a {
-text-decoration: none;
-}
-}
-.site-title {
-font-style: italic;
-float: left;
-}
-.github-link {
-float: right;
-}
-</style>
+<link rel="stylesheet" href="../template/styles.css" type="text/css"/>
 </head>
 <body>
-<nav class="running-header">
-  <div class="site-title">
-    <a href="https://rogerfarrell.net">Roger Farrell’s notes</a>
-  </div>
-  <div class="github-link">
-    <a href="https://github.com/rogerfarrell/Notes/">GitHub</a>
-  </div>
-</nav>
-<header id="title-block-header">
+<div id="content" class="content">
 <h1 class="title">Learning log</h1>
-</header>
-<table>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
 <colgroup>
-<col style="width: 11%" />
-<col style="width: 50%" />
-<col style="width: 37%" />
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
-<th style="text-align: left;">date</th>
-<th style="text-align: left;">description</th>
-<th style="text-align: left;">references</th>
+<th scope="col" class="org-right">date</th>
+<th scope="col" class="org-left">description</th>
+<th scope="col" class="org-left">references</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">2025-09-17</td>
-<td style="text-align: left;">Some good pointers on publishing notes
-from <em>org-roam</em> via <em>org-publish</em>.</td>
-<td style="text-align: left;"><a href="https://commonplace.doubleloop.net/how-i-publish-my-wiki-with-org-publish" class="uri">https://commonplace.doubleloop.net/how-i-publish-my-wiki-with-org-publish</a></td>
+<td class="org-right">2025-09-18</td>
+<td class="org-left">Skribe and Skribilo may be the scheme markup language I have been looking for.</td>
+<td class="org-left"><a href="https://www.nongnu.org/skribilo/">https://www.nongnu.org/skribilo/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-17</td>
-<td style="text-align: left;">In Emacs, this is a simple workflow for
-find/replace across files.</td>
-<td style="text-align: left;"><a href="https://stackoverflow.com/a/271136/28799158" class="uri">https://stackoverflow.com/a/271136/28799158</a></td>
+<td class="org-right">2025-09-17</td>
+<td class="org-left">In Emacs org mode, some useful tips for big tables (like this one) are available in the manual.</td>
+<td class="org-left"><code>C-h i g (org)Column Width and Alignment</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-16</td>
-<td style="text-align: left;">Some useful references for future
-exploration of Gnus for email.</td>
-<td style="text-align: left;"><a href="https://baty.net/posts/2025/03/using-gnus-for-email/" class="uri">https://baty.net/posts/2025/03/using-gnus-for-email/</a>, <a href="https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org" class="uri">https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org</a>,
-<a href="https://github.com/jwiegley/dot-emacs/blob/master/init.org" class="uri">https://github.com/jwiegley/dot-emacs/blob/master/init.org</a></td>
+<td class="org-right">2025-09-17</td>
+<td class="org-left">Some good pointers on publishing notes from <i>org-roam</i> via <i>org-publish</i>.</td>
+<td class="org-left"><a href="https://commonplace.doubleloop.net/how-i-publish-my-wiki-with-org-publish">https://commonplace.doubleloop.net/how-i-publish-my-wiki-with-org-publish</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-16</td>
-<td style="text-align: left;">In Emacs, <code>C-x C-v</code> kills the
-current buffer, replacing it with the new file/directory.</td>
-<td style="text-align: left;"><code>C-h k C-x C-v</code></td>
+<td class="org-right">2025-09-17</td>
+<td class="org-left">In Emacs, this is a simple workflow for find/replace across files.</td>
+<td class="org-left"><a href="https://stackoverflow.com/a/271136/28799158">https://stackoverflow.com/a/271136/28799158</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-11</td>
-<td style="text-align: left;">This is a good introduction to completions
-in Emacs (with keybinds).</td>
-<td style="text-align: left;"><a href="https://www.masteringemacs.org/article/understanding-minibuffer-completion" class="uri">https://www.masteringemacs.org/article/understanding-minibuffer-completion</a></td>
+<td class="org-right">2025-09-16</td>
+<td class="org-left">Some useful references for future exploration of Gnus for email.</td>
+<td class="org-left"><a href="https://baty.net/posts/2025/03/using-gnus-for-email/">https://baty.net/posts/2025/03/using-gnus-for-email/</a>, <a href="https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org">https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org</a>, <a href="https://github.com/jwiegley/dot-emacs/blob/master/init.org">https://github.com/jwiegley/dot-emacs/blob/master/init.org</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-11</td>
-<td style="text-align: left;">macOS has massive overlap with Emacs
-keybindings.</td>
-<td style="text-align: left;"><a href="https://jblevins.org/log/kbd" class="uri">https://jblevins.org/log/kbd</a></td>
+<td class="org-right">2025-09-16</td>
+<td class="org-left">In Emacs, <code>C-x C-v</code> kills the current buffer, replacing it with the new file/directory.</td>
+<td class="org-left"><code>C-h k C-x C-v</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-09</td>
-<td style="text-align: left;">Google Docs utilizes the <em>RE2</em>
-REGEX standard.</td>
-<td style="text-align: left;"><a href="https://support.google.com/docs/answer/62754#regular_expressions&amp;zippy=%2Csee-an-example" class="uri">https://support.google.com/docs/answer/62754#regular_expressions&amp;zippy=%2Csee-an-example</a>
-<a href="https://github.com/google/re2/blob/main/doc/syntax.txt" class="uri">https://github.com/google/re2/blob/main/doc/syntax.txt</a></td>
+<td class="org-right">2025-09-11</td>
+<td class="org-left">This is a good introduction to completions in Emacs (with keybinds).</td>
+<td class="org-left"><a href="https://www.masteringemacs.org/article/understanding-minibuffer-completion">https://www.masteringemacs.org/article/understanding-minibuffer-completion</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-09</td>
-<td style="text-align: left;">In Google Docs, <code>\v</code> is the
-REGEX pattern for soft returns.</td>
-<td style="text-align: left;"><a href="https://appiphony.com/blog/create-a-hard-or-soft-return-in-google-docs#:~:text=You%20can%20also%20quickly%20identify,returns%2C%20search%20for%20%5Cv." class="uri">https://appiphony.com/blog/create-a-hard-or-soft-return-in-google-docs#:~:text=You%20can%20also%20quickly%20identify,returns%2C%20search%20for%20%5Cv.</a></td>
+<td class="org-right">2025-09-11</td>
+<td class="org-left">macOS has massive overlap with Emacs keybindings.</td>
+<td class="org-left"><a href="https://jblevins.org/log/kbd">https://jblevins.org/log/kbd</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-09</td>
-<td style="text-align: left;">In InDesign, use a paragraph rule to add
-offset before the first paragraph in a text frame.</td>
-<td style="text-align: left;"><a href="https://graphicdesign.stackexchange.com/a/70460/211504" class="uri">https://graphicdesign.stackexchange.com/a/70460/211504</a></td>
+<td class="org-right">2025-09-09</td>
+<td class="org-left">Google Docs utilizes the <i>RE2</i> REGEX standard.</td>
+<td class="org-left"><a href="https://support.google.com/docs/answer/62754#regular_expressions&amp;zippy=%2Csee-an-example">https://support.google.com/docs/answer/62754#regular_expressions&amp;zippy=%2Csee-an-example</a> <a href="https://github.com/google/re2/blob/main/doc/syntax.txt">https://github.com/google/re2/blob/main/doc/syntax.txt</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-05</td>
-<td style="text-align: left;">A some great instructions on loading
-<em>SICP</em> into Emacs info mode.</td>
-<td style="text-align: left;"><a href="https://zv.github.io/sicp-in-texinfo" class="uri">https://zv.github.io/sicp-in-texinfo</a></td>
+<td class="org-right">2025-09-09</td>
+<td class="org-left">In Google Docs, <code>\v</code> is the REGEX pattern for soft returns.</td>
+<td class="org-left"><a href="https://appiphony.com/blog/create-a-hard-or-soft-return-in-google-docs#:~:text=You%20can%20also%20quickly%20identify,returns%2C%20search%20for%20%5Cv.">https://appiphony.com/blog/create-a-hard-or-soft-return-in-google-docs#:~:text=You%20can%20also%20quickly%20identify,returns%2C%20search%20for%20%5Cv.</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-05</td>
-<td style="text-align: left;">Emacs has a native tab mode! Type
-<code>C-x t 2</code> to create a new tab.</td>
-<td style="text-align: left;"><code>C-h i g (emacs)Tab Bars</code></td>
+<td class="org-right">2025-09-09</td>
+<td class="org-left">In InDesign, use a paragraph rule to add offset before the first paragraph in a text frame.</td>
+<td class="org-left"><a href="https://graphicdesign.stackexchange.com/a/70460/211504">https://graphicdesign.stackexchange.com/a/70460/211504</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-04</td>
-<td style="text-align: left;">This is a great introduction to
-<em>xargs</em> in Bash.</td>
-<td style="text-align: left;"><a href="https://stackoverflow.com/a/76130645/28799158" class="uri">https://stackoverflow.com/a/76130645/28799158</a></td>
+<td class="org-right">2025-09-05</td>
+<td class="org-left">A some great instructions on loading <i>SICP</i> into Emacs info mode.</td>
+<td class="org-left"><a href="https://zv.github.io/sicp-in-texinfo">https://zv.github.io/sicp-in-texinfo</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-03</td>
-<td style="text-align: left;">Emacs has some text object marking
-capabilities by default.</td>
-<td style="text-align: left;"><code>C-h i g (emacs)Marking Objects</code></td>
+<td class="org-right">2025-09-05</td>
+<td class="org-left">Emacs has a native tab mode! Type <code>C-x t 2</code> to create a new tab.</td>
+<td class="org-left"><code>C-h i g (emacs)Tab Bars</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-02</td>
-<td style="text-align: left;">In Emacs, launch a new eshell from the
-current dired directory via <code>C-u M-x eshell</code>. Navigate
-between these eshells by number: <code>C-3 M-x eshell</code> will open
-<code>*eshell*&lt;3&gt;</code>.</td>
-<td style="text-align: left;"><a href="https://stackoverflow.com/a/6533447" class="uri">https://stackoverflow.com/a/6533447</a></td>
+<td class="org-right">2025-09-04</td>
+<td class="org-left">This is a great introduction to <i>xargs</i> in Bash.</td>
+<td class="org-left"><a href="https://stackoverflow.com/a/76130645/28799158">https://stackoverflow.com/a/76130645/28799158</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-09-02</td>
-<td style="text-align: left;">In Emacs, org-roam has an Obsidian-style
-graph visualization.</td>
-<td style="text-align: left;"><a href="https://github.com/org-roam/org-roam-ui?tab=readme-ov-file#usage" class="uri">https://github.com/org-roam/org-roam-ui?tab=readme-ov-file#usage</a></td>
+<td class="org-right">2025-09-03</td>
+<td class="org-left">Emacs has some text object marking capabilities by default.</td>
+<td class="org-left"><code>C-h i g (emacs)Marking Objects</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-28</td>
-<td style="text-align: left;">In Emacs, <code>C-o</code> <em>opens</em>
-a new line after the point. This is a close as Emacs gets to Vim’s
-<code>C-o</code> and <code>C-O</code>.</td>
-<td style="text-align: left;"><code>C-h k C-o</code></td>
+<td class="org-right">2025-09-02</td>
+<td class="org-left">In Emacs, launch a new eshell from the current dired directory via <code>C-u M-x eshell</code>. Navigate between these eshells by number: <code>C-3 M-x eshell</code> will open <code>*eshell*&lt;3&gt;</code>.</td>
+<td class="org-left"><a href="https://stackoverflow.com/a/6533447">https://stackoverflow.com/a/6533447</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-28</td>
-<td style="text-align: left;">In Emacs on macOS, the tile bar can be
-disabled for a cleaner look.</td>
-<td style="text-align: left;"><a href="https://stackoverflow.com/a/72426586" class="uri">https://stackoverflow.com/a/72426586</a></td>
+<td class="org-right">2025-09-02</td>
+<td class="org-left">In Emacs, org-roam has an Obsidian-style graph visualization.</td>
+<td class="org-left"><a href="https://github.com/org-roam/org-roam-ui?tab=readme-ov-file#usage">https://github.com/org-roam/org-roam-ui?tab=readme-ov-file#usage</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-27</td>
-<td style="text-align: left;">The Inscape CLI does great conversions
-from SVG to image formats.</td>
-<td style="text-align: left;"><a href="https://stackoverflow.com/a/14174624" class="uri">https://stackoverflow.com/a/14174624</a></td>
+<td class="org-right">2025-08-28</td>
+<td class="org-left">In Emacs, <code>C-o</code> <i>opens</i> a new line after the point. This is a close as Emacs gets to Vim's <code>C-o</code> and <code>C-O</code>.</td>
+<td class="org-left"><code>C-h k C-o</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-27</td>
-<td style="text-align: left;">In Guix, the <em>sops-guix</em> package is
-an interesting way to manage secrets.</td>
-<td style="text-align: left;"><a href="https://fishinthecalculator.me/blog/secrets-management-with-sops-guix.html" class="uri">https://fishinthecalculator.me/blog/secrets-management-with-sops-guix.html</a></td>
+<td class="org-right">2025-08-28</td>
+<td class="org-left">In Emacs on macOS, the tile bar can be disabled for a cleaner look.</td>
+<td class="org-left"><a href="https://stackoverflow.com/a/72426586">https://stackoverflow.com/a/72426586</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-25</td>
-<td style="text-align: left;">In Lisp, comment convention recommends
-<code>;</code> for end-of-line comments and <code>;;</code> for comments
-on their own lines.</td>
-<td style="text-align: left;"><a href="https://stackoverflow.com/a/6365579" class="uri">https://stackoverflow.com/a/6365579</a>, <a href="https://www.lispworks.com/documentation/HyperSpec/Body/02_ddb.htm" class="uri">https://www.lispworks.com/documentation/HyperSpec/Body/02_ddb.htm</a></td>
+<td class="org-right">2025-08-27</td>
+<td class="org-left">The Inscape CLI does great conversions from SVG to image formats.</td>
+<td class="org-left"><a href="https://stackoverflow.com/a/14174624">https://stackoverflow.com/a/14174624</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-22</td>
-<td style="text-align: left;">In Emacs, type <code>C-q</code> to insert
-a literal character regardless of bindings. (Think of it at the
-interactive equivalent of quoting symbols in Lisp.)</td>
-<td style="text-align: left;"><code>C-h k C-q</code></td>
+<td class="org-right">2025-08-27</td>
+<td class="org-left">In Guix, the <i>sops-guix</i> package is an interesting way to manage secrets.</td>
+<td class="org-left"><a href="https://fishinthecalculator.me/blog/secrets-management-with-sops-guix.html">https://fishinthecalculator.me/blog/secrets-management-with-sops-guix.html</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-22</td>
-<td style="text-align: left;">In Emacs, evaluate
-<code>(insert (format-time-string &quot;%Y-%m-%d&quot;))</code> to insert the
-current date in <em>YYYY-MM-DD</em> format.</td>
-<td style="text-align: left;"></td>
+<td class="org-right">2025-08-25</td>
+<td class="org-left">In Lisp, comment convention recommends <code>;</code> for end-of-line comments and <code>;;</code> for comments on their own lines.</td>
+<td class="org-left"><a href="https://stackoverflow.com/a/6365579">https://stackoverflow.com/a/6365579</a>, <a href="https://www.lispworks.com/documentation/HyperSpec/Body/02_ddb.htm">https://www.lispworks.com/documentation/HyperSpec/Body/02_ddb.htm</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-22</td>
-<td style="text-align: left;">In Emacs, <em>devil-mode</em> may be the
-best modifier-less minor mode.</td>
-<td style="text-align: left;"><a href="https://github.com/susam/devil" class="uri">https://github.com/susam/devil</a>, <a href="https://susam.github.io/devil/" class="uri">https://susam.github.io/devil/</a></td>
+<td class="org-right">2025-08-22</td>
+<td class="org-left">In Emacs, type <code>C-q</code> to insert a literal character regardless of bindings. (Think of it at the interactive equivalent of quoting symbols in Lisp.)</td>
+<td class="org-left"><code>C-h k C-q</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-22</td>
-<td style="text-align: left;">In Emacs, <em>god-mode</em> beautifully
-addresses modifier fatigue.</td>
-<td style="text-align: left;"><a href="https://chrisdone.com/posts/god-mode/" class="uri">https://chrisdone.com/posts/god-mode/</a>, <a href="https://github.com/emacsorphanage/god-mode" class="uri">https://github.com/emacsorphanage/god-mode</a></td>
+<td class="org-right">2025-08-22</td>
+<td class="org-left">In Emacs, evaluate <code>(insert (format-time-string "%Y-%m-%d"))</code> to insert the current date in <i>YYYY-MM-DD</i> format.</td>
+<td class="org-left">&#xa0;</td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-20</td>
-<td style="text-align: left;">In Vim insert mode, <code>ga</code> will
-reveal information about the character under the cursor, including its
-Vim digraph.</td>
-<td style="text-align: left;"><code>:help ga</code></td>
+<td class="org-right">2025-08-22</td>
+<td class="org-left">In Emacs, <i>devil-mode</i> may be the best modifier-less minor mode.</td>
+<td class="org-left"><a href="https://github.com/susam/devil">https://github.com/susam/devil</a>, <a href="https://susam.github.io/devil/">https://susam.github.io/devil/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-14</td>
-<td style="text-align: left;">This author has an interesting perspective
-on prepress via CSS paged media module.</td>
-<td style="text-align: left;"><a href="https://iangmcdowell.com/blog/posts/laying-out-a-book-with-css/" class="uri">https://iangmcdowell.com/blog/posts/laying-out-a-book-with-css/</a></td>
+<td class="org-right">2025-08-22</td>
+<td class="org-left">In Emacs, <i>god-mode</i> beautifully addresses modifier fatigue.</td>
+<td class="org-left"><a href="https://chrisdone.com/posts/god-mode/">https://chrisdone.com/posts/god-mode/</a>, <a href="https://github.com/emacsorphanage/god-mode">https://github.com/emacsorphanage/god-mode</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-14</td>
-<td style="text-align: left;">SXML is a Guile Scheme standard for
-representing XML.</td>
-<td style="text-align: left;"><a href="https://www.gnu.org/software/guile/manual/html_node/SXML.html" class="uri">https://www.gnu.org/software/guile/manual/html_node/SXML.html</a></td>
+<td class="org-right">2025-08-20</td>
+<td class="org-left">In Vim insert mode, <code>ga</code> will reveal information about the character under the cursor, including its Vim digraph.</td>
+<td class="org-left"><code>:help ga</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-13</td>
-<td style="text-align: left;">A potentially useful guide on setting up
-Gnus in Emacs.</td>
-<td style="text-align: left;"><a href="https://www.bounga.org/tips/2020/05/03/multiple-smtp-accounts-in-gnus-without-external-tools/" class="uri">https://www.bounga.org/tips/2020/05/03/multiple-smtp-accounts-in-gnus-without-external-tools/</a></td>
+<td class="org-right">2025-08-14</td>
+<td class="org-left">This author has an interesting perspective on prepress via CSS paged media module.</td>
+<td class="org-left"><a href="https://iangmcdowell.com/blog/posts/laying-out-a-book-with-css/">https://iangmcdowell.com/blog/posts/laying-out-a-book-with-css/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-13</td>
-<td style="text-align: left;">50# offset (uncoated) paper stock has an
-average thickness of 0.004 in.</td>
-<td style="text-align: left;"><a href="https://www.hollandlitho.com/paper_thickness_and_weight_cutting_through_the_confusion.html" class="uri">https://www.hollandlitho.com/paper_thickness_and_weight_cutting_through_the_confusion.html</a></td>
+<td class="org-right">2025-08-14</td>
+<td class="org-left">SXML is a Guile Scheme standard for representing XML.</td>
+<td class="org-left"><a href="https://www.gnu.org/software/guile/manual/html_node/SXML.html">https://www.gnu.org/software/guile/manual/html_node/SXML.html</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-12</td>
-<td style="text-align: left;">In Vim <em>and</em> Emacs evil-mode,
-<code>CTRL-B</code> is bound to <code>&lt;PageUp&gt;</code>.</td>
-<td style="text-align: left;"><code>:help CTRL-B</code>,
-<code>C-h f evil-scroll-page-up</code></td>
+<td class="org-right">2025-08-13</td>
+<td class="org-left">A potentially useful guide on setting up Gnus in Emacs.</td>
+<td class="org-left"><a href="https://www.bounga.org/tips/2020/05/03/multiple-smtp-accounts-in-gnus-without-external-tools/">https://www.bounga.org/tips/2020/05/03/multiple-smtp-accounts-in-gnus-without-external-tools/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-12</td>
-<td style="text-align: left;">In Emacs ELisp buffers, tab autocompletion
-of procedures can be enabled.</td>
-<td style="text-align: left;"><a href="https://stackoverflow.com/a/7023515" class="uri">https://stackoverflow.com/a/7023515</a></td>
+<td class="org-right">2025-08-13</td>
+<td class="org-left">50# offset (uncoated) paper stock has an average thickness of 0.004 in.</td>
+<td class="org-left"><a href="https://www.hollandlitho.com/paper_thickness_and_weight_cutting_through_the_confusion.html">https://www.hollandlitho.com/paper_thickness_and_weight_cutting_through_the_confusion.html</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-11</td>
-<td style="text-align: left;">This is a good place to start when
-learning Emacs.</td>
-<td style="text-align: left;"><a href="https://protesilaos.com/codelog/2019-12-20-vlog-switch-emacs/" class="uri">https://protesilaos.com/codelog/2019-12-20-vlog-switch-emacs/</a></td>
+<td class="org-right">2025-08-12</td>
+<td class="org-left">In Vim <i>and</i> Emacs evil-mode, <code>CTRL-B</code> is bound to <code>&lt;PageUp&gt;</code>.</td>
+<td class="org-left"><code>:help CTRL-B</code>, <code>C-h f evil-scroll-page-up</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-11</td>
-<td style="text-align: left;">Protesilaos Stavrou is a Greek thinker
-with potential insights on FOSS and Emacs.</td>
-<td style="text-align: left;"><a href="https://protesilaos.com/about/" class="uri">https://protesilaos.com/about/</a></td>
+<td class="org-right">2025-08-12</td>
+<td class="org-left">In Emacs ELisp buffers, tab autocompletion of procedures can be enabled.</td>
+<td class="org-left"><a href="https://stackoverflow.com/a/7023515">https://stackoverflow.com/a/7023515</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-10</td>
-<td style="text-align: left;">This paper explains the rationale behind
-LAML.</td>
-<td style="text-align: left;"><a href="https://archives.iw3c2.org/www2002/_normark/laml/papers/lugm-laml.pdf" class="uri">https://archives.iw3c2.org/www2002/_normark/laml/papers/lugm-laml.pdf</a></td>
+<td class="org-right">2025-08-11</td>
+<td class="org-left">This is a good place to start when learning Emacs.</td>
+<td class="org-left"><a href="https://protesilaos.com/codelog/2019-12-20-vlog-switch-emacs/">https://protesilaos.com/codelog/2019-12-20-vlog-switch-emacs/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-10</td>
-<td style="text-align: left;">LAML is perhaps the nicest Lisp markup
-language.</td>
-<td style="text-align: left;"><a href="https://people.cs.aau.dk/~normark/laml-distributions/laml/index.html" class="uri">https://people.cs.aau.dk/~normark/laml-distributions/laml/index.html</a></td>
+<td class="org-right">2025-08-11</td>
+<td class="org-left">Protesilaos Stavrou is a Greek thinker with potential insights on FOSS and Emacs.</td>
+<td class="org-left"><a href="https://protesilaos.com/about/">https://protesilaos.com/about/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-10</td>
-<td style="text-align: left;">I guess I should not be surprised that
-there are many attempts at Lisp-as-markup.</td>
-<td style="text-align: left;"><a href="https://www.cliki.net/Lisp+Markup+Languages" class="uri">https://www.cliki.net/Lisp+Markup+Languages</a></td>
+<td class="org-right">2025-08-10</td>
+<td class="org-left">This paper explains the rationale behind LAML.</td>
+<td class="org-left"><a href="https://archives.iw3c2.org/www2002/_normark/laml/papers/lugm-laml.pdf">https://archives.iw3c2.org/www2002/_normark/laml/papers/lugm-laml.pdf</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-10</td>
-<td style="text-align: left;">Guix channels may be embedded in the
-system and home config files.</td>
-<td style="text-align: left;"><a href="https://guix.gnu.org/manual/devel/en/html_node/Customizing-the-System_002dWide-Guix.html" class="uri">https://guix.gnu.org/manual/devel/en/html_node/Customizing-the-System_002dWide-Guix.html</a>,
-<a href="https://guix.gnu.org/manual/en/html_node/Guix-Home-Services.html" class="uri">https://guix.gnu.org/manual/en/html_node/Guix-Home-Services.html</a></td>
+<td class="org-right">2025-08-10</td>
+<td class="org-left">LAML is perhaps the nicest Lisp markup language.</td>
+<td class="org-left"><a href="https://people.cs.aau.dk/~normark/laml-distributions/laml/index.html">https://people.cs.aau.dk/~normark/laml-distributions/laml/index.html</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-08</td>
-<td style="text-align: left;">In Bash, use <code>du -hs .</code> to get
-the size of the current directory.</td>
-<td style="text-align: left;"><code>man du</code>, <a href="https://stackoverflow.com/a/16662027" class="uri">https://stackoverflow.com/a/16662027</a></td>
+<td class="org-right">2025-08-10</td>
+<td class="org-left">I guess I should not be surprised that there are many attempts at Lisp-as-markup.</td>
+<td class="org-left"><a href="https://www.cliki.net/Lisp+Markup+Languages">https://www.cliki.net/Lisp+Markup+Languages</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-07</td>
-<td style="text-align: left;">In Emacs, <code>M-n</code> to access
-minibuffer future history moving files between dired buffers.</td>
-<td style="text-align: left;"><a href="https://www.reddit.com/r/emacs/comments/1hevtrx/dired_faster_way_to_move_files/" class="uri">https://www.reddit.com/r/emacs/comments/1hevtrx/dired_faster_way_to_move_files/</a>,
-<a href="https://engineering.collbox.co/post/working-faster-in-emacs-by-reading-the-future/" class="uri">https://engineering.collbox.co/post/working-faster-in-emacs-by-reading-the-future/</a></td>
+<td class="org-right">2025-08-10</td>
+<td class="org-left">Guix channels may be embedded in the system and home config files.</td>
+<td class="org-left"><a href="https://guix.gnu.org/manual/devel/en/html_node/Customizing-the-System_002dWide-Guix.html">https://guix.gnu.org/manual/devel/en/html_node/Customizing-the-System_002dWide-Guix.html</a>, <a href="https://guix.gnu.org/manual/en/html_node/Guix-Home-Services.html">https://guix.gnu.org/manual/en/html_node/Guix-Home-Services.html</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-02</td>
-<td style="text-align: left;">In Emacs, <code>C-x 4 0</code> closes the
-current window <em>and</em> buffer.</td>
-<td style="text-align: left;"><a href="https://superuser.com/q/1309765/2465866" class="uri">https://superuser.com/q/1309765/2465866</a></td>
+<td class="org-right">2025-08-08</td>
+<td class="org-left">In Bash, use <code>du -hs .</code> to get the size of the current directory.</td>
+<td class="org-left"><code>man du</code>, <a href="https://stackoverflow.com/a/16662027">https://stackoverflow.com/a/16662027</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-08-01</td>
-<td style="text-align: left;">This is a great introduction into
-Vim-comparable motions in Emacs.</td>
-<td style="text-align: left;"><a href="https://www.masteringemacs.org/article/effective-editing-movement" class="uri">https://www.masteringemacs.org/article/effective-editing-movement</a></td>
+<td class="org-right">2025-08-07</td>
+<td class="org-left">In Emacs, <code>M-n</code> to access minibuffer future history moving files between dired buffers.</td>
+<td class="org-left"><a href="https://www.reddit.com/r/emacs/comments/1hevtrx/dired_faster_way_to_move_files/">https://www.reddit.com/r/emacs/comments/1hevtrx/dired_faster_way_to_move_files/</a>, <a href="https://engineering.collbox.co/post/working-faster-in-emacs-by-reading-the-future/">https://engineering.collbox.co/post/working-faster-in-emacs-by-reading-the-future/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-07-16</td>
-<td style="text-align: left;">A potentially useful plugin for batching
-various InDesign exports.</td>
-<td style="text-align: left;"><a href="https://creativepro.com/files/kahrel/indesign/batch_convert.html" class="uri">https://creativepro.com/files/kahrel/indesign/batch_convert.html</a></td>
+<td class="org-right">2025-08-02</td>
+<td class="org-left">In Emacs, <code>C-x 4 0</code> closes the current window <i>and</i> buffer.</td>
+<td class="org-left"><a href="https://superuser.com/q/1309765/2465866">https://superuser.com/q/1309765/2465866</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-07-10</td>
-<td style="text-align: left;">This is a very provocative talk about
-interactive and visual programming.</td>
-<td style="text-align: left;"><a href="https://jackrusher.com/strange-loop-2022/" class="uri">https://jackrusher.com/strange-loop-2022/</a></td>
+<td class="org-right">2025-08-01</td>
+<td class="org-left">This is a great introduction into Vim-comparable motions in Emacs.</td>
+<td class="org-left"><a href="https://www.masteringemacs.org/article/effective-editing-movement">https://www.masteringemacs.org/article/effective-editing-movement</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-07-10</td>
-<td style="text-align: left;"><em>Interactive programming</em> is what I
-have been looking for regarding the <em>correct</em> way to interface
-with computers.</td>
-<td style="text-align: left;"><a href="https://en.wikipedia.org/wiki/Interactive_programming" class="uri">https://en.wikipedia.org/wiki/Interactive_programming</a></td>
+<td class="org-right">2025-07-16</td>
+<td class="org-left">A potentially useful plugin for batching various InDesign exports.</td>
+<td class="org-left"><a href="https://creativepro.com/files/kahrel/indesign/batch_convert.html">https://creativepro.com/files/kahrel/indesign/batch_convert.html</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-07-09</td>
-<td style="text-align: left;">In Vim insert mode, type
-<code>&lt;C-o&gt;</code> to use one normal mode command without leaving
-insert mode.</td>
-<td style="text-align: left;"><code>:help i_CTRL-O</code></td>
+<td class="org-right">2025-07-10</td>
+<td class="org-left">This is a very provocative talk about interactive and visual programming.</td>
+<td class="org-left"><a href="https://jackrusher.com/strange-loop-2022/">https://jackrusher.com/strange-loop-2022/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-07-07</td>
-<td style="text-align: left;">Guix has a handy reference card for
-frequent commands.</td>
-<td style="text-align: left;"><a href="https://guix.gnu.org/guix-refcard.pdf" class="uri">https://guix.gnu.org/guix-refcard.pdf</a></td>
+<td class="org-right">2025-07-10</td>
+<td class="org-left"><i>Interactive programming</i> is what I have been looking for regarding the <i>correct</i> way to interface with computers.</td>
+<td class="org-left"><a href="https://en.wikipedia.org/wiki/Interactive_programming">https://en.wikipedia.org/wiki/Interactive_programming</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-07-04</td>
-<td style="text-align: left;">LispKit is a library for developing Scheme
-on Apple devices. It has some interesting graphing capabilities.</td>
-<td style="text-align: left;"><a href="https://www.lisppad.app/libraries/lispkit/lispkit-draw-chart-bar" class="uri">https://www.lisppad.app/libraries/lispkit/lispkit-draw-chart-bar</a></td>
+<td class="org-right">2025-07-09</td>
+<td class="org-left">In Vim insert mode, type <code>&lt;C-o&gt;</code> to use one normal mode command without leaving insert mode.</td>
+<td class="org-left"><code>:help i_CTRL-O</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-07-02</td>
-<td style="text-align: left;">These posts give the most detailed
-explanation of the InDesign MathML implementation than I have found
-to-date.</td>
-<td style="text-align: left;"><a href="https://indiscripts.com/post/2024/10/indesign-20-goes-to-mathml-1" class="uri">https://indiscripts.com/post/2024/10/indesign-20-goes-to-mathml-1</a>,
-<a href="https://indiscripts.com/post/2025/03/indesign-20-goes-to-mathml-2" class="uri">https://indiscripts.com/post/2025/03/indesign-20-goes-to-mathml-2</a></td>
+<td class="org-right">2025-07-07</td>
+<td class="org-left">Guix has a handy reference card for frequent commands.</td>
+<td class="org-left"><a href="https://guix.gnu.org/guix-refcard.pdf">https://guix.gnu.org/guix-refcard.pdf</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-07-01</td>
-<td style="text-align: left;">This is a great basic usage of Guix
-Deploy.</td>
-<td style="text-align: left;"><a href="https://stumbles.id.au/getting-started-with-guix-deploy.html" class="uri">https://stumbles.id.au/getting-started-with-guix-deploy.html</a></td>
+<td class="org-right">2025-07-04</td>
+<td class="org-left">LispKit is a library for developing Scheme on Apple devices. It has some interesting graphing capabilities.</td>
+<td class="org-left"><a href="https://www.lisppad.app/libraries/lispkit/lispkit-draw-chart-bar">https://www.lisppad.app/libraries/lispkit/lispkit-draw-chart-bar</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-07-01</td>
-<td style="text-align: left;">Gimp supports automated workflows via
-scripting in Scheme!</td>
-<td style="text-align: left;"><a href="https://www.gimp.org/tutorials/Basic_Batch/" class="uri">https://www.gimp.org/tutorials/Basic_Batch/</a></td>
+<td class="org-right">2025-07-02</td>
+<td class="org-left">These posts give the most detailed explanation of the InDesign MathML implementation than I have found to-date.</td>
+<td class="org-left"><a href="https://indiscripts.com/post/2024/10/indesign-20-goes-to-mathml-1">https://indiscripts.com/post/2024/10/indesign-20-goes-to-mathml-1</a>, <a href="https://indiscripts.com/post/2025/03/indesign-20-goes-to-mathml-2">https://indiscripts.com/post/2025/03/indesign-20-goes-to-mathml-2</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-27</td>
-<td style="text-align: left;">In Vim, type <code>U</code> to toggle undo
-line.</td>
-<td style="text-align: left;"><code>:help U</code></td>
+<td class="org-right">2025-07-01</td>
+<td class="org-left">This is a great basic usage of Guix Deploy.</td>
+<td class="org-left"><a href="https://stumbles.id.au/getting-started-with-guix-deploy.html">https://stumbles.id.au/getting-started-with-guix-deploy.html</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-27</td>
-<td style="text-align: left;">In Vim, <code>ZZ</code> is equivalent to
-<code>:x</code>.</td>
-<td style="text-align: left;"><code>:help ZZ</code></td>
+<td class="org-right">2025-07-01</td>
+<td class="org-left">Gimp supports automated workflows via scripting in Scheme!</td>
+<td class="org-left"><a href="https://www.gimp.org/tutorials/Basic_Batch/">https://www.gimp.org/tutorials/Basic_Batch/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-27</td>
-<td style="text-align: left;">In Vim, <code>&lt;C-d&gt;</code> will show
-all matching help topics for an incomplete help command.</td>
-<td style="text-align: left;"><code>:help c_CTRL-D</code></td>
+<td class="org-right">2025-06-27</td>
+<td class="org-left">In Vim, type <code>U</code> to toggle undo line.</td>
+<td class="org-left"><code>:help U</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-27</td>
-<td style="text-align: left;">In Vim, type <code>&lt;C-w&gt;p</code> to
-go to the previous window.</td>
-<td style="text-align: left;"><code>:help CTRL-W_p</code></td>
+<td class="org-right">2025-06-27</td>
+<td class="org-left">In Vim, <code>ZZ</code> is equivalent to <code>:x</code>.</td>
+<td class="org-left"><code>:help ZZ</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-20</td>
-<td style="text-align: left;">GUI apps can be started from the Linux
-virtual terminal via a number of methods.</td>
-<td style="text-align: left;"><a href="https://linuxconfig.org/how-to-run-x-applications-without-a-desktop-or-a-wm" class="uri">https://linuxconfig.org/how-to-run-x-applications-without-a-desktop-or-a-wm</a>,
-<a href="https://superuser.com/q/550020" class="uri">https://superuser.com/q/550020</a>, <a href="https://superuser.com/q/606811" class="uri">https://superuser.com/q/606811</a></td>
+<td class="org-right">2025-06-27</td>
+<td class="org-left">In Vim, <code>&lt;C-d&gt;</code> will show all matching help topics for an incomplete help command.</td>
+<td class="org-left"><code>:help c_CTRL-D</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-20</td>
-<td style="text-align: left;">David Thompson, a Guix contributor, gives
-some helpful perspective on hardware compatibility with Guix’s FOSS
-stance.</td>
-<td style="text-align: left;"><a href="https://dthompson.us/posts/installing-guix-on-a-10th-gen-thinkpad-x1.html" class="uri">https://dthompson.us/posts/installing-guix-on-a-10th-gen-thinkpad-x1.html</a></td>
+<td class="org-right">2025-06-27</td>
+<td class="org-left">In Vim, type <code>&lt;C-w&gt;p</code> to go to the previous window.</td>
+<td class="org-left"><code>:help CTRL-W_p</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-20</td>
-<td style="text-align: left;">In Vim, type <code>g&lt;C-g&gt;</code> to
-see information about the cursor position.</td>
-<td style="text-align: left;"><code>:help g_CTRL-G</code>,
-<code>:help word-count</code></td>
+<td class="org-right">2025-06-20</td>
+<td class="org-left">GUI apps can be started from the Linux virtual terminal via a number of methods.</td>
+<td class="org-left"><a href="https://linuxconfig.org/how-to-run-x-applications-without-a-desktop-or-a-wm">https://linuxconfig.org/how-to-run-x-applications-without-a-desktop-or-a-wm</a>, <a href="https://superuser.com/q/550020">https://superuser.com/q/550020</a>, <a href="https://superuser.com/q/606811">https://superuser.com/q/606811</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-20</td>
-<td style="text-align: left;">In Vim, type <code>:set ruler</code> to
-enable line/column/relative position info for the cursor in the bottom
-left of the window.</td>
-<td style="text-align: left;"><code>:help ruler</code>, <a href="https://unix.stackexchange.com/a/335468/727998" class="uri">https://unix.stackexchange.com/a/335468/727998</a></td>
+<td class="org-right">2025-06-20</td>
+<td class="org-left">David Thompson, a Guix contributor, gives some helpful perspective on hardware compatibility with Guix's FOSS stance.</td>
+<td class="org-left"><a href="https://dthompson.us/posts/installing-guix-on-a-10th-gen-thinkpad-x1.html">https://dthompson.us/posts/installing-guix-on-a-10th-gen-thinkpad-x1.html</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-19</td>
-<td style="text-align: left;">In Vim insert mode, type
-<code>&lt;C-k&gt;Co</code> for the copyright symbol: ©.</td>
-<td style="text-align: left;"><code>:digraphs</code>,
-<code>:help digraph</code></td>
+<td class="org-right">2025-06-20</td>
+<td class="org-left">In Vim, type <code>g&lt;C-g&gt;</code> to see information about the cursor position.</td>
+<td class="org-left"><code>:help g_CTRL-G</code>, <code>:help word-count</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-19</td>
-<td style="text-align: left;">In Vim command mode, type
-<code>:e &lt;cfile&gt;</code> to create a new file at the path under the
-cursor.</td>
-<td style="text-align: left;"><code>:help &lt;cfile&gt;</code></td>
+<td class="org-right">2025-06-20</td>
+<td class="org-left">In Vim, type <code>:set ruler</code> to enable line/column/relative position info for the cursor in the bottom left of the window.</td>
+<td class="org-left"><code>:help ruler</code>, <a href="https://unix.stackexchange.com/a/335468/727998">https://unix.stackexchange.com/a/335468/727998</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-18</td>
-<td style="text-align: left;">This devlog has some helpful info about an
-initial Guix setup.</td>
-<td style="text-align: left;"><a href="https://simendsjo.me/blog/20240712085803-initial_guix_home_setup.html" class="uri">https://simendsjo.me/blog/20240712085803-initial_guix_home_setup.html</a></td>
+<td class="org-right">2025-06-19</td>
+<td class="org-left">In Vim insert mode, type <code>&lt;C-k&gt;Co</code> for the copyright symbol: ©.</td>
+<td class="org-left"><code>:digraphs</code>, <code>:help digraph</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-17</td>
-<td style="text-align: left;">Guix deploy is a built-in feature for
-managing Guix on remote hardware.</td>
-<td style="text-align: left;"><a href="https://guix.gnu.org/manual/en/html_node/Invoking-guix-deploy.html" class="uri">https://guix.gnu.org/manual/en/html_node/Invoking-guix-deploy.html</a></td>
+<td class="org-right">2025-06-19</td>
+<td class="org-left">In Vim command mode, type <code>:e &lt;cfile&gt;</code> to create a new file at the path under the cursor.</td>
+<td class="org-left"><code>:help &lt;cfile&gt;</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-17</td>
-<td style="text-align: left;">Haunt is a static site generator written
-in Guile Scheme.</td>
-<td style="text-align: left;"><a href="https://dthompson.us/projects/haunt.html" class="uri">https://dthompson.us/projects/haunt.html</a></td>
+<td class="org-right">2025-06-18</td>
+<td class="org-left">This devlog has some helpful info about an initial Guix setup.</td>
+<td class="org-left"><a href="https://simendsjo.me/blog/20240712085803-initial_guix_home_setup.html">https://simendsjo.me/blog/20240712085803-initial_guix_home_setup.html</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-17</td>
-<td style="text-align: left;">The man page for bash has a whole section
-about the readline (with keybinds.</td>
-<td style="text-align: left;"><code>man bash</code></td>
+<td class="org-right">2025-06-17</td>
+<td class="org-left">Guix deploy is a built-in feature for managing Guix on remote hardware.</td>
+<td class="org-left"><a href="https://guix.gnu.org/manual/en/html_node/Invoking-guix-deploy.html">https://guix.gnu.org/manual/en/html_node/Invoking-guix-deploy.html</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-17</td>
-<td style="text-align: left;">In Vim, Netrw cannot copy
-directories.</td>
-<td style="text-align: left;"><a href="https://vi.stackexchange.com/questions/12095/is-it-possible-to-clone-a-directory-with-netrw" class="uri">https://vi.stackexchange.com/questions/12095/is-it-possible-to-clone-a-directory-with-netrw</a>,
-<a href="https://stackoverflow.com/questions/26958059/vim-netrw-copy-commands" class="uri">https://stackoverflow.com/questions/26958059/vim-netrw-copy-commands</a></td>
+<td class="org-right">2025-06-17</td>
+<td class="org-left">Haunt is a static site generator written in Guile Scheme.</td>
+<td class="org-left"><a href="https://dthompson.us/projects/haunt.html">https://dthompson.us/projects/haunt.html</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-17</td>
-<td style="text-align: left;">Vim can be configured to run as a command
-server when GUI support is enabled.</td>
-<td style="text-align: left;"><code>:help clientserver</code>, <a href="https://subvisual.com/blog/posts/119-open-files-on-existing-vim-sessions/" class="uri">https://subvisual.com/blog/posts/119-open-files-on-existing-vim-sessions/</a></td>
+<td class="org-right">2025-06-17</td>
+<td class="org-left">The man page for bash has a whole section about the readline (with keybinds.</td>
+<td class="org-left"><code>man bash</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-16</td>
-<td style="text-align: left;">This is a great quick-start guide by the
-founder of Guix about using Guix Home.</td>
-<td style="text-align: left;"><a href="https://guix.gnu.org/blog/2022/keeping-ones-home-tidy/" class="uri">https://guix.gnu.org/blog/2022/keeping-ones-home-tidy/</a></td>
+<td class="org-right">2025-06-17</td>
+<td class="org-left">In Vim, Netrw cannot copy directories.</td>
+<td class="org-left"><a href="https://vi.stackexchange.com/questions/12095/is-it-possible-to-clone-a-directory-with-netrw">https://vi.stackexchange.com/questions/12095/is-it-possible-to-clone-a-directory-with-netrw</a>, <a href="https://stackoverflow.com/questions/26958059/vim-netrw-copy-commands">https://stackoverflow.com/questions/26958059/vim-netrw-copy-commands</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-13</td>
-<td style="text-align: left;">This guy, Podiki, built a gaming rig with
-Guix System. He is also a major contributor to NonGuix.</td>
-<td style="text-align: left;"><a href="https://boilingsteam.com/how-i-built-my-new-linux-gaming-desktop-in-2021-with-amd-cpugpu-and-gnu-guix/" class="uri">https://boilingsteam.com/how-i-built-my-new-linux-gaming-desktop-in-2021-with-amd-cpugpu-and-gnu-guix/</a></td>
+<td class="org-right">2025-06-17</td>
+<td class="org-left">Vim can be configured to run as a command server when GUI support is enabled.</td>
+<td class="org-left"><code>:help clientserver</code>, <a href="https://subvisual.com/blog/posts/119-open-files-on-existing-vim-sessions/">https://subvisual.com/blog/posts/119-open-files-on-existing-vim-sessions/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-12</td>
-<td style="text-align: left;">In Vim, use <code>:helpg /pattern/</code>
-to search the Vim help via grep. Use <code>:cn</code> and
-<code>:cp</code> to navigate matches.</td>
-<td style="text-align: left;"><code>:help helpg</code></td>
+<td class="org-right">2025-06-16</td>
+<td class="org-left">This is a great quick-start guide by the founder of Guix about using Guix Home.</td>
+<td class="org-left"><a href="https://guix.gnu.org/blog/2022/keeping-ones-home-tidy/">https://guix.gnu.org/blog/2022/keeping-ones-home-tidy/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-02</td>
-<td style="text-align: left;">System Crafters is a great community with
-info about Guix and Emacs.</td>
-<td style="text-align: left;"><a href="https://systemcrafters.net/" class="uri">https://systemcrafters.net/</a></td>
+<td class="org-right">2025-06-13</td>
+<td class="org-left">This guy, Podiki, built a gaming rig with Guix System. He is also a major contributor to NonGuix.</td>
+<td class="org-left"><a href="https://boilingsteam.com/how-i-built-my-new-linux-gaming-desktop-in-2021-with-amd-cpugpu-and-gnu-guix/">https://boilingsteam.com/how-i-built-my-new-linux-gaming-desktop-in-2021-with-amd-cpugpu-and-gnu-guix/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-02</td>
-<td style="text-align: left;">Guix is a better, GNU clone of NixOS
-configured in Guile Scheme.</td>
-<td style="text-align: left;"><a href="https://guix.gnu.org/" class="uri">https://guix.gnu.org/</a></td>
+<td class="org-right">2025-06-12</td>
+<td class="org-left">In Vim, use <code>:helpg /pattern/</code> to search the Vim help via grep. Use <code>:cn</code> and <code>:cp</code> to navigate matches.</td>
+<td class="org-left"><code>:help helpg</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-06-02</td>
-<td style="text-align: left;">Literate programming is a way of
-documenting high-level code approaches by structuring the code files
-with prose.</td>
-<td style="text-align: left;"><a href="https://en.wikipedia.org/wiki/Literate_programming" class="uri">https://en.wikipedia.org/wiki/Literate_programming</a></td>
+<td class="org-right">2025-06-02</td>
+<td class="org-left">System Crafters is a great community with info about Guix and Emacs.</td>
+<td class="org-left"><a href="https://systemcrafters.net/">https://systemcrafters.net/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-30</td>
-<td style="text-align: left;">In Zsh, <code>$OLDPWD</code> stores the
-value of the previous pwd. This is hugely useful for moving files
-around.</td>
-<td style="text-align: left;"></td>
+<td class="org-right">2025-06-02</td>
+<td class="org-left">Guix is a better, GNU clone of NixOS configured in Guile Scheme.</td>
+<td class="org-left"><a href="https://guix.gnu.org/">https://guix.gnu.org/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-30</td>
-<td style="text-align: left;">In Zsh, adding a glob to an expression
-makes the whole expression a glob. Make sure you are postfixing
-<code>*</code> if you want to see all matches for a that begin with the
-glob.</td>
-<td style="text-align: left;"></td>
+<td class="org-right">2025-06-02</td>
+<td class="org-left">Literate programming is a way of documenting high-level code approaches by structuring the code files with prose.</td>
+<td class="org-left"><a href="https://en.wikipedia.org/wiki/Literate_programming">https://en.wikipedia.org/wiki/Literate_programming</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-30</td>
-<td style="text-align: left;">In Vim, use <code>&lt;C-w&gt;T</code> to
-move the current window to a new tab.</td>
-<td style="text-align: left;"><code>CTRL-W_T</code></td>
+<td class="org-right">2025-05-30</td>
+<td class="org-left">In Zsh, <code>$OLDPWD</code> stores the value of the previous pwd. This is hugely useful for moving files around.</td>
+<td class="org-left">&#xa0;</td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-30</td>
-<td style="text-align: left;">In Zsh, use <code>exec zsh</code> to
-totally reload Zsh (including environment variables).</td>
-<td style="text-align: left;"><a href="https://batsov.com/articles/2022/09/15/reload-zsh-configuration/" class="uri">https://batsov.com/articles/2022/09/15/reload-zsh-configuration/</a></td>
+<td class="org-right">2025-05-30</td>
+<td class="org-left">In Zsh, adding a glob to an expression makes the whole expression a glob. Make sure you are postfixing <code>*</code> if you want to see all matches for a that begin with the glob.</td>
+<td class="org-left">&#xa0;</td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-30</td>
-<td style="text-align: left;">top is way better than Activity
-Monitor.</td>
-<td style="text-align: left;"><code>man top</code></td>
+<td class="org-right">2025-05-30</td>
+<td class="org-left">In Vim, use <code>&lt;C-w&gt;T</code> to move the current window to a new tab.</td>
+<td class="org-left"><code>CTRL-W_T</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-21</td>
-<td style="text-align: left;">In Vim, <code>nrformats+=alpha</code> must
-be set to increment/decrement</td>
-<td style="text-align: left;"><code>:help nrformats</code> letters with
-the below two commands.</td>
+<td class="org-right">2025-05-30</td>
+<td class="org-left">In Zsh, use <code>exec zsh</code> to totally reload Zsh (including environment variables).</td>
+<td class="org-left"><a href="https://batsov.com/articles/2022/09/15/reload-zsh-configuration/">https://batsov.com/articles/2022/09/15/reload-zsh-configuration/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-21</td>
-<td style="text-align: left;">In Vim visual modes, use
-<code>g&lt;C-x&gt;</code> to decrement.</td>
-<td style="text-align: left;"><code>:help v_g_CTRL-A</code></td>
+<td class="org-right">2025-05-30</td>
+<td class="org-left">top is way better than Activity Monitor.</td>
+<td class="org-left"><code>man top</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-10</td>
-<td style="text-align: left;">In Vim visual modes, use
-<code>g&lt;C-a&gt;</code> to increment numbers on all lines.</td>
-<td style="text-align: left;"><code>:help v_g_CTRL-A</code>, <a href="https://www.joshmorony.com/totw/28/" class="uri">https://www.joshmorony.com/totw/28/</a></td>
+<td class="org-right">2025-05-21</td>
+<td class="org-left">In Vim, <code>nrformats+=alpha</code> must be set to increment/decrement</td>
+<td class="org-left"><code>:help nrformats</code> letters with the below two commands.</td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-07</td>
-<td style="text-align: left;">In Vim, use <code>`&lt;</code> and
-<code>`&gt;</code> to go to the beginning and end of the previous visual
-selection.</td>
-<td style="text-align: left;"><code>:help `&lt;</code>,
-<code>:help `&gt;</code>, <a href="https://stackoverflow.com/questions/11176159/how-to-jump-to-the-start-or-the-end-of-visual-selection-in-vim" class="uri">https://stackoverflow.com/questions/11176159/how-to-jump-to-the-start-or-the-end-of-visual-selection-in-vim</a></td>
+<td class="org-right">2025-05-21</td>
+<td class="org-left">In Vim visual modes, use <code>g&lt;C-x&gt;</code> to decrement.</td>
+<td class="org-left"><code>:help v_g_CTRL-A</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-06</td>
-<td style="text-align: left;">In Vim,
-<code>&lt;C-r&gt;&lt;C-r&gt;register</code> will paste from a register
-without executing special characters.</td>
-<td style="text-align: left;"><code>:help i_CTRL-R_CTRL-R</code>, <a href="https://vim.fandom.com/wiki/Pasting_registers" class="uri">https://vim.fandom.com/wiki/Pasting_registers</a></td>
+<td class="org-right">2025-05-10</td>
+<td class="org-left">In Vim visual modes, use <code>g&lt;C-a&gt;</code> to increment numbers on all lines.</td>
+<td class="org-left"><code>:help v_g_CTRL-A</code>, <a href="https://www.joshmorony.com/totw/28/">https://www.joshmorony.com/totw/28/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-06</td>
-<td style="text-align: left;">In Vim, you can execute arbitrary edits
-with <code>:g/pattern/normal somecommand</code>.</td>
-<td style="text-align: left;"><code>:help :g</code>, <a href="https://learnvim.irian.to/basics/the_global_command" class="uri">https://learnvim.irian.to/basics/the_global_command</a></td>
+<td class="org-right">2025-05-07</td>
+<td class="org-left">In Vim, use <code>`&lt;</code> and <code>`&gt;</code> to go to the beginning and end of the previous visual selection.</td>
+<td class="org-left"><code>:help `&lt;</code>, <code>:help `&gt;</code>, <a href="https://stackoverflow.com/questions/11176159/how-to-jump-to-the-start-or-the-end-of-visual-selection-in-vim">https://stackoverflow.com/questions/11176159/how-to-jump-to-the-start-or-the-end-of-visual-selection-in-vim</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-05</td>
-<td style="text-align: left;">In double entry accounting, payments made
-with credit cards and other liabilities are represented as outgoing
-(negative) values.</td>
-<td style="text-align: left;"><a href="https://www.reddit.com/r/plaintextaccounting/comments/eh9bz7/yet_another_question_about_credit_cards_and/" class="uri">https://www.reddit.com/r/plaintextaccounting/comments/eh9bz7/yet_another_question_about_credit_cards_and/</a></td>
+<td class="org-right">2025-05-06</td>
+<td class="org-left">In Vim, <code>&lt;C-r&gt;&lt;C-r&gt;register</code> will paste from a register without executing special characters.</td>
+<td class="org-left"><code>:help i_CTRL-R_CTRL-R</code>, <a href="https://vim.fandom.com/wiki/Pasting_registers">https://vim.fandom.com/wiki/Pasting_registers</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-02</td>
-<td style="text-align: left;">In Zsh use <code>bindkey -v</code> to
-enable Vi mode. (Insert mode is the default.</td>
-<td style="text-align: left;"></td>
+<td class="org-right">2025-05-06</td>
+<td class="org-left">In Vim, you can execute arbitrary edits with <code>:g/pattern/normal somecommand</code>.</td>
+<td class="org-left"><code>:help :g</code>, <a href="https://learnvim.irian.to/basics/the_global_command">https://learnvim.irian.to/basics/the_global_command</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-05-01</td>
-<td style="text-align: left;">In Zsh use
-<code>setopt extended_glob; yourcmdhere (^negativepattern)</code> to
-apply a command via an exclusion.</td>
-<td style="text-align: left;"><a href="https://unix.stackexchange.com/a/541787/727998" class="uri">https://unix.stackexchange.com/a/541787/727998</a></td>
+<td class="org-right">2025-05-05</td>
+<td class="org-left">In double entry accounting, payments made with credit cards and other liabilities are represented as outgoing (negative) values.</td>
+<td class="org-left"><a href="https://www.reddit.com/r/plaintextaccounting/comments/eh9bz7/yet_another_question_about_credit_cards_and/">https://www.reddit.com/r/plaintextaccounting/comments/eh9bz7/yet_another_question_about_credit_cards_and/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-30</td>
-<td style="text-align: left;">In Vim insert mode, type
-<code>&lt;C-v&gt;160</code> to insert a no-break space.</td>
-<td style="text-align: left;"><a href="https://vimtricks.com/p/vimtrick-non-printable-characters/" class="uri">https://vimtricks.com/p/vimtrick-non-printable-characters/</a></td>
+<td class="org-right">2025-05-02</td>
+<td class="org-left">In Zsh use <code>bindkey -v</code> to enable Vi mode. (Insert mode is the default.</td>
+<td class="org-left">&#xa0;</td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-30</td>
-<td style="text-align: left;">In Vim, you can set various white space
-characters and markers with <code>listchars</code>.</td>
-<td style="text-align: left;"><code>:help listchars</code></td>
+<td class="org-right">2025-05-01</td>
+<td class="org-left">In Zsh use <code>setopt extended_glob; yourcmdhere (^negativepattern)</code> to apply a command via an exclusion.</td>
+<td class="org-left"><a href="https://unix.stackexchange.com/a/541787/727998">https://unix.stackexchange.com/a/541787/727998</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-30</td>
-<td style="text-align: left;">In Vim <code>R</code> replace mode, type
-<code>&lt;C-r&gt;&quot;</code> to paste yanked contents.</td>
-<td style="text-align: left;"><a href="https://stackoverflow.com/a/25413808/28799158" class="uri">https://stackoverflow.com/a/25413808/28799158</a></td>
+<td class="org-right">2025-04-30</td>
+<td class="org-left">In Vim insert mode, type <code>&lt;C-v&gt;160</code> to insert a no-break space.</td>
+<td class="org-left"><a href="https://vimtricks.com/p/vimtrick-non-printable-characters/">https://vimtricks.com/p/vimtrick-non-printable-characters/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-28</td>
-<td style="text-align: left;">In Vim GREP, <code>\_.</code> matches any
-character <em>including a newline</em>.</td>
-<td style="text-align: left;"><code>:help /\_.</code>, <a href="https://stackoverflow.com/a/784203/28799158" class="uri">https://stackoverflow.com/a/784203/28799158</a></td>
+<td class="org-right">2025-04-30</td>
+<td class="org-left">In Vim, you can set various white space characters and markers with <code>listchars</code>.</td>
+<td class="org-left"><code>:help listchars</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-28</td>
-<td style="text-align: left;">In Vim, use <code>:%s//~/</code> to redo
-the last substitution.</td>
-<td style="text-align: left;"><code>:help g&amp;</code>, <a href="https://vi.stackexchange.com/a/18107/54693" class="uri">https://vi.stackexchange.com/a/18107/54693</a></td>
+<td class="org-right">2025-04-30</td>
+<td class="org-left">In Vim <code>R</code> replace mode, type <code>&lt;C-r&gt;"</code> to paste yanked contents.</td>
+<td class="org-left"><a href="https://stackoverflow.com/a/25413808/28799158">https://stackoverflow.com/a/25413808/28799158</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-28</td>
-<td style="text-align: left;">Pandoc can translate markdown fenced divs
-to ICML paragraph and character styles.</td>
-<td style="text-align: left;"><a href="https://github.com/jgm/pandoc/wiki/Importing-Markdown-in-InDesign" class="uri">https://github.com/jgm/pandoc/wiki/Importing-Markdown-in-InDesign</a></td>
+<td class="org-right">2025-04-28</td>
+<td class="org-left">In Vim GREP, <code>\_.</code> matches any character <i>including a newline</i>.</td>
+<td class="org-left"><code>:help /\_.</code>, <a href="https://stackoverflow.com/a/784203/28799158">https://stackoverflow.com/a/784203/28799158</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-28</td>
-<td style="text-align: left;">Processing manuscripts as XML may
-dramatically reduce the InDesign workload.</td>
-<td style="text-align: left;"><a href="https://helpx.adobe.com/indesign/using/importing-xml.html" class="uri">https://helpx.adobe.com/indesign/using/importing-xml.html</a>,
-<a href="https://carijansen.com/indesign-xml-reference-guide/" class="uri">https://carijansen.com/indesign-xml-reference-guide/</a>, <a href="https://stackoverflow.com/a/66267474/28799158" class="uri">https://stackoverflow.com/a/66267474/28799158</a></td>
+<td class="org-right">2025-04-28</td>
+<td class="org-left">In Vim, use <code>:%s//~/</code> to redo the last substitution.</td>
+<td class="org-left"><code>:help g&amp;</code>, <a href="https://vi.stackexchange.com/a/18107/54693">https://vi.stackexchange.com/a/18107/54693</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-24</td>
-<td style="text-align: left;">In Vim, <code>gq{motion}</code> will
-format the text. This is particularly useful for aligning text to a tab
-stop.</td>
-<td style="text-align: left;"><code>:help gq</code></td>
+<td class="org-right">2025-04-28</td>
+<td class="org-left">Pandoc can translate markdown fenced divs to ICML paragraph and character styles.</td>
+<td class="org-left"><a href="https://github.com/jgm/pandoc/wiki/Importing-Markdown-in-InDesign">https://github.com/jgm/pandoc/wiki/Importing-Markdown-in-InDesign</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-23</td>
-<td style="text-align: left;">In Vim <code>@%</code> is the register for
-the current file (absolute path).</td>
-<td style="text-align: left;"><code>:help quote%</code></td>
+<td class="org-right">2025-04-28</td>
+<td class="org-left">Processing manuscripts as XML may dramatically reduce the InDesign workload.</td>
+<td class="org-left"><a href="https://helpx.adobe.com/indesign/using/importing-xml.html">https://helpx.adobe.com/indesign/using/importing-xml.html</a>, <a href="https://carijansen.com/indesign-xml-reference-guide/">https://carijansen.com/indesign-xml-reference-guide/</a>, <a href="https://stackoverflow.com/a/66267474/28799158">https://stackoverflow.com/a/66267474/28799158</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-23</td>
-<td style="text-align: left;">In Vim, <code>:call delete(@%)</code>
-deletes the current (but leaves the buffer intact.</td>
-<td style="text-align: left;"><code>:help delete()</code>, <a href="https://stackoverflow.com/a/16679182" class="uri">https://stackoverflow.com/a/16679182</a></td>
+<td class="org-right">2025-04-24</td>
+<td class="org-left">In Vim, <code>gq{motion}</code> will format the text. This is particularly useful for aligning text to a tab stop.</td>
+<td class="org-left"><code>:help gq</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-23</td>
-<td style="text-align: left;">In Vim GREP, <code>\c</code> makes the
-selection case insensitive.</td>
-<td style="text-align: left;"><code>:help /\c</code>, <a href="https://superuser.com/a/713957" class="uri">https://superuser.com/a/713957</a></td>
+<td class="org-right">2025-04-23</td>
+<td class="org-left">In Vim <code>@%</code> is the register for the current file (absolute path).</td>
+<td class="org-left"><code>:help quote%</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-23</td>
-<td style="text-align: left;">In Vim, <code>_</code> is the <em>current
-line</em> motion.</td>
-<td style="text-align: left;"><code>:help _</code>, <a href="https://stackoverflow.com/a/47864035/28799158" class="uri">https://stackoverflow.com/a/47864035/28799158</a></td>
+<td class="org-right">2025-04-23</td>
+<td class="org-left">In Vim, <code>:call delete(@%)</code> deletes the current (but leaves the buffer intact.</td>
+<td class="org-left"><code>:help delete()</code>, <a href="https://stackoverflow.com/a/16679182">https://stackoverflow.com/a/16679182</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-22</td>
-<td style="text-align: left;">This video explores the importance of
-experience/familiarity/practice in learning at pace.</td>
-<td style="text-align: left;"><a href="https://www.youtube.com/watch?v=bSDprg24pEA" class="uri">https://www.youtube.com/watch?v=bSDprg24pEA</a></td>
+<td class="org-right">2025-04-23</td>
+<td class="org-left">In Vim GREP, <code>\c</code> makes the selection case insensitive.</td>
+<td class="org-left"><code>:help /\c</code>, <a href="https://superuser.com/a/713957">https://superuser.com/a/713957</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-22</td>
-<td style="text-align: left;">Vim has a built in print feature:
-<code>:hardcopy</code></td>
-<td style="text-align: left;"><code>:help :hardcopy</code>, <a href="https://stackoverflow.com/a/9693079" class="uri">https://stackoverflow.com/a/9693079</a></td>
+<td class="org-right">2025-04-23</td>
+<td class="org-left">In Vim, <code>_</code> is the <i>current line</i> motion.</td>
+<td class="org-left"><code>:help _</code>, <a href="https://stackoverflow.com/a/47864035/28799158">https://stackoverflow.com/a/47864035/28799158</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-22</td>
-<td style="text-align: left;">lpr is a shell service for printing
-files.</td>
-<td style="text-align: left;"><code>man lpr</code>, <a href="https://superuser.com/a/607380" class="uri">https://superuser.com/a/607380</a></td>
+<td class="org-right">2025-04-22</td>
+<td class="org-left">This video explores the importance of experience/familiarity/practice in learning at pace.</td>
+<td class="org-left"><a href="https://www.youtube.com/watch?v=bSDprg24pEA">https://www.youtube.com/watch?v=bSDprg24pEA</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-18</td>
-<td style="text-align: left;">In Vim command mode,
-<code>&lt;cfile&gt;</code> is replaced with the filename under the
-cursor.</td>
-<td style="text-align: left;"><code>:help &lt;cfile&gt;</code></td>
+<td class="org-right">2025-04-22</td>
+<td class="org-left">Vim has a built in print feature: <code>:hardcopy</code></td>
+<td class="org-left"><code>:help :hardcopy</code>, <a href="https://stackoverflow.com/a/9693079">https://stackoverflow.com/a/9693079</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-18</td>
-<td style="text-align: left;">Lilypond is a musical markup language
-based on ABC and LaTeX. There is a (depreciated) Pandoc Lua filter for
-it already.</td>
-<td style="text-align: left;"><a href="https://lilypond.org" class="uri">https://lilypond.org</a>, <a href="https://abcnotation.com" class="uri">https://abcnotation.com</a>, <a href="https://github.com/pandoc/lua-filters/tree/master/lilypond" class="uri">https://github.com/pandoc/lua-filters/tree/master/lilypond</a></td>
+<td class="org-right">2025-04-22</td>
+<td class="org-left">lpr is a shell service for printing files.</td>
+<td class="org-left"><code>man lpr</code>, <a href="https://superuser.com/a/607380">https://superuser.com/a/607380</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-18</td>
-<td style="text-align: left;">In Vim GREP, the <code>\%V</code> atom
-restricts the search to the last visual mode selection.</td>
-<td style="text-align: left;"><code>help /\%V</code>, <a href="https://vim.fandom.com/wiki/Search_and_replace_in_a_visual_selection#Substituting_in_a_visual_selection" class="uri">https://vim.fandom.com/wiki/Search_and_replace_in_a_visual_selection#Substituting_in_a_visual_selection</a></td>
+<td class="org-right">2025-04-18</td>
+<td class="org-left">In Vim command mode, <code>&lt;cfile&gt;</code> is replaced with the filename under the cursor.</td>
+<td class="org-left"><code>:help &lt;cfile&gt;</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-18</td>
-<td style="text-align: left;">In Vim command mode, use
-<code>&lt;Up&gt;</code> and <code>&lt;Down&gt;</code> to scroll through
-history just like in the shell.</td>
-<td style="text-align: left;"><code>:help c_&lt;Up&gt;</code>,
-<code>:help c_&lt;Down&gt;</code></td>
+<td class="org-right">2025-04-18</td>
+<td class="org-left">Lilypond is a musical markup language based on ABC and LaTeX. There is a (depreciated) Pandoc Lua filter for it already.</td>
+<td class="org-left"><a href="https://lilypond.org">https://lilypond.org</a>, <a href="https://abcnotation.com">https://abcnotation.com</a>, <a href="https://github.com/pandoc/lua-filters/tree/master/lilypond">https://github.com/pandoc/lua-filters/tree/master/lilypond</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-18</td>
-<td style="text-align: left;">In Vim, use
-<code>:ene</code>/<code>:enew</code> to begin editing a new file in the
-pwd.</td>
-<td style="text-align: left;"><code>:help :enew</code></td>
+<td class="org-right">2025-04-18</td>
+<td class="org-left">In Vim GREP, the <code>\%V</code> atom restricts the search to the last visual mode selection.</td>
+<td class="org-left"><code>help /\%V</code>, <a href="https://vim.fandom.com/wiki/Search_and_replace_in_a_visual_selection#Substituting_in_a_visual_selection">https://vim.fandom.com/wiki/Search_and_replace_in_a_visual_selection#Substituting_in_a_visual_selection</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-17</td>
-<td style="text-align: left;">I finally remembered where I bought my
-favorite round thick-rimmed glasses.</td>
-<td style="text-align: left;"><a href="https://www.fytoo.com/product/FT0969?id=2239" class="uri">https://www.fytoo.com/product/FT0969?id=2239</a></td>
+<td class="org-right">2025-04-18</td>
+<td class="org-left">In Vim command mode, use <code>&lt;Up&gt;</code> and <code>&lt;Down&gt;</code> to scroll through history just like in the shell.</td>
+<td class="org-left"><code>:help c_&lt;Up&gt;</code>, <code>:help c_&lt;Down&gt;</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-17</td>
-<td style="text-align: left;">Language is provably ambiguous.</td>
-<td style="text-align: left;"><a href="https://youtu.be/rWjUS2h2BfU?si=pITI0xi3Fq0LUz8p" class="uri">https://youtu.be/rWjUS2h2BfU?si=pITI0xi3Fq0LUz8p</a></td>
+<td class="org-right">2025-04-18</td>
+<td class="org-left">In Vim, use <code>:ene=/</code>:enew= to begin editing a new file in the pwd.</td>
+<td class="org-left"><code>:help :enew</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-17</td>
-<td style="text-align: left;">The <em>royal order of adjectives</em> is
-a standard order for chaining adjectives in English.</td>
-<td style="text-align: left;"><a href="https://dictionary.cambridge.org/us/grammar/british-grammar/adjectives-order" class="uri">https://dictionary.cambridge.org/us/grammar/british-grammar/adjectives-order</a></td>
+<td class="org-right">2025-04-17</td>
+<td class="org-left">I finally remembered where I bought my favorite round thick-rimmed glasses.</td>
+<td class="org-left"><a href="https://www.fytoo.com/product/FT0969?id=2239">https://www.fytoo.com/product/FT0969?id=2239</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-17</td>
-<td style="text-align: left;">ShellCheck is a Haskell shell script
-validator.</td>
-<td style="text-align: left;"><a href="https://hackage.haskell.org/package/ShellCheck" class="uri">https://hackage.haskell.org/package/ShellCheck</a></td>
+<td class="org-right">2025-04-17</td>
+<td class="org-left">Language is provably ambiguous.</td>
+<td class="org-left"><a href="https://youtu.be/rWjUS2h2BfU?si=pITI0xi3Fq0LUz8p">https://youtu.be/rWjUS2h2BfU?si=pITI0xi3Fq0LUz8p</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-16</td>
-<td style="text-align: left;">GitHub CLI extension leaves much to be
-desired. Currently, it can only process shell commands.</td>
-<td style="text-align: left;"><a href="https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line" class="uri">https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line</a></td>
+<td class="org-right">2025-04-17</td>
+<td class="org-left">The <i>royal order of adjectives</i> is a standard order for chaining adjectives in English.</td>
+<td class="org-left"><a href="https://dictionary.cambridge.org/us/grammar/british-grammar/adjectives-order">https://dictionary.cambridge.org/us/grammar/british-grammar/adjectives-order</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-16</td>
-<td style="text-align: left;">API keys are not a part of the ChatGPT
-Plus subscription. They are served by the OpenAI API platform.</td>
-<td style="text-align: left;"><a href="https://community.openai.com/t/api-access-as-a-chatgpt-plus-subscriber/573409/2" class="uri">https://community.openai.com/t/api-access-as-a-chatgpt-plus-subscriber/573409/2</a></td>
+<td class="org-right">2025-04-17</td>
+<td class="org-left">ShellCheck is a Haskell shell script validator.</td>
+<td class="org-left"><a href="https://hackage.haskell.org/package/ShellCheck">https://hackage.haskell.org/package/ShellCheck</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-15</td>
-<td style="text-align: left;">InDesign’s GREP supports word boundaries:
-<code>\b</code>. (It also supports the opening/closing boundaries:
-<code>\&lt;</code> and <code>\&gt;</code>.)</td>
-<td style="text-align: left;"><a href="https://www.oreilly.com/library/view/grep-in-indesign/9780596157173/ch04.html" class="uri">https://www.oreilly.com/library/view/grep-in-indesign/9780596157173/ch04.html</a></td>
+<td class="org-right">2025-04-16</td>
+<td class="org-left">GitHub CLI extension leaves much to be desired. Currently, it can only process shell commands.</td>
+<td class="org-left"><a href="https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line">https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-10</td>
-<td style="text-align: left;">Zenburn is a Vim color scheme used
-natively for Pandoc syntax highlighting. It is so good, I am using it in
-my .vimrc.</td>
-<td style="text-align: left;"><a href="https://github.com/jnurmine/Zenburn" class="uri">https://github.com/jnurmine/Zenburn</a></td>
+<td class="org-right">2025-04-16</td>
+<td class="org-left">API keys are not a part of the ChatGPT Plus subscription. They are served by the OpenAI API platform.</td>
+<td class="org-left"><a href="https://community.openai.com/t/api-access-as-a-chatgpt-plus-subscriber/573409/2">https://community.openai.com/t/api-access-as-a-chatgpt-plus-subscriber/573409/2</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-10</td>
-<td style="text-align: left;">SVG favicons are now a thing.</td>
-<td style="text-align: left;"><a href="https://css-tricks.com/svg-favicons-and-all-the-fun-things-we-can-do-with-them/" class="uri">https://css-tricks.com/svg-favicons-and-all-the-fun-things-we-can-do-with-them/</a></td>
+<td class="org-right">2025-04-15</td>
+<td class="org-left">InDesign's GREP supports word boundaries: <code>\b</code>. (It also supports the opening/closing boundaries: <code>\&lt;</code> and <code>\&gt;</code>.)</td>
+<td class="org-left"><a href="https://www.oreilly.com/library/view/grep-in-indesign/9780596157173/ch04.html">https://www.oreilly.com/library/view/grep-in-indesign/9780596157173/ch04.html</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-10</td>
-<td style="text-align: left;">In CSS, use
-<code>display: flow-root;</code> to ensure parent elements min size
-accounts for floated elements.</td>
-<td style="text-align: left;"><a href="https://www.digitalocean.com/community/tutorials/css-no-more-clearfix-flow-root" class="uri">https://www.digitalocean.com/community/tutorials/css-no-more-clearfix-flow-root</a></td>
+<td class="org-right">2025-04-10</td>
+<td class="org-left">Zenburn is a Vim color scheme used natively for Pandoc syntax highlighting. It is so good, I am using it in my .vimrc.</td>
+<td class="org-left"><a href="https://github.com/jnurmine/Zenburn">https://github.com/jnurmine/Zenburn</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-09</td>
-<td style="text-align: left;">In Vim insert mode, evaluate expressions
-(e.g. math) by typing
-<code>&lt;C-R&gt;=yourexpression&lt;CR&gt;</code>.</td>
-<td style="text-align: left;"><code>:help c_CTRL-R_=</code>, <a href="https://vimtricks.com/p/vim-calculator/" class="uri">https://vimtricks.com/p/vim-calculator/</a></td>
+<td class="org-right">2025-04-10</td>
+<td class="org-left">SVG favicons are now a thing.</td>
+<td class="org-left"><a href="https://css-tricks.com/svg-favicons-and-all-the-fun-things-we-can-do-with-them/">https://css-tricks.com/svg-favicons-and-all-the-fun-things-we-can-do-with-them/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-09</td>
-<td style="text-align: left;">In Vim, open file under the cursor in a
-new split with <code>CTRL-W_f</code>.</td>
-<td style="text-align: left;"><code>:help CTRL-W_f</code>, <a href="https://vimtricks.com/p/open-file-in-a-split/" class="uri">https://vimtricks.com/p/open-file-in-a-split/</a></td>
+<td class="org-right">2025-04-10</td>
+<td class="org-left">In CSS, use <code>display: flow-root;</code> to ensure parent elements min size accounts for floated elements.</td>
+<td class="org-left"><a href="https://www.digitalocean.com/community/tutorials/css-no-more-clearfix-flow-root">https://www.digitalocean.com/community/tutorials/css-no-more-clearfix-flow-root</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-09</td>
-<td style="text-align: left;">In Vim, quickly switch to a one-time shell
-with <code>:shell</code> or <code>:sh</code>.</td>
-<td style="text-align: left;"><code>:help :shell</code></td>
+<td class="org-right">2025-04-09</td>
+<td class="org-left">In Vim insert mode, evaluate expressions (e.g. math) by typing <code>&lt;C-R&gt;=yourexpression&lt;CR&gt;</code>.</td>
+<td class="org-left"><code>:help c_CTRL-R_=</code>, <a href="https://vimtricks.com/p/vim-calculator/">https://vimtricks.com/p/vim-calculator/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-09</td>
-<td style="text-align: left;">In Git, use <code>git reset</code> to
-clear local changes since last commit.</td>
-<td style="text-align: left;"><a href="https://stackoverflow.com/a/1146981/28799158" class="uri">https://stackoverflow.com/a/1146981/28799158</a></td>
+<td class="org-right">2025-04-09</td>
+<td class="org-left">In Vim, open file under the cursor in a new split with <code>CTRL-W_f</code>.</td>
+<td class="org-left"><code>:help CTRL-W_f</code>, <a href="https://vimtricks.com/p/open-file-in-a-split/">https://vimtricks.com/p/open-file-in-a-split/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-09</td>
-<td style="text-align: left;">In Vim, use <code>g&amp;</code> to repeat
-last substitution.</td>
-<td style="text-align: left;"><code>:help g&amp;</code>, <a href="https://vi.stackexchange.com/a/18107/54693" class="uri">https://vi.stackexchange.com/a/18107/54693</a></td>
+<td class="org-right">2025-04-09</td>
+<td class="org-left">In Vim, quickly switch to a one-time shell with <code>:shell</code> or <code>:sh</code>.</td>
+<td class="org-left"><code>:help :shell</code></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-09</td>
-<td style="text-align: left;">In Git, safely undo up to a prior commit
-without destroying history:
-<code>git revert --no-commit 0d1d7fc3..HEAD</code></td>
-<td style="text-align: left;"><a href="https://stackoverflow.com/a/21718540/28799158" class="uri">https://stackoverflow.com/a/21718540/28799158</a></td>
+<td class="org-right">2025-04-09</td>
+<td class="org-left">In Git, use <code>git reset</code> to clear local changes since last commit.</td>
+<td class="org-left"><a href="https://stackoverflow.com/a/1146981/28799158">https://stackoverflow.com/a/1146981/28799158</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-08</td>
-<td style="text-align: left;">Pandoc will treat iframes and other plain
-HTML as code blocks if there are more than four spaces worth of
-indentation.</td>
-<td style="text-align: left;"><a href="https://github.com/jgm/pandoc/issues/2244" class="uri">https://github.com/jgm/pandoc/issues/2244</a></td>
+<td class="org-right">2025-04-09</td>
+<td class="org-left">In Vim, use <code>g&amp;</code> to repeat last substitution.</td>
+<td class="org-left"><code>:help g&amp;</code>, <a href="https://vi.stackexchange.com/a/18107/54693">https://vi.stackexchange.com/a/18107/54693</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-08</td>
-<td style="text-align: left;">In Vim, delete all but current buffer with
-<code>%bd | e#</code></td>
-<td style="text-align: left;"><a href="https://stackoverflow.com/a/34050776/28799158" class="uri">https://stackoverflow.com/a/34050776/28799158</a></td>
+<td class="org-right">2025-04-09</td>
+<td class="org-left">In Git, safely undo up to a prior commit without destroying history: <code>git revert --no-commit 0d1d7fc3..HEAD</code></td>
+<td class="org-left"><a href="https://stackoverflow.com/a/21718540/28799158">https://stackoverflow.com/a/21718540/28799158</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-08</td>
-<td style="text-align: left;">Quickly create a PDF with a subset of the
-pages of another PDF by selecting the pages in the sidebar,
-right-clicking, and selecting <em>Extract Pages…</em>.</td>
-<td style="text-align: left;"></td>
+<td class="org-right">2025-04-08</td>
+<td class="org-left">Pandoc will treat iframes and other plain HTML as code blocks if there are more than four spaces worth of indentation.</td>
+<td class="org-left"><a href="https://github.com/jgm/pandoc/issues/2244">https://github.com/jgm/pandoc/issues/2244</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-04</td>
-<td style="text-align: left;">A joke about how deep the rabbit hole goes
-for solving computer problems.</td>
-<td style="text-align: left;"><a href="https://people.willamette.edu/~fruehr/haskell/evolution.html" class="uri">https://people.willamette.edu/~fruehr/haskell/evolution.html</a></td>
+<td class="org-right">2025-04-08</td>
+<td class="org-left">In Vim, delete all but current buffer with <code>%bd\verte#</code></td>
+<td class="org-left"><a href="https://stackoverflow.com/a/34050776/28799158">https://stackoverflow.com/a/34050776/28799158</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-03</td>
-<td style="text-align: left;">The T2 chip on Apple computers can make
-installing Linux difficult.</td>
-<td style="text-align: left;"><a href="https://wiki.t2linux.org" class="uri">https://wiki.t2linux.org</a></td>
+<td class="org-right">2025-04-08</td>
+<td class="org-left">Quickly create a PDF with a subset of the pages of another PDF by selecting the pages in the sidebar, right-clicking, and selecting <i>Extract Pages&#x2026;</i>.</td>
+<td class="org-left">&#xa0;</td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-02</td>
-<td style="text-align: left;">Tufte CSS is a CSS styling philosophy
-derived from Edward Tufte’s books and handouts. (It is very
-elegant.)</td>
-<td style="text-align: left;"><a href="https://edwardtufte.github.io/tufte-css/" class="uri">https://edwardtufte.github.io/tufte-css/</a></td>
+<td class="org-right">2025-04-04</td>
+<td class="org-left">A joke about how deep the rabbit hole goes for solving computer problems.</td>
+<td class="org-left"><a href="https://people.willamette.edu/~fruehr/haskell/evolution.html">https://people.willamette.edu/~fruehr/haskell/evolution.html</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-02</td>
-<td style="text-align: left;"><code>git checkout -b [&lt;name-of-new-branch&gt;]</code>
-is a composition of <code>git branch</code> and
-<code>git checkout</code>.</td>
-<td style="text-align: left;"><a href="https://stackoverflow.com/questions/66882952/how-to-create-new-local-branch-and-switch-between-branches-in-git" class="uri">https://stackoverflow.com/questions/66882952/how-to-create-new-local-branch-and-switch-between-branches-in-git</a></td>
+<td class="org-right">2025-04-03</td>
+<td class="org-left">The T2 chip on Apple computers can make installing Linux difficult.</td>
+<td class="org-left"><a href="https://wiki.t2linux.org">https://wiki.t2linux.org</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-02</td>
-<td style="text-align: left;">Pandoc multiline tables best fit my needs
-for note taking. NOTE: They still convert to single-line.</td>
-<td style="text-align: left;"><a href="https://pandoc.org/MANUAL.html#extension-multiline_tables" class="uri">https://pandoc.org/MANUAL.html#extension-multiline_tables</a></td>
+<td class="org-right">2025-04-02</td>
+<td class="org-left">Tufte CSS is a CSS styling philosophy derived from Edward Tufte's books and handouts. (It is very elegant.)</td>
+<td class="org-left"><a href="https://edwardtufte.github.io/tufte-css/">https://edwardtufte.github.io/tufte-css/</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-02</td>
-<td style="text-align: left;">In Vim, use
-<code>:echo expand(&quot;%:h&quot;)</code> to show the path of the current
-file.</td>
-<td style="text-align: left;"><code>:help :echo</code>,
-<code>:help expand()</code></td>
+<td class="org-right">2025-04-02</td>
+<td class="org-left"><code>git checkout -b [&lt;name-of-new-branch&gt;]</code> is a composition of <code>git branch</code> and <code>git checkout</code>.</td>
+<td class="org-left"><a href="https://stackoverflow.com/questions/66882952/how-to-create-new-local-branch-and-switch-between-branches-in-git">https://stackoverflow.com/questions/66882952/how-to-create-new-local-branch-and-switch-between-branches-in-git</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-02</td>
-<td style="text-align: left;">In Vim, <code>%</code> refers to the
-complete file path, <code>%:h</code> gets the head (path minus
-filename).</td>
-<td style="text-align: left;"><code>:help %:h</code></td>
+<td class="org-right">2025-04-02</td>
+<td class="org-left">Pandoc multiline tables best fit my needs for note taking. NOTE: They still convert to single-line.</td>
+<td class="org-left"><a href="https://pandoc.org/MANUAL.html#extension-multiline_tables">https://pandoc.org/MANUAL.html#extension-multiline_tables</a></td>
 </tr>
+
 <tr>
-<td style="text-align: left;">2025-04-02</td>
-<td style="text-align: left;">In Vim, insert current time insert mode
-with <code>&lt;C-r&gt;=strftime(&#39;%F&#39;)&lt;CR&gt;</code>.</td>
-<td style="text-align: left;"><a href="https://superuser.com/questions/451340/how-to-insert-the-date-into-vim" class="uri">https://superuser.com/questions/451340/how-to-insert-the-date-into-vim</a></td>
+<td class="org-right">2025-04-02</td>
+<td class="org-left">In Vim, use <code>:echo expand("%:h")</code> to show the path of the current file.</td>
+<td class="org-left"><code>:help :echo</code>, <code>:help expand()</code></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-04-02</td>
+<td class="org-left">In Vim, <code>%</code> refers to the complete file path, <code>%:h</code> gets the head (path minus filename).</td>
+<td class="org-left"><code>:help %:h</code></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-04-02</td>
+<td class="org-left">In Vim, insert current time insert mode with <code>&lt;C-r&gt;=strftime('%F')&lt;CR&gt;</code>.</td>
+<td class="org-left"><a href="https://superuser.com/questions/451340/how-to-insert-the-date-into-vim">https://superuser.com/questions/451340/how-to-insert-the-date-into-vim</a></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Roger Farrell</p>
+<p class="date">Created: 2025-09-18 Thu 13:51</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
 </body>
 </html>

@@ -1,0 +1,60 @@
+#+title: Vim tips
+
+* Find/replace
+:PROPERTIES:
+:CUSTOM_ID: findreplace
+:END:
+- Immediately after searching a pattern with =/= use =c//e= to replace
+  the currently highlighted match.
+- Refer to =:help pattern-atoms= for some basic info about Vim's default
+  GREP flavor.[fn:1]
+
+* Multiplexing
+:PROPERTIES:
+:CUSTOM_ID: multiplexing
+:END:
+Vanilla Vim is adequate for basic multiplexing:
+[[file:multiplexing-in-vanilla-vim.org]]
+
+* Navigating =:help=
+:PROPERTIES:
+:CUSTOM_ID: navigating-help
+:END:
+- See =:help key-notation= for key abbreviations
+
+* Navigating files
+:PROPERTIES:
+:CUSTOM_ID: navigating-files
+:END:
+- Quickly open Netrw to the path of the current file: =:E=
+
+- go to file under cursor: =gf=
+
+  - Go to previous cursor position (in the jumplist): =<C-o>=
+  - Go to next cursor position (in the jumplist): =<C-i>=
+
+- In Netrw file tree view, use =gn= to change root directory to selected
+
+- Change root directory: =:cd path/to/new/root=
+
+- Clear highlighting till next search: =:nohlsearch= or =:noh=
+
+* Targeting nouns
+:PROPERTIES:
+:CUSTOM_ID: targeting-nouns
+:END:
+- Around (whole noun): =<verb> i <noun>=
+- Inside (inner content): =<verb> i <noun>=
+
+* Moving the cursor
+:PROPERTIES:
+:CUSTOM_ID: moving-the-cursor
+:END:
+- Scroll up: =<C-u>=
+- Scroll down: =<C-d>=
+- Go to previous ={=: =[{=
+- Go to next =}=: =]}=
+
+[fn:1] */TODO/* Write a note about Vim GREP, referring to this superb
+       article:
+       [[https://thevaluable.dev/regular-expression-basics-vim-grep/]]

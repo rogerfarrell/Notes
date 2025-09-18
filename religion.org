@@ -1,0 +1,13 @@
+#+title: Religion
+
+- [[file:bible.org]]
+- [[file:defining-the-christmas-spirit.org]]
+- [[file:cultural-christianity-is-a-good-thing.org]]
+- [[file:piety-strives-not-for-perfection.org]]
+- [[file:separation-of-church-and-state-is-incompatible-with-state-religion.org]]
+- [[file:theology.org]]
+
+--------------
+
+- [[file:references/paschal-greeting-in-greek.org]]
+- [[file:references/the-lords-prayer-in-greek.org]]

@@ -1,0 +1,5 @@
+#+title: Education
+
+- [[file:a-critique-of-critical-thinking.org]]
+- [[file:passive-externalism-through-ai.org]]
+- [[file:learning-begins-with-exposure.org]]

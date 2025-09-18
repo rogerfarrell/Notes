@@ -1,0 +1,3 @@
+#+title: Bible
+
+- [[file:all-cretans-are-liars.org]].

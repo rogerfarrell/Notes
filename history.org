@@ -1,0 +1,3 @@
+#+title: History
+
+- [[file:the-purpose-of-history.org]]

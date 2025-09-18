@@ -1,0 +1,30 @@
+#+title: Guide: batch convert SVGs to PNGs
+
+While faithful to the title, this guide also serves as an demonstration
+of advanced batch execution with =find=.
+
+#+begin_src sh
+find . -regex "./filename\.svg" \
+       -exec sh -c \
+         'inkscape -w 1200 "$1" -o "${1%.svg}.png"' \
+         sh {} \
+         \;
+#+end_src
+
+The =find= command collects a list of files matching the =-regex=
+pattern executes the command passed between =-exec= and =\;= for every
+match.[fn:1] In this example, the command is =sh -c=, which itself takes
+a command as a string and passes it to a sub-shell with the following
+positional arguments.[fn:2] The first argument is =sh= at position =$0=.
+This string is used for error messages. The second argument is ={}= at
+position =$1=. This is the placeholder used by the =-exec= flag to
+represent our matched file. This is the argument which is passed to the
+=inkscape= process. The output width in pixels is set with =-w=. The
+destination filename and format is set with =-o= via parameter
+expansion.
+
+[fn:1] This behavior is analogous to /map/ in functional programming.
+
+[fn:2] More information about using =find= with =sh -c= can be found in
+       this great Stack Overflow answer:
+       [[https://unix.stackexchange.com/a/389706/727998]]

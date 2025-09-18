@@ -1,348 +1,416 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Taking notes in Vim</title>
-  <style>
-html {
-color: #1a1a1a;
-background-color: #fdfdfd;
-}
-body {
-margin: 0 auto;
-max-width: 36em;
-padding-left: 50px;
-padding-right: 50px;
-padding-top: 50px;
-padding-bottom: 50px;
-hyphens: auto;
-overflow-wrap: break-word;
-text-rendering: optimizeLegibility;
-font-kerning: normal;
-}
-@media (max-width: 600px) {
-body {
-font-size: 0.9em;
-padding: 12px;
-}
-h1 {
-font-size: 1.8em;
-}
-}
-@media print {
-html {
-background-color: white;
-}
-body {
-background-color: transparent;
-color: black;
-font-size: 12pt;
-}
-p, h2, h3 {
-orphans: 3;
-widows: 3;
-}
-h2, h3, h4 {
-page-break-after: avoid;
-}
-}
-p {
-margin: 1em 0;
-}
-a {
-color: #1a1a1a;
-}
-a:visited {
-color: #1a1a1a;
-}
-img {
-max-width: 100%;
-}
-svg {
-height: auto;
-max-width: 100%;
-}
-h1, h2, h3, h4, h5, h6 {
-margin-top: 1.4em;
-}
-h5, h6 {
-font-size: 1em;
-font-style: italic;
-}
-h6 {
-font-weight: normal;
-}
-ol, ul {
-padding-left: 1.7em;
-margin-top: 1em;
-}
-li > ol, li > ul {
-margin-top: 0;
-}
-blockquote {
-margin: 1em 0 1em 1.7em;
-padding-left: 1em;
-border-left: 2px solid #e6e6e6;
-color: #606060;
-}
-code {
-font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-font-size: 85%;
-margin: 0;
-hyphens: manual;
-}
-pre {
-margin: 1em 0;
-overflow: auto;
-}
-pre code {
-padding: 0;
-overflow: visible;
-overflow-wrap: normal;
-}
-.sourceCode {
-background-color: transparent;
-overflow: visible;
-}
-hr {
-border: none;
-border-top: 1px solid #1a1a1a;
-height: 1px;
-margin: 1em 0;
-}
-table {
-margin: 1em 0;
-border-collapse: collapse;
-width: 100%;
-overflow-x: auto;
-display: block;
-font-variant-numeric: lining-nums tabular-nums;
-}
-table caption {
-margin-bottom: 0.75em;
-}
-tbody {
-margin-top: 0.5em;
-border-top: 1px solid #1a1a1a;
-border-bottom: 1px solid #1a1a1a;
-}
-th {
-border-top: 1px solid #1a1a1a;
-padding: 0.25em 0.5em 0.25em 0.5em;
-}
-td {
-padding: 0.125em 0.5em 0.25em 0.5em;
-}
-header {
-margin-bottom: 4em;
-text-align: center;
-}
-#TOC li {
-list-style: none;
-}
-#TOC ul {
-padding-left: 1.3em;
-}
-#TOC > ul {
-padding-left: 0;
-}
-#TOC a:not(:hover) {
-text-decoration: none;
-}
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+<!-- 2025-09-18 Thu 13:51 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Taking notes in Vim</title>
+<meta name="author" content="Roger Farrell" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
-ul.task-list[class]{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-font-size: inherit;
-width: 0.8em;
-margin: 0 0.8em 0.2em -1.6em;
-vertical-align: middle;
-}
-.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
 </style>
-  <style>
-:root
-{
---color-txt: color-mix(in srgb, CanvasText, Canvas 40%);
---color-accent: color-mix(in srgb, CanvasText, Canvas 80%);
-}
-html {
-color: var(--color-txt);
-background-color: Canvas;
-color-scheme: light dark;
-}
-body {
-max-width: 45em;
-}
-header {
-text-align: left;
-}
-.subtitle:before {
-content: 'Tags: '
-}
-a {
-color: var(--color-txt);
-}
-a:visited {
-color: var(--color-txt);
-}
-a[href^="http"]:not([href^="https://rogerfarrell.net"]):after {
-content:"\2B08"; 
-font-size: 0.8em;
-line-height: 0.8em;
-vertical-align: super;
-}
-th {
-border-top: 1px solid var(--color-accent);
-}
-tbody {
-border-top: 1px solid var(--color-accent);
-border-bottom: 1px solid var(--color-accent);
-}
-blockquote {
-border-left: 2px solid var(--color-accent);
-}
-div.sourceCode {
-padding: 0.5em;
-border-radius: 2px;
-}
-hr {
-border: none;
-border-top: 1px solid var(--color-accent);
-opacity: 0.75;
-}
-
-nav.running-header {
-display: flow-root;
-font-size: 0.75em;
-padding-bottom: 5px;
-border-bottom: 1pt solid var(--color-accent);
-a {
-text-decoration: none;
-}
-}
-.site-title {
-font-style: italic;
-float: left;
-}
-.github-link {
-float: right;
-}
-</style>
+<link rel="stylesheet" href="template/styles.css" type="text/css"/>
 </head>
 <body>
-<nav class="running-header">
-  <div class="site-title">
-    <a href="https://rogerfarrell.net">Roger Farrell’s notes</a>
-  </div>
-  <div class="github-link">
-    <a href="https://github.com/rogerfarrell/Notes/">GitHub</a>
-  </div>
-</nav>
-<header id="title-block-header">
+<div id="content" class="content">
 <h1 class="title">Taking notes in Vim</h1>
-<p class="subtitle"><a href="vim" class="wikilink">vim</a></p>
-</header>
-<p>Vim is a great platform for taking notes. However, some constraints
-are necessary to maximize efficiency for real-time thought-capture.</p>
-<p><strong>This note is a work in progress. It may be out-of-date or
-have incomplete information.</strong></p>
+<p>
+Vim is a great platform for taking notes. However, some constraints are
+necessary to maximize efficiency for real-time thought-capture.
+</p>
+
+<p>
+<b>This note is a work in progress. It may be out-of-date or have
+incomplete information.</b>
+</p>
+<div id="outline-container-current-solution" class="outline-2">
 <h2 id="current-solution">Current solution</h2>
-<h3 id="configure-vims-handling-of-markdown-files">Configure Vim’s
-handling of markdown files</h3>
-<p>I have a file type plugin at
-<code>~/.vim/ftplugin/markdown.vim</code>. There are several settings in
-that file that improve my workflow specifically for taking markdown
-notes.</p>
+<div class="outline-text-2" id="text-current-solution">
+</div>
+<div id="outline-container-configure-vims-handling-of-markdown-files" class="outline-3">
+<h3 id="configure-vims-handling-of-markdown-files">Configure Vim's handling of markdown files</h3>
+<div class="outline-text-3" id="text-configure-vims-handling-of-markdown-files">
+<p>
+I have a file type plugin at <code>~/.vim/ftplugin/markdown.vim</code>. There are
+several settings in that file that improve my workflow specifically for
+taking markdown notes.
+</p>
+</div>
+</div>
+<div id="outline-container-markdown-syntax" class="outline-3">
 <h3 id="markdown-syntax">Markdown syntax</h3>
-<p>Markdown is the de facto standard for note-taking, it lacks a single
+<div class="outline-text-3" id="text-markdown-syntax">
+<p>
+Markdown is the de facto standard for note-taking, it lacks a single
 definitive spec. Since Pandoc is the best tool for Markdown conversion,
-I will be following the <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc Markdown
-spec</a>. If a fallback is required for further clarity, I will use <a href="https://github.github.com/gfm">Github Flavored Markdown</a>.</p>
+I will be following the
+<a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc Markdown
+spec</a>. If a fallback is required for further clarity, I will use
+<a href="https://github.github.com/gfm">Github Flavored Markdown</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-representing-keystrokes" class="outline-3">
 <h3 id="representing-keystrokes">Representing keystrokes</h3>
-<p>Since I spend a lot of time in the Vim help docs, I have decided to
-use Vim’s notation for keystrokes and special characters. In practice,
-this means I am representing keystrokes using markdown inline code
-segments instead of the HTML <code>&lt;kbd&gt;</code> tag. For more
-information about Vim’s notation syntax, see
-<code>:help notation</code>.</p>
+<div class="outline-text-3" id="text-representing-keystrokes">
+<p>
+Since I spend a lot of time in the Vim help docs, I have decided to use
+Vim's notation for keystrokes and special characters. In practice, this
+means I am representing keystrokes using markdown inline code segments
+instead of the HTML <code>&lt;kbd&gt;</code> tag. For more information about Vim's
+notation syntax, see <code>:help notation</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-links-instead-of-tags" class="outline-3">
 <h3 id="links-instead-of-tags">Links instead of tags</h3>
-<p>The zettelkasten method prefers curated entry points to notes over
+<div class="outline-text-3" id="text-links-instead-of-tags">
+<p>
+The zettelkasten method prefers curated entry points to notes over
 content searches. In the spirit of this convention, I have elected to
 forgo querying by tags. Navigation will be handled entirely by links.
 This has the added benefit of being fully supported by base Markdown
-syntax.</p>
+syntax.
+</p>
+</div>
+</div>
+<div id="outline-container-pandoc-for-online-viewing" class="outline-3">
 <h3 id="pandoc-for-online-viewing">Pandoc for online viewing</h3>
-<p>I am building my notes using Pandoc via a makefile. Currently, I am
-only using one non-default Pandoc extension: <a href="https://pandoc.org/MANUAL.html#extension-wikilinks_title_after_pipe">wikilinks_title_after_pipe</a>.
+<div class="outline-text-3" id="text-pandoc-for-online-viewing">
+<p>
+I am building my notes using Pandoc via a makefile. Currently, I am only
+using one non-default Pandoc extension:
+<a href="https://pandoc.org/MANUAL.html#extension-wikilinks_title_after_pipe">wikilinks<sub>title</sub><sub>after</sub><sub>pipe</sub></a>.
 Wikilinks are simpler to write. I tried working with plain markdown
-links, but they interrupted my flow-state.</p>
+links, but they interrupted my flow-state.
+</p>
+
 <hr />
+</div>
+</div>
+</div>
+<div id="outline-container-previous-solutions" class="outline-2">
 <h2 id="previous-solutions">Previous solutions</h2>
+<div class="outline-text-2" id="text-previous-solutions">
+</div>
+<div id="outline-container-vim-help-docs" class="outline-3">
 <h3 id="vim-help-docs">Vim help docs</h3>
-<p>Vim supports writing your own custom help docs in the VIMDOC format.
+<div class="outline-text-3" id="text-vim-help-docs">
+<p>
+Vim supports writing your own custom help docs in the VIMDOC format.
 With some simple configuration, these can be accessed in exactly the
-same way as the built-in Vim help.</p>
-<p>Custom help docs should be added to <code>~/.vim/doc/</code>.</p>
-<p>In order for Vim to read the help files, VIMDOCs begin and end with
+same way as the built-in Vim help.
+</p>
+
+<p>
+Custom help docs should be added to <code>~/.vim/doc/</code>.
+</p>
+
+<p>
+In order for Vim to read the help files, VIMDOCs begin and end with
 special lines which contain metadata. The file must begin with a title
-line in the below format,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and end with a modeline.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<pre class="vim"><code>*filetitle.txt* {short description of the plugin}</code></pre>
+line in the below format,<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> and end with a modeline.<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-vim">*filetitle.txt* {short description of the plugin}
+</pre>
+</div>
+</div>
+<div id="outline-container-configuring-vim" class="outline-4">
 <h4 id="configuring-vim">Configuring Vim</h4>
-<p>Some minimal configuration is required to enable custom VIMDOCS. The
-following should be added to your <em>.vimrc</em>.</p>
-<pre class="vim"><code>&quot; USING VIM HELP DOCS FOR NOTES
+<div class="outline-text-4" id="text-configuring-vim">
+<p>
+Some minimal configuration is required to enable custom VIMDOCS. The
+following should be added to your <i>.vimrc</i>.
+</p>
 
-&quot; enables modelines in custom help files
-&quot; (This is overriding the default macOS config at /usr/share/vim/vimrc)
-set modelines=1                                        
+<div class="org-src-container">
+<pre class="src src-vim">" USING VIM HELP DOCS FOR NOTES
 
-&quot; regenerate help tags for personal notes on file save
-autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc </code></pre>
+" enables modelines in custom help files
+" (This is overriding the default macOS config at /usr/share/vim/vimrc)
+set modelines=1l
+
+" regenerate help tags for personal notes on file save
+autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-making-a-template" class="outline-4">
 <h4 id="making-a-template">Making a template</h4>
-<p>To reduce overhead when creating new notes a template like the one
-below is advisable. Note that I have set ‘modifiable’ and ‘noreadonly’
-to enable editing.</p>
-<pre class="vim"><code>*n-template.txt*  Aliases: *n-tmp*  Created: YYYY-MM-DD
+<div class="outline-text-4" id="text-making-a-template">
+<p>
+To reduce overhead when creating new notes a template like the one below
+is advisable. Note that I have set 'modifiable' and 'noreadonly' to
+enable editing.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-vim">*n-template.txt*  Aliases: *n-tmp*  Created: YYYY-MM-DD
 
 
 your text here
 
 
- vim:tw=78:ts=8:noet:ft=help:norl:modifiable:noreadonly:</code></pre>
+ vim:tw=78:ts=8:noet:ft=help:norl:modifiable:noreadonly:
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-writing-to-dos" class="outline-4">
 <h4 id="writing-to-dos">Writing to dos</h4>
-<p>VIMDOC has a native syntax for to dos (see below). Note that real
-tabs must be used for the syntax highlighting to work. If ‘expandtabs’
-is enabled, tabs can be inserted by typing <code>&lt;C-V&gt;</code> and
-then <code>&lt;Tab&gt;</code>. Also, the to do title must begin with a
-lower case letter.</p>
-<pre class="vim"><code>    *Todo   your to do (starting with a lower case letter)</code></pre>
+<div class="outline-text-4" id="text-writing-to-dos">
+<p>
+VIMDOC has a native syntax for to dos (see below). Note that real tabs
+must be used for the syntax highlighting to work. If 'expandtabs' is
+enabled, tabs can be inserted by typing <code>&lt;C-V&gt;</code> and then <code>&lt;Tab&gt;</code>. Also,
+the to do title must begin with a lower case letter.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-vim">*Todo   your to do (starting with a lower case letter)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-vimwiki-plugin" class="outline-3">
 <h3 id="vimwiki-plugin">Vimwiki plugin</h3>
-<p>I tested <a href="https://github.com/vimwiki">Vimwiki</a> for several
-months. It extends Vim’s note taking capability in many significant
-ways. Most importantly, it reduces the mental overhead of note
-composition. Some key features of Vimwiki include:</p>
-<ul>
+<div class="outline-text-3" id="text-vimwiki-plugin">
+<p>
+I tested <a href="https://github.com/vimwiki">Vimwiki</a> for several months. It
+extends Vim's note taking capability in many significant ways. Most
+importantly, it reduces the mental overhead of note composition. Some
+key features of Vimwiki include:
+</p>
+
+<ul class="org-ul">
 <li>Excellent internal link navigation</li>
 <li>Automatic not creation from links</li>
 <li>Automatic global link updates upon file rename</li>
 </ul>
-<p>Eventually, I managed to simplify my strategy sufficiently that the
-efficiency gains were marginal.</p>
+
+<p>
+Eventually, I managed to simplify my strategy sufficiently that the
+efficiency gains were marginal.
+</p>
+</div>
+</div>
+<div id="outline-container-publishing-notes-with-mdwiki" class="outline-3">
 <h3 id="publishing-notes-with-mdwiki">Publishing notes with MDwiki</h3>
-<p>While using Vimwiki, I published my notes with <a href="https://dynalon.github.io/mdwiki/">MDwiki</a>.</p>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p><code>:help help-writing</code><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><code>:help modeline</code><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
+<div class="outline-text-3" id="text-publishing-notes-with-mdwiki">
+<p>
+While using Vimwiki, I published my notes with
+<a href="https://dynalon.github.io/mdwiki/">MDwiki</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<code>:help help-writing</code>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<code>:help modeline</code>
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Roger Farrell</p>
+<p class="date">Created: 2025-09-18 Thu 13:51</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
 </body>
 </html>

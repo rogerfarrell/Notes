@@ -1,0 +1,35 @@
+#+title: Substitute across multiple files in Vim
+
+There are a couple ways to find/replace in Vim. The most vim-like way
+consists of populating the QuickFix list (=:help quickfix=) with all the
+files you intend to search across. You can then iterate through these
+files, applying any commands you desire.
+
+* Populating the QuickFix list
+:PROPERTIES:
+:CUSTOM_ID: populating-the-quickfix-list
+:END:
+My preferred way to populate the QuickFix list is using =:vimgrep=
+(=:vim= for short). This uses Vim's internal grep engine, which is
+consistent across systems. A typical command is as follows:
+=:vim /searchpattern/ pathtofiles=. See =:help :vimgrep= for more info.
+Note that this will populate the QuickFix list with all matches from all
+files at the specified path. This will be useful later.
+
+* Running a find/replace on QuickFix entries
+:PROPERTIES:
+:CUSTOM_ID: running-a-findreplace-on-quickfix-entries
+:END:
+Once the QuickFix list is populated, You can substitute across all files
+just like a single file. See the following command:
+
+#+begin_src vim
+:cfdo %s/searchpattern/replacepattern/ | update
+#+end_src
+
+- =:cfdo= runs the following command across all files.[fn:1]
+- =| update= is necessary to automatically save the file before the
+  search move to the next match.
+
+[fn:1] =:cfdo= is generally preferred over =:cdo=:
+       [[file:references/cdo-vs-cfdo.org]]

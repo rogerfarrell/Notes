@@ -1,0 +1,25 @@
+#+title: Zettelkasten rules
+
+* Atomize thoughts
+:PROPERTIES:
+:CUSTOM_ID: atomize-thoughts
+:END:
+Each zettel should contain one single idea. Putting multiple thoughts in
+a single zettel effectively creates static links. It undermines the
+dynamic behavior that makes the method powerful.
+
+* Write /everything/ in your own words
+:PROPERTIES:
+:CUSTOM_ID: write-everything-in-your-own-words
+:END:
+Zettels are discreet personal thoughts, not citations. The goal is to
+have captured the thought you had when you encountered the thing you are
+citing.
+
+* Contextualize links
+:PROPERTIES:
+:CUSTOM_ID: contextualize-links
+:END:
+The zettelkasten method is oriented around building quality connections
+between thoughts (i.e. relevance maps). Links with explicit context have
+maximum utility.

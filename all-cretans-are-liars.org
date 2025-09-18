@@ -1,0 +1,10 @@
+#+title: All Cretans are liars
+
+* Leads for further study
+:PROPERTIES:
+:CUSTOM_ID: leads-for-further-study
+:END:
+- [[https://en.wikipedia.org/wiki/Epimenides_paradox][Epimenides
+  paradox]]
+- [[https://www.gotquestions.org/all-Cretans-are-liars.html][Topical
+  page on gotquestions.org]]

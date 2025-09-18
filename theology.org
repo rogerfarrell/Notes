@@ -1,0 +1,4 @@
+#+title: Theology
+
+- [[file:christs-incarnation-restores-cosmic-communion.org]]
+- [[file:how-christians-die-for-the-sin-of-the-world.org]]

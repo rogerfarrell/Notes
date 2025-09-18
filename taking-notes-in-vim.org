@@ -1,0 +1,160 @@
+#+title: Taking notes in Vim
+
+Vim is a great platform for taking notes. However, some constraints are
+necessary to maximize efficiency for real-time thought-capture.
+
+*This note is a work in progress. It may be out-of-date or have
+incomplete information.*
+
+* Current solution
+:PROPERTIES:
+:CUSTOM_ID: current-solution
+:END:
+** Configure Vim's handling of markdown files
+:PROPERTIES:
+:CUSTOM_ID: configure-vims-handling-of-markdown-files
+:END:
+I have a file type plugin at =~/.vim/ftplugin/markdown.vim=. There are
+several settings in that file that improve my workflow specifically for
+taking markdown notes.
+
+** Markdown syntax
+:PROPERTIES:
+:CUSTOM_ID: markdown-syntax
+:END:
+Markdown is the de facto standard for note-taking, it lacks a single
+definitive spec. Since Pandoc is the best tool for Markdown conversion,
+I will be following the
+[[https://pandoc.org/MANUAL.html#pandocs-markdown][Pandoc Markdown
+spec]]. If a fallback is required for further clarity, I will use
+[[https://github.github.com/gfm][Github Flavored Markdown]].
+
+** Representing keystrokes
+:PROPERTIES:
+:CUSTOM_ID: representing-keystrokes
+:END:
+Since I spend a lot of time in the Vim help docs, I have decided to use
+Vim's notation for keystrokes and special characters. In practice, this
+means I am representing keystrokes using markdown inline code segments
+instead of the HTML =<kbd>= tag. For more information about Vim's
+notation syntax, see =:help notation=.
+
+** Links instead of tags
+:PROPERTIES:
+:CUSTOM_ID: links-instead-of-tags
+:END:
+The zettelkasten method prefers curated entry points to notes over
+content searches. In the spirit of this convention, I have elected to
+forgo querying by tags. Navigation will be handled entirely by links.
+This has the added benefit of being fully supported by base Markdown
+syntax.
+
+** Pandoc for online viewing
+:PROPERTIES:
+:CUSTOM_ID: pandoc-for-online-viewing
+:END:
+I am building my notes using Pandoc via a makefile. Currently, I am only
+using one non-default Pandoc extension:
+[[https://pandoc.org/MANUAL.html#extension-wikilinks_title_after_pipe][wikilinks_title_after_pipe]].
+Wikilinks are simpler to write. I tried working with plain markdown
+links, but they interrupted my flow-state.
+
+--------------
+
+* Previous solutions
+:PROPERTIES:
+:CUSTOM_ID: previous-solutions
+:END:
+** Vim help docs
+:PROPERTIES:
+:CUSTOM_ID: vim-help-docs
+:END:
+Vim supports writing your own custom help docs in the VIMDOC format.
+With some simple configuration, these can be accessed in exactly the
+same way as the built-in Vim help.
+
+Custom help docs should be added to =~/.vim/doc/=.
+
+In order for Vim to read the help files, VIMDOCs begin and end with
+special lines which contain metadata. The file must begin with a title
+line in the below format,[fn:1] and end with a modeline.[fn:2]
+
+#+begin_src vim
+,*filetitle.txt* {short description of the plugin}
+#+end_src
+
+*** Configuring Vim
+:PROPERTIES:
+:CUSTOM_ID: configuring-vim
+:END:
+Some minimal configuration is required to enable custom VIMDOCS. The
+following should be added to your /.vimrc/.
+
+#+begin_src vim
+" USING VIM HELP DOCS FOR NOTES
+
+" enables modelines in custom help files
+" (This is overriding the default macOS config at /usr/share/vim/vimrc)
+set modelines=1l
+
+" regenerate help tags for personal notes on file save
+autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc
+#+end_src
+
+*** Making a template
+:PROPERTIES:
+:CUSTOM_ID: making-a-template
+:END:
+To reduce overhead when creating new notes a template like the one below
+is advisable. Note that I have set 'modifiable' and 'noreadonly' to
+enable editing.
+
+#+begin_src vim
+,*n-template.txt*  Aliases: *n-tmp*  Created: YYYY-MM-DD
+
+
+your text here
+
+
+ vim:tw=78:ts=8:noet:ft=help:norl:modifiable:noreadonly:
+#+end_src
+
+*** Writing to dos
+:PROPERTIES:
+:CUSTOM_ID: writing-to-dos
+:END:
+VIMDOC has a native syntax for to dos (see below). Note that real tabs
+must be used for the syntax highlighting to work. If 'expandtabs' is
+enabled, tabs can be inserted by typing =<C-V>= and then =<Tab>=. Also,
+the to do title must begin with a lower case letter.
+
+#+begin_src vim
+    ,*Todo   your to do (starting with a lower case letter)
+#+end_src
+
+** Vimwiki plugin
+:PROPERTIES:
+:CUSTOM_ID: vimwiki-plugin
+:END:
+I tested [[https://github.com/vimwiki][Vimwiki]] for several months. It
+extends Vim's note taking capability in many significant ways. Most
+importantly, it reduces the mental overhead of note composition. Some
+key features of Vimwiki include:
+
+- Excellent internal link navigation
+- Automatic not creation from links
+- Automatic global link updates upon file rename
+
+Eventually, I managed to simplify my strategy sufficiently that the
+efficiency gains were marginal.
+
+** Publishing notes with MDwiki
+:PROPERTIES:
+:CUSTOM_ID: publishing-notes-with-mdwiki
+:END:
+While using Vimwiki, I published my notes with
+[[https://dynalon.github.io/mdwiki/][MDwiki]].
+
+[fn:1] =:help help-writing=
+
+[fn:2] =:help modeline=

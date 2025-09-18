@@ -1,0 +1,27 @@
+#+title: The Divine Comedy
+
+by Dante Alighieri (Author), John Ciardi (Translator)
+
+* The Inferno
+:PROPERTIES:
+:CUSTOM_ID: the-inferno
+:END:
+** Canto I
+:PROPERTIES:
+:CUSTOM_ID: canto-i
+:END:
+The opening scene of /Over the Garden Wall/ is earily similar to Dante's
+/Dark Wood of Error/.
+
+* The Purgatorio
+:PROPERTIES:
+:CUSTOM_ID: the-purgatorio
+:END:
+* The Paradiso
+:PROPERTIES:
+:CUSTOM_ID: the-paradiso
+:END:
+
+--------------
+
+- [[https://books.apple.com/us/book/the-divine-comedy/id357913986]]

@@ -1,0 +1,3 @@
+These are my personal notes. I am writing them in Vim. They are
+converted to HTML via Pandoc and published to
+[[https://rogerfarrell.net][my website]] with GitHub Pages.
