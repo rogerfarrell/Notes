@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-09-18 Thu 14:13 -->
+<!-- 2025-09-23 Tue 07:25 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Guide: Batch convert PDFs to JPGs</title>
@@ -222,7 +222,7 @@ parts of the image may appear as other colors.<sup><a id="fnr.2" class="footref"
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">magick -verbose \
+<pre class="src src-bash">magick -verbose \
        -density 300 \
        input.pdf \
        -background white \
@@ -239,7 +239,7 @@ I also typically want a 600px wide version of every image:<sup><a id="fnr.3" cla
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">magick input-f-lg.jpg -resize 600 output-f-sm.jpg
+<pre class="src src-bash">magick input-f-lg.jpg -resize 600 output-f-sm.jpg
 </pre>
 </div>
 <div id="footnotes">
@@ -269,7 +269,7 @@ Overflow thread:
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: Roger Farrell</p>
-<p class="date">Created: 2025-09-18 Thu 14:13</p>
+<p class="date">Created: 2025-09-23 Tue 07:25</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

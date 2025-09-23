@@ -18,7 +18,7 @@ First, I must convert each PDF to a high-quality JPG.[fn:1] I remove the
 alpha channel and set the background to white. Otherwise, transparent
 parts of the image may appear as other colors.[fn:2]
 
-#+begin_src sh
+#+begin_src bash
 magick -verbose \
        -density 300 \
        input.pdf \
@@ -32,7 +32,7 @@ magick -verbose \
 
 I also typically want a 600px wide version of every image:[fn:3]
 
-#+begin_src sh
+#+begin_src bash
 magick input-f-lg.jpg -resize 600 output-f-sm.jpg
 #+end_src
 

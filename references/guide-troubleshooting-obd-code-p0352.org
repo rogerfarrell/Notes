@@ -37,4 +37,4 @@ plugs and faulty wiring.[fn:2]
        [[https://www.identifix.com/blogs/code-p0352-the-diagnostic-and-repair-guide]]
 
 [fn:2] To change spark plugs (and ignition coils) see:
-       [[file:guide-how-to-replace-spark-plugs-on-a-toyota-2gr-fe.org.org]]
+       [[file:guide-how-to-replace-spark-plugs-on-a-toyota-2gr-fe.org]]

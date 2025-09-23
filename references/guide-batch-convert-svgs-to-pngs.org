@@ -3,7 +3,7 @@
 While faithful to the title, this guide also serves as an demonstration
 of advanced batch execution with =find=.
 
-#+begin_src sh
+#+begin_src bash
 find . -regex "./filename\.svg" \
        -exec sh -c \
          'inkscape -w 1200 "$1" -o "${1%.svg}.png"' \

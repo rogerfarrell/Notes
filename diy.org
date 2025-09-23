@@ -4,7 +4,7 @@
 :PROPERTIES:
 :CUSTOM_ID: cars
 :END:
-- [[file:references/guide-replace-spark-plugs-on-a-toyota-2gr-fe.md.org]]
+- [[file:references/guide-replace-spark-plugs-on-a-toyota-2gr-fe.org]]
 - [[file:references/guide-troubleshooting-obd-code-p0352.org]]
 
 * Home appliances
