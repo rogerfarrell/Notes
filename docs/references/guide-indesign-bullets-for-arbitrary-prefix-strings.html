@@ -6,7 +6,7 @@
 <!-- 2025-09-29 Mon 12:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Symbolism</title>
+<title>Guide: InDesign bullets for arbitrary prefix strings</title>
 <meta name="author" content="Roger Farrell" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
@@ -193,27 +193,42 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<link rel="stylesheet" href="template/styles.css" type="text/css"/>
+<link rel="stylesheet" href="../template/styles.css" type="text/css"/>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Symbolism</h1>
-<ul class="org-ul">
-<li><a href="breaking-the-4th-wall-as-the-death-pangs-of-modern-myth.html">breaking-the-4th-wall-as-the-death-pangs-of-modern-myth.html</a></li>
-<li><a href="christs-incarnation-restores-cosmic-communion.html">christs-incarnation-restores-cosmic-communion.html</a></li>
-<li><a href="existence-as-sacrifice.html">existence-as-sacrifice.html</a></li>
-<li><a href="nakedness-is-the-body-unveiled.html">nakedness-is-the-body-unveiled.html</a></li>
-<li><a href="negative-relationships.html">negative-relationships.html</a></li>
-<li><a href="patterns-of-4.html">patterns-of-4.html</a></li>
-<li><a href="positive-relationships.html">positive-relationships.html</a></li>
-<li><a href="the-symbolism-of-reaping-without-sowing.html">the-symbolism-of-reaping-without-sowing.html</a></li>
-<li><a href="the-tower-of-babel-is-a-self-referential-totality.html">the-tower-of-babel-is-a-self-referential-totality.html</a></li>
-<li><a href="veils.html">veils.html</a>
-<ul class="org-ul">
-<li><a href="veils-reveal-through-concealment.html">veils-reveal-through-concealment.html</a></li>
-<li><a href="nakedness-is-the-body-unveiled.html">nakedness-is-the-body-unveiled.html</a></li>
-</ul></li>
-</ul>
+<h1 class="title">Guide: InDesign bullets for arbitrary prefix strings</h1>
+<p>
+It is occasionally useful to set an arbitrary text prefix at the
+paragraph style level. One such example is for a table of contents
+where entries are formatted as follows:
+</p>
+
+<pre class="example">
+Page # -- Title of entry
+</pre>
+
+
+<p>
+InDesign's auto-generated table of contents can reproduce this entire
+example with the exception of the prefixed word <i>Page</i> followed by a
+space.
+</p>
+
+<p>
+We can add the prefix by creating a custom bullet character in the
+<i>Bullets and Numbering</i> section of the paragraph style options.
+</p>
+
+<ol class="org-ol">
+<li>Under <i>Bullet Character</i> choose <i>Add</i>.</li>
+<li>Select the very top-left grid item. (Hovering over it will display
+a tooltip. It should be the <code>&lt;control-0000&gt;</code> character. This
+unicode character has no width and basically means <code>null</code>.)</li>
+<li>Click <i>Add</i></li>
+<li>In the <i>Text After</i> field, write your prefix text.</li>
+<li>Choose a character style, if desired.</li>
+</ol>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Roger Farrell</p>

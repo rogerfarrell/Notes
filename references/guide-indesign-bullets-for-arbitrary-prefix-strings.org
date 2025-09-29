@@ -1,0 +1,22 @@
+#+title: Guide: InDesign bullets for arbitrary prefix strings
+
+It is occasionally useful to set an arbitrary text prefix at the
+paragraph style level. One such example is for a table of contents
+where entries are formatted as follows:
+
+: Page # -- Title of entry
+
+InDesign's auto-generated table of contents can reproduce this entire
+example with the exception of the prefixed word /Page/ followed by a
+space.
+
+We can add the prefix by creating a custom bullet character in the
+/Bullets and Numbering/ section of the paragraph style options.
+
+1. Under /Bullet Character/ choose /Add/.
+2. Select the very top-left grid item. (Hovering over it will display
+   a tooltip. It should be the =<control-0000>= character. This
+   unicode character has no width and basically means =null=.)
+3. Click /Add/
+4. In the /Text After/ field, write your prefix text.
+5. Choose a character style, if desired.

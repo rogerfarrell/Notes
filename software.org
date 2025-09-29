@@ -14,5 +14,6 @@
 - [[file:references/guide-markdown-to-indesign-workflow.org]]
 - [[file:references/guide-docsflow-and-share-for-review.org]]
 - [[file:references/indesign-book-layout-checklist.org]]
+- [[file:references/guide-indesign-bullets-for-arbitrary-prefix-strings.org]]
 - [[file:references/indesign-grep-snippets.org]]
 - [[file:references/the-lisp-machine-and-gnu.org]]
