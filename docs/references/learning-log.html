@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-11-17 Mon 01:52 -->
+<!-- 2025-11-21 Fri 23:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Learning log</title>
@@ -217,6 +217,48 @@
 </thead>
 <tbody>
 <tr>
+<td class="org-right">2025-11-21</td>
+<td class="org-left">Some more ideas for handling secrets in Guix.</td>
+<td class="org-left"><a href="https://gitlab.com/martin-baulig/config-and-setup/guix-packages/-/blob/work-wal-g/guix/extensions/secrets.scm?ref_type=heads">https://gitlab.com/martin-baulig/config-and-setup/guix-packages/-/blob/work-wal-g/guix/extensions/secrets.scm?ref_type=heads</a>, <a href="https://gitlab.com/martin-baulig/config-and-setup/guix-packages/-/blob/work-wal-g/packages/baulig/build/secrets-service.scm?ref_type=heads">https://gitlab.com/martin-baulig/config-and-setup/guix-packages/-/blob/work-wal-g/packages/baulig/build/secrets-service.scm?ref_type=heads</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-11-21</td>
+<td class="org-left">Some ideas for handling secrets in Guix.</td>
+<td class="org-left"><a href="https://www.freakingpenguin.com/blog/guix-tricks-managing-secrets-using-password-store-and-run-time-decryption-scripts.html">https://www.freakingpenguin.com/blog/guix-tricks-managing-secrets-using-password-store-and-run-time-decryption-scripts.html</a>, <a href="https://github.com/fishinthecalculator/sops-guix?tab=readme-ov-file">https://github.com/fishinthecalculator/sops-guix?tab=readme-ov-file</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-11-21</td>
+<td class="org-left">Some useful info about <code>guix-for-channels</code> and other ways to configure channels within the system config.</td>
+<td class="org-left"><a href="https://lists.gnu.org/archive/html/guix-devel/2024-12/msg00265.html">https://lists.gnu.org/archive/html/guix-devel/2024-12/msg00265.html</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-11-21</td>
+<td class="org-left">An interesting argument: Macros are are necessary for language development, not regular use cases.</td>
+<td class="org-left"><a href="https://qr.ae/pC4VPZ">https://qr.ae/pC4VPZ</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-11-21</td>
+<td class="org-left">An interesting value comparison: <i>immutable data &gt; functions &gt; macros</i>.</td>
+<td class="org-left"><a href="https://ericnormand.me/article/data-functions-macros-why">https://ericnormand.me/article/data-functions-macros-why</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-11-18</td>
+<td class="org-left">In Emacs ERC, connect to ZNC with <code>(erc-tls :server "my_znc_server.com" :port 5555 :nick "dima5" :password "dima/oftc:zncpassword")</code>.</td>
+<td class="org-left"><a href="https://notes.secretsauce.net/notes/2014/10/08_znc-and-erc.html">https://notes.secretsauce.net/notes/2014/10/08_znc-and-erc.html</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-11-17</td>
+<td class="org-left">A great Guix config for reference.</td>
+<td class="org-left"><a href="https://github.com/hiecaq/guix-config">https://github.com/hiecaq/guix-config</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-11-17</td>
 <td class="org-left">In Guix, a way to pin specific packages to their own channel commits is in the works. They are calling it <i>inferiors</i>.</td>
 <td class="org-left"><a href="https://guix.gnu.org/manual/en/html_node/Inferiors.html">https://guix.gnu.org/manual/en/html_node/Inferiors.html</a></td>
@@ -248,7 +290,7 @@
 
 <tr>
 <td class="org-right">2025-11-16</td>
-<td class="org-left">In Guix, channels can be added directly to the system config. (Though, these will not be used prior to the initial reconfigure.)</td>
+<td class="org-left">In Guix, channels can be added directly to the system config with <code>guix-for-channels</code>. This will force a <code>guix pull</code> before every build (including the initial build).</td>
 <td class="org-left"><a href="https://guix.gnu.org/manual/devel/en/html_node/Customizing-the-System_002dWide-Guix.html">https://guix.gnu.org/manual/devel/en/html_node/Customizing-the-System_002dWide-Guix.html</a></td>
 </tr>
 
@@ -1210,7 +1252,7 @@
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Roger Farrell</p>
-<p class="date">Created: 2025-11-17 Mon 01:52</p>
+<p class="date">Created: 2025-11-21 Fri 23:13</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
