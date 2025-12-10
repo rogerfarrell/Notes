@@ -1,4 +1,4 @@
-#+title: Roger Farrell's notes
+#+TITLE: Roger Farrell's notes
 
 Welcome to my personal notes. I am loosely following the [[https://zettelkasten.de/overview/][zettelkasten]]
 method to create a hyperlinked network of information, similar to a
@@ -25,6 +25,7 @@ about, check out my learning log: [[file:references/learning-log.org]].
 - [[file:development.org]]
 - [[file:diy.org]]
 - [[file:education.org]]
+- [[file:emacs.org]]
 - [[file:history.org]]
 - [[file:mythology.org]]
 - [[file:religion.org]]

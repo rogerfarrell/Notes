@@ -1,0 +1,32 @@
+#+TITLE: Quick notes with org capture
+
+=org-capture= is the best native tool for low-friction note taking in
+Emacs. The meat and potatoes of the tool are the templates stored in
+=org-capture-templates=. Here are some examples from my config:
+
+#+BEGIN_SRC elisp
+  (("l" "learning-log"
+    table-line (file "~/iCloud Drive/Documents/org/references/learning-log.org")
+    "| %<%Y-%m-%d> | %^{Log description} | %? |"
+    :table-line-pos "I+1")
+   ("m" "meetings"
+    entry (file+olp+datetree "~/iCloud Drive/Documents/org/local/meetings.org")
+    "**** %^{Meeting title}\n\n- %?"
+    :time-prompt t :empty-lines-before 1 :jump-to-captured t)
+   ("t" "todo"
+    entry (file+olp+datetree "~/iCloud Drive/Documents/org/local/todo.org")
+    "**** TODO %^{Todo title}\n\n%?"
+    :time-prompt t :empty-lines-before 1 :jump-to-captured t))
+#+END_SRC
+
+These templates are explained in-detail in [[info:org#Template elements][info "(org) Template
+elements"]]. Each template contains a template string, which describes
+the actual text to be inserted. Placeholders in the form of
+/%-escapes/ are used to define dynamic content which will be added
+automatically or interactively.[fn:1] Two of the most useful
+placeholders are =%^{PROMPT}= and =%?=. These respectively prompt for
+text and set the initial cursor position.
+
+* Footnotes
+
+[fn:1] [[info:org#Template expansion][info "(org) Template expansion"]]

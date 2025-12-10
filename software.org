@@ -1,5 +1,6 @@
 #+title: Software
 
+- [[file:emacs.org]]
 - [[file:foss-compliments-functional-configuration.org]]
 - [[file:internalized-vs-externalized-config.org]]
 - [[file:what-is-a-makefile.org]]
