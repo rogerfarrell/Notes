@@ -4,4 +4,5 @@ Emacs has a superb, nearly exhaustive help system. My goal in these
 notes is to map my own exploration of Emacs, citing the help system as
 I go.
 
+- [[file:emacs-native-backups.org]]
 - [[file:quick-notes-with-org-capture.org]]

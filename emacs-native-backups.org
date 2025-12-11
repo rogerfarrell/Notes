@@ -1,0 +1,17 @@
+#+TITLE: Emacs native backups
+
+By default, Emacs will save a backup file on first write of a file
+buffer. Backups should be omitted for files which are checked into
+version control. They can be made by renaming or copying the source
+file. This choice has implications for hard links and ownership.[fn:1]
+Copying seems to be the safer option.
+
+While many people seem to prefer sending all backups to a separate
+directory, the default behavior of storing them alongside the source
+files strikes me as a reasonable minimalistic approach. It makes it
+easy to tell when a backup has been created. Furthermore, these
+backups will be retained if the parent directory is copied/moved.
+
+* Footnotes
+
+[fn:1] [[info:emacs#Backup Copying][info "(emacs) Backup Copying"]]
