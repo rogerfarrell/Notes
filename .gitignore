@@ -1,12 +1,12 @@
 .DS_Store
 
-# For private notes
+# Private notes
 local/
 
-# Ignore Vim files:
-*~
+# Ignore Vim files
 *.swp
 *.swo
 
-# Ignore Emacs files:
+# Ignore Emacs files
+*~
 \#*#
