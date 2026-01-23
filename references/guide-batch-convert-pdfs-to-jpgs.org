@@ -1,22 +1,20 @@
 #+title: Guide: Batch convert PDFs to JPGs
-
 #+author: Roger Farrell
-A frequent chore I am called upon to perform is generating JPGs of book
-covers from PDFs. This is especially tedious as many of the covers
-belong to series. Consequently, I researched a way to perform this task
-on the command line via [[https://imagemagick.org][ImageMagick]]. This
-workflow allows me to process PDFs in batches via
-[[https://en.wikipedia.org/wiki/Xargs][xargs]] or by writing a series of
+
+A frequent chore I am called upon to perform is generating JPGs of
+book covers from PDFs. This is especially tedious as many of the
+covers belong to series. Consequently, I researched a way to perform
+this task on the command line via [[https://imagemagick.org][ImageMagick]]. This workflow allows me
+to process PDFs in batches via [[https://en.wikipedia.org/wiki/Xargs][xargs]] or by writing a series of
 commands in Vim which can be run line-by-line via =:w !sh=. It is much
 faster than processing the images by hand.
 
-/Note: This method pairs nicely with
-[[https://github.com/xKeNcHii/Mockup-Automation-Script][this InDesign
-script]] for batch generating product mockups./
+/Note: This method pairs nicely with [[https://github.com/xKeNcHii/Mockup-Automation-Script][this InDesign script]] for batch
+generating product mockups./
 
-First, I must convert each PDF to a high-quality JPG.[fn:1] I remove the
-alpha channel and set the background to white. Otherwise, transparent
-parts of the image may appear as other colors.[fn:2]
+First, I must convert each PDF to a high-quality JPG.[fn:1] I remove
+the alpha channel and set the background to white. Otherwise,
+transparent parts of the image may appear as other colors.[fn:2]
 
 #+begin_src bash
 magick -verbose \
