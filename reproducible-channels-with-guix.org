@@ -1,0 +1,45 @@
+#+title: Reproducible channels with Guix
+
+The whole point of Guix is transparency and reproducibility. Both
+priorities are dependent on what channels and commits are being
+sourced. The following is my current approach (as of 2026-02-06) for
+managing channels. It is heavily influenced by the discussion here:
+[[https://codeberg.org/guix/guix/issues/431]].
+
+* Write channels-unpinned.scm
+
+This is a description of my desired channels sans commits. I can use
+it in the following step to generate my actual channels.scm.
+
+* Generate channels.scm
+
+#+begin_src shell
+  guix time-machine -C <channels-unpinned.scm> -- describe -f channels > <channels.scm>
+#+end_src
+
+This command updates my channels.scm to the latest commits
+available. Note that this step is entirely optional. I can update
+channels.scm manually if I know exactly what commits I want.
+
+* Pull channels.scm
+
+#+begin_src shell
+  guix pull -C <channels.scm>
+#+end_src
+
+This is where the Guix daemon and package derivations are updated to
+my desired channel commits. A pull specifying the channels.scm file is
+necessary, as my system has not yet been reconfigured.
+
+* Reconfigure home/system
+
+Now I am ready to reconfigure. Since I am using
+=guix-for-channels=[fn:1] and =home-channels-service-type=,[fn:2]
+future reconfigures will update the default channels used for both
+home and system.
+
+* footnotes
+
+[fn:1] [[info:guix#Customizing the System-Wide Guix][info "(guix) Customizing the System-Wide Guix"]]
+
+[fn:2] [[info:guix#Guix Home Services][info "(guix) Guix Home Services"]]

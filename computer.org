@@ -1,5 +1,6 @@
 #+title: Computer
 
+- [[file:guix.org]]
 - [[file:macos.org]]
 - [[file:software.org]]
 - [[file:typing.org]]

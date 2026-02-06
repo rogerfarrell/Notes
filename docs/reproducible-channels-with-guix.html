@@ -6,7 +6,7 @@
 <!-- 2026-02-06 Fri 11:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Computer</title>
+<title>Reproducible channels with Guix</title>
 <meta name="author" content="Roger Farrell" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
@@ -197,15 +197,84 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Computer</h1>
-<ul class="org-ul">
-<li><a href="guix.html">guix.html</a></li>
-<li><a href="macos.html">macos.html</a></li>
-<li><a href="software.html">software.html</a></li>
-<li><a href="typing.html">typing.html</a></li>
-<li><a href="shells.html">shells.html</a></li>
-</ul>
+<h1 class="title">Reproducible channels with Guix</h1>
+<p>
+The whole point of Guix is transparency and reproducibility. Both
+priorities are dependent on what channels and commits are being
+sourced. The following is my current approach (as of 2026-02-06) for
+managing channels. It is heavily influenced by the discussion here:
+<a href="https://codeberg.org/guix/guix/issues/431">https://codeberg.org/guix/guix/issues/431</a>.
+</p>
+<div id="outline-container-org1f3234e" class="outline-2">
+<h2 id="org1f3234e">Write channels-unpinned.scm</h2>
+<div class="outline-text-2" id="text-org1f3234e">
+<p>
+This is a description of my desired channels sans commits. I can use
+it in the following step to generate my actual channels.scm.
+</p>
 </div>
+</div>
+<div id="outline-container-org7af4870" class="outline-2">
+<h2 id="org7af4870">Generate channels.scm</h2>
+<div class="outline-text-2" id="text-org7af4870">
+<div class="org-src-container">
+<pre class="src src-shell">guix time-machine -C &lt;channels-unpinned.scm&gt; -- describe -f channels &gt; &lt;channels.scm&gt;
+</pre>
+</div>
+
+<p>
+This command updates my channels.scm to the latest commits
+available. Note that this step is entirely optional. I can update
+channels.scm manually if I know exactly what commits I want.
+</p>
+</div>
+</div>
+<div id="outline-container-orga5bcd10" class="outline-2">
+<h2 id="orga5bcd10">Pull channels.scm</h2>
+<div class="outline-text-2" id="text-orga5bcd10">
+<div class="org-src-container">
+<pre class="src src-shell">guix pull -C &lt;channels.scm&gt;
+</pre>
+</div>
+
+<p>
+This is where the Guix daemon and package derivations are updated to
+my desired channel commits. A pull specifying the channels.scm file is
+necessary, as my system has not yet been reconfigured.
+</p>
+</div>
+</div>
+<div id="outline-container-org80a20aa" class="outline-2">
+<h2 id="org80a20aa">Reconfigure home/system</h2>
+<div class="outline-text-2" id="text-org80a20aa">
+<p>
+Now I am ready to reconfigure. Since I am using
+<code>guix-for-channels</code><sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> and <code>home-channels-service-type</code>,<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
+future reconfigures will update the default channels used for both
+home and system.
+</p>
+</div>
+</div>
+<div id="outline-container-org66d73c3" class="outline-2">
+<h2 id="org66d73c3">footnotes</h2>
+<div class="outline-text-2" id="text-org66d73c3">
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="guix.html#Customizing-the-System_002dWide-Guix">info "(guix) Customizing the System-Wide Guix"</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="guix.html#Guix-Home-Services">info "(guix) Guix Home Services"</a>
+</p></div></div>
+
+
+</div>
+</div></div>
 <div id="postamble" class="status">
 <p class="author">Author: Roger Farrell</p>
 <p class="date">Created: 2026-02-06 Fri 11:50</p>
