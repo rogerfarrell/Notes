@@ -38,8 +38,6 @@ Now I am ready to reconfigure. Since I am using
 future reconfigures will update the default channels used for both
 home and system.
 
-* footnotes
-
 [fn:1] [[info:guix#Customizing the System-Wide Guix][info "(guix) Customizing the System-Wide Guix"]]
 
 [fn:2] [[info:guix#Guix Home Services][info "(guix) Guix Home Services"]]
