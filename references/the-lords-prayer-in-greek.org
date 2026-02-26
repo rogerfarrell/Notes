@@ -1,5 +1,4 @@
 #+title: The Lord's Prayer in Greek
-
 #+author: [[https://wikisource.org/wiki/Πάτερ_ἡμῶν]]
 
 Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς\\
@@ -8,8 +7,11 @@
 ἁγιασθήτω τὸ ὄνομά σου·\\
 /hagiasthḗtō tò ónomá sou/
 
-ἐλθέτω ἡ βασιλεία σου· γενηθήτω τὸ θέλημά σου,\\
-/elthétō hē basileía sou genēthḗtō tò thélēmá sou,/
+ἐλθέτω ἡ βασιλεία σου·\\
+/elthétō hē basileía sou/
+
+γενηθήτω τὸ θέλημά σου,\\
+/genēthḗtō tò thélēmá sou,/
 
 ὡς ἐν οὐρανῷ καὶ ἐπὶ τῆς γῆς·\\
 /hōs en ouranō̧̂ kaì epì tê̄s gê̄s:/
