@@ -1,0 +1,1108 @@
+#+TITLE: Bash scripting cheatsheet
+#+AUTHOR: [[https://devhints.io/bash][devhints.io]]
+
+
+* Getting started
+:PROPERTIES:
+:CUSTOM_ID: getting-started
+:END:
+
+** Introduction
+:PROPERTIES:
+:CUSTOM_ID: introduction
+:END:
+
+This is a quick reference to getting started with Bash scripting.
+
+- [[https://learnxinyminutes.com/docs/bash/][Learn bash in y minutes]]
+  /(learnxinyminutes.com)/
+- [[http://mywiki.wooledge.org/BashGuide][Bash Guide]]
+  /(mywiki.wooledge.org)/
+- [[https://web.archive.org/web/20230406205817/https://wiki.bash-hackers.org/][Bash Hackers Wiki]]
+  /(wiki.bash-hackers.org)/
+
+** Example
+:PROPERTIES:
+:CUSTOM_ID: example
+:END:
+
+#+begin_src language-bash
+#!/usr/bin/env bash
+
+name="John"
+echo "Hello $name!"
+#+end_src
+
+** Variables
+:PROPERTIES:
+:CUSTOM_ID: variables
+:END:
+
+#+begin_src language-bash
+name="John"
+echo $name  # see below
+echo "$name"
+echo "${name}!"
+#+end_src
+
+Generally quote your variables unless they contain wildcards to expand
+or command fragments.
+
+#+begin_src language-bash
+wildcard="*.txt"
+options="iv"
+cp -$options $wildcard /tmp
+#+end_src
+
+** String quotes
+:PROPERTIES:
+:CUSTOM_ID: string-quotes
+:END:
+
+#+begin_src language-bash
+name="John"
+echo "Hi $name"  #=> Hi John
+echo 'Hi $name'  #=> Hi $name
+#+end_src
+
+** Shell execution
+:PROPERTIES:
+:CUSTOM_ID: shell-execution
+:END:
+
+#+begin_src language-bash
+echo "I'm in $(pwd)"
+echo "I'm in `pwd`"  # obsolescent
+# Same
+#+end_src
+
+See
+[[https://web.archive.org/web/20230326081741/https://wiki.bash-hackers.org/syntax/expansion/cmdsubst][Command substitution]]
+
+** Conditional execution
+:PROPERTIES:
+:CUSTOM_ID: conditional-execution
+:END:
+
+#+begin_src language-bash
+git commit && git push
+git commit || echo "Commit failed"
+#+end_src
+
+** Functions
+:PROPERTIES:
+:CUSTOM_ID: functions-example
+:END:
+
+#+begin_src language-bash
+get_name() {
+  echo "John"
+}
+
+echo "You are $(get_name)"
+#+end_src
+
+See: [[#functions][Functions]]
+
+** Conditionals
+:PROPERTIES:
+:CUSTOM_ID: conditionals-example
+:END:
+
+#+begin_src language-bash
+if [[ -z "$string" ]]; then
+  echo "String is empty"
+elif [[ -n "$string" ]]; then
+  echo "String is not empty"
+fi
+#+end_src
+
+See: [[#conditionals][Conditionals]]
+
+** Strict mode
+:PROPERTIES:
+:CUSTOM_ID: strict-mode
+:END:
+
+#+begin_src language-bash
+set -euo pipefail
+IFS=$'\n\t'
+#+end_src
+
+See:
+[[http://redsymbol.net/articles/unofficial-bash-strict-mode/][Unofficial bash strict mode]]
+
+** Brace expansion
+:PROPERTIES:
+:CUSTOM_ID: brace-expansion
+:END:
+
+#+begin_src language-bash
+echo {A,B}.js
+#+end_src
+
+| Expression        | Description           |
+|-------------------+-----------------------|
+| ={A,B}=           | Same as =A B=         |
+| ={A,B}.js=        | Same as =A.js B.js=   |
+| ={1..5}=          | Same as =1 2 3 4 5=   |
+| ={{1..3},{7..9}}= | Same as =1 2 3 7 8 9= |
+
+See:
+[[https://web.archive.org/web/20230207192110/https://wiki.bash-hackers.org/syntax/expansion/brace][Brace expansion]]
+
+* Parameter expansions
+:PROPERTIES:
+:CUSTOM_ID: parameter-expansions
+:END:
+
+** Basics
+:PROPERTIES:
+:CUSTOM_ID: basics
+:END:
+
+#+begin_src language-bash
+name="John"
+echo "${name}"
+echo "${name/J/j}"    #=> "john" (substitution)
+echo "${name:0:2}"    #=> "Jo" (slicing)
+echo "${name::2}"     #=> "Jo" (slicing)
+echo "${name::-1}"    #=> "Joh" (slicing)
+echo "${name:(-1)}"   #=> "n" (slicing from right)
+echo "${name:(-2):1}" #=> "h" (slicing from right)
+echo "${food:-Cake}"  #=> $food or "Cake"
+#+end_src
+
+#+begin_src language-bash
+length=2
+echo "${name:0:length}"  #=> "Jo"
+#+end_src
+
+See:
+[[https://web.archive.org/web/20230408142504/https://wiki.bash-hackers.org/syntax/pe][Parameter expansion]]
+
+#+begin_src language-bash
+str="/path/to/foo.cpp"
+echo "${str%.cpp}"    # /path/to/foo
+echo "${str%.cpp}.o"  # /path/to/foo.o
+echo "${str%/*}"      # /path/to
+
+echo "${str##*.}"     # cpp (extension)
+echo "${str##*/}"     # foo.cpp (basepath)
+
+echo "${str#*/}"      # path/to/foo.cpp
+echo "${str##*/}"     # foo.cpp
+
+echo "${str/foo/bar}" # /path/to/bar.cpp
+#+end_src
+
+#+begin_src language-bash
+str="Hello world"
+echo "${str:6:5}"    # "world"
+echo "${str: -5:5}"  # "world"
+#+end_src
+
+#+begin_src language-bash
+src="/path/to/foo.cpp"
+base=${src##*/}   #=> "foo.cpp" (basepath)
+dir=${src%$base}  #=> "/path/to/" (dirpath)
+dir=${src%/*}     #=> "/path/to" (dirpath)
+#+end_src
+
+** Prefix name expansion
+:PROPERTIES:
+:CUSTOM_ID: prefix-name-expansion
+:END:
+
+#+begin_src language-bash
+prefix_a=one
+prefix_b=two
+echo ${!prefix_*}  # all variables names starting with `prefix_`
+prefix_a prefix_b
+#+end_src
+
+** Indirection
+:PROPERTIES:
+:CUSTOM_ID: indirection
+:END:
+
+#+begin_src language-bash
+name=joe
+pointer=name
+echo ${!pointer}
+joe
+#+end_src
+
+** Substitution
+:PROPERTIES:
+:CUSTOM_ID: substitution
+:END:
+
+| Code              | Description         |
+|-------------------+---------------------|
+| =${foo%suffix}=   | Remove suffix       |
+| =${foo#prefix}=   | Remove prefix       |
+| =${foo%%suffix}=  | Remove long suffix  |
+| =${foo/%suffix}=  | Remove long suffix  |
+| =${foo##prefix}=  | Remove long prefix  |
+| =${foo/#prefix}=  | Remove long prefix  |
+| =${foo/from/to}=  | Replace first match |
+| =${foo//from/to}= | Replace all         |
+| =${foo/%from/to}= | Replace suffix      |
+| =${foo/#from/to}= | Replace prefix      |
+
+** Comments
+:PROPERTIES:
+:CUSTOM_ID: comments
+:END:
+
+#+begin_src language-bash
+# Single line comment
+#+end_src
+
+#+begin_src language-bash
+: '
+This is a
+multi line
+comment
+'
+#+end_src
+
+** Substrings
+:PROPERTIES:
+:CUSTOM_ID: substrings
+:END:
+
+| Expression      | Description                    |
+|-----------------+--------------------------------|
+| =${foo:0:3}=    | Substring /(position, length)/ |
+| =${foo:(-3):3}= | Substring from the right       |
+
+** Length
+:PROPERTIES:
+:CUSTOM_ID: length
+:END:
+
+| Expression | Description      |
+|------------+------------------|
+| =${#foo}=  | Length of =$foo= |
+
+** Manipulation
+:PROPERTIES:
+:CUSTOM_ID: manipulation
+:END:
+
+#+begin_src language-bash
+str="HELLO WORLD!"
+echo "${str,}"   #=> "hELLO WORLD!" (lowercase 1st letter)
+echo "${str,,}"  #=> "hello world!" (all lowercase)
+
+str="hello world!"
+echo "${str^}"   #=> "Hello world!" (uppercase 1st letter)
+echo "${str^^}"  #=> "HELLO WORLD!" (all uppercase)
+#+end_src
+
+** Default values
+:PROPERTIES:
+:CUSTOM_ID: default-values
+:END:
+
+| Expression        | Description                                              |
+|-------------------+----------------------------------------------------------|
+| =${foo:-val}=     | =$foo=, or =val= if unset (or null)                      |
+| =${foo:=val}=     | Set =$foo= to =val= if unset (or null)                   |
+| =${foo:+val}=     | =val= if =$foo= is set (and not null)                    |
+| =${foo:?message}= | Show error message and exit if =$foo= is unset (or null) |
+
+Omitting the =:= removes the (non)nullity checks, e.g. =${foo-val}=
+expands to =val= if unset otherwise =$foo=.
+
+* Loops
+:PROPERTIES:
+:CUSTOM_ID: loops
+:END:
+
+** Basic for loop
+:PROPERTIES:
+:CUSTOM_ID: basic-for-loop
+:END:
+
+#+begin_src language-bash
+for i in /etc/rc.*; do
+  echo "$i"
+done
+#+end_src
+
+** C-like for loop
+:PROPERTIES:
+:CUSTOM_ID: c-like-for-loop
+:END:
+
+#+begin_src language-bash
+for ((i = 0 ; i < 100 ; i++)); do
+  echo "$i"
+done
+#+end_src
+
+** Ranges
+:PROPERTIES:
+:CUSTOM_ID: ranges
+:END:
+
+#+begin_src language-bash
+for i in {1..5}; do
+    echo "Welcome $i"
+done
+#+end_src
+
+*** With step size
+:PROPERTIES:
+:CUSTOM_ID: with-step-size
+:END:
+#+begin_src language-bash
+for i in {5..50..5}; do
+    echo "Welcome $i"
+done
+#+end_src
+
+** Reading lines
+:PROPERTIES:
+:CUSTOM_ID: reading-lines
+:END:
+
+#+begin_src language-bash
+while read -r line; do
+  echo "$line"
+done <file.txt
+#+end_src
+
+** Forever
+:PROPERTIES:
+:CUSTOM_ID: forever
+:END:
+
+#+begin_src language-bash
+while true; do
+  ···
+done
+#+end_src
+
+* Functions
+:PROPERTIES:
+:CUSTOM_ID: functions
+:END:
+
+** Defining functions
+:PROPERTIES:
+:CUSTOM_ID: defining-functions
+:END:
+
+#+begin_src language-bash
+myfunc() {
+    echo "hello $1"
+}
+#+end_src
+
+#+begin_src language-bash
+# Same as above (alternate syntax)
+function myfunc {
+    echo "hello $1"
+}
+#+end_src
+
+#+begin_src language-bash
+myfunc "John"
+#+end_src
+
+** Returning values
+:PROPERTIES:
+:CUSTOM_ID: returning-values
+:END:
+
+#+begin_src language-bash
+myfunc() {
+    local myresult='some value'
+    echo "$myresult"
+}
+#+end_src
+
+#+begin_src language-bash
+result=$(myfunc)
+#+end_src
+
+** Raising errors
+:PROPERTIES:
+:CUSTOM_ID: raising-errors
+:END:
+
+#+begin_src language-bash
+myfunc() {
+  return 1
+}
+#+end_src
+
+#+begin_src language-bash
+if myfunc; then
+  echo "success"
+else
+  echo "failure"
+fi
+#+end_src
+
+** Arguments
+:PROPERTIES:
+:CUSTOM_ID: arguments
+:END:
+
+| Expression | Description                                    |
+|------------+------------------------------------------------|
+| =$#=       | Number of arguments                            |
+| =$*=       | All positional arguments (as a single word)    |
+| =$@=       | All positional arguments (as separate strings) |
+| =$1=       | First argument                                 |
+| =$_=       | Last argument of the previous command          |
+
+*Note*: =$@= and =$*= must be quoted in order to perform as described.
+Otherwise, they do exactly the same thing (arguments as separate
+strings).
+
+See
+[[https://web.archive.org/web/20230318164746/https://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables][Special parameters]].
+
+* Conditionals
+:PROPERTIES:
+:CUSTOM_ID: conditionals
+:END:
+
+** Conditions
+:PROPERTIES:
+:CUSTOM_ID: conditions
+:END:
+
+Note that =[[= is actually a command/program that returns either =0=
+(true) or =1= (false). Any program that obeys the same logic (like all
+base utils, such as =grep(1)= or =ping(1)=) can be used as condition,
+see examples.
+
+| Condition                | Description           |
+|--------------------------+-----------------------|
+| =[[ -z STRING ]]=        | Empty string          |
+| =[[ -n STRING ]]=        | Not empty string      |
+| =[[ STRING == STRING ]]= | Equal                 |
+| =[[ STRING != STRING ]]= | Not Equal             |
+| =[[ NUM -eq NUM ]]=      | Equal                 |
+| =[[ NUM -ne NUM ]]=      | Not equal             |
+| =[[ NUM -lt NUM ]]=      | Less than             |
+| =[[ NUM -le NUM ]]=      | Less than or equal    |
+| =[[ NUM -gt NUM ]]=      | Greater than          |
+| =[[ NUM -ge NUM ]]=      | Greater than or equal |
+| =[[ STRING =~ STRING ]]= | Regexp                |
+| =(( NUM < NUM ))=        | Numeric conditions    |
+
+*** More conditions
+:PROPERTIES:
+:CUSTOM_ID: more-conditions
+:END:
+| Condition            | Description              |
+|----------------------+--------------------------|
+| =[[ -o noclobber ]]= | If OPTIONNAME is enabled |
+| =[[ ! EXPR ]]=       | Not                      |
+| =[[ X && Y ]]=       | And                      |
+| =[[ X || Y ]]=       | Or                       |
+
+** File conditions
+:PROPERTIES:
+:CUSTOM_ID: file-conditions
+:END:
+
+| Condition               | Description             |
+|-------------------------+-------------------------|
+| =[[ -e FILE ]]=         | Exists                  |
+| =[[ -r FILE ]]=         | Readable                |
+| =[[ -h FILE ]]=         | Symlink                 |
+| =[[ -d FILE ]]=         | Directory               |
+| =[[ -w FILE ]]=         | Writable                |
+| =[[ -s FILE ]]=         | Size is > 0 bytes       |
+| =[[ -f FILE ]]=         | File                    |
+| =[[ -x FILE ]]=         | Executable              |
+| =[[ FILE1 -nt FILE2 ]]= | 1 is more recent than 2 |
+| =[[ FILE1 -ot FILE2 ]]= | 2 is more recent than 1 |
+| =[[ FILE1 -ef FILE2 ]]= | Same files              |
+
+** Example
+:PROPERTIES:
+:CUSTOM_ID: example-1
+:END:
+
+#+begin_src language-bash
+# String
+if [[ -z "$string" ]]; then
+  echo "String is empty"
+elif [[ -n "$string" ]]; then
+  echo "String is not empty"
+else
+  echo "This never happens"
+fi
+#+end_src
+
+#+begin_src language-bash
+# Combinations
+if [[ X && Y ]]; then
+  ...
+fi
+#+end_src
+
+#+begin_src language-bash
+# Equal
+if [[ "$A" == "$B" ]]
+#+end_src
+
+#+begin_src language-bash
+# Regex
+if [[ "A" =~ . ]]
+#+end_src
+
+#+begin_src language-bash
+if (( $a < $b )); then
+   echo "$a is smaller than $b"
+fi
+#+end_src
+
+#+begin_src language-bash
+if [[ -e "file.txt" ]]; then
+  echo "file exists"
+fi
+#+end_src
+
+* Arrays
+:PROPERTIES:
+:CUSTOM_ID: arrays
+:END:
+
+** Defining arrays
+:PROPERTIES:
+:CUSTOM_ID: defining-arrays
+:END:
+
+#+begin_src language-bash
+Fruits=('Apple' 'Banana' 'Orange')
+#+end_src
+
+#+begin_src language-bash
+Fruits[0]="Apple"
+Fruits[1]="Banana"
+Fruits[2]="Orange"
+#+end_src
+
+** Working with arrays
+:PROPERTIES:
+:CUSTOM_ID: working-with-arrays
+:END:
+
+#+begin_src language-bash
+echo "${Fruits[0]}"           # Element #0
+echo "${Fruits[-1]}"          # Last element
+echo "${Fruits[@]}"           # All elements, space-separated
+echo "${#Fruits[@]}"          # Number of elements
+echo "${#Fruits}"             # String length of the 1st element
+echo "${#Fruits[3]}"          # String length of the Nth element
+echo "${Fruits[@]:3:2}"       # Range (from position 3, length 2)
+echo "${!Fruits[@]}"          # Keys of all elements, space-separated
+#+end_src
+
+** Operations
+:PROPERTIES:
+:CUSTOM_ID: operations
+:END:
+
+#+begin_src language-bash
+Fruits=("${Fruits[@]}" "Watermelon")    # Push
+Fruits+=('Watermelon')                  # Also Push
+Fruits=( "${Fruits[@]/Ap*/}" )          # Remove by regex match
+unset Fruits[2]                         # Remove one item
+Fruits=("${Fruits[@]}")                 # Duplicate
+Fruits=("${Fruits[@]}" "${Veggies[@]}") # Concatenate
+words=($(< datafile))                   # From file (split by IFS)
+#+end_src
+
+** Iteration
+:PROPERTIES:
+:CUSTOM_ID: iteration
+:END:
+
+#+begin_src language-bash
+for i in "${arrayName[@]}"; do
+  echo "$i"
+done
+#+end_src
+
+* Dictionaries
+:PROPERTIES:
+:CUSTOM_ID: dictionaries
+:END:
+
+** Defining
+:PROPERTIES:
+:CUSTOM_ID: defining
+:END:
+
+#+begin_src language-bash
+declare -A sounds
+#+end_src
+
+#+begin_src language-bash
+sounds[dog]="bark"
+sounds[cow]="moo"
+sounds[bird]="tweet"
+sounds[wolf]="howl"
+#+end_src
+
+Declares =sound= as a Dictionary object (aka associative array).
+
+** Working with dictionaries
+:PROPERTIES:
+:CUSTOM_ID: working-with-dictionaries
+:END:
+
+#+begin_src language-bash
+echo "${sounds[dog]}" # Dog's sound
+echo "${sounds[@]}"   # All values
+echo "${!sounds[@]}"  # All keys
+echo "${#sounds[@]}"  # Number of elements
+unset sounds[dog]     # Delete dog
+#+end_src
+
+** Iteration
+:PROPERTIES:
+:CUSTOM_ID: iteration-1
+:END:
+
+*** Iterate over values
+:PROPERTIES:
+:CUSTOM_ID: iterate-over-values
+:END:
+#+begin_src language-bash
+for val in "${sounds[@]}"; do
+  echo "$val"
+done
+#+end_src
+
+*** Iterate over keys
+:PROPERTIES:
+:CUSTOM_ID: iterate-over-keys
+:END:
+#+begin_src language-bash
+for key in "${!sounds[@]}"; do
+  echo "$key"
+done
+#+end_src
+
+* Options
+:PROPERTIES:
+:CUSTOM_ID: options
+:END:
+
+** Options
+:PROPERTIES:
+:CUSTOM_ID: options-1
+:END:
+
+#+begin_src language-bash
+set -o noclobber  # Avoid overlay files (echo "hi" > foo)
+set -o errexit    # Used to exit upon error, avoiding cascading errors
+set -o pipefail   # Unveils hidden failures
+set -o nounset    # Exposes unset variables
+#+end_src
+
+** Glob options
+:PROPERTIES:
+:CUSTOM_ID: glob-options
+:END:
+
+#+begin_src language-bash
+shopt -s nullglob    # Non-matching globs are removed  ('*.foo' => '')
+shopt -s failglob    # Non-matching globs throw errors
+shopt -s nocaseglob  # Case insensitive globs
+shopt -s dotglob     # Wildcards match dotfiles ("*.sh" => ".foo.sh")
+shopt -s globstar    # Allow ** for recursive matches ('lib/**/*.rb' => 'lib/a/b/c.rb')
+#+end_src
+
+Set =GLOBIGNORE= as a colon-separated list of patterns to be removed
+from glob matches.
+
+* History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
+
+** Commands
+:PROPERTIES:
+:CUSTOM_ID: commands
+:END:
+
+| Command               | Description                               |
+|-----------------------+-------------------------------------------|
+| =history=             | Show history                              |
+| =shopt -s histverify= | Don't execute expanded result immediately |
+
+** Expansions
+:PROPERTIES:
+:CUSTOM_ID: expansions
+:END:
+
+| Expression   | Description                                          |
+|--------------+------------------------------------------------------|
+| =!$=         | Expand last parameter of most recent command         |
+| =!*=         | Expand all parameters of most recent command         |
+| =!-n=        | Expand =n=th most recent command                     |
+| =!n=         | Expand =n=th command in history                      |
+| =!<command>= | Expand most recent invocation of command =<command>= |
+
+** Operations
+:PROPERTIES:
+:CUSTOM_ID: operations-1
+:END:
+
+| Code                 | Description                                                           |
+|----------------------+-----------------------------------------------------------------------|
+| =!!=                 | Execute last command again                                            |
+| =!!:s/<FROM>/<TO>/=  | Replace first occurrence of =<FROM>= to =<TO>= in most recent command |
+| =!!:gs/<FROM>/<TO>/= | Replace all occurrences of =<FROM>= to =<TO>= in most recent command  |
+| =!$:t=               | Expand only basename from last parameter of most recent command       |
+| =!$:h=               | Expand only directory from last parameter of most recent command      |
+
+=!!= and =!$= can be replaced with any valid expansion.
+
+** Slices
+:PROPERTIES:
+:CUSTOM_ID: slices
+:END:
+
+| Code     | Description                                                                              |
+|----------+------------------------------------------------------------------------------------------|
+| =!!:n=   | Expand only =n=th token from most recent command (command is =0=; first argument is =1=) |
+| =!^=     | Expand first argument from most recent command                                           |
+| =!$=     | Expand last token from most recent command                                               |
+| =!!:n-m= | Expand range of tokens from most recent command                                          |
+| =!!:n-$= | Expand =n=th token to last from most recent command                                      |
+
+=!!= can be replaced with any valid expansion i.e. =!cat=, =!-2=, =!42=,
+etc.
+
+* Miscellaneous
+:PROPERTIES:
+:CUSTOM_ID: miscellaneous
+:END:
+
+** Numeric calculations
+:PROPERTIES:
+:CUSTOM_ID: numeric-calculations
+:END:
+
+#+begin_src language-bash
+$((a + 200))      # Add 200 to $a
+#+end_src
+
+#+begin_src language-bash
+$(($RANDOM%200))  # Random number 0..199
+#+end_src
+
+#+begin_src language-bash
+declare -i count  # Declare as type integer
+count+=1          # Increment
+#+end_src
+
+** Subshells
+:PROPERTIES:
+:CUSTOM_ID: subshells
+:END:
+
+#+begin_src language-bash
+(cd somedir; echo "I'm now in $PWD")
+pwd # still in first directory
+#+end_src
+
+** Redirection
+:PROPERTIES:
+:CUSTOM_ID: redirection
+:END:
+
+#+begin_src language-bash
+python hello.py > output.txt            # stdout to (file)
+python hello.py >> output.txt           # stdout to (file), append
+python hello.py 2> error.log            # stderr to (file)
+python hello.py 2>&1                    # stderr to stdout
+python hello.py 2>/dev/null             # stderr to (null)
+python hello.py >output.txt 2>&1        # stdout and stderr to (file), equivalent to &>
+python hello.py &>/dev/null             # stdout and stderr to (null)
+echo "$0: warning: too many users" >&2  # print diagnostic message to stderr
+#+end_src
+
+#+begin_src language-bash
+python hello.py < foo.txt      # feed foo.txt to stdin for python
+diff <(ls -r) <(ls)            # Compare two stdout without files
+#+end_src
+
+** Inspecting commands
+:PROPERTIES:
+:CUSTOM_ID: inspecting-commands
+:END:
+
+#+begin_src language-bash
+command -V cd
+#=> "cd is a function/alias/whatever"
+#+end_src
+
+** Trap errors
+:PROPERTIES:
+:CUSTOM_ID: trap-errors
+:END:
+
+#+begin_src language-bash
+trap 'echo Error at about $LINENO' ERR
+#+end_src
+
+or
+
+#+begin_src language-bash
+traperr() {
+  echo "ERROR: ${BASH_SOURCE[1]} at about ${BASH_LINENO[0]}"
+}
+
+set -o errtrace
+trap traperr ERR
+#+end_src
+
+** Case/switch
+:PROPERTIES:
+:CUSTOM_ID: caseswitch
+:END:
+
+#+begin_src language-bash
+case "$1" in
+  start | up)
+    vagrant up
+    ;;
+
+  ,*)
+    echo "Usage: $0 {start|stop|ssh}"
+    ;;
+esac
+#+end_src
+
+** Source relative
+:PROPERTIES:
+:CUSTOM_ID: source-relative
+:END:
+
+#+begin_src language-bash
+source "${0%/*}/../share/foo.sh"
+#+end_src
+
+** printf
+:PROPERTIES:
+:CUSTOM_ID: printf
+:END:
+
+#+begin_src language-bash
+printf "Hello %s, I'm %s" Sven Olga
+#=> "Hello Sven, I'm Olga
+
+printf "1 + 1 = %d" 2
+#=> "1 + 1 = 2"
+
+printf "This is how you print a float: %f" 2
+#=> "This is how you print a float: 2.000000"
+
+printf '%s\n' '#!/bin/bash' 'echo hello' >file
+# format string is applied to each group of arguments
+printf '%i+%i=%i\n' 1 2 3  4 5 9
+#+end_src
+
+** Transform strings
+:PROPERTIES:
+:CUSTOM_ID: transform-strings
+:END:
+
+| Command option | Description                                         |
+|----------------+-----------------------------------------------------|
+| =-c=           | Operations apply to characters not in the given set |
+| =-d=           | Delete characters                                   |
+| =-s=           | Replaces repeated characters with single occurrence |
+| =-t=           | Truncates                                           |
+| =[:upper:]=    | All upper case letters                              |
+| =[:lower:]=    | All lower case letters                              |
+| =[:digit:]=    | All digits                                          |
+| =[:space:]=    | All whitespace                                      |
+| =[:alpha:]=    | All letters                                         |
+| =[:alnum:]=    | All letters and digits                              |
+
+*** Example
+:PROPERTIES:
+:CUSTOM_ID: example-2
+:END:
+#+begin_src language-bash
+echo "Welcome To Devhints" | tr '[:lower:]' '[:upper:]'
+WELCOME TO DEVHINTS
+#+end_src
+
+** Directory of script
+:PROPERTIES:
+:CUSTOM_ID: directory-of-script
+:END:
+
+#+begin_src language-bash
+dir=${0%/*}
+#+end_src
+
+** Getting options
+:PROPERTIES:
+:CUSTOM_ID: getting-options
+:END:
+
+#+begin_src language-bash
+while [[ "$1" =~ ^- && ! "$1" == "--" ]]; do case $1 in
+  -V | --version )
+    echo "$version"
+    exit
+    ;;
+  -s | --string )
+    shift; string=$1
+    ;;
+  -f | --flag )
+    flag=1
+    ;;
+esac; shift; done
+if [[ "$1" == '--' ]]; then shift; fi
+#+end_src
+
+** Heredoc
+:PROPERTIES:
+:CUSTOM_ID: heredoc
+:END:
+
+#+begin_src language-sh
+cat <<END
+hello world
+END
+#+end_src
+
+Heredoc allows a section of your source code to be treated as a file.
+See
+[[https://www.gnu.org/software/bash/manual/html_node/Redirections.html#Here-Documents][Bash Reference Manual]].
+
+** Herestring
+:PROPERTIES:
+:CUSTOM_ID: herestring
+:END:
+
+#+begin_src language-sh
+tr '[:lower:]' '[:upper:]' <<< "Will be uppercased, even $variable"
+#+end_src
+
+Herestring allows a string to be treated as a standard input (stdin).
+See
+[[https://www.gnu.org/software/bash/manual/html_node/Redirections.html#Here-Strings][Bash Reference Manual]].
+
+** Process substitution
+:PROPERTIES:
+:CUSTOM_ID: process-substitution
+:END:
+
+#+begin_src language-sh
+# loop on myfunc output lines
+while read -r line; do
+  echo "$line"
+done < <(myfunc)
+
+# compare content of two folders
+diff <(ls "$dir1") <(ls "$dir2")
+#+end_src
+
+Process substitution allows the input (or output) of a command to be
+treated as a file. See
+[[https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html][Bash Reference Manual]].
+
+** Reading input
+:PROPERTIES:
+:CUSTOM_ID: reading-input
+:END:
+
+#+begin_src language-bash
+echo -n "Proceed? [y/n]: "
+read -r ans
+echo "$ans"
+#+end_src
+
+The =-r= option disables a peculiar legacy behavior with backslashes.
+
+#+begin_src language-bash
+read -n 1 ans    # Just one character
+#+end_src
+
+** Special variables
+:PROPERTIES:
+:CUSTOM_ID: special-variables
+:END:
+
+| Expression         | Description                            |
+|--------------------+----------------------------------------|
+| =$?=               | Exit status of last task               |
+| =$!=               | PID of last background task            |
+| =$$=               | PID of shell                           |
+| =$0=               | Filename of the shell script           |
+| =$_=               | Last argument of the previous command  |
+| =${PIPESTATUS[n]}= | return value of piped commands (array) |
+
+See
+[[https://web.archive.org/web/20230318164746/https://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables][Special parameters]].
+
+** Go to previous directory
+:PROPERTIES:
+:CUSTOM_ID: go-to-previous-directory
+:END:
+
+#+begin_src language-bash
+pwd # /home/user/foo
+cd bar/
+pwd # /home/user/foo/bar
+cd -
+pwd # /home/user/foo
+#+end_src
+
+** Check for command's result
+:PROPERTIES:
+:CUSTOM_ID: check-for-commands-result
+:END:
+
+#+begin_src language-bash
+if ping -c 1 google.com; then
+  echo "It appears you have a working internet connection"
+fi
+#+end_src
+
+** Grep check
+:PROPERTIES:
+:CUSTOM_ID: grep-check
+:END:
+
+#+begin_src language-bash
+if grep -q 'foo' ~/.bash_history; then
+  echo "You appear to have typed 'foo' in the past"
+fi
+#+end_src
+
+* Also see
+:PROPERTIES:
+:CUSTOM_ID: also-see
+:END:
+
+- [[https://web.archive.org/web/20230406205817/https://wiki.bash-hackers.org/][Bash-hackers wiki]]
+  /(bash-hackers.org)/
+- [[https://web.archive.org/web/20230318164746/https://wiki.bash-hackers.org/syntax/shellvars][Shell vars]]
+  /(bash-hackers.org)/
+- [[https://learnxinyminutes.com/docs/bash/][Learn bash in y minutes]]
+  /(learnxinyminutes.com)/
+- [[http://mywiki.wooledge.org/BashGuide][Bash Guide]]
+  /(mywiki.wooledge.org)/
+- [[https://www.shellcheck.net/][ShellCheck]] /(shellcheck.net)/

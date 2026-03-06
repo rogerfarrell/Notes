@@ -1,0 +1,1928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-03-06 Fri 17:05 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bash scripting cheatsheet</title>
+<meta name="author" content="[[https://devhints.io/bash][devhints.io]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" href="../template/styles.css" type="text/css"/>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Bash scripting cheatsheet</h1>
+<div id="outline-container-getting-started" class="outline-2">
+<h2 id="getting-started">Getting started</h2>
+<div class="outline-text-2" id="text-getting-started">
+</div>
+<div id="outline-container-introduction" class="outline-3">
+<h3 id="introduction">Introduction</h3>
+<div class="outline-text-3" id="text-introduction">
+<p>
+This is a quick reference to getting started with Bash scripting.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://learnxinyminutes.com/docs/bash/">Learn bash in y minutes</a>
+<i>(learnxinyminutes.com)</i></li>
+<li><a href="http://mywiki.wooledge.org/BashGuide">Bash Guide</a>
+<i>(mywiki.wooledge.org)</i></li>
+<li><a href="https://web.archive.org/web/20230406205817/https://wiki.bash-hackers.org/">Bash Hackers Wiki</a>
+<i>(wiki.bash-hackers.org)</i></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-example" class="outline-3">
+<h3 id="example">Example</h3>
+<div class="outline-text-3" id="text-example">
+<div class="org-src-container">
+<pre class="src src-language-bash">#!/usr/bin/env bash
+
+name="John"
+echo "Hello $name!"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-variables" class="outline-3">
+<h3 id="variables">Variables</h3>
+<div class="outline-text-3" id="text-variables">
+<div class="org-src-container">
+<pre class="src src-language-bash">name="John"
+echo $name  # see below
+echo "$name"
+echo "${name}!"
+</pre>
+</div>
+
+<p>
+Generally quote your variables unless they contain wildcards to expand
+or command fragments.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">wildcard="*.txt"
+options="iv"
+cp -$options $wildcard /tmp
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-string-quotes" class="outline-3">
+<h3 id="string-quotes">String quotes</h3>
+<div class="outline-text-3" id="text-string-quotes">
+<div class="org-src-container">
+<pre class="src src-language-bash">name="John"
+echo "Hi $name"  #=&gt; Hi John
+echo 'Hi $name'  #=&gt; Hi $name
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-shell-execution" class="outline-3">
+<h3 id="shell-execution">Shell execution</h3>
+<div class="outline-text-3" id="text-shell-execution">
+<div class="org-src-container">
+<pre class="src src-language-bash">echo "I'm in $(pwd)"
+echo "I'm in `pwd`"  # obsolescent
+# Same
+</pre>
+</div>
+
+<p>
+See
+<a href="https://web.archive.org/web/20230326081741/https://wiki.bash-hackers.org/syntax/expansion/cmdsubst">Command substitution</a>
+</p>
+</div>
+</div>
+<div id="outline-container-conditional-execution" class="outline-3">
+<h3 id="conditional-execution">Conditional execution</h3>
+<div class="outline-text-3" id="text-conditional-execution">
+<div class="org-src-container">
+<pre class="src src-language-bash">git commit &amp;&amp; git push
+git commit || echo "Commit failed"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-functions-example" class="outline-3">
+<h3 id="functions-example">Functions</h3>
+<div class="outline-text-3" id="text-functions-example">
+<div class="org-src-container">
+<pre class="src src-language-bash">get_name() {
+  echo "John"
+}
+
+echo "You are $(get_name)"
+</pre>
+</div>
+
+<p>
+See: <a href="#functions">Functions</a>
+</p>
+</div>
+</div>
+<div id="outline-container-conditionals-example" class="outline-3">
+<h3 id="conditionals-example">Conditionals</h3>
+<div class="outline-text-3" id="text-conditionals-example">
+<div class="org-src-container">
+<pre class="src src-language-bash">if [[ -z "$string" ]]; then
+  echo "String is empty"
+elif [[ -n "$string" ]]; then
+  echo "String is not empty"
+fi
+</pre>
+</div>
+
+<p>
+See: <a href="#conditionals">Conditionals</a>
+</p>
+</div>
+</div>
+<div id="outline-container-strict-mode" class="outline-3">
+<h3 id="strict-mode">Strict mode</h3>
+<div class="outline-text-3" id="text-strict-mode">
+<div class="org-src-container">
+<pre class="src src-language-bash">set -euo pipefail
+IFS=$'\n\t'
+</pre>
+</div>
+
+<p>
+See:
+<a href="http://redsymbol.net/articles/unofficial-bash-strict-mode/">Unofficial bash strict mode</a>
+</p>
+</div>
+</div>
+<div id="outline-container-brace-expansion" class="outline-3">
+<h3 id="brace-expansion">Brace expansion</h3>
+<div class="outline-text-3" id="text-brace-expansion">
+<div class="org-src-container">
+<pre class="src src-language-bash">echo {A,B}.js
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Expression</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>{A,B}</code></td>
+<td class="org-left">Same as <code>A B</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>{A,B}.js</code></td>
+<td class="org-left">Same as <code>A.js B.js</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>{1..5}</code></td>
+<td class="org-left">Same as <code>1 2 3 4 5</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>{{1..3},{7..9}}</code></td>
+<td class="org-left">Same as <code>1 2 3 7 8 9</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>
+See:
+<a href="https://web.archive.org/web/20230207192110/https://wiki.bash-hackers.org/syntax/expansion/brace">Brace expansion</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-parameter-expansions" class="outline-2">
+<h2 id="parameter-expansions">Parameter expansions</h2>
+<div class="outline-text-2" id="text-parameter-expansions">
+</div>
+<div id="outline-container-basics" class="outline-3">
+<h3 id="basics">Basics</h3>
+<div class="outline-text-3" id="text-basics">
+<div class="org-src-container">
+<pre class="src src-language-bash">name="John"
+echo "${name}"
+echo "${name/J/j}"    #=&gt; "john" (substitution)
+echo "${name:0:2}"    #=&gt; "Jo" (slicing)
+echo "${name::2}"     #=&gt; "Jo" (slicing)
+echo "${name::-1}"    #=&gt; "Joh" (slicing)
+echo "${name:(-1)}"   #=&gt; "n" (slicing from right)
+echo "${name:(-2):1}" #=&gt; "h" (slicing from right)
+echo "${food:-Cake}"  #=&gt; $food or "Cake"
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">length=2
+echo "${name:0:length}"  #=&gt; "Jo"
+</pre>
+</div>
+
+<p>
+See:
+<a href="https://web.archive.org/web/20230408142504/https://wiki.bash-hackers.org/syntax/pe">Parameter expansion</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">str="/path/to/foo.cpp"
+echo "${str%.cpp}"    # /path/to/foo
+echo "${str%.cpp}.o"  # /path/to/foo.o
+echo "${str%/*}"      # /path/to
+
+echo "${str##*.}"     # cpp (extension)
+echo "${str##*/}"     # foo.cpp (basepath)
+
+echo "${str#*/}"      # path/to/foo.cpp
+echo "${str##*/}"     # foo.cpp
+
+echo "${str/foo/bar}" # /path/to/bar.cpp
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">str="Hello world"
+echo "${str:6:5}"    # "world"
+echo "${str: -5:5}"  # "world"
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">src="/path/to/foo.cpp"
+base=${src##*/}   #=&gt; "foo.cpp" (basepath)
+dir=${src%$base}  #=&gt; "/path/to/" (dirpath)
+dir=${src%/*}     #=&gt; "/path/to" (dirpath)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-prefix-name-expansion" class="outline-3">
+<h3 id="prefix-name-expansion">Prefix name expansion</h3>
+<div class="outline-text-3" id="text-prefix-name-expansion">
+<div class="org-src-container">
+<pre class="src src-language-bash">prefix_a=one
+prefix_b=two
+echo ${!prefix_*}  # all variables names starting with `prefix_`
+prefix_a prefix_b
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-indirection" class="outline-3">
+<h3 id="indirection">Indirection</h3>
+<div class="outline-text-3" id="text-indirection">
+<div class="org-src-container">
+<pre class="src src-language-bash">name=joe
+pointer=name
+echo ${!pointer}
+joe
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-substitution" class="outline-3">
+<h3 id="substitution">Substitution</h3>
+<div class="outline-text-3" id="text-substitution">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Code</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>${foo%suffix}</code></td>
+<td class="org-left">Remove suffix</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${foo#prefix}</code></td>
+<td class="org-left">Remove prefix</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${foo%%suffix}</code></td>
+<td class="org-left">Remove long suffix</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${foo/%suffix}</code></td>
+<td class="org-left">Remove long suffix</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${foo##prefix}</code></td>
+<td class="org-left">Remove long prefix</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${foo/#prefix}</code></td>
+<td class="org-left">Remove long prefix</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${foo/from/to}</code></td>
+<td class="org-left">Replace first match</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${foo//from/to}</code></td>
+<td class="org-left">Replace all</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${foo/%from/to}</code></td>
+<td class="org-left">Replace suffix</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${foo/#from/to}</code></td>
+<td class="org-left">Replace prefix</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-comments" class="outline-3">
+<h3 id="comments">Comments</h3>
+<div class="outline-text-3" id="text-comments">
+<div class="org-src-container">
+<pre class="src src-language-bash"># Single line comment
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">: '
+This is a
+multi line
+comment
+'
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-substrings" class="outline-3">
+<h3 id="substrings">Substrings</h3>
+<div class="outline-text-3" id="text-substrings">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Expression</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>${foo:0:3}</code></td>
+<td class="org-left">Substring <i>(position, length)</i></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${foo:(-3):3}</code></td>
+<td class="org-left">Substring from the right</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-length" class="outline-3">
+<h3 id="length">Length</h3>
+<div class="outline-text-3" id="text-length">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Expression</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>${#foo}</code></td>
+<td class="org-left">Length of <code>$foo</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-manipulation" class="outline-3">
+<h3 id="manipulation">Manipulation</h3>
+<div class="outline-text-3" id="text-manipulation">
+<div class="org-src-container">
+<pre class="src src-language-bash">str="HELLO WORLD!"
+echo "${str,}"   #=&gt; "hELLO WORLD!" (lowercase 1st letter)
+echo "${str,,}"  #=&gt; "hello world!" (all lowercase)
+
+str="hello world!"
+echo "${str^}"   #=&gt; "Hello world!" (uppercase 1st letter)
+echo "${str^^}"  #=&gt; "HELLO WORLD!" (all uppercase)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-default-values" class="outline-3">
+<h3 id="default-values">Default values</h3>
+<div class="outline-text-3" id="text-default-values">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Expression</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>${foo:-val}</code></td>
+<td class="org-left"><code>$foo</code>, or <code>val</code> if unset (or null)</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${foo:=val}</code></td>
+<td class="org-left">Set <code>$foo</code> to <code>val</code> if unset (or null)</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${foo:+val}</code></td>
+<td class="org-left"><code>val</code> if <code>$foo</code> is set (and not null)</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${foo:?message}</code></td>
+<td class="org-left">Show error message and exit if <code>$foo</code> is unset (or null)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Omitting the <code>:</code> removes the (non)nullity checks, e.g. <code>${foo-val}</code>
+expands to <code>val</code> if unset otherwise <code>$foo</code>.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-loops" class="outline-2">
+<h2 id="loops">Loops</h2>
+<div class="outline-text-2" id="text-loops">
+</div>
+<div id="outline-container-basic-for-loop" class="outline-3">
+<h3 id="basic-for-loop">Basic for loop</h3>
+<div class="outline-text-3" id="text-basic-for-loop">
+<div class="org-src-container">
+<pre class="src src-language-bash">for i in /etc/rc.*; do
+  echo "$i"
+done
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-c-like-for-loop" class="outline-3">
+<h3 id="c-like-for-loop">C-like for loop</h3>
+<div class="outline-text-3" id="text-c-like-for-loop">
+<div class="org-src-container">
+<pre class="src src-language-bash">for ((i = 0 ; i &lt; 100 ; i++)); do
+  echo "$i"
+done
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-ranges" class="outline-3">
+<h3 id="ranges">Ranges</h3>
+<div class="outline-text-3" id="text-ranges">
+<div class="org-src-container">
+<pre class="src src-language-bash">for i in {1..5}; do
+    echo "Welcome $i"
+done
+</pre>
+</div>
+</div>
+<div id="outline-container-with-step-size" class="outline-4">
+<h4 id="with-step-size">With step size</h4>
+<div class="outline-text-4" id="text-with-step-size">
+<div class="org-src-container">
+<pre class="src src-language-bash">for i in {5..50..5}; do
+    echo "Welcome $i"
+done
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-reading-lines" class="outline-3">
+<h3 id="reading-lines">Reading lines</h3>
+<div class="outline-text-3" id="text-reading-lines">
+<div class="org-src-container">
+<pre class="src src-language-bash">while read -r line; do
+  echo "$line"
+done &lt;file.txt
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-forever" class="outline-3">
+<h3 id="forever">Forever</h3>
+<div class="outline-text-3" id="text-forever">
+<div class="org-src-container">
+<pre class="src src-language-bash">while true; do
+  ···
+done
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-functions" class="outline-2">
+<h2 id="functions">Functions</h2>
+<div class="outline-text-2" id="text-functions">
+</div>
+<div id="outline-container-defining-functions" class="outline-3">
+<h3 id="defining-functions">Defining functions</h3>
+<div class="outline-text-3" id="text-defining-functions">
+<div class="org-src-container">
+<pre class="src src-language-bash">myfunc() {
+    echo "hello $1"
+}
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash"># Same as above (alternate syntax)
+function myfunc {
+    echo "hello $1"
+}
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">myfunc "John"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-returning-values" class="outline-3">
+<h3 id="returning-values">Returning values</h3>
+<div class="outline-text-3" id="text-returning-values">
+<div class="org-src-container">
+<pre class="src src-language-bash">myfunc() {
+    local myresult='some value'
+    echo "$myresult"
+}
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">result=$(myfunc)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-raising-errors" class="outline-3">
+<h3 id="raising-errors">Raising errors</h3>
+<div class="outline-text-3" id="text-raising-errors">
+<div class="org-src-container">
+<pre class="src src-language-bash">myfunc() {
+  return 1
+}
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">if myfunc; then
+  echo "success"
+else
+  echo "failure"
+fi
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-arguments" class="outline-3">
+<h3 id="arguments">Arguments</h3>
+<div class="outline-text-3" id="text-arguments">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Expression</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>$#</code></td>
+<td class="org-left">Number of arguments</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>$*</code></td>
+<td class="org-left">All positional arguments (as a single word)</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>$@</code></td>
+<td class="org-left">All positional arguments (as separate strings)</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>$1</code></td>
+<td class="org-left">First argument</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>$_</code></td>
+<td class="org-left">Last argument of the previous command</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<b>Note</b>: <code>$@</code> and <code>$*</code> must be quoted in order to perform as described.
+Otherwise, they do exactly the same thing (arguments as separate
+strings).
+</p>
+
+<p>
+See
+<a href="https://web.archive.org/web/20230318164746/https://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables">Special parameters</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-conditionals" class="outline-2">
+<h2 id="conditionals">Conditionals</h2>
+<div class="outline-text-2" id="text-conditionals">
+</div>
+<div id="outline-container-conditions" class="outline-3">
+<h3 id="conditions">Conditions</h3>
+<div class="outline-text-3" id="text-conditions">
+<p>
+Note that <code>[[</code> is actually a command/program that returns either <code>0</code>
+(true) or <code>1</code> (false). Any program that obeys the same logic (like all
+base utils, such as <code>grep(1)</code> or <code>ping(1)</code>) can be used as condition,
+see examples.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Condition</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>[[ -z STRING ]]</code></td>
+<td class="org-left">Empty string</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ -n STRING ]]</code></td>
+<td class="org-left">Not empty string</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ STRING =</code> STRING ]]=</td>
+<td class="org-left">Equal</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ STRING !</code> STRING ]]=</td>
+<td class="org-left">Not Equal</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ NUM -eq NUM ]]</code></td>
+<td class="org-left">Equal</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ NUM -ne NUM ]]</code></td>
+<td class="org-left">Not equal</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ NUM -lt NUM ]]</code></td>
+<td class="org-left">Less than</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ NUM -le NUM ]]</code></td>
+<td class="org-left">Less than or equal</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ NUM -gt NUM ]]</code></td>
+<td class="org-left">Greater than</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ NUM -ge NUM ]]</code></td>
+<td class="org-left">Greater than or equal</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ STRING =~ STRING ]]</code></td>
+<td class="org-left">Regexp</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(( NUM &lt; NUM ))</code></td>
+<td class="org-left">Numeric conditions</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outline-container-more-conditions" class="outline-4">
+<h4 id="more-conditions">More conditions</h4>
+<div class="outline-text-4" id="text-more-conditions">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Condition</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>[[ -o noclobber ]]</code></td>
+<td class="org-left">If OPTIONNAME is enabled</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ ! EXPR ]]</code></td>
+<td class="org-left">Not</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ X &amp;&amp; Y ]]</code></td>
+<td class="org-left">And</td>
+</tr>
+
+<tr>
+<td class="org-left">=[[ X</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Y ]]=</td>
+<td class="org-left">Or</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-file-conditions" class="outline-3">
+<h3 id="file-conditions">File conditions</h3>
+<div class="outline-text-3" id="text-file-conditions">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Condition</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>[[ -e FILE ]]</code></td>
+<td class="org-left">Exists</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ -r FILE ]]</code></td>
+<td class="org-left">Readable</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ -h FILE ]]</code></td>
+<td class="org-left">Symlink</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ -d FILE ]]</code></td>
+<td class="org-left">Directory</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ -w FILE ]]</code></td>
+<td class="org-left">Writable</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ -s FILE ]]</code></td>
+<td class="org-left">Size is &gt; 0 bytes</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ -f FILE ]]</code></td>
+<td class="org-left">File</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ -x FILE ]]</code></td>
+<td class="org-left">Executable</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ FILE1 -nt FILE2 ]]</code></td>
+<td class="org-left">1 is more recent than 2</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ FILE1 -ot FILE2 ]]</code></td>
+<td class="org-left">2 is more recent than 1</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[ FILE1 -ef FILE2 ]]</code></td>
+<td class="org-left">Same files</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-example-1" class="outline-3">
+<h3 id="example-1">Example</h3>
+<div class="outline-text-3" id="text-example-1">
+<div class="org-src-container">
+<pre class="src src-language-bash"># String
+if [[ -z "$string" ]]; then
+  echo "String is empty"
+elif [[ -n "$string" ]]; then
+  echo "String is not empty"
+else
+  echo "This never happens"
+fi
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash"># Combinations
+if [[ X &amp;&amp; Y ]]; then
+  ...
+fi
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash"># Equal
+if [[ "$A" == "$B" ]]
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash"># Regex
+if [[ "A" =~ . ]]
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">if (( $a &lt; $b )); then
+   echo "$a is smaller than $b"
+fi
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">if [[ -e "file.txt" ]]; then
+  echo "file exists"
+fi
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-arrays" class="outline-2">
+<h2 id="arrays">Arrays</h2>
+<div class="outline-text-2" id="text-arrays">
+</div>
+<div id="outline-container-defining-arrays" class="outline-3">
+<h3 id="defining-arrays">Defining arrays</h3>
+<div class="outline-text-3" id="text-defining-arrays">
+<div class="org-src-container">
+<pre class="src src-language-bash">Fruits=('Apple' 'Banana' 'Orange')
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">Fruits[0]="Apple"
+Fruits[1]="Banana"
+Fruits[2]="Orange"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-working-with-arrays" class="outline-3">
+<h3 id="working-with-arrays">Working with arrays</h3>
+<div class="outline-text-3" id="text-working-with-arrays">
+<div class="org-src-container">
+<pre class="src src-language-bash">echo "${Fruits[0]}"           # Element #0
+echo "${Fruits[-1]}"          # Last element
+echo "${Fruits[@]}"           # All elements, space-separated
+echo "${#Fruits[@]}"          # Number of elements
+echo "${#Fruits}"             # String length of the 1st element
+echo "${#Fruits[3]}"          # String length of the Nth element
+echo "${Fruits[@]:3:2}"       # Range (from position 3, length 2)
+echo "${!Fruits[@]}"          # Keys of all elements, space-separated
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-operations" class="outline-3">
+<h3 id="operations">Operations</h3>
+<div class="outline-text-3" id="text-operations">
+<div class="org-src-container">
+<pre class="src src-language-bash">Fruits=("${Fruits[@]}" "Watermelon")    # Push
+Fruits+=('Watermelon')                  # Also Push
+Fruits=( "${Fruits[@]/Ap*/}" )          # Remove by regex match
+unset Fruits[2]                         # Remove one item
+Fruits=("${Fruits[@]}")                 # Duplicate
+Fruits=("${Fruits[@]}" "${Veggies[@]}") # Concatenate
+words=($(&lt; datafile))                   # From file (split by IFS)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-iteration" class="outline-3">
+<h3 id="iteration">Iteration</h3>
+<div class="outline-text-3" id="text-iteration">
+<div class="org-src-container">
+<pre class="src src-language-bash">for i in "${arrayName[@]}"; do
+  echo "$i"
+done
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-dictionaries" class="outline-2">
+<h2 id="dictionaries">Dictionaries</h2>
+<div class="outline-text-2" id="text-dictionaries">
+</div>
+<div id="outline-container-defining" class="outline-3">
+<h3 id="defining">Defining</h3>
+<div class="outline-text-3" id="text-defining">
+<div class="org-src-container">
+<pre class="src src-language-bash">declare -A sounds
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">sounds[dog]="bark"
+sounds[cow]="moo"
+sounds[bird]="tweet"
+sounds[wolf]="howl"
+</pre>
+</div>
+
+<p>
+Declares <code>sound</code> as a Dictionary object (aka associative array).
+</p>
+</div>
+</div>
+<div id="outline-container-working-with-dictionaries" class="outline-3">
+<h3 id="working-with-dictionaries">Working with dictionaries</h3>
+<div class="outline-text-3" id="text-working-with-dictionaries">
+<div class="org-src-container">
+<pre class="src src-language-bash">echo "${sounds[dog]}" # Dog's sound
+echo "${sounds[@]}"   # All values
+echo "${!sounds[@]}"  # All keys
+echo "${#sounds[@]}"  # Number of elements
+unset sounds[dog]     # Delete dog
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-iteration-1" class="outline-3">
+<h3 id="iteration-1">Iteration</h3>
+<div class="outline-text-3" id="text-iteration-1">
+</div>
+<div id="outline-container-iterate-over-values" class="outline-4">
+<h4 id="iterate-over-values">Iterate over values</h4>
+<div class="outline-text-4" id="text-iterate-over-values">
+<div class="org-src-container">
+<pre class="src src-language-bash">for val in "${sounds[@]}"; do
+  echo "$val"
+done
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-iterate-over-keys" class="outline-4">
+<h4 id="iterate-over-keys">Iterate over keys</h4>
+<div class="outline-text-4" id="text-iterate-over-keys">
+<div class="org-src-container">
+<pre class="src src-language-bash">for key in "${!sounds[@]}"; do
+  echo "$key"
+done
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-options" class="outline-2">
+<h2 id="options">Options</h2>
+<div class="outline-text-2" id="text-options">
+</div>
+<div id="outline-container-options-1" class="outline-3">
+<h3 id="options-1">Options</h3>
+<div class="outline-text-3" id="text-options-1">
+<div class="org-src-container">
+<pre class="src src-language-bash">set -o noclobber  # Avoid overlay files (echo "hi" &gt; foo)
+set -o errexit    # Used to exit upon error, avoiding cascading errors
+set -o pipefail   # Unveils hidden failures
+set -o nounset    # Exposes unset variables
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-glob-options" class="outline-3">
+<h3 id="glob-options">Glob options</h3>
+<div class="outline-text-3" id="text-glob-options">
+<div class="org-src-container">
+<pre class="src src-language-bash">shopt -s nullglob    # Non-matching globs are removed  ('*.foo' =&gt; '')
+shopt -s failglob    # Non-matching globs throw errors
+shopt -s nocaseglob  # Case insensitive globs
+shopt -s dotglob     # Wildcards match dotfiles ("*.sh" =&gt; ".foo.sh")
+shopt -s globstar    # Allow ** for recursive matches ('lib/**/*.rb' =&gt; 'lib/a/b/c.rb')
+</pre>
+</div>
+
+<p>
+Set <code>GLOBIGNORE</code> as a colon-separated list of patterns to be removed
+from glob matches.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-history" class="outline-2">
+<h2 id="history">History</h2>
+<div class="outline-text-2" id="text-history">
+</div>
+<div id="outline-container-commands" class="outline-3">
+<h3 id="commands">Commands</h3>
+<div class="outline-text-3" id="text-commands">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>history</code></td>
+<td class="org-left">Show history</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>shopt -s histverify</code></td>
+<td class="org-left">Don't execute expanded result immediately</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-expansions" class="outline-3">
+<h3 id="expansions">Expansions</h3>
+<div class="outline-text-3" id="text-expansions">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Expression</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>!$</code></td>
+<td class="org-left">Expand last parameter of most recent command</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>!*</code></td>
+<td class="org-left">Expand all parameters of most recent command</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>!-n</code></td>
+<td class="org-left">Expand =n=th most recent command</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>!n</code></td>
+<td class="org-left">Expand =n=th command in history</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>!&lt;command&gt;</code></td>
+<td class="org-left">Expand most recent invocation of command <code>&lt;command&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-operations-1" class="outline-3">
+<h3 id="operations-1">Operations</h3>
+<div class="outline-text-3" id="text-operations-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Code</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>!!</code></td>
+<td class="org-left">Execute last command again</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>!!:s/&lt;FROM&gt;/&lt;TO&gt;/</code></td>
+<td class="org-left">Replace first occurrence of <code>&lt;FROM&gt;</code> to <code>&lt;TO&gt;</code> in most recent command</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>!!:gs/&lt;FROM&gt;/&lt;TO&gt;/</code></td>
+<td class="org-left">Replace all occurrences of <code>&lt;FROM&gt;</code> to <code>&lt;TO&gt;</code> in most recent command</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>!$:t</code></td>
+<td class="org-left">Expand only basename from last parameter of most recent command</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>!$:h</code></td>
+<td class="org-left">Expand only directory from last parameter of most recent command</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<code>!!</code> and <code>!$</code> can be replaced with any valid expansion.
+</p>
+</div>
+</div>
+<div id="outline-container-slices" class="outline-3">
+<h3 id="slices">Slices</h3>
+<div class="outline-text-3" id="text-slices">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Code</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>!!:n</code></td>
+<td class="org-left">Expand only <code>n=th token from most recent command (command is =0</code>; first argument is <code>1</code>)</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>!^</code></td>
+<td class="org-left">Expand first argument from most recent command</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>!$</code></td>
+<td class="org-left">Expand last token from most recent command</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>!!:n-m</code></td>
+<td class="org-left">Expand range of tokens from most recent command</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>!!:n-$</code></td>
+<td class="org-left">Expand =n=th token to last from most recent command</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<code>!!</code> can be replaced with any valid expansion i.e. <code>!cat</code>, <code>!-2</code>, <code>!42</code>,
+etc.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-miscellaneous" class="outline-2">
+<h2 id="miscellaneous">Miscellaneous</h2>
+<div class="outline-text-2" id="text-miscellaneous">
+</div>
+<div id="outline-container-numeric-calculations" class="outline-3">
+<h3 id="numeric-calculations">Numeric calculations</h3>
+<div class="outline-text-3" id="text-numeric-calculations">
+<div class="org-src-container">
+<pre class="src src-language-bash">$((a + 200))      # Add 200 to $a
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">$(($RANDOM%200))  # Random number 0..199
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">declare -i count  # Declare as type integer
+count+=1          # Increment
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-subshells" class="outline-3">
+<h3 id="subshells">Subshells</h3>
+<div class="outline-text-3" id="text-subshells">
+<div class="org-src-container">
+<pre class="src src-language-bash">(cd somedir; echo "I'm now in $PWD")
+pwd # still in first directory
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-redirection" class="outline-3">
+<h3 id="redirection">Redirection</h3>
+<div class="outline-text-3" id="text-redirection">
+<div class="org-src-container">
+<pre class="src src-language-bash">python hello.py &gt; output.txt            # stdout to (file)
+python hello.py &gt;&gt; output.txt           # stdout to (file), append
+python hello.py 2&gt; error.log            # stderr to (file)
+python hello.py 2&gt;&amp;1                    # stderr to stdout
+python hello.py 2&gt;/dev/null             # stderr to (null)
+python hello.py &gt;output.txt 2&gt;&amp;1        # stdout and stderr to (file), equivalent to &amp;&gt;
+python hello.py &amp;&gt;/dev/null             # stdout and stderr to (null)
+echo "$0: warning: too many users" &gt;&amp;2  # print diagnostic message to stderr
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">python hello.py &lt; foo.txt      # feed foo.txt to stdin for python
+diff &lt;(ls -r) &lt;(ls)            # Compare two stdout without files
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-inspecting-commands" class="outline-3">
+<h3 id="inspecting-commands">Inspecting commands</h3>
+<div class="outline-text-3" id="text-inspecting-commands">
+<div class="org-src-container">
+<pre class="src src-language-bash">command -V cd
+#=&gt; "cd is a function/alias/whatever"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-trap-errors" class="outline-3">
+<h3 id="trap-errors">Trap errors</h3>
+<div class="outline-text-3" id="text-trap-errors">
+<div class="org-src-container">
+<pre class="src src-language-bash">trap 'echo Error at about $LINENO' ERR
+</pre>
+</div>
+
+<p>
+or
+</p>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">traperr() {
+  echo "ERROR: ${BASH_SOURCE[1]} at about ${BASH_LINENO[0]}"
+}
+
+set -o errtrace
+trap traperr ERR
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-caseswitch" class="outline-3">
+<h3 id="caseswitch">Case/switch</h3>
+<div class="outline-text-3" id="text-caseswitch">
+<div class="org-src-container">
+<pre class="src src-language-bash">case "$1" in
+  start | up)
+    vagrant up
+    ;;
+
+  *)
+    echo "Usage: $0 {start|stop|ssh}"
+    ;;
+esac
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-source-relative" class="outline-3">
+<h3 id="source-relative">Source relative</h3>
+<div class="outline-text-3" id="text-source-relative">
+<div class="org-src-container">
+<pre class="src src-language-bash">source "${0%/*}/../share/foo.sh"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-printf" class="outline-3">
+<h3 id="printf">printf</h3>
+<div class="outline-text-3" id="text-printf">
+<div class="org-src-container">
+<pre class="src src-language-bash">printf "Hello %s, I'm %s" Sven Olga
+#=&gt; "Hello Sven, I'm Olga
+
+printf "1 + 1 = %d" 2
+#=&gt; "1 + 1 = 2"
+
+printf "This is how you print a float: %f" 2
+#=&gt; "This is how you print a float: 2.000000"
+
+printf '%s\n' '#!/bin/bash' 'echo hello' &gt;file
+# format string is applied to each group of arguments
+printf '%i+%i=%i\n' 1 2 3  4 5 9
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-transform-strings" class="outline-3">
+<h3 id="transform-strings">Transform strings</h3>
+<div class="outline-text-3" id="text-transform-strings">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command option</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>-c</code></td>
+<td class="org-left">Operations apply to characters not in the given set</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>-d</code></td>
+<td class="org-left">Delete characters</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>-s</code></td>
+<td class="org-left">Replaces repeated characters with single occurrence</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>-t</code></td>
+<td class="org-left">Truncates</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[:upper:]</code></td>
+<td class="org-left">All upper case letters</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[:lower:]</code></td>
+<td class="org-left">All lower case letters</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[:digit:]</code></td>
+<td class="org-left">All digits</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[:space:]</code></td>
+<td class="org-left">All whitespace</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[:alpha:]</code></td>
+<td class="org-left">All letters</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[:alnum:]</code></td>
+<td class="org-left">All letters and digits</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outline-container-example-2" class="outline-4">
+<h4 id="example-2">Example</h4>
+<div class="outline-text-4" id="text-example-2">
+<div class="org-src-container">
+<pre class="src src-language-bash">echo "Welcome To Devhints" | tr '[:lower:]' '[:upper:]'
+WELCOME TO DEVHINTS
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-directory-of-script" class="outline-3">
+<h3 id="directory-of-script">Directory of script</h3>
+<div class="outline-text-3" id="text-directory-of-script">
+<div class="org-src-container">
+<pre class="src src-language-bash">dir=${0%/*}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-getting-options" class="outline-3">
+<h3 id="getting-options">Getting options</h3>
+<div class="outline-text-3" id="text-getting-options">
+<div class="org-src-container">
+<pre class="src src-language-bash">while [[ "$1" =~ ^- &amp;&amp; ! "$1" == "--" ]]; do case $1 in
+  -V | --version )
+    echo "$version"
+    exit
+    ;;
+  -s | --string )
+    shift; string=$1
+    ;;
+  -f | --flag )
+    flag=1
+    ;;
+esac; shift; done
+if [[ "$1" == '--' ]]; then shift; fi
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-heredoc" class="outline-3">
+<h3 id="heredoc">Heredoc</h3>
+<div class="outline-text-3" id="text-heredoc">
+<div class="org-src-container">
+<pre class="src src-language-sh">cat &lt;&lt;END
+hello world
+END
+</pre>
+</div>
+
+<p>
+Heredoc allows a section of your source code to be treated as a file.
+See
+<a href="https://www.gnu.org/software/bash/manual/html_node/Redirections.html#Here-Documents">Bash Reference Manual</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-herestring" class="outline-3">
+<h3 id="herestring">Herestring</h3>
+<div class="outline-text-3" id="text-herestring">
+<div class="org-src-container">
+<pre class="src src-language-sh">tr '[:lower:]' '[:upper:]' &lt;&lt;&lt; "Will be uppercased, even $variable"
+</pre>
+</div>
+
+<p>
+Herestring allows a string to be treated as a standard input (stdin).
+See
+<a href="https://www.gnu.org/software/bash/manual/html_node/Redirections.html#Here-Strings">Bash Reference Manual</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-process-substitution" class="outline-3">
+<h3 id="process-substitution">Process substitution</h3>
+<div class="outline-text-3" id="text-process-substitution">
+<div class="org-src-container">
+<pre class="src src-language-sh"># loop on myfunc output lines
+while read -r line; do
+  echo "$line"
+done &lt; &lt;(myfunc)
+
+# compare content of two folders
+diff &lt;(ls "$dir1") &lt;(ls "$dir2")
+</pre>
+</div>
+
+<p>
+Process substitution allows the input (or output) of a command to be
+treated as a file. See
+<a href="https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html">Bash Reference Manual</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-reading-input" class="outline-3">
+<h3 id="reading-input">Reading input</h3>
+<div class="outline-text-3" id="text-reading-input">
+<div class="org-src-container">
+<pre class="src src-language-bash">echo -n "Proceed? [y/n]: "
+read -r ans
+echo "$ans"
+</pre>
+</div>
+
+<p>
+The <code>-r</code> option disables a peculiar legacy behavior with backslashes.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-language-bash">read -n 1 ans    # Just one character
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-special-variables" class="outline-3">
+<h3 id="special-variables">Special variables</h3>
+<div class="outline-text-3" id="text-special-variables">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Expression</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>$?</code></td>
+<td class="org-left">Exit status of last task</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>$!</code></td>
+<td class="org-left">PID of last background task</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>$$</code></td>
+<td class="org-left">PID of shell</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>$0</code></td>
+<td class="org-left">Filename of the shell script</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>$_</code></td>
+<td class="org-left">Last argument of the previous command</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>${PIPESTATUS[n]}</code></td>
+<td class="org-left">return value of piped commands (array)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+See
+<a href="https://web.archive.org/web/20230318164746/https://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables">Special parameters</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-go-to-previous-directory" class="outline-3">
+<h3 id="go-to-previous-directory">Go to previous directory</h3>
+<div class="outline-text-3" id="text-go-to-previous-directory">
+<div class="org-src-container">
+<pre class="src src-language-bash">pwd # /home/user/foo
+cd bar/
+pwd # /home/user/foo/bar
+cd -
+pwd # /home/user/foo
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-check-for-commands-result" class="outline-3">
+<h3 id="check-for-commands-result">Check for command's result</h3>
+<div class="outline-text-3" id="text-check-for-commands-result">
+<div class="org-src-container">
+<pre class="src src-language-bash">if ping -c 1 google.com; then
+  echo "It appears you have a working internet connection"
+fi
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-grep-check" class="outline-3">
+<h3 id="grep-check">Grep check</h3>
+<div class="outline-text-3" id="text-grep-check">
+<div class="org-src-container">
+<pre class="src src-language-bash">if grep -q 'foo' ~/.bash_history; then
+  echo "You appear to have typed 'foo' in the past"
+fi
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-also-see" class="outline-2">
+<h2 id="also-see">Also see</h2>
+<div class="outline-text-2" id="text-also-see">
+<ul class="org-ul">
+<li><a href="https://web.archive.org/web/20230406205817/https://wiki.bash-hackers.org/">Bash-hackers wiki</a>
+<i>(bash-hackers.org)</i></li>
+<li><a href="https://web.archive.org/web/20230318164746/https://wiki.bash-hackers.org/syntax/shellvars">Shell vars</a>
+<i>(bash-hackers.org)</i></li>
+<li><a href="https://learnxinyminutes.com/docs/bash/">Learn bash in y minutes</a>
+<i>(learnxinyminutes.com)</i></li>
+<li><a href="http://mywiki.wooledge.org/BashGuide">Bash Guide</a>
+<i>(mywiki.wooledge.org)</i></li>
+<li><a href="https://www.shellcheck.net/">ShellCheck</a> <i>(shellcheck.net)</i></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: <a href="https://devhints.io/bash">devhints.io</a></p>
+<p class="date">Created: 2026-03-06 Fri 17:05</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

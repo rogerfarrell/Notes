@@ -5,6 +5,7 @@
 
 --------------
 
+- [[file:references/bash-scripting-cheatsheet.org]]
 - [[file:references/change-image-color-profile-with-sips.org]]
 - [[file:references/guide-batch-convert-pdfs-to-jpgs.org]]
 - [[file:references/guide-batch-convert-svgs-to-pngs.org]]
