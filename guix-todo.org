@@ -1,0 +1,6 @@
+#+title: Guix TODO
+#+author: Roger Farrell
+
+* TODO write script: update channels.lock to last commits with substitutes for given packages
+
+Look at the =(guix scripts weather)= module for inspiration.

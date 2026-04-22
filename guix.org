@@ -1,3 +1,4 @@
 #+title: Guix
 
 - [[file:reproducible-channels-with-guix.org]]
+- [[file:guix-todo.org]]
