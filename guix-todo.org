@@ -1,6 +1,14 @@
 #+title: Guix TODO
 #+author: Roger Farrell
 
-* TODO write script: update channels.lock to last commits with substitutes for given packages
+* TODO Write script: update channels.lock to last commits with substitutes for given packages
 
 Look at the =(guix scripts weather)= module for inspiration.
+
+** Conceptual roadmap
+
+1. Read manifest file and channels file
+2. Identify source channels for each package (something like guix show)
+3. Working back from the commits specified in the channels file
+   (default: latest), return the a list of channels with the latest
+   commits possessing substitutes for all packages in manifest file
