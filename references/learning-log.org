@@ -1,7 +1,17 @@
 #+TITLE: Learning log
+#+STARTUP: overview
 #+OPTIONS: toc:nil num:nil prop:Cite
 #+COLUMNS: %TIMESTAMP_IA(time) %125ITEM(entry) %75Cite(citation)
-
+* The Meshtastic CLI and utils are already packaged for Guix.
+:PROPERTIES:
+:Cite: [[shell:guix show python-meshtastic]]
+:END:
+[2026-05-02]
+* Guix for DAM (digital asset management)
+:PROPERTIES:
+:Cite: [[https://sam-d.com/blog/introducing-damright-units/]]
+:END:
+[2026-04-29]
 * This may be the best we have at-present for guix system containers.
 :PROPERTIES:
 :Cite: [[https://issues.genenetwork.org/topics/guix/guix-system-containers-and-how-we-use-them]]
