@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-05-02 Sat 00:30 -->
+<!-- 2026-05-23 Sat 07:58 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Learning log</title>
@@ -57,6 +57,7 @@
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
   pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-c:before { content: 'C'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -71,7 +72,7 @@
   pre.src-haskell:before { content: 'Haskell'; }
   pre.src-hledger:before { content: 'hledger'; }
   pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
+  pre.src-js:before { content: 'JavaScript'; }
   pre.src-latex:before { content: 'LaTeX'; }
   pre.src-ledger:before { content: 'Ledger'; }
   pre.src-lisp:before { content: 'Lisp'; }
@@ -198,9 +199,100 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">Learning log</h1>
-<div id="outline-container-org0b4eca0" class="outline-2">
-<h2 id="org0b4eca0">The Meshtastic CLI and utils are already packaged for Guix.</h2>
-<div class="outline-text-2" id="text-org0b4eca0">
+<div id="outline-container-org34fd06a" class="outline-2">
+<h2 id="org34fd06a">In bash, upload data directly from stdin: <code>curl -F "file=@"&lt;(cat -) URL</code></h2>
+<div class="outline-text-2" id="text-org34fd06a">
+<pre class="example">
+Cite: 
+</pre>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2026-05-23 Sat]</span></span>
+</p>
+</div>
+</div>
+<div id="outline-container-org6eca228" class="outline-2">
+<h2 id="org6eca228">Use process substitution to pipe together commands that write to files instead of stdout: <code>cmd1 --output-file &gt;(cmd2 -)</code></h2>
+<div class="outline-text-2" id="text-org6eca228">
+<pre class="example">
+Cite: [[https://linuxhandbook.com/bash-process-substitution/]]
+</pre>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2026-05-23 Sat]</span></span>
+</p>
+</div>
+</div>
+<div id="outline-container-org3236edf" class="outline-2">
+<h2 id="org3236edf">In Emacs, run shell command on region with <code>M-|</code>.</h2>
+<div class="outline-text-2" id="text-org3236edf">
+<pre class="example">
+Cite: [[info:emacs#Shell][info "(emacs) Shell"]]
+</pre>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2026-05-23 Sat]</span></span>
+</p>
+</div>
+</div>
+<div id="outline-container-orgc0497bb" class="outline-2">
+<h2 id="orgc0497bb">The place to find old bitmap fonts</h2>
+<div class="outline-text-2" id="text-orgc0497bb">
+<pre class="example">
+Cite: [[https://int10h.org/oldschool-pc-fonts/]]
+</pre>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2026-05-19 Tue]</span></span>
+</p>
+</div>
+</div>
+<div id="outline-container-org5172064" class="outline-2">
+<h2 id="org5172064">Guix has the variable <i>Recursive</i> font.</h2>
+<div class="outline-text-2" id="text-org5172064">
+<pre class="example">
+Cite: [[shell:guix show font-recursive]]
+</pre>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2026-05-18 Mon]</span></span>
+</p>
+</div>
+</div>
+<div id="outline-container-org22e8858" class="outline-2">
+<h2 id="org22e8858">In Emacs dired, type <code>@</code> to open marked files with sudo.</h2>
+<div class="outline-text-2" id="text-org22e8858">
+<pre class="example">
+Cite: [[help:tramp-dired-find-file-with-sudo]]
+</pre>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2026-05-15 Fri]</span></span>
+</p>
+</div>
+</div>
+<div id="outline-container-orgcc61c07" class="outline-2">
+<h2 id="orgcc61c07">Kill the Emacs daemon from within Emacs Client with <code>kill-emacs</code>.</h2>
+<div class="outline-text-2" id="text-orgcc61c07">
+<pre class="example">
+Cite: [[info:emacs#Exiting][info "(emacs) Exiting"]]
+</pre>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2026-05-14 Thu]</span></span>
+</p>
+</div>
+</div>
+<div id="outline-container-org8cdb2c6" class="outline-2">
+<h2 id="org8cdb2c6">The motivation for my note taking experiments may be <i>incremental static emergence</i>.</h2>
+<div class="outline-text-2" id="text-org8cdb2c6">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2026-05-13 Wed]</span></span>
+</p>
+
+<p>
+I coined this term to describe encoding relationships between
+information primitives in a static format, where the structure emerges
+incrementally without dynamic querying.
+</p>
+</div>
+</div>
+<div id="outline-container-org7ad7fc6" class="outline-2">
+<h2 id="org7ad7fc6">The Meshtastic CLI and utils are already packaged for Guix.</h2>
+<div class="outline-text-2" id="text-org7ad7fc6">
 <pre class="example">
 Cite: [[shell:guix show python-meshtastic]]
 </pre>
@@ -209,9 +301,9 @@ Cite: [[shell:guix show python-meshtastic]]
 </p>
 </div>
 </div>
-<div id="outline-container-org5d97c1c" class="outline-2">
-<h2 id="org5d97c1c">Guix for DAM (digital asset management)</h2>
-<div class="outline-text-2" id="text-org5d97c1c">
+<div id="outline-container-orgdf6ff09" class="outline-2">
+<h2 id="orgdf6ff09">Guix for DAM (digital asset management)</h2>
+<div class="outline-text-2" id="text-orgdf6ff09">
 <pre class="example">
 Cite: [[https://sam-d.com/blog/introducing-damright-units/]]
 </pre>
@@ -220,9 +312,9 @@ Cite: [[https://sam-d.com/blog/introducing-damright-units/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org475515c" class="outline-2">
-<h2 id="org475515c">This may be the best we have at-present for guix system containers.</h2>
-<div class="outline-text-2" id="text-org475515c">
+<div id="outline-container-org844a091" class="outline-2">
+<h2 id="org844a091">This may be the best we have at-present for guix system containers.</h2>
+<div class="outline-text-2" id="text-org844a091">
 <pre class="example">
 Cite: [[https://issues.genenetwork.org/topics/guix/guix-system-containers-and-how-we-use-them]]
 </pre>
@@ -231,9 +323,9 @@ Cite: [[https://issues.genenetwork.org/topics/guix/guix-system-containers-and-ho
 </p>
 </div>
 </div>
-<div id="outline-container-orgbf30b1a" class="outline-2">
-<h2 id="orgbf30b1a">Someone else has already been down the guix system containers rabbit hole recently.</h2>
-<div class="outline-text-2" id="text-orgbf30b1a">
+<div id="outline-container-org3dde33d" class="outline-2">
+<h2 id="org3dde33d">Someone else has already been down the guix system containers rabbit hole recently.</h2>
+<div class="outline-text-2" id="text-org3dde33d">
 <pre class="example">
 Cite: [[https://www.mail-archive.com/help-guix@gnu.org/msg19964.html]]
 </pre>
@@ -242,9 +334,9 @@ Cite: [[https://www.mail-archive.com/help-guix@gnu.org/msg19964.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgfd0b245" class="outline-2">
-<h2 id="orgfd0b245">Swineherd is a good reference for guix system containers as a service.</h2>
-<div class="outline-text-2" id="text-orgfd0b245">
+<div id="outline-container-orgfee6c3b" class="outline-2">
+<h2 id="orgfee6c3b">Swineherd is a good reference for guix system containers as a service.</h2>
+<div class="outline-text-2" id="text-orgfee6c3b">
 <pre class="example">
 Cite: [[https://github.com/BIMSBbioinfo/swineherd/tree/main]]
 </pre>
@@ -253,9 +345,9 @@ Cite: [[https://github.com/BIMSBbioinfo/swineherd/tree/main]]
 </p>
 </div>
 </div>
-<div id="outline-container-org3c4e6cc" class="outline-2">
-<h2 id="org3c4e6cc">glenneth from #systemcrafters has a great 0x0 replacement.</h2>
-<div class="outline-text-2" id="text-org3c4e6cc">
+<div id="outline-container-org8890050" class="outline-2">
+<h2 id="org8890050">glenneth from #systemcrafters has a great 0x0 replacement.</h2>
+<div class="outline-text-2" id="text-org8890050">
 <pre class="example">
 Cite: [[https://crafterbin.glennstack.dev]]
 </pre>
@@ -264,9 +356,9 @@ Cite: [[https://crafterbin.glennstack.dev]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgb9881ed" class="outline-2">
-<h2 id="orgb9881ed">Childhurds may be the key to Guix system VMs within an OS config.</h2>
-<div class="outline-text-2" id="text-orgb9881ed">
+<div id="outline-container-orgc3dd790" class="outline-2">
+<h2 id="orgc3dd790">Childhurds may be the key to Guix system VMs within an OS config.</h2>
+<div class="outline-text-2" id="text-orgc3dd790">
 <pre class="example">
 Cite: [[https://guix.gnu.org/manual/devel/en/html_node/Virtualization-Services.html#The-Hurd-in-a-Virtual-Machine]]
 </pre>
@@ -275,9 +367,9 @@ Cite: [[https://guix.gnu.org/manual/devel/en/html_node/Virtualization-Services.h
 </p>
 </div>
 </div>
-<div id="outline-container-orga18c279" class="outline-2">
-<h2 id="orga18c279">Package contribution guidelines for Guix</h2>
-<div class="outline-text-2" id="text-orga18c279">
+<div id="outline-container-orgaba5774" class="outline-2">
+<h2 id="orgaba5774">Package contribution guidelines for Guix</h2>
+<div class="outline-text-2" id="text-orgaba5774">
 <pre class="example">
 Cite: [[https://guix.gnu.org/manual/devel/en/html_node/Submitting-Patches.html]]
 </pre>
@@ -286,9 +378,9 @@ Cite: [[https://guix.gnu.org/manual/devel/en/html_node/Submitting-Patches.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgf0c7b52" class="outline-2">
-<h2 id="orgf0c7b52">A good article about LAN vulnerabilities</h2>
-<div class="outline-text-2" id="text-orgf0c7b52">
+<div id="outline-container-orgb458ae9" class="outline-2">
+<h2 id="orgb458ae9">A good article about LAN vulnerabilities</h2>
+<div class="outline-text-2" id="text-orgb458ae9">
 <pre class="example">
 Cite: [[https://web.archive.org/web/20181130174629/https://bouk.co/blog/hacking-developers/]]
 </pre>
@@ -297,9 +389,9 @@ Cite: [[https://web.archive.org/web/20181130174629/https://bouk.co/blog/hacking-
 </p>
 </div>
 </div>
-<div id="outline-container-org360356b" class="outline-2">
-<h2 id="org360356b">Some really solid Guix documentation</h2>
-<div class="outline-text-2" id="text-org360356b">
+<div id="outline-container-orgc8ee250" class="outline-2">
+<h2 id="orgc8ee250">Some really solid Guix documentation</h2>
+<div class="outline-text-2" id="text-orgc8ee250">
 <pre class="example">
 Cite: [[https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/guix/index.md]]
 </pre>
@@ -308,9 +400,9 @@ Cite: [[https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/guix/in
 </p>
 </div>
 </div>
-<div id="outline-container-org5165a7f" class="outline-2">
-<h2 id="org5165a7f">ieure from #guix may be on to something with his transform-based config.</h2>
-<div class="outline-text-2" id="text-org5165a7f">
+<div id="outline-container-org32b60ef" class="outline-2">
+<h2 id="org32b60ef">ieure from #guix may be on to something with his transform-based config.</h2>
+<div class="outline-text-2" id="text-org32b60ef">
 <pre class="example">
 Cite: [[https://codeberg.org/ieure/atomized-guix/src/commit/9add63cec28117dd45499b4ee81277cc664a16ea/atomized/transforms.scm]]
 </pre>
@@ -319,9 +411,9 @@ Cite: [[https://codeberg.org/ieure/atomized-guix/src/commit/9add63cec28117dd4549
 </p>
 </div>
 </div>
-<div id="outline-container-orge72b29a" class="outline-2">
-<h2 id="orge72b29a">Guix containers are exposed as an API.</h2>
-<div class="outline-text-2" id="text-orge72b29a">
+<div id="outline-container-org7adf43d" class="outline-2">
+<h2 id="org7adf43d">Guix containers are exposed as an API.</h2>
+<div class="outline-text-2" id="text-org7adf43d">
 <pre class="example">
 Cite: [[https://codeberg.org/guix/guix/src/branch/master/gnu/build/linux-container.scm]]
 </pre>
@@ -330,9 +422,9 @@ Cite: [[https://codeberg.org/guix/guix/src/branch/master/gnu/build/linux-contain
 </p>
 </div>
 </div>
-<div id="outline-container-org3324495" class="outline-2">
-<h2 id="org3324495">More information on Samba in Guix</h2>
-<div class="outline-text-2" id="text-org3324495">
+<div id="outline-container-orgdf16957" class="outline-2">
+<h2 id="orgdf16957">More information on Samba in Guix</h2>
+<div class="outline-text-2" id="text-orgdf16957">
 <pre class="example">
 Cite: [[https://www.snamellit.com/blog/20240817-samba-adventures-in-guix/]]
 </pre>
@@ -341,9 +433,9 @@ Cite: [[https://www.snamellit.com/blog/20240817-samba-adventures-in-guix/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgba2e52e" class="outline-2">
-<h2 id="orgba2e52e">It is trivial to setup a local guix substitute server.</h2>
-<div class="outline-text-2" id="text-orgba2e52e">
+<div id="outline-container-org1c18204" class="outline-2">
+<h2 id="org1c18204">It is trivial to setup a local guix substitute server.</h2>
+<div class="outline-text-2" id="text-org1c18204">
 <pre class="example">
 Cite: [[https://guix.gnu.org/manual/1.5.0/en/html_node/Invoking-guix-publish.html]]
 Cite: [[https://guix.gnu.org/manual/1.5.0/en/html_node/Invoking-guix-build.html]]
@@ -353,9 +445,9 @@ Cite: [[https://guix.gnu.org/manual/1.5.0/en/html_node/Invoking-guix-build.html]
 </p>
 </div>
 </div>
-<div id="outline-container-org861ffb3" class="outline-2">
-<h2 id="org861ffb3">My wifi problem may be a physical connection issue.</h2>
-<div class="outline-text-2" id="text-org861ffb3">
+<div id="outline-container-org72283aa" class="outline-2">
+<h2 id="org72283aa">My wifi problem may be a physical connection issue.</h2>
+<div class="outline-text-2" id="text-org72283aa">
 <pre class="example">
 Cite: [[https://stackoverflow.com/questions/32423127/how-to-view-the-next-days-in-org-modes-agenda]]
 Cite: [[https://forums.opensuse.org/t/realtek-8822ce-randomly-not-available/175390/3]]
@@ -365,9 +457,9 @@ Cite: [[https://forums.opensuse.org/t/realtek-8822ce-randomly-not-available/1753
 </p>
 </div>
 </div>
-<div id="outline-container-org233753a" class="outline-2">
-<h2 id="org233753a">In org mode agenda, <code>v</code> brings up a useful menu for adjusting agenda scope.</h2>
-<div class="outline-text-2" id="text-org233753a">
+<div id="outline-container-org6511c56" class="outline-2">
+<h2 id="org6511c56">In org mode agenda, <code>v</code> brings up a useful menu for adjusting agenda scope.</h2>
+<div class="outline-text-2" id="text-org6511c56">
 <pre class="example">
 Cite: [[https://stackoverflow.com/questions/32423127/how-to-view-the-next-days-in-org-modes-agenda]]
 </pre>
@@ -376,9 +468,9 @@ Cite: [[https://stackoverflow.com/questions/32423127/how-to-view-the-next-days-i
 </p>
 </div>
 </div>
-<div id="outline-container-org81fb9d6" class="outline-2">
-<h2 id="org81fb9d6">Some helpful config tips for Emacs eww</h2>
-<div class="outline-text-2" id="text-org81fb9d6">
+<div id="outline-container-orgad87279" class="outline-2">
+<h2 id="orgad87279">Some helpful config tips for Emacs eww</h2>
+<div class="outline-text-2" id="text-orgad87279">
 <pre class="example">
 Cite: [[https://joshblais.com/blog/emacs-as-my-browser/]]
 </pre>
@@ -387,9 +479,9 @@ Cite: [[https://joshblais.com/blog/emacs-as-my-browser/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgb519193" class="outline-2">
-<h2 id="orgb519193">Org mode can present trees with properties as tables.</h2>
-<div class="outline-text-2" id="text-orgb519193">
+<div id="outline-container-org21dd0a8" class="outline-2">
+<h2 id="org21dd0a8">Org mode can present trees with properties as tables.</h2>
+<div class="outline-text-2" id="text-org21dd0a8">
 <pre class="example">
 Cite: [[info:org#Column View]]
 </pre>
@@ -398,17 +490,17 @@ Cite: [[info:org#Column View]]
 </p>
 </div>
 </div>
-<div id="outline-container-org436a256" class="outline-2">
-<h2 id="org436a256">Use <code>guix [system/home] search</code> to find the correct name for <code>guix edit</code>.</h2>
-<div class="outline-text-2" id="text-org436a256">
+<div id="outline-container-org777969b" class="outline-2">
+<h2 id="org777969b">Use <code>guix [system/home] search</code> to find the correct name for <code>guix edit</code>.</h2>
+<div class="outline-text-2" id="text-org777969b">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2026-04-23 Thu]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-orgb613941" class="outline-2">
-<h2 id="orgb613941"><code>guix [system/home] edit</code> opens package/service source directly!</h2>
-<div class="outline-text-2" id="text-orgb613941">
+<div id="outline-container-orgb6c28bb" class="outline-2">
+<h2 id="orgb6c28bb"><code>guix [system/home] edit</code> opens package/service source directly!</h2>
+<div class="outline-text-2" id="text-orgb6c28bb">
 <pre class="example">
 Cite: [[info:guix#Invoking guix edit]]
 </pre>
@@ -417,9 +509,9 @@ Cite: [[info:guix#Invoking guix edit]]
 </p>
 </div>
 </div>
-<div id="outline-container-org2124031" class="outline-2">
-<h2 id="org2124031">lspci is awesomesauce for identifying hardware.</h2>
-<div class="outline-text-2" id="text-org2124031">
+<div id="outline-container-org46f6e9f" class="outline-2">
+<h2 id="org46f6e9f">lspci is awesomesauce for identifying hardware.</h2>
+<div class="outline-text-2" id="text-org46f6e9f">
 <pre class="example">
 Cite: [[shell:man lspci]]
 </pre>
@@ -428,9 +520,9 @@ Cite: [[shell:man lspci]]
 </p>
 </div>
 </div>
-<div id="outline-container-org0b8978f" class="outline-2">
-<h2 id="org0b8978f">A great Emacs-style config for qutebrowser</h2>
-<div class="outline-text-2" id="text-org0b8978f">
+<div id="outline-container-org0539b1a" class="outline-2">
+<h2 id="org0539b1a">A great Emacs-style config for qutebrowser</h2>
+<div class="outline-text-2" id="text-org0539b1a">
 <pre class="example">
 Cite: [[https://git.sr.ht/~willvaughn/dots/tree/main/item/.config/qutebrowser/qutemacs.py?__goaway_challenge=meta-refresh&__goaway_id=5d0ea5f2261267ce46744aca9513fa28&__goaway_referer=https%3A%2F%2Fgithub.com%2Fqutebrowser%2Fqutebrowser%2Fblob%2Fmain%2Fdoc%2Fhelp%2Fconfiguring.asciidoc]]
 </pre>
@@ -439,9 +531,9 @@ Cite: [[https://git.sr.ht/~willvaughn/dots/tree/main/item/.config/qutebrowser/qu
 </p>
 </div>
 </div>
-<div id="outline-container-orga63c09f" class="outline-2">
-<h2 id="orga63c09f">Great info on mounting a NFS (Network File System)</h2>
-<div class="outline-text-2" id="text-orga63c09f">
+<div id="outline-container-org527e19b" class="outline-2">
+<h2 id="org527e19b">Great info on mounting a NFS (Network File System)</h2>
+<div class="outline-text-2" id="text-org527e19b">
 <pre class="example">
 Cite: [[https://www.cyberciti.biz/faq/apple-mac-osx-nfs-mount-command-tutorial/]]
 </pre>
@@ -450,9 +542,9 @@ Cite: [[https://www.cyberciti.biz/faq/apple-mac-osx-nfs-mount-command-tutorial/]
 </p>
 </div>
 </div>
-<div id="outline-container-org7649171" class="outline-2">
-<h2 id="org7649171">In Emacs, <code>C-u M-! &lt;command&gt;</code> to insert stdout into buffer.</h2>
-<div class="outline-text-2" id="text-org7649171">
+<div id="outline-container-org37cae40" class="outline-2">
+<h2 id="org37cae40">In Emacs, <code>C-u M-! &lt;command&gt;</code> to insert stdout into buffer.</h2>
+<div class="outline-text-2" id="text-org37cae40">
 <pre class="example">
 Cite: [[info:emacs#Single Shell]]
 </pre>
@@ -461,17 +553,17 @@ Cite: [[info:emacs#Single Shell]]
 </p>
 </div>
 </div>
-<div id="outline-container-org94c7517" class="outline-2">
-<h2 id="org94c7517">In Guix, <code>herd -n &lt;number-of-lines&gt; &lt;process&gt;</code> will return the logs for a shepherd process.</h2>
-<div class="outline-text-2" id="text-org94c7517">
+<div id="outline-container-org7283098" class="outline-2">
+<h2 id="org7283098">In Guix, <code>herd -n &lt;number-of-lines&gt; &lt;process&gt;</code> will return the logs for a shepherd process.</h2>
+<div class="outline-text-2" id="text-org7283098">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2026-04-16 Thu]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-org3024268" class="outline-2">
-<h2 id="org3024268">It is possible to launch X server after login on Guix.</h2>
-<div class="outline-text-2" id="text-org3024268">
+<div id="outline-container-org1c11416" class="outline-2">
+<h2 id="org1c11416">It is possible to launch X server after login on Guix.</h2>
+<div class="outline-text-2" id="text-org1c11416">
 <pre class="example">
 Cite: [[https://lists.gnu.org/archive/html/help-guix/2018-07/msg00080.html]]
 Cite: [[https://github.com/lfam/guix/blob/master/gnu/services/xorg.scm]]
@@ -481,9 +573,9 @@ Cite: [[https://github.com/lfam/guix/blob/master/gnu/services/xorg.scm]]
 </p>
 </div>
 </div>
-<div id="outline-container-orga09888b" class="outline-2">
-<h2 id="orga09888b">An interesting approach to scripting on Guix</h2>
-<div class="outline-text-2" id="text-orga09888b">
+<div id="outline-container-org22b5c1b" class="outline-2">
+<h2 id="org22b5c1b">An interesting approach to scripting on Guix</h2>
+<div class="outline-text-2" id="text-org22b5c1b">
 <pre class="example">
 Cite: [[https://qeef.srht.site/note/run-guile-script-with-guix/]]
 </pre>
@@ -492,9 +584,9 @@ Cite: [[https://qeef.srht.site/note/run-guile-script-with-guix/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgfcbb1d5" class="outline-2">
-<h2 id="orgfcbb1d5">Emacs ERC has a bug that makes logging on part and inserting logs automatically incompatible.</h2>
-<div class="outline-text-2" id="text-orgfcbb1d5">
+<div id="outline-container-org7e8f0a2" class="outline-2">
+<h2 id="org7e8f0a2">Emacs ERC has a bug that makes logging on part and inserting logs automatically incompatible.</h2>
+<div class="outline-text-2" id="text-org7e8f0a2">
 <pre class="example">
 Cite: [[https://debbugs.gnu.org/cgi/bugreport.cgi?bug=79665]]
 Cite: [[https://gist.github.com/LionyxML/55618551fcc8d1446bd8023bd178687f]]
@@ -504,9 +596,9 @@ Cite: [[https://gist.github.com/LionyxML/55618551fcc8d1446bd8023bd178687f]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgc0e7be0" class="outline-2">
-<h2 id="orgc0e7be0">A simple temp-file server: <code>curl -F file=@filename.extension -Fexpires=24 https://temp.sh/upload</code></h2>
-<div class="outline-text-2" id="text-orgc0e7be0">
+<div id="outline-container-org16ecc78" class="outline-2">
+<h2 id="org16ecc78">A simple temp-file server: <code>curl -F file=@filename.extension -Fexpires=24 https://temp.sh/upload</code></h2>
+<div class="outline-text-2" id="text-org16ecc78">
 <pre class="example">
 Cite: [[https://www.temp.sh]]
 </pre>
@@ -515,9 +607,9 @@ Cite: [[https://www.temp.sh]]
 </p>
 </div>
 </div>
-<div id="outline-container-org15a866a" class="outline-2">
-<h2 id="org15a866a">Emacs has a dired-like buffer for processes: <code>M-x proced</code></h2>
-<div class="outline-text-2" id="text-org15a866a">
+<div id="outline-container-orgcf89a84" class="outline-2">
+<h2 id="orgcf89a84">Emacs has a dired-like buffer for processes: <code>M-x proced</code></h2>
+<div class="outline-text-2" id="text-orgcf89a84">
 <pre class="example">
 Cite: [[https://www.masteringemacs.org/article/displaying-interacting-processes-proced]]
 Cite: [[https://unix.stackexchange.com/questions/317492/list-of-kill-signals]]
@@ -527,9 +619,9 @@ Cite: [[https://unix.stackexchange.com/questions/317492/list-of-kill-signals]]
 </p>
 </div>
 </div>
-<div id="outline-container-org77f2921" class="outline-2">
-<h2 id="org77f2921">Another great guix substitutes build farm: cache-cdn.guix.moe</h2>
-<div class="outline-text-2" id="text-org77f2921">
+<div id="outline-container-orgc952668" class="outline-2">
+<h2 id="orgc952668">Another great guix substitutes build farm: cache-cdn.guix.moe</h2>
+<div class="outline-text-2" id="text-orgc952668">
 <pre class="example">
 Cite: [[https://ultrarare.space/en/posts/guix-build-farm/]]
 </pre>
@@ -538,9 +630,9 @@ Cite: [[https://ultrarare.space/en/posts/guix-build-farm/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org3a229f9" class="outline-2">
-<h2 id="org3a229f9">A free supplement to CarFax is vehicle.report</h2>
-<div class="outline-text-2" id="text-org3a229f9">
+<div id="outline-container-org8838891" class="outline-2">
+<h2 id="org8838891">A free supplement to CarFax is vehicle.report</h2>
+<div class="outline-text-2" id="text-org8838891">
 <pre class="example">
 Cite: [[https://vehicle.report/]]
 </pre>
@@ -549,9 +641,9 @@ Cite: [[https://vehicle.report/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgdad8426" class="outline-2">
-<h2 id="orgdad8426">Chevy Bolts had buybacks to correct battery defects leading to fires.</h2>
-<div class="outline-text-2" id="text-orgdad8426">
+<div id="outline-container-org368d23d" class="outline-2">
+<h2 id="org368d23d">Chevy Bolts had buybacks to correct battery defects leading to fires.</h2>
+<div class="outline-text-2" id="text-org368d23d">
 <pre class="example">
 Cite: [[https://www.kbb.com/chevrolet/bolt-ev/2020/lt-hatchback-4d/?vehicleid=444932&mileage=50000&offeroptions=true&modalview=false&intent=trade-in-sell&pricetype=private-party&condition=good&iscombined=true&options=9124382%7Ctrue%7C9124381%7Ctrue%7C9124383%7Ctrue%7C9124391%7Ctrue%7C9124391%7Ctrue%7C9124391%7Ctrue&extcolor=black&skippedleadform=true&subintent=sell&colorOptionId=9124391&entry=defymmt]]
 Cite: [[https://www.reddit.com/r/BoltEV/wiki/index/]]
@@ -561,17 +653,17 @@ Cite: [[https://www.reddit.com/r/BoltEV/wiki/index/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org2c6aacb" class="outline-2">
-<h2 id="org2c6aacb">Lionyx on #systemcrafters about Emacs VC: "&#x2026;I simply  C-x v D, &#x2026;[kill unwanted lines with k, then]&#x2026; 'C-x v v'"</h2>
-<div class="outline-text-2" id="text-org2c6aacb">
+<div id="outline-container-orgaa72a5b" class="outline-2">
+<h2 id="orgaa72a5b">Lionyx on #systemcrafters about Emacs VC: "&hellip;I simply  C-x v D, &hellip;[kill unwanted lines with k, then]&hellip; 'C-x v v'"</h2>
+<div class="outline-text-2" id="text-orgaa72a5b">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2026-03-18 Wed]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-org1b4156a" class="outline-2">
-<h2 id="org1b4156a">Guix needs <code>(add-to-list 'tramp-remote-path 'tramp-own-remote-path)</code> to work with with Tramp in Emacs.</h2>
-<div class="outline-text-2" id="text-org1b4156a">
+<div id="outline-container-orgc55cbaa" class="outline-2">
+<h2 id="orgc55cbaa">Guix needs <code>(add-to-list 'tramp-remote-path 'tramp-own-remote-path)</code> to work with with Tramp in Emacs.</h2>
+<div class="outline-text-2" id="text-orgc55cbaa">
 <pre class="example">
 Cite: [[info:tramp#Remote programs]]
 Cite: [[https://blog.smith-manor.us/tramp_and_guix/]]
@@ -581,9 +673,9 @@ Cite: [[https://blog.smith-manor.us/tramp_and_guix/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org546f38a" class="outline-2">
-<h2 id="org546f38a">Some devlogs on building a Guix router</h2>
-<div class="outline-text-2" id="text-org546f38a">
+<div id="outline-container-orgc699334" class="outline-2">
+<h2 id="orgc699334">Some devlogs on building a Guix router</h2>
+<div class="outline-text-2" id="text-orgc699334">
 <pre class="example">
 Cite: [[https://connorbey13.org/writings/gnu-guix-ipv6-v4-router.html]]
 Cite: [[https://timmydouglas.com/2021/02/07/guix-router.html]]
@@ -593,9 +685,9 @@ Cite: [[https://timmydouglas.com/2021/02/07/guix-router.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org6583f71" class="outline-2">
-<h2 id="org6583f71">In Emacs org mode, type <code>C-c C-z</code> to enter a timestamped note under the current heading.</h2>
-<div class="outline-text-2" id="text-org6583f71">
+<div id="outline-container-orgca22f7d" class="outline-2">
+<h2 id="orgca22f7d">In Emacs org mode, type <code>C-c C-z</code> to enter a timestamped note under the current heading.</h2>
+<div class="outline-text-2" id="text-orgca22f7d">
 <pre class="example">
 Cite: [[info:org#Drawers]]
 </pre>
@@ -604,9 +696,9 @@ Cite: [[info:org#Drawers]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgb701414" class="outline-2">
-<h2 id="orgb701414">Lots of ZNC config tips</h2>
-<div class="outline-text-2" id="text-orgb701414">
+<div id="outline-container-org8754d7b" class="outline-2">
+<h2 id="org8754d7b">Lots of ZNC config tips</h2>
+<div class="outline-text-2" id="text-org8754d7b">
 <pre class="example">
 Cite: [[https://connor.zip/posts/2023-09-05-znc]]
 </pre>
@@ -615,9 +707,9 @@ Cite: [[https://connor.zip/posts/2023-09-05-znc]]
 </p>
 </div>
 </div>
-<div id="outline-container-org657ca2e" class="outline-2">
-<h2 id="org657ca2e">Default macOS shortcuts can be extended natively to enhance Emacs equivalence.</h2>
-<div class="outline-text-2" id="text-org657ca2e">
+<div id="outline-container-orgbf18a07" class="outline-2">
+<h2 id="orgbf18a07">Default macOS shortcuts can be extended natively to enhance Emacs equivalence.</h2>
+<div class="outline-text-2" id="text-orgbf18a07">
 <pre class="example">
 Cite: [[https://mastodon.social/@amake/116185038353841251]]
 </pre>
@@ -626,9 +718,9 @@ Cite: [[https://mastodon.social/@amake/116185038353841251]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgdbb650f" class="outline-2">
-<h2 id="orgdbb650f">In Emacs, magit is superfluous. VC is the way.</h2>
-<div class="outline-text-2" id="text-orgdbb650f">
+<div id="outline-container-orgaeb7f4a" class="outline-2">
+<h2 id="orgaeb7f4a">In Emacs, magit is superfluous. VC is the way.</h2>
+<div class="outline-text-2" id="text-orgaeb7f4a">
 <pre class="example">
 Cite: [[info:emacs#Version Control]]
 </pre>
@@ -637,9 +729,9 @@ Cite: [[info:emacs#Version Control]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgdfb4374" class="outline-2">
-<h2 id="orgdfb4374">password-store is somewhat preferred by the Guix community.</h2>
-<div class="outline-text-2" id="text-orgdfb4374">
+<div id="outline-container-org119c0a9" class="outline-2">
+<h2 id="org119c0a9">password-store is somewhat preferred by the Guix community.</h2>
+<div class="outline-text-2" id="text-org119c0a9">
 <pre class="example">
 Cite: [[https://guix.gnu.org/manual/1.5.0/en/html_node/VPN-Services.html]]
 Cite: [[https://www.freakingpenguin.com/blog/guix-tricks-managing-secrets-using-password-store-and-run-time-decryption-scripts.html]]
@@ -649,9 +741,9 @@ Cite: [[https://www.freakingpenguin.com/blog/guix-tricks-managing-secrets-using-
 </p>
 </div>
 </div>
-<div id="outline-container-org4c77a72" class="outline-2">
-<h2 id="org4c77a72">password-store, or pass, is the unix password manager I have been looking for.</h2>
-<div class="outline-text-2" id="text-org4c77a72">
+<div id="outline-container-orgd6c8abe" class="outline-2">
+<h2 id="orgd6c8abe">password-store, or pass, is the unix password manager I have been looking for.</h2>
+<div class="outline-text-2" id="text-orgd6c8abe">
 <pre class="example">
 Cite: [[https://www.passwordstore.org]]
 Cite: [[https://github.com/tadfisher/pass-otp]]
@@ -661,9 +753,9 @@ Cite: [[https://github.com/tadfisher/pass-otp]]
 </p>
 </div>
 </div>
-<div id="outline-container-org5c0dec3" class="outline-2">
-<h2 id="org5c0dec3">Lots of good eshell tips for any time I want to dig in and do something more advanced</h2>
-<div class="outline-text-2" id="text-org5c0dec3">
+<div id="outline-container-orgec4a1d6" class="outline-2">
+<h2 id="orgec4a1d6">Lots of good eshell tips for any time I want to dig in and do something more advanced</h2>
+<div class="outline-text-2" id="text-orgec4a1d6">
 <pre class="example">
 Cite: [[https://www.howardism.org/Technical/Emacs/eshell-fun.html]]
 </pre>
@@ -672,9 +764,9 @@ Cite: [[https://www.howardism.org/Technical/Emacs/eshell-fun.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgd5bfa37" class="outline-2">
-<h2 id="orgd5bfa37">In Emacs use-package, you can pin packages to specific archives.</h2>
-<div class="outline-text-2" id="text-orgd5bfa37">
+<div id="outline-container-org0b4e709" class="outline-2">
+<h2 id="org0b4e709">In Emacs use-package, you can pin packages to specific archives.</h2>
+<div class="outline-text-2" id="text-org0b4e709">
 <pre class="example">
 Cite: [[info:use-package#Pinning packages]]
 </pre>
@@ -683,9 +775,9 @@ Cite: [[info:use-package#Pinning packages]]
 </p>
 </div>
 </div>
-<div id="outline-container-org4f2e8e7" class="outline-2">
-<h2 id="org4f2e8e7">There are guides for installing Guix on Raspberry Pi</h2>
-<div class="outline-text-2" id="text-org4f2e8e7">
+<div id="outline-container-org0d3286d" class="outline-2">
+<h2 id="org0d3286d">There are guides for installing Guix on Raspberry Pi</h2>
+<div class="outline-text-2" id="text-org0d3286d">
 <pre class="example">
 Cite: [[https://me.literatelisp.eu/guix-system-on-a-raspberry-pi-3b.html]]
 </pre>
@@ -694,9 +786,9 @@ Cite: [[https://me.literatelisp.eu/guix-system-on-a-raspberry-pi-3b.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgc25d4ec" class="outline-2">
-<h2 id="orgc25d4ec">A great Emacs ERC and ZNC walk-through</h2>
-<div class="outline-text-2" id="text-orgc25d4ec">
+<div id="outline-container-org4cfae2d" class="outline-2">
+<h2 id="org4cfae2d">A great Emacs ERC and ZNC walk-through</h2>
+<div class="outline-text-2" id="text-org4cfae2d">
 <pre class="example">
 Cite: [[https://notes.secretsauce.net/notes/2014/10/08_znc-and-erc.html]]
 </pre>
@@ -705,9 +797,9 @@ Cite: [[https://notes.secretsauce.net/notes/2014/10/08_znc-and-erc.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org2da149e" class="outline-2">
-<h2 id="org2da149e">In Guile, you can modify the load path programmatically with <code>(add-to-load-path &lt;string&gt;)</code>.</h2>
-<div class="outline-text-2" id="text-org2da149e">
+<div id="outline-container-org76d90fc" class="outline-2">
+<h2 id="org76d90fc">In Guile, you can modify the load path programmatically with <code>(add-to-load-path &lt;string&gt;)</code>.</h2>
+<div class="outline-text-2" id="text-org76d90fc">
 <pre class="example">
 Cite: [[info:guile#Load Paths]]
 Cite: [[https://trop.in/blog/how-to-set-up-guile-load-path]]
@@ -717,9 +809,9 @@ Cite: [[https://trop.in/blog/how-to-set-up-guile-load-path]]
 </p>
 </div>
 </div>
-<div id="outline-container-orge1e82d3" class="outline-2">
-<h2 id="orge1e82d3">Guile Hoot has brought the REPL to the browser!</h2>
-<div class="outline-text-2" id="text-orge1e82d3">
+<div id="outline-container-org0112535" class="outline-2">
+<h2 id="org0112535">Guile Hoot has brought the REPL to the browser!</h2>
+<div class="outline-text-2" id="text-org0112535">
 <pre class="example">
 Cite: [[https://spritely.institute/news/hoot-0-8-0-released.html]]
 </pre>
@@ -728,9 +820,9 @@ Cite: [[https://spritely.institute/news/hoot-0-8-0-released.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org6f06914" class="outline-2">
-<h2 id="org6f06914">In Guix System, the root Guix profile is generally not used</h2>
-<div class="outline-text-2" id="text-org6f06914">
+<div id="outline-container-orgada6dfb" class="outline-2">
+<h2 id="orgada6dfb">In Guix System, the root Guix profile is generally not used</h2>
+<div class="outline-text-2" id="text-orgada6dfb">
 <pre class="example">
 Cite: [[https://lists.gnu.org/archive/html/help-guix/2024-08/msg00063.html]]
 </pre>
@@ -739,9 +831,9 @@ Cite: [[https://lists.gnu.org/archive/html/help-guix/2024-08/msg00063.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org400fe97" class="outline-2">
-<h2 id="org400fe97">For Guix, some tips for layering profiles</h2>
-<div class="outline-text-2" id="text-org400fe97">
+<div id="outline-container-org72baa99" class="outline-2">
+<h2 id="org72baa99">For Guix, some tips for layering profiles</h2>
+<div class="outline-text-2" id="text-org72baa99">
 <pre class="example">
 Cite: [[https://www.futurile.net/2022/12/23/guix-profiles-layering-at-login/]]
 </pre>
@@ -750,9 +842,9 @@ Cite: [[https://www.futurile.net/2022/12/23/guix-profiles-layering-at-login/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgff8e722" class="outline-2">
-<h2 id="orgff8e722">In Bash, run <code>who</code> to see all active sessions.</h2>
-<div class="outline-text-2" id="text-orgff8e722">
+<div id="outline-container-org597412d" class="outline-2">
+<h2 id="org597412d">In Bash, run <code>who</code> to see all active sessions.</h2>
+<div class="outline-text-2" id="text-org597412d">
 <pre class="example">
 Cite: [[shell:man who]]
 </pre>
@@ -761,17 +853,17 @@ Cite: [[shell:man who]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgfdb85ef" class="outline-2">
-<h2 id="orgfdb85ef">In Guix, run <code>sudo -i guix pull</code> to update the root guix profile.</h2>
-<div class="outline-text-2" id="text-orgfdb85ef">
+<div id="outline-container-org641c586" class="outline-2">
+<h2 id="org641c586">In Guix, run <code>sudo -i guix pull</code> to update the root guix profile.</h2>
+<div class="outline-text-2" id="text-org641c586">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2026-02-24 Tue]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-orgd2c016d" class="outline-2">
-<h2 id="orgd2c016d">In Emacs evil mode, <code>\</code> executes the next binding in <code>emacs-state</code>!</h2>
-<div class="outline-text-2" id="text-orgd2c016d">
+<div id="outline-container-orgaabc92a" class="outline-2">
+<h2 id="orgaabc92a">In Emacs evil mode, <code>\</code> executes the next binding in <code>emacs-state</code>!</h2>
+<div class="outline-text-2" id="text-orgaabc92a">
 <pre class="example">
 Cite: [[help:evil-execute-in-emacs-state]]
 </pre>
@@ -780,9 +872,9 @@ Cite: [[help:evil-execute-in-emacs-state]]
 </p>
 </div>
 </div>
-<div id="outline-container-org7094d5c" class="outline-2">
-<h2 id="org7094d5c">The first half of the prior article</h2>
-<div class="outline-text-2" id="text-org7094d5c">
+<div id="outline-container-org6b4ff74" class="outline-2">
+<h2 id="org6b4ff74">The first half of the prior article</h2>
+<div class="outline-text-2" id="text-org6b4ff74">
 <pre class="example">
 Cite: [[https://lambdanil.github.io/Guix_Dive/]]
 </pre>
@@ -791,9 +883,9 @@ Cite: [[https://lambdanil.github.io/Guix_Dive/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgeb6ee00" class="outline-2">
-<h2 id="orgeb6ee00">For Guix, some really interesting inspections of services</h2>
-<div class="outline-text-2" id="text-orgeb6ee00">
+<div id="outline-container-org0014ebb" class="outline-2">
+<h2 id="org0014ebb">For Guix, some really interesting inspections of services</h2>
+<div class="outline-text-2" id="text-org0014ebb">
 <pre class="example">
 Cite: [[https://lambdanil.github.io/Guix_Dive_2/]]
 </pre>
@@ -802,9 +894,9 @@ Cite: [[https://lambdanil.github.io/Guix_Dive_2/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org0272025" class="outline-2">
-<h2 id="org0272025">Random Guix tips</h2>
-<div class="outline-text-2" id="text-org0272025">
+<div id="outline-container-org3616b88" class="outline-2">
+<h2 id="org3616b88">Random Guix tips</h2>
+<div class="outline-text-2" id="text-org3616b88">
 <pre class="example">
 Cite: [[https://lambdanil.github.io/Guix_Mistakes/]]
 </pre>
@@ -813,9 +905,9 @@ Cite: [[https://lambdanil.github.io/Guix_Mistakes/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org722cbc6" class="outline-2">
-<h2 id="org722cbc6">For PDFs, an in-depth explanation of tagged PDFs</h2>
-<div class="outline-text-2" id="text-org722cbc6">
+<div id="outline-container-orgd496785" class="outline-2">
+<h2 id="orgd496785">For PDFs, an in-depth explanation of tagged PDFs</h2>
+<div class="outline-text-2" id="text-orgd496785">
 <pre class="example">
 Cite: [[https://www.overleaf.com/learn/latex/An_introduction_to_tagged_PDF_files%3A_internals_and_the_challenges_of_accessibility]]
 </pre>
@@ -824,9 +916,9 @@ Cite: [[https://www.overleaf.com/learn/latex/An_introduction_to_tagged_PDF_files
 </p>
 </div>
 </div>
-<div id="outline-container-org0a42f62" class="outline-2">
-<h2 id="org0a42f62">Another piece about secrets in Guix</h2>
-<div class="outline-text-2" id="text-org0a42f62">
+<div id="outline-container-org43703f3" class="outline-2">
+<h2 id="org43703f3">Another piece about secrets in Guix</h2>
+<div class="outline-text-2" id="text-org43703f3">
 <pre class="example">
 Cite: [[https://compress.cafe/blog/guix_home_secrets.html]]
 </pre>
@@ -835,9 +927,9 @@ Cite: [[https://compress.cafe/blog/guix_home_secrets.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org54c8c95" class="outline-2">
-<h2 id="org54c8c95">GPG (GnuPG) cheatsheet</h2>
-<div class="outline-text-2" id="text-org54c8c95">
+<div id="outline-container-org6d6a61c" class="outline-2">
+<h2 id="org6d6a61c">GPG (GnuPG) cheatsheet</h2>
+<div class="outline-text-2" id="text-org6d6a61c">
 <pre class="example">
 Cite: [[https://cheatsheets.chaospixel.com/gnupg/]]
 </pre>
@@ -846,9 +938,9 @@ Cite: [[https://cheatsheets.chaospixel.com/gnupg/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org3e6f966" class="outline-2">
-<h2 id="org3e6f966">For Guix, a starting point for a minimal EXWM config</h2>
-<div class="outline-text-2" id="text-org3e6f966">
+<div id="outline-container-orga062e3a" class="outline-2">
+<h2 id="orga062e3a">For Guix, a starting point for a minimal EXWM config</h2>
+<div class="outline-text-2" id="text-orga062e3a">
 <pre class="example">
 Cite: [[https://codeberg.org/tuff-engin/GuixConfigurationSkeleton]]
 </pre>
@@ -857,9 +949,9 @@ Cite: [[https://codeberg.org/tuff-engin/GuixConfigurationSkeleton]]
 </p>
 </div>
 </div>
-<div id="outline-container-org999ad6b" class="outline-2">
-<h2 id="org999ad6b">A great index of Guix resources</h2>
-<div class="outline-text-2" id="text-org999ad6b">
+<div id="outline-container-orgb44d6c0" class="outline-2">
+<h2 id="orgb44d6c0">A great index of Guix resources</h2>
+<div class="outline-text-2" id="text-orgb44d6c0">
 <pre class="example">
 Cite: [[https://github.com/franzos/awesome-guix]]
 </pre>
@@ -868,17 +960,17 @@ Cite: [[https://github.com/franzos/awesome-guix]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgf867792" class="outline-2">
-<h2 id="orgf867792">macOS has a great native internet speed test CLI: <code>networkquality -v</code>.</h2>
-<div class="outline-text-2" id="text-orgf867792">
+<div id="outline-container-org0699fee" class="outline-2">
+<h2 id="org0699fee">macOS has a great native internet speed test CLI: <code>networkquality -v</code>.</h2>
+<div class="outline-text-2" id="text-org0699fee">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2026-02-05 Thu]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-org7ded975" class="outline-2">
-<h2 id="org7ded975">In Bash, use <code>qpdf input.pdf --overlay watermark.pdf --to=1 -- --replace-input</code> to add a watermark to the first page of a PDF.</h2>
-<div class="outline-text-2" id="text-org7ded975">
+<div id="outline-container-orgb1af72f" class="outline-2">
+<h2 id="orgb1af72f">In Bash, use <code>qpdf input.pdf --overlay watermark.pdf --to=1 -- --replace-input</code> to add a watermark to the first page of a PDF.</h2>
+<div class="outline-text-2" id="text-orgb1af72f">
 <pre class="example">
 Cite: [[shell:man qpdf]]
 </pre>
@@ -887,9 +979,9 @@ Cite: [[shell:man qpdf]]
 </p>
 </div>
 </div>
-<div id="outline-container-org99102f7" class="outline-2">
-<h2 id="org99102f7">WeasyPrint v67 is a significant improvement. It might be the next level in FOSS HTML-&gt;PDF.</h2>
-<div class="outline-text-2" id="text-org99102f7">
+<div id="outline-container-org9c899e4" class="outline-2">
+<h2 id="org9c899e4">WeasyPrint v67 is a significant improvement. It might be the next level in FOSS HTML-&gt;PDF.</h2>
+<div class="outline-text-2" id="text-org9c899e4">
 <pre class="example">
 Cite: [[https://www.courtbouillon.org/blog/00060-weasyprint-67/]]
 </pre>
@@ -898,9 +990,9 @@ Cite: [[https://www.courtbouillon.org/blog/00060-weasyprint-67/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgf6388d9" class="outline-2">
-<h2 id="orgf6388d9">In Emacs, some tips on setting shell environment variables</h2>
-<div class="outline-text-2" id="text-orgf6388d9">
+<div id="outline-container-orgaabffe6" class="outline-2">
+<h2 id="orgaabffe6">In Emacs, some tips on setting shell environment variables</h2>
+<div class="outline-text-2" id="text-orgaabffe6">
 <pre class="example">
 Cite: [[http://xahlee.info/emacs/emacs/emacs_env_var_paths.html]]
 </pre>
@@ -909,17 +1001,17 @@ Cite: [[http://xahlee.info/emacs/emacs/emacs_env_var_paths.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org30bea2c" class="outline-2">
-<h2 id="org30bea2c">In Emacs, <code>C-u M-s M-w</code> will execute a web search in a new eww buffer.</h2>
-<div class="outline-text-2" id="text-org30bea2c">
+<div id="outline-container-org3b9c11f" class="outline-2">
+<h2 id="org3b9c11f">In Emacs, <code>C-u M-s M-w</code> will execute a web search in a new eww buffer.</h2>
+<div class="outline-text-2" id="text-org3b9c11f">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2026-02-02 Mon]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-orgcdbec52" class="outline-2">
-<h2 id="orgcdbec52">In Emacs, search the web natively in eww with <code>M-s M-w</code>.</h2>
-<div class="outline-text-2" id="text-orgcdbec52">
+<div id="outline-container-orgedc4b81" class="outline-2">
+<h2 id="orgedc4b81">In Emacs, search the web natively in eww with <code>M-s M-w</code>.</h2>
+<div class="outline-text-2" id="text-orgedc4b81">
 <pre class="example">
 Cite: [[info:emacs#Word Search]]
 </pre>
@@ -928,9 +1020,9 @@ Cite: [[info:emacs#Word Search]]
 </p>
 </div>
 </div>
-<div id="outline-container-org1fed6ec" class="outline-2">
-<h2 id="org1fed6ec">Poppler might be the most robust FOSS PDF rendering library.</h2>
-<div class="outline-text-2" id="text-org1fed6ec">
+<div id="outline-container-org9275404" class="outline-2">
+<h2 id="org9275404">Poppler might be the most robust FOSS PDF rendering library.</h2>
+<div class="outline-text-2" id="text-org9275404">
 <pre class="example">
 Cite: [[https://poppler.freedesktop.org]]
 </pre>
@@ -939,9 +1031,9 @@ Cite: [[https://poppler.freedesktop.org]]
 </p>
 </div>
 </div>
-<div id="outline-container-org7c3d8ff" class="outline-2">
-<h2 id="org7c3d8ff">xpdf is a PDF reader with lots of useful utilities.</h2>
-<div class="outline-text-2" id="text-org7c3d8ff">
+<div id="outline-container-orgbbe114e" class="outline-2">
+<h2 id="orgbbe114e">xpdf is a PDF reader with lots of useful utilities.</h2>
+<div class="outline-text-2" id="text-orgbbe114e">
 <pre class="example">
 Cite: [[https://www.xpdfreader.com/support.html]]
 </pre>
@@ -950,9 +1042,9 @@ Cite: [[https://www.xpdfreader.com/support.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org8cc1c0c" class="outline-2">
-<h2 id="org8cc1c0c">A book on MuPDF with great insights on PDF mechanics</h2>
-<div class="outline-text-2" id="text-org8cc1c0c">
+<div id="outline-container-orgd38d0b3" class="outline-2">
+<h2 id="orgd38d0b3">A book on MuPDF with great insights on PDF mechanics</h2>
+<div class="outline-text-2" id="text-orgd38d0b3">
 <pre class="example">
 Cite: [[https://casper.mupdf.com/docs/mupdf_explored.pdf]]
 </pre>
@@ -961,9 +1053,9 @@ Cite: [[https://casper.mupdf.com/docs/mupdf_explored.pdf]]
 </p>
 </div>
 </div>
-<div id="outline-container-orga54d8dc" class="outline-2">
-<h2 id="orga54d8dc">MuPDF seems to be a powerful PDF interpreter library. It is dual licensed under the GPL.</h2>
-<div class="outline-text-2" id="text-orga54d8dc">
+<div id="outline-container-orgd78d5aa" class="outline-2">
+<h2 id="orgd78d5aa">MuPDF seems to be a powerful PDF interpreter library. It is dual licensed under the GPL.</h2>
+<div class="outline-text-2" id="text-orgd78d5aa">
 <pre class="example">
 Cite: [[https://mupdf.com]]
 </pre>
@@ -972,9 +1064,9 @@ Cite: [[https://mupdf.com]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgc7279e1" class="outline-2">
-<h2 id="orgc7279e1">In Bash, use Poppler to easily extract images from a PDF: <code>pdfimages -all &lt;input.pdf&gt; &lt;output-dir&gt;</code></h2>
-<div class="outline-text-2" id="text-orgc7279e1">
+<div id="outline-container-orgaafec9b" class="outline-2">
+<h2 id="orgaafec9b">In Bash, use Poppler to easily extract images from a PDF: <code>pdfimages -all &lt;input.pdf&gt; &lt;output-dir&gt;</code></h2>
+<div class="outline-text-2" id="text-orgaafec9b">
 <pre class="example">
 Cite: [[shell:man pdfimages]]
 </pre>
@@ -983,9 +1075,9 @@ Cite: [[shell:man pdfimages]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgbeb45a8" class="outline-2">
-<h2 id="orgbeb45a8">On macOS, use <code>sips -g profile &lt;input-image&gt;</code> to view the name of the image color profile.</h2>
-<div class="outline-text-2" id="text-orgbeb45a8">
+<div id="outline-container-org3eb627a" class="outline-2">
+<h2 id="org3eb627a">On macOS, use <code>sips -g profile &lt;input-image&gt;</code> to view the name of the image color profile.</h2>
+<div class="outline-text-2" id="text-org3eb627a">
 <pre class="example">
 Cite: [[shell:man sips]]
 </pre>
@@ -994,9 +1086,9 @@ Cite: [[shell:man sips]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgbd18e71" class="outline-2">
-<h2 id="orgbd18e71">In Emacs, an interesting Discord client.</h2>
-<div class="outline-text-2" id="text-orgbd18e71">
+<div id="outline-container-org8c354b6" class="outline-2">
+<h2 id="org8c354b6">In Emacs, an interesting Discord client.</h2>
+<div class="outline-text-2" id="text-org8c354b6">
 <pre class="example">
 Cite: [[https://aliquote.org/post/discord-bitlbee/]]
 </pre>
@@ -1005,9 +1097,9 @@ Cite: [[https://aliquote.org/post/discord-bitlbee/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org0511f4b" class="outline-2">
-<h2 id="org0511f4b">In Emacs, you can run a one-off command in eshell from anywhere with <code>M-x eshell-command</code>.</h2>
-<div class="outline-text-2" id="text-org0511f4b">
+<div id="outline-container-org16a540c" class="outline-2">
+<h2 id="org16a540c">In Emacs, you can run a one-off command in eshell from anywhere with <code>M-x eshell-command</code>.</h2>
+<div class="outline-text-2" id="text-org16a540c">
 <pre class="example">
 Cite: [[info:eshell#One-Off Commands]]
 </pre>
@@ -1016,9 +1108,9 @@ Cite: [[info:eshell#One-Off Commands]]
 </p>
 </div>
 </div>
-<div id="outline-container-org73b1c65" class="outline-2">
-<h2 id="org73b1c65">In Emacs, <code>C-x p e</code> starts eshell in the working directory.</h2>
-<div class="outline-text-2" id="text-org73b1c65">
+<div id="outline-container-orgd68d5b9" class="outline-2">
+<h2 id="orgd68d5b9">In Emacs, <code>C-x p e</code> starts eshell in the working directory.</h2>
+<div class="outline-text-2" id="text-orgd68d5b9">
 <pre class="example">
 Cite: [[info:emacs#Project File Commands]]
 </pre>
@@ -1027,9 +1119,9 @@ Cite: [[info:emacs#Project File Commands]]
 </p>
 </div>
 </div>
-<div id="outline-container-org0567469" class="outline-2">
-<h2 id="org0567469">In Bash scripts, beginning your file with <code>set -euo pipefail</code> is a fairly clean way to debug errors.</h2>
-<div class="outline-text-2" id="text-org0567469">
+<div id="outline-container-org998061c" class="outline-2">
+<h2 id="org998061c">In Bash scripts, beginning your file with <code>set -euo pipefail</code> is a fairly clean way to debug errors.</h2>
+<div class="outline-text-2" id="text-org998061c">
 <pre class="example">
 Cite: [[https://gist.github.com/mohanpedala/1e2ff5661761d3abd0385e8223e16425]]
 </pre>
@@ -1038,9 +1130,9 @@ Cite: [[https://gist.github.com/mohanpedala/1e2ff5661761d3abd0385e8223e16425]]
 </p>
 </div>
 </div>
-<div id="outline-container-org27a5177" class="outline-2">
-<h2 id="org27a5177">A good introduction to modular Bash scripting</h2>
-<div class="outline-text-2" id="text-org27a5177">
+<div id="outline-container-org0485f40" class="outline-2">
+<h2 id="org0485f40">A good introduction to modular Bash scripting</h2>
+<div class="outline-text-2" id="text-org0485f40">
 <pre class="example">
 Cite: [[https://www.funwithlinux.net/bash-scripting/breaking-down-complex-problems-modular-design-in-bash-scripts/#1-what-is-modular-design-in-bash]]
 </pre>
@@ -1049,9 +1141,9 @@ Cite: [[https://www.funwithlinux.net/bash-scripting/breaking-down-complex-proble
 </p>
 </div>
 </div>
-<div id="outline-container-org40cdc10" class="outline-2">
-<h2 id="org40cdc10">In Bash, use <code>ps aux -c</code> to list auxilary processes by command name.</h2>
-<div class="outline-text-2" id="text-org40cdc10">
+<div id="outline-container-orgda6d3c0" class="outline-2">
+<h2 id="orgda6d3c0">In Bash, use <code>ps aux -c</code> to list auxilary processes by command name.</h2>
+<div class="outline-text-2" id="text-orgda6d3c0">
 <pre class="example">
 Cite: [[shell:man ps]]
 </pre>
@@ -1060,9 +1152,9 @@ Cite: [[shell:man ps]]
 </p>
 </div>
 </div>
-<div id="outline-container-org777bd4e" class="outline-2">
-<h2 id="org777bd4e">In Bash, a great starting point for multiline print statements</h2>
-<div class="outline-text-2" id="text-org777bd4e">
+<div id="outline-container-org91605bd" class="outline-2">
+<h2 id="org91605bd">In Bash, a great starting point for multiline print statements</h2>
+<div class="outline-text-2" id="text-org91605bd">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/57839821/28799158]]
 </pre>
@@ -1071,9 +1163,9 @@ Cite: [[https://stackoverflow.com/a/57839821/28799158]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgd4d5700" class="outline-2">
-<h2 id="orgd4d5700">Some common Bash parameter expansions</h2>
-<div class="outline-text-2" id="text-orgd4d5700">
+<div id="outline-container-org2a2cc81" class="outline-2">
+<h2 id="org2a2cc81">Some common Bash parameter expansions</h2>
+<div class="outline-text-2" id="text-org2a2cc81">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/3362952]]
 </pre>
@@ -1082,9 +1174,9 @@ Cite: [[https://stackoverflow.com/a/3362952]]
 </p>
 </div>
 </div>
-<div id="outline-container-org5eb5e3c" class="outline-2">
-<h2 id="org5eb5e3c">In Emacs magit, <code>C-u S</code> stages <i>all</i> files, even untracked (except for ignored).</h2>
-<div class="outline-text-2" id="text-org5eb5e3c">
+<div id="outline-container-org4c79863" class="outline-2">
+<h2 id="org4c79863">In Emacs magit, <code>C-u S</code> stages <i>all</i> files, even untracked (except for ignored).</h2>
+<div class="outline-text-2" id="text-org4c79863">
 <pre class="example">
 Cite: [[help:magit-stage-modified]]
 </pre>
@@ -1093,9 +1185,9 @@ Cite: [[help:magit-stage-modified]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgf33bec1" class="outline-2">
-<h2 id="orgf33bec1">pdfseparate and pdfunite are handy utilities for splitting and joining PDFs via the command line.</h2>
-<div class="outline-text-2" id="text-orgf33bec1">
+<div id="outline-container-orgcc54571" class="outline-2">
+<h2 id="orgcc54571">pdfseparate and pdfunite are handy utilities for splitting and joining PDFs via the command line.</h2>
+<div class="outline-text-2" id="text-orgcc54571">
 <pre class="example">
 Cite: [[https://superuser.com/a/1034450]]
 </pre>
@@ -1104,9 +1196,9 @@ Cite: [[https://superuser.com/a/1034450]]
 </p>
 </div>
 </div>
-<div id="outline-container-org93c7848" class="outline-2">
-<h2 id="org93c7848">In Emacs eww, <code>R</code> enables eww's reader mode, <i>eww-readable</i>.</h2>
-<div class="outline-text-2" id="text-org93c7848">
+<div id="outline-container-orgeed859a" class="outline-2">
+<h2 id="orgeed859a">In Emacs eww, <code>R</code> enables eww's reader mode, <i>eww-readable</i>.</h2>
+<div class="outline-text-2" id="text-orgeed859a">
 <pre class="example">
 Cite: [[help:eww-readable]]
 </pre>
@@ -1115,9 +1207,9 @@ Cite: [[help:eww-readable]]
 </p>
 </div>
 </div>
-<div id="outline-container-org52d1839" class="outline-2">
-<h2 id="org52d1839">In Emacs, <code>M-: (setq VAR VALUE)</code> is indeed the quickest way to set a non-customizable variable.</h2>
-<div class="outline-text-2" id="text-org52d1839">
+<div id="outline-container-orgca025ce" class="outline-2">
+<h2 id="orgca025ce">In Emacs, <code>M-: (setq VAR VALUE)</code> is indeed the quickest way to set a non-customizable variable.</h2>
+<div class="outline-text-2" id="text-orgca025ce">
 <pre class="example">
 Cite: [[info:emacs#Examining]]
 </pre>
@@ -1126,9 +1218,9 @@ Cite: [[info:emacs#Examining]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgee3143e" class="outline-2">
-<h2 id="orgee3143e"><i>Mastering Emacs</i> has some good tips for dealing with secrets in Emacs.</h2>
-<div class="outline-text-2" id="text-orgee3143e">
+<div id="outline-container-orgb086c56" class="outline-2">
+<h2 id="orgb086c56"><i>Mastering Emacs</i> has some good tips for dealing with secrets in Emacs.</h2>
+<div class="outline-text-2" id="text-orgb086c56">
 <pre class="example">
 Cite: [[https://www.masteringemacs.org/article/keeping-secrets-in-emacs-gnupg-auth-sources]]
 </pre>
@@ -1137,9 +1229,9 @@ Cite: [[https://www.masteringemacs.org/article/keeping-secrets-in-emacs-gnupg-au
 </p>
 </div>
 </div>
-<div id="outline-container-org69150af" class="outline-2">
-<h2 id="org69150af"><i>Pass</i> is a very vanilla Unix password manager.</h2>
-<div class="outline-text-2" id="text-org69150af">
+<div id="outline-container-orge3e4c88" class="outline-2">
+<h2 id="orge3e4c88"><i>Pass</i> is a very vanilla Unix password manager.</h2>
+<div class="outline-text-2" id="text-orge3e4c88">
 <pre class="example">
 Cite: [[https://www.passwordstore.org]]
 </pre>
@@ -1148,9 +1240,9 @@ Cite: [[https://www.passwordstore.org]]
 </p>
 </div>
 </div>
-<div id="outline-container-org3a660ec" class="outline-2">
-<h2 id="org3a660ec"><i>Shroud</i> is a simple GnuPG-based password manager written in Guile Scheme by David Thompson.</h2>
-<div class="outline-text-2" id="text-org3a660ec">
+<div id="outline-container-org30ae199" class="outline-2">
+<h2 id="org30ae199"><i>Shroud</i> is a simple GnuPG-based password manager written in Guile Scheme by David Thompson.</h2>
+<div class="outline-text-2" id="text-org30ae199">
 <pre class="example">
 Cite: [[https://dthompson.us/projects/shroud.html]]
 </pre>
@@ -1159,17 +1251,17 @@ Cite: [[https://dthompson.us/projects/shroud.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org52defce" class="outline-2">
-<h2 id="org52defce">On macOS, <code>diskutil eject</code> accepts <code>NAME</code> from <code>diskutil list</code>.</h2>
-<div class="outline-text-2" id="text-org52defce">
+<div id="outline-container-org419fc8e" class="outline-2">
+<h2 id="org419fc8e">On macOS, <code>diskutil eject</code> accepts <code>NAME</code> from <code>diskutil list</code>.</h2>
+<div class="outline-text-2" id="text-org419fc8e">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2026-01-19 Mon]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-org3675e08" class="outline-2">
-<h2 id="org3675e08">ProseMirror appears to be a robust WYSIWYG collaborative HTML editor written in TypeScript.</h2>
-<div class="outline-text-2" id="text-org3675e08">
+<div id="outline-container-orgf3e3b30" class="outline-2">
+<h2 id="orgf3e3b30">ProseMirror appears to be a robust WYSIWYG collaborative HTML editor written in TypeScript.</h2>
+<div class="outline-text-2" id="text-orgf3e3b30">
 <pre class="example">
 Cite: [[https://github.com/prosemirror]]
 </pre>
@@ -1178,9 +1270,9 @@ Cite: [[https://github.com/prosemirror]]
 </p>
 </div>
 </div>
-<div id="outline-container-org7fd74a0" class="outline-2">
-<h2 id="org7fd74a0">A superior alternative to Adobe's own InDesign API documentation.</h2>
-<div class="outline-text-2" id="text-org7fd74a0">
+<div id="outline-container-org29e2909" class="outline-2">
+<h2 id="org29e2909">A superior alternative to Adobe's own InDesign API documentation.</h2>
+<div class="outline-text-2" id="text-org29e2909">
 <pre class="example">
 Cite: [[https://www.indesignjs.de/extendscriptAPI/indesign-latest/index.html]]
 </pre>
@@ -1189,17 +1281,17 @@ Cite: [[https://www.indesignjs.de/extendscriptAPI/indesign-latest/index.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgd1d7bec" class="outline-2">
-<h2 id="orgd1d7bec">A convenient way to kill an app via bash: <code>pkill -i "app-name"</code></h2>
-<div class="outline-text-2" id="text-orgd1d7bec">
+<div id="outline-container-orgdb38167" class="outline-2">
+<h2 id="orgdb38167">A convenient way to kill an app via bash: <code>pkill -i "app-name"</code></h2>
+<div class="outline-text-2" id="text-orgdb38167">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2026-01-08 Thu]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-org2451735" class="outline-2">
-<h2 id="org2451735">Another description of PDF syntax</h2>
-<div class="outline-text-2" id="text-org2451735">
+<div id="outline-container-org4f96f54" class="outline-2">
+<h2 id="org4f96f54">Another description of PDF syntax</h2>
+<div class="outline-text-2" id="text-org4f96f54">
 <pre class="example">
 Cite: [[https://dev.to/zubinajmera/pdf-syntax-101-a-simple-guide-to-pdf-object-types-and-how-they-work-1mmc]]
 </pre>
@@ -1208,9 +1300,9 @@ Cite: [[https://dev.to/zubinajmera/pdf-syntax-101-a-simple-guide-to-pdf-object-t
 </p>
 </div>
 </div>
-<div id="outline-container-orge2e0f0c" class="outline-2">
-<h2 id="orge2e0f0c">More info on how PDFs work</h2>
-<div class="outline-text-2" id="text-orge2e0f0c">
+<div id="outline-container-orgce8cc36" class="outline-2">
+<h2 id="orgce8cc36">More info on how PDFs work</h2>
+<div class="outline-text-2" id="text-orgce8cc36">
 <pre class="example">
 Cite: [[https://dev.to/michael_lahr/why-is-pdf-so-hard-to-edit-3h3l]]
 </pre>
@@ -1219,9 +1311,9 @@ Cite: [[https://dev.to/michael_lahr/why-is-pdf-so-hard-to-edit-3h3l]]
 </p>
 </div>
 </div>
-<div id="outline-container-org1cf9df4" class="outline-2">
-<h2 id="org1cf9df4">The PDF specification</h2>
-<div class="outline-text-2" id="text-org1cf9df4">
+<div id="outline-container-org74b9a04" class="outline-2">
+<h2 id="org74b9a04">The PDF specification</h2>
+<div class="outline-text-2" id="text-org74b9a04">
 <pre class="example">
 Cite: [[https://opensource.adobe.com/dc-acrobat-sdk-docs/standards/pdfstandards/pdf/PDF32000_2008.pdf]]
 </pre>
@@ -1230,9 +1322,9 @@ Cite: [[https://opensource.adobe.com/dc-acrobat-sdk-docs/standards/pdfstandards/
 </p>
 </div>
 </div>
-<div id="outline-container-org1380165" class="outline-2">
-<h2 id="org1380165">To trim a video with ffmpeg, use <code>ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4</code>, where <code>-ss</code> is start time and <code>-t</code> is end time of clip after trim.</h2>
-<div class="outline-text-2" id="text-org1380165">
+<div id="outline-container-org0ff3796" class="outline-2">
+<h2 id="org0ff3796">To trim a video with ffmpeg, use <code>ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4</code>, where <code>-ss</code> is start time and <code>-t</code> is end time of clip after trim.</h2>
+<div class="outline-text-2" id="text-org0ff3796">
 <pre class="example">
 Cite: [[https://stackoverflow.com/questions/18444194/cutting-multimedia-files-based-on-start-and-end-time-using-ffmpeg]]
 </pre>
@@ -1241,9 +1333,9 @@ Cite: [[https://stackoverflow.com/questions/18444194/cutting-multimedia-files-ba
 </p>
 </div>
 </div>
-<div id="outline-container-org3d4c0a4" class="outline-2">
-<h2 id="org3d4c0a4">Hammerspoon is a Lua scripting engine for macOS.</h2>
-<div class="outline-text-2" id="text-org3d4c0a4">
+<div id="outline-container-org0f70093" class="outline-2">
+<h2 id="org0f70093">Hammerspoon is a Lua scripting engine for macOS.</h2>
+<div class="outline-text-2" id="text-org0f70093">
 <pre class="example">
 Cite: [[https://www.hammerspoon.org]]
 </pre>
@@ -1252,9 +1344,9 @@ Cite: [[https://www.hammerspoon.org]]
 </p>
 </div>
 </div>
-<div id="outline-container-org18ec50e" class="outline-2">
-<h2 id="org18ec50e">One of many <i>okay</i> Bash cheat sheets</h2>
-<div class="outline-text-2" id="text-org18ec50e">
+<div id="outline-container-orgd63ef99" class="outline-2">
+<h2 id="orgd63ef99">One of many <i>okay</i> Bash cheat sheets</h2>
+<div class="outline-text-2" id="text-orgd63ef99">
 <pre class="example">
 Cite: [[https://devhints.io/bash]]
 </pre>
@@ -1263,9 +1355,9 @@ Cite: [[https://devhints.io/bash]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgae7bf03" class="outline-2">
-<h2 id="orgae7bf03">Bash process substitution is cool.</h2>
-<div class="outline-text-2" id="text-orgae7bf03">
+<div id="outline-container-org3512848" class="outline-2">
+<h2 id="org3512848">Bash process substitution is cool.</h2>
+<div class="outline-text-2" id="text-org3512848">
 <pre class="example">
 Cite: [[info:bash#Process Substitution]]
 Cite: [[https://youtu.be/2A4bs40scSo?si=6ypQ9MLstPsbMK6m]]
@@ -1275,9 +1367,9 @@ Cite: [[https://youtu.be/2A4bs40scSo?si=6ypQ9MLstPsbMK6m]]
 </p>
 </div>
 </div>
-<div id="outline-container-org3345c7a" class="outline-2">
-<h2 id="org3345c7a">Concurrency is the key to fault-tolerant programming.</h2>
-<div class="outline-text-2" id="text-org3345c7a">
+<div id="outline-container-org08d9ad9" class="outline-2">
+<h2 id="org08d9ad9">Concurrency is the key to fault-tolerant programming.</h2>
+<div class="outline-text-2" id="text-org08d9ad9">
 <pre class="example">
 Cite: [[https://youtu.be/cNICGEwmXLU?si=cYkpUjRDXVvr1EO4]]
 </pre>
@@ -1286,9 +1378,9 @@ Cite: [[https://youtu.be/cNICGEwmXLU?si=cYkpUjRDXVvr1EO4]]
 </p>
 </div>
 </div>
-<div id="outline-container-org9ba3fb9" class="outline-2">
-<h2 id="org9ba3fb9">On macOS, <code>C-RET</code> opens the context menu for the cursor position.</h2>
-<div class="outline-text-2" id="text-org9ba3fb9">
+<div id="outline-container-orgd2097b2" class="outline-2">
+<h2 id="orgd2097b2">On macOS, <code>C-RET</code> opens the context menu for the cursor position.</h2>
+<div class="outline-text-2" id="text-orgd2097b2">
 <pre class="example">
 Cite: [[https://apple.stackexchange.com/a/476141/590533]]
 </pre>
@@ -1297,9 +1389,9 @@ Cite: [[https://apple.stackexchange.com/a/476141/590533]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgb821247" class="outline-2">
-<h2 id="orgb821247">In Emacs org-mode, <code>C-u C-u C-c TAB</code> expands a shrunk table.</h2>
-<div class="outline-text-2" id="text-orgb821247">
+<div id="outline-container-org598b6a7" class="outline-2">
+<h2 id="org598b6a7">In Emacs org-mode, <code>C-u C-u C-c TAB</code> expands a shrunk table.</h2>
+<div class="outline-text-2" id="text-org598b6a7">
 <pre class="example">
 Cite: [[info:org#Column Width and Alignment]]
 </pre>
@@ -1308,9 +1400,9 @@ Cite: [[info:org#Column Width and Alignment]]
 </p>
 </div>
 </div>
-<div id="outline-container-org641efc7" class="outline-2">
-<h2 id="org641efc7">In Emacs info-mode, see your history with <code>L</code>.</h2>
-<div class="outline-text-2" id="text-org641efc7">
+<div id="outline-container-org558d557" class="outline-2">
+<h2 id="org558d557">In Emacs info-mode, see your history with <code>L</code>.</h2>
+<div class="outline-text-2" id="text-org558d557">
 <pre class="example">
 Cite: [[info:emacs#Help-Int]]
 </pre>
@@ -1319,9 +1411,9 @@ Cite: [[info:emacs#Help-Int]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgc2acfef" class="outline-2">
-<h2 id="orgc2acfef">In Emacs, set the default text size in the <code>default</code> face.</h2>
-<div class="outline-text-2" id="text-orgc2acfef">
+<div id="outline-container-org66f658c" class="outline-2">
+<h2 id="org66f658c">In Emacs, set the default text size in the <code>default</code> face.</h2>
+<div class="outline-text-2" id="text-org66f658c">
 <pre class="example">
 Cite: [[info:emacs#Standard Faces]]
 </pre>
@@ -1330,9 +1422,9 @@ Cite: [[info:emacs#Standard Faces]]
 </p>
 </div>
 </div>
-<div id="outline-container-org8a86f09" class="outline-2">
-<h2 id="org8a86f09">In Emacs, single letter bindings prefixed with <code>C-c</code> are reserved for the user.</h2>
-<div class="outline-text-2" id="text-org8a86f09">
+<div id="outline-container-orgd39e1db" class="outline-2">
+<h2 id="orgd39e1db">In Emacs, single letter bindings prefixed with <code>C-c</code> are reserved for the user.</h2>
+<div class="outline-text-2" id="text-orgd39e1db">
 <pre class="example">
 Cite: [[info:emacs#Key Bindings]]
 </pre>
@@ -1341,17 +1433,17 @@ Cite: [[info:emacs#Key Bindings]]
 </p>
 </div>
 </div>
-<div id="outline-container-org458f0b2" class="outline-2">
-<h2 id="org458f0b2">Programming as a user (e.g. configuring Emacs) seems to be an entirely separate UX from development.</h2>
-<div class="outline-text-2" id="text-org458f0b2">
+<div id="outline-container-orgcc0801b" class="outline-2">
+<h2 id="orgcc0801b">Programming as a user (e.g. configuring Emacs) seems to be an entirely separate UX from development.</h2>
+<div class="outline-text-2" id="text-orgcc0801b">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2025-12-09 Tue]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-orgcb10d0c" class="outline-2">
-<h2 id="orgcb10d0c">In Emacs with evil, substitute <code>TAB</code> for <code>org-cycle</code> with <code>zO</code> and <code>zo</code>.</h2>
-<div class="outline-text-2" id="text-orgcb10d0c">
+<div id="outline-container-orgb7bc4de" class="outline-2">
+<h2 id="orgb7bc4de">In Emacs with evil, substitute <code>TAB</code> for <code>org-cycle</code> with <code>zO</code> and <code>zo</code>.</h2>
+<div class="outline-text-2" id="text-orgb7bc4de">
 <pre class="example">
 Cite: [[=C-h k zO=]]
 Cite: [[=C-h k zo=]]
@@ -1361,9 +1453,9 @@ Cite: [[=C-h k zo=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org798e1b1" class="outline-2">
-<h2 id="org798e1b1">Tutorial for crochet beanie that might work well for paracord.</h2>
-<div class="outline-text-2" id="text-org798e1b1">
+<div id="outline-container-org19dbc89" class="outline-2">
+<h2 id="org19dbc89">Tutorial for crochet beanie that might work well for paracord.</h2>
+<div class="outline-text-2" id="text-org19dbc89">
 <pre class="example">
 Cite: [[https://youtu.be/ufCgyVbmWkI?si=8mJ7e8cSm6p9XNe5]]
 </pre>
@@ -1372,9 +1464,9 @@ Cite: [[https://youtu.be/ufCgyVbmWkI?si=8mJ7e8cSm6p9XNe5]]
 </p>
 </div>
 </div>
-<div id="outline-container-org0245731" class="outline-2">
-<h2 id="org0245731">In Emacs, add prefix argument to <code>q</code> in view-mode buffers to kill the buffer instead of burying it.</h2>
-<div class="outline-text-2" id="text-org0245731">
+<div id="outline-container-orgb19d89c" class="outline-2">
+<h2 id="orgb19d89c">In Emacs, add prefix argument to <code>q</code> in view-mode buffers to kill the buffer instead of burying it.</h2>
+<div class="outline-text-2" id="text-orgb19d89c">
 <pre class="example">
 Cite: [[info:elisp#Quitting Windows]]
 </pre>
@@ -1383,17 +1475,17 @@ Cite: [[info:elisp#Quitting Windows]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgd7df2fd" class="outline-2">
-<h2 id="orgd7df2fd">In Geiser for Emacs, saving the current buffer in <code>/tmp/</code> and compiling with <code>C-c C-k</code> prior to <code>C-c C-a</code> seems to be a workaround for temp buffer name space issues.</h2>
-<div class="outline-text-2" id="text-orgd7df2fd">
+<div id="outline-container-orgf2fdd1e" class="outline-2">
+<h2 id="orgf2fdd1e">In Geiser for Emacs, saving the current buffer in <code>/tmp/</code> and compiling with <code>C-c C-k</code> prior to <code>C-c C-a</code> seems to be a workaround for temp buffer name space issues.</h2>
+<div class="outline-text-2" id="text-orgf2fdd1e">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2025-12-02 Tue]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-orge2d5149" class="outline-2">
-<h2 id="orge2d5149">In Guix, <i>soft-pinning</i> is an interesting idea.</h2>
-<div class="outline-text-2" id="text-orge2d5149">
+<div id="outline-container-orgedf08c1" class="outline-2">
+<h2 id="orgedf08c1">In Guix, <i>soft-pinning</i> is an interesting idea.</h2>
+<div class="outline-text-2" id="text-orgedf08c1">
 <pre class="example">
 Cite: [[https://www.freakingpenguin.com/blog/guix-tricks-soft-pinning-channels-in-a-channelsscm-file.html]]
 </pre>
@@ -1402,9 +1494,9 @@ Cite: [[https://www.freakingpenguin.com/blog/guix-tricks-soft-pinning-channels-i
 </p>
 </div>
 </div>
-<div id="outline-container-orgb8bf589" class="outline-2">
-<h2 id="orgb8bf589">An introduction to basic GnuPG usage.</h2>
-<div class="outline-text-2" id="text-orgb8bf589">
+<div id="outline-container-orgb197325" class="outline-2">
+<h2 id="orgb197325">An introduction to basic GnuPG usage.</h2>
+<div class="outline-text-2" id="text-orgb197325">
 <pre class="example">
 Cite: [[https://www.techtarget.com/searchSecurity/tutorial/How-to-use-GPG-to-encrypt-and-decrypt-files]]
 </pre>
@@ -1413,9 +1505,9 @@ Cite: [[https://www.techtarget.com/searchSecurity/tutorial/How-to-use-GPG-to-enc
 </p>
 </div>
 </div>
-<div id="outline-container-orgaf2a38a" class="outline-2">
-<h2 id="orgaf2a38a">In InDesign, the <i>indent to here</i> character can be used to define a content dependent indent for subsequent lines.</h2>
-<div class="outline-text-2" id="text-orgaf2a38a">
+<div id="outline-container-orga168e3d" class="outline-2">
+<h2 id="orga168e3d">In InDesign, the <i>indent to here</i> character can be used to define a content dependent indent for subsequent lines.</h2>
+<div class="outline-text-2" id="text-orga168e3d">
 <pre class="example">
 Cite: [[https://helpx.adobe.com/indesign/using/tabs-indents.html]]
 </pre>
@@ -1424,9 +1516,9 @@ Cite: [[https://helpx.adobe.com/indesign/using/tabs-indents.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org69c1651" class="outline-2">
-<h2 id="org69c1651">In Emacs, engine-mode looks to be a well-build package for leveraging search engines. Per the author's recommendation, I will try the built-in webjump first.</h2>
-<div class="outline-text-2" id="text-org69c1651">
+<div id="outline-container-org02a4c91" class="outline-2">
+<h2 id="org02a4c91">In Emacs, engine-mode looks to be a well-build package for leveraging search engines. Per the author's recommendation, I will try the built-in webjump first.</h2>
+<div class="outline-text-2" id="text-org02a4c91">
 <pre class="example">
 Cite: [[https://elpa.nongnu.org/nongnu-devel/engine-mode.html]]
 </pre>
@@ -1435,9 +1527,9 @@ Cite: [[https://elpa.nongnu.org/nongnu-devel/engine-mode.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org4ab3eda" class="outline-2">
-<h2 id="org4ab3eda">In Guix, <code>sudo guix pull</code> is basically never needed. An optimal system is configured to always use the user's guix package.</h2>
-<div class="outline-text-2" id="text-org4ab3eda">
+<div id="outline-container-orgd9a61f6" class="outline-2">
+<h2 id="orgd9a61f6">In Guix, <code>sudo guix pull</code> is basically never needed. An optimal system is configured to always use the user's guix package.</h2>
+<div class="outline-text-2" id="text-orgd9a61f6">
 <pre class="example">
 Cite: [[https://logs.guix.gnu.org/guix/2025-11-24.log#222855]]
 </pre>
@@ -1446,9 +1538,9 @@ Cite: [[https://logs.guix.gnu.org/guix/2025-11-24.log#222855]]
 </p>
 </div>
 </div>
-<div id="outline-container-org3556ab8" class="outline-2">
-<h2 id="org3556ab8">Some more ideas for handling secrets in Guix.</h2>
-<div class="outline-text-2" id="text-org3556ab8">
+<div id="outline-container-org433f9dd" class="outline-2">
+<h2 id="org433f9dd">Some more ideas for handling secrets in Guix.</h2>
+<div class="outline-text-2" id="text-org433f9dd">
 <pre class="example">
 Cite: [[https://gitlab.com/martin-baulig/config-and-setup/guix-packages/-/blob/work-wal-g/guix/extensions/secrets.scm?ref_type=heads]]
 Cite: [[https://gitlab.com/martin-baulig/config-and-setup/guix-packages/-/blob/work-wal-g/packages/baulig/build/secrets-service.scm?ref_type=heads]]
@@ -1458,9 +1550,9 @@ Cite: [[https://gitlab.com/martin-baulig/config-and-setup/guix-packages/-/blob/w
 </p>
 </div>
 </div>
-<div id="outline-container-orge116ee3" class="outline-2">
-<h2 id="orge116ee3">Some ideas for handling secrets in Guix.</h2>
-<div class="outline-text-2" id="text-orge116ee3">
+<div id="outline-container-orgc052cf2" class="outline-2">
+<h2 id="orgc052cf2">Some ideas for handling secrets in Guix.</h2>
+<div class="outline-text-2" id="text-orgc052cf2">
 <pre class="example">
 Cite: [[https://www.freakingpenguin.com/blog/guix-tricks-managing-secrets-using-password-store-and-run-time-decryption-scripts.html]]
 Cite: [[https://github.com/fishinthecalculator/sops-guix?tab=readme-ov-file]]
@@ -1470,9 +1562,9 @@ Cite: [[https://github.com/fishinthecalculator/sops-guix?tab=readme-ov-file]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgbefd938" class="outline-2">
-<h2 id="orgbefd938">Some useful info about <code>guix-for-channels</code> and other ways to configure channels within the system config.</h2>
-<div class="outline-text-2" id="text-orgbefd938">
+<div id="outline-container-org6a7d59e" class="outline-2">
+<h2 id="org6a7d59e">Some useful info about <code>guix-for-channels</code> and other ways to configure channels within the system config.</h2>
+<div class="outline-text-2" id="text-org6a7d59e">
 <pre class="example">
 Cite: [[https://lists.gnu.org/archive/html/guix-devel/2024-12/msg00265.html]]
 </pre>
@@ -1481,9 +1573,9 @@ Cite: [[https://lists.gnu.org/archive/html/guix-devel/2024-12/msg00265.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-orge9b2e70" class="outline-2">
-<h2 id="orge9b2e70">An interesting argument: Macros are are necessary for language development, not regular use cases.</h2>
-<div class="outline-text-2" id="text-orge9b2e70">
+<div id="outline-container-org869818b" class="outline-2">
+<h2 id="org869818b">An interesting argument: Macros are are necessary for language development, not regular use cases.</h2>
+<div class="outline-text-2" id="text-org869818b">
 <pre class="example">
 Cite: [[https://qr.ae/pC4VPZ]]
 </pre>
@@ -1492,9 +1584,9 @@ Cite: [[https://qr.ae/pC4VPZ]]
 </p>
 </div>
 </div>
-<div id="outline-container-org16c7efb" class="outline-2">
-<h2 id="org16c7efb">An interesting value comparison: <i>immutable data &gt; functions &gt; macros</i>.</h2>
-<div class="outline-text-2" id="text-org16c7efb">
+<div id="outline-container-orga9ad112" class="outline-2">
+<h2 id="orga9ad112">An interesting value comparison: <i>immutable data &gt; functions &gt; macros</i>.</h2>
+<div class="outline-text-2" id="text-orga9ad112">
 <pre class="example">
 Cite: [[https://ericnormand.me/article/data-functions-macros-why]]
 </pre>
@@ -1503,9 +1595,9 @@ Cite: [[https://ericnormand.me/article/data-functions-macros-why]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgcb117c7" class="outline-2">
-<h2 id="orgcb117c7">In Emacs ERC, connect to ZNC with <code>(erc-tls :server "my_znc_server.com" :port 5555 :nick "dima5" :password "dima/oftc:zncpassword")</code>.</h2>
-<div class="outline-text-2" id="text-orgcb117c7">
+<div id="outline-container-orga4870b5" class="outline-2">
+<h2 id="orga4870b5">In Emacs ERC, connect to ZNC with <code>(erc-tls :server "my_znc_server.com" :port 5555 :nick "dima5" :password "dima/oftc:zncpassword")</code>.</h2>
+<div class="outline-text-2" id="text-orga4870b5">
 <pre class="example">
 Cite: [[https://notes.secretsauce.net/notes/2014/10/08_znc-and-erc.html]]
 </pre>
@@ -1514,9 +1606,9 @@ Cite: [[https://notes.secretsauce.net/notes/2014/10/08_znc-and-erc.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org53a44c3" class="outline-2">
-<h2 id="org53a44c3">A great Guix config for reference.</h2>
-<div class="outline-text-2" id="text-org53a44c3">
+<div id="outline-container-org5af67ed" class="outline-2">
+<h2 id="org5af67ed">A great Guix config for reference.</h2>
+<div class="outline-text-2" id="text-org5af67ed">
 <pre class="example">
 Cite: [[https://github.com/hiecaq/guix-config]]
 </pre>
@@ -1525,9 +1617,9 @@ Cite: [[https://github.com/hiecaq/guix-config]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgc02c472" class="outline-2">
-<h2 id="orgc02c472">In Guix, a way to pin specific packages to their own channel commits is in the works. They are calling it <i>inferiors</i>.</h2>
-<div class="outline-text-2" id="text-orgc02c472">
+<div id="outline-container-org4a857ed" class="outline-2">
+<h2 id="org4a857ed">In Guix, a way to pin specific packages to their own channel commits is in the works. They are calling it <i>inferiors</i>.</h2>
+<div class="outline-text-2" id="text-org4a857ed">
 <pre class="example">
 Cite: [[https://guix.gnu.org/manual/en/html_node/Inferiors.html]]
 </pre>
@@ -1536,9 +1628,9 @@ Cite: [[https://guix.gnu.org/manual/en/html_node/Inferiors.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org1fa73fe" class="outline-2">
-<h2 id="org1fa73fe">In Emacs, edit a file that requires root credentials with <code>C-x C-f /sudo::/path/to/file/</code>.</h2>
-<div class="outline-text-2" id="text-org1fa73fe">
+<div id="outline-container-org880819d" class="outline-2">
+<h2 id="org880819d">In Emacs, edit a file that requires root credentials with <code>C-x C-f /sudo::/path/to/file/</code>.</h2>
+<div class="outline-text-2" id="text-org880819d">
 <pre class="example">
 Cite: [[https://emacs.stackexchange.com/a/56/49222]]
 </pre>
@@ -1547,9 +1639,9 @@ Cite: [[https://emacs.stackexchange.com/a/56/49222]]
 </p>
 </div>
 </div>
-<div id="outline-container-orga9287a1" class="outline-2">
-<h2 id="orga9287a1">A helpful explanation of Emacs package management in Guix.</h2>
-<div class="outline-text-2" id="text-orga9287a1">
+<div id="outline-container-orgdf6d05f" class="outline-2">
+<h2 id="orgdf6d05f">A helpful explanation of Emacs package management in Guix.</h2>
+<div class="outline-text-2" id="text-orgdf6d05f">
 <pre class="example">
 Cite: [[https://www.youtube.com/live/gqmZjovuomc?si=4UgDFBHT5p7hnaXZ]]
 </pre>
@@ -1558,9 +1650,9 @@ Cite: [[https://www.youtube.com/live/gqmZjovuomc?si=4UgDFBHT5p7hnaXZ]]
 </p>
 </div>
 </div>
-<div id="outline-container-org785ece9" class="outline-2">
-<h2 id="org785ece9">A good introduction to Guix.</h2>
-<div class="outline-text-2" id="text-org785ece9">
+<div id="outline-container-org895688b" class="outline-2">
+<h2 id="org895688b">A good introduction to Guix.</h2>
+<div class="outline-text-2" id="text-org895688b">
 <pre class="example">
 Cite: [[https://rendaw.gitlab.io/blog/55daefcf49e2.html]]
 </pre>
@@ -1569,9 +1661,9 @@ Cite: [[https://rendaw.gitlab.io/blog/55daefcf49e2.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgfb4ba5e" class="outline-2">
-<h2 id="orgfb4ba5e">In Guix, there is a built-in service for ZNC (the IRC bouncer).</h2>
-<div class="outline-text-2" id="text-orgfb4ba5e">
+<div id="outline-container-orgbdfe209" class="outline-2">
+<h2 id="orgbdfe209">In Guix, there is a built-in service for ZNC (the IRC bouncer).</h2>
+<div class="outline-text-2" id="text-orgbdfe209">
 <pre class="example">
 Cite: [[https://guix.gnu.org/manual/devel/en/html_node/Messaging-Home-Services.html]]
 </pre>
@@ -1580,9 +1672,9 @@ Cite: [[https://guix.gnu.org/manual/devel/en/html_node/Messaging-Home-Services.h
 </p>
 </div>
 </div>
-<div id="outline-container-org8d7a0b5" class="outline-2">
-<h2 id="org8d7a0b5">In Guix, channels can be added directly to the system config with <code>guix-for-channels</code>. This will force a <code>guix pull</code> before every build (including the initial build).</h2>
-<div class="outline-text-2" id="text-org8d7a0b5">
+<div id="outline-container-org28dc167" class="outline-2">
+<h2 id="org28dc167">In Guix, channels can be added directly to the system config with <code>guix-for-channels</code>. This will force a <code>guix pull</code> before every build (including the initial build).</h2>
+<div class="outline-text-2" id="text-org28dc167">
 <pre class="example">
 Cite: [[https://guix.gnu.org/manual/devel/en/html_node/Customizing-the-System_002dWide-Guix.html]]
 </pre>
@@ -1591,9 +1683,9 @@ Cite: [[https://guix.gnu.org/manual/devel/en/html_node/Customizing-the-System_00
 </p>
 </div>
 </div>
-<div id="outline-container-org20ec02e" class="outline-2">
-<h2 id="org20ec02e">In Vim <i>and</i> Emacs evil insert mode, <code>CTRL-T</code> and <code>CTRL-D</code> indents/outdents the current line.</h2>
-<div class="outline-text-2" id="text-org20ec02e">
+<div id="outline-container-org09e93d8" class="outline-2">
+<h2 id="org09e93d8">In Vim <i>and</i> Emacs evil insert mode, <code>CTRL-T</code> and <code>CTRL-D</code> indents/outdents the current line.</h2>
+<div class="outline-text-2" id="text-org09e93d8">
 <pre class="example">
 Cite: [[=:help i_CTRL-T=]]
 Cite: [[=:help i_CTRL-D=]]
@@ -1605,9 +1697,9 @@ Cite: [[=C-h f evil-shift-left-line=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgeb6e26c" class="outline-2">
-<h2 id="orgeb6e26c">In Elisp, a great introduction to interactive functions.</h2>
-<div class="outline-text-2" id="text-orgeb6e26c">
+<div id="outline-container-org8a3224f" class="outline-2">
+<h2 id="org8a3224f">In Elisp, a great introduction to interactive functions.</h2>
+<div class="outline-text-2" id="text-org8a3224f">
 <pre class="example">
 Cite: [[https://systemcrafters.net/learning-emacs-lisp/defining-functions-and-commands/]]
 </pre>
@@ -1616,9 +1708,9 @@ Cite: [[https://systemcrafters.net/learning-emacs-lisp/defining-functions-and-co
 </p>
 </div>
 </div>
-<div id="outline-container-org01be009" class="outline-2">
-<h2 id="org01be009">For Guix, a custom service to daemonize kmonad.</h2>
-<div class="outline-text-2" id="text-org01be009">
+<div id="outline-container-org6f675c8" class="outline-2">
+<h2 id="org6f675c8">For Guix, a custom service to daemonize kmonad.</h2>
+<div class="outline-text-2" id="text-org6f675c8">
 <pre class="example">
 Cite: [[https://tannerhoelzel.com/gnu-shepherd-simple-service.html]]
 </pre>
@@ -1627,9 +1719,9 @@ Cite: [[https://tannerhoelzel.com/gnu-shepherd-simple-service.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org7b2fd0e" class="outline-2">
-<h2 id="org7b2fd0e">In Guix, temp home environments (including dotfiles) can be created with <code>guix home container</code>.</h2>
-<div class="outline-text-2" id="text-org7b2fd0e">
+<div id="outline-container-org1b66fe2" class="outline-2">
+<h2 id="org1b66fe2">In Guix, temp home environments (including dotfiles) can be created with <code>guix home container</code>.</h2>
+<div class="outline-text-2" id="text-org1b66fe2">
 <pre class="example">
 Cite: [[https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-home.html]]
 </pre>
@@ -1638,9 +1730,9 @@ Cite: [[https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-home.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org3b92b1b" class="outline-2">
-<h2 id="org3b92b1b">In Guix, build a dev enviroment as a package from within the project repo.</h2>
-<div class="outline-text-2" id="text-org3b92b1b">
+<div id="outline-container-orgfde216b" class="outline-2">
+<h2 id="orgfde216b">In Guix, build a dev enviroment as a package from within the project repo.</h2>
+<div class="outline-text-2" id="text-orgfde216b">
 <pre class="example">
 Cite: [[https://guix.gnu.org/cookbook/en/html_node/Software-Development.html]]
 </pre>
@@ -1649,9 +1741,9 @@ Cite: [[https://guix.gnu.org/cookbook/en/html_node/Software-Development.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-orga282990" class="outline-2">
-<h2 id="orga282990">In Emacs, image-dired is a thumbnail preview file manager.</h2>
-<div class="outline-text-2" id="text-orga282990">
+<div id="outline-container-orgb103821" class="outline-2">
+<h2 id="orgb103821">In Emacs, image-dired is a thumbnail preview file manager.</h2>
+<div class="outline-text-2" id="text-orgb103821">
 <pre class="example">
 Cite: [[info:emacs#Image-Dired]]
 </pre>
@@ -1660,9 +1752,9 @@ Cite: [[info:emacs#Image-Dired]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgc6d3c2d" class="outline-2">
-<h2 id="orgc6d3c2d">A basic tutorial for manual manipulation of SVGs.</h2>
-<div class="outline-text-2" id="text-orgc6d3c2d">
+<div id="outline-container-org4866a8d" class="outline-2">
+<h2 id="org4866a8d">A basic tutorial for manual manipulation of SVGs.</h2>
+<div class="outline-text-2" id="text-org4866a8d">
 <pre class="example">
 Cite: [[https://www.aleksandrhovhannisyan.com/blog/svg-tutorial/#how-are-svgs-drawn]]
 </pre>
@@ -1671,9 +1763,9 @@ Cite: [[https://www.aleksandrhovhannisyan.com/blog/svg-tutorial/#how-are-svgs-dr
 </p>
 </div>
 </div>
-<div id="outline-container-org05900d2" class="outline-2">
-<h2 id="org05900d2">In Emacs, some great help on batch renaming files in dired.</h2>
-<div class="outline-text-2" id="text-org05900d2">
+<div id="outline-container-org9f7dc25" class="outline-2">
+<h2 id="org9f7dc25">In Emacs, some great help on batch renaming files in dired.</h2>
+<div class="outline-text-2" id="text-org9f7dc25">
 <pre class="example">
 Cite: [[info:emacs#Transforming File Names]]
 </pre>
@@ -1682,9 +1774,9 @@ Cite: [[info:emacs#Transforming File Names]]
 </p>
 </div>
 </div>
-<div id="outline-container-org9a8e230" class="outline-2">
-<h2 id="org9a8e230">An interesting browser-based SVG path editor.s</h2>
-<div class="outline-text-2" id="text-org9a8e230">
+<div id="outline-container-org6a20e7f" class="outline-2">
+<h2 id="org6a20e7f">An interesting browser-based SVG path editor.s</h2>
+<div class="outline-text-2" id="text-org6a20e7f">
 <pre class="example">
 Cite: [[https://yqnn.github.io/svg-path-editor/]]
 </pre>
@@ -1693,9 +1785,9 @@ Cite: [[https://yqnn.github.io/svg-path-editor/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org0e25eb4" class="outline-2">
-<h2 id="org0e25eb4">In Emacs, an interesting preview mode for SVGs.</h2>
-<div class="outline-text-2" id="text-org0e25eb4">
+<div id="outline-container-org00a39e0" class="outline-2">
+<h2 id="org00a39e0">In Emacs, an interesting preview mode for SVGs.</h2>
+<div class="outline-text-2" id="text-org00a39e0">
 <pre class="example">
 Cite: [[https://monospace.games/misc/svg-preview-mode/]]
 </pre>
@@ -1704,9 +1796,9 @@ Cite: [[https://monospace.games/misc/svg-preview-mode/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgd6c2aa9" class="outline-2">
-<h2 id="orgd6c2aa9">Some great tips for incremental adoption of plain text accounting.</h2>
-<div class="outline-text-2" id="text-orgd6c2aa9">
+<div id="outline-container-org6f58b11" class="outline-2">
+<h2 id="org6f58b11">Some great tips for incremental adoption of plain text accounting.</h2>
+<div class="outline-text-2" id="text-org6f58b11">
 <pre class="example">
 Cite: [[https://tylercipriani.com/blog/2024/10/24/plain-text-accounting/]]
 </pre>
@@ -1715,9 +1807,9 @@ Cite: [[https://tylercipriani.com/blog/2024/10/24/plain-text-accounting/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org08888e7" class="outline-2">
-<h2 id="org08888e7">In Emacs, some great tips on expanding the <code>use-package</code> macro.</h2>
-<div class="outline-text-2" id="text-org08888e7">
+<div id="outline-container-org2d87bfc" class="outline-2">
+<h2 id="org2d87bfc">In Emacs, some great tips on expanding the <code>use-package</code> macro.</h2>
+<div class="outline-text-2" id="text-org2d87bfc">
 <pre class="example">
 Cite: [[https://emacsnotes.wordpress.com/2023/07/02/migrating-to-use-package-tip-1-do-not-use-a-naive-macroexpand-to-grok-a-use-package-declaration-use-this-wrapper-instead/]]
 </pre>
@@ -1726,9 +1818,9 @@ Cite: [[https://emacsnotes.wordpress.com/2023/07/02/migrating-to-use-package-tip
 </p>
 </div>
 </div>
-<div id="outline-container-org3a48444" class="outline-2">
-<h2 id="org3a48444">In Emacs, <code>glyphless-display-mode</code> will show all invisible characters.</h2>
-<div class="outline-text-2" id="text-org3a48444">
+<div id="outline-container-org878d33c" class="outline-2">
+<h2 id="org878d33c">In Emacs, <code>glyphless-display-mode</code> will show all invisible characters.</h2>
+<div class="outline-text-2" id="text-org878d33c">
 <pre class="example">
 Cite: [[https://lemmy.world/post/15944517]]
 </pre>
@@ -1737,9 +1829,9 @@ Cite: [[https://lemmy.world/post/15944517]]
 </p>
 </div>
 </div>
-<div id="outline-container-orge1bc896" class="outline-2">
-<h2 id="orge1bc896">Guix has packages for Wireguard.</h2>
-<div class="outline-text-2" id="text-orge1bc896">
+<div id="outline-container-org407718c" class="outline-2">
+<h2 id="org407718c">Guix has packages for Wireguard.</h2>
+<div class="outline-text-2" id="text-org407718c">
 <pre class="example">
 Cite: [[https://enge.math.u-bordeaux.fr/blog/wireguard.html]]
 </pre>
@@ -1748,9 +1840,9 @@ Cite: [[https://enge.math.u-bordeaux.fr/blog/wireguard.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org61b4470" class="outline-2">
-<h2 id="org61b4470">Wireguard is the new de-facto FOSS VPN.</h2>
-<div class="outline-text-2" id="text-org61b4470">
+<div id="outline-container-org9491890" class="outline-2">
+<h2 id="org9491890">Wireguard is the new de-facto FOSS VPN.</h2>
+<div class="outline-text-2" id="text-org9491890">
 <pre class="example">
 Cite: [[https://www.wireguard.com]]
 </pre>
@@ -1759,9 +1851,9 @@ Cite: [[https://www.wireguard.com]]
 </p>
 </div>
 </div>
-<div id="outline-container-org72f5071" class="outline-2">
-<h2 id="org72f5071">Bash permits parenthesized sub-expressions. (Just be sure you escape the parentheses: <code>\(\)</code>.)</h2>
-<div class="outline-text-2" id="text-org72f5071">
+<div id="outline-container-orgf4c83ea" class="outline-2">
+<h2 id="orgf4c83ea">Bash permits parenthesized sub-expressions. (Just be sure you escape the parentheses: <code>\(\)</code>.)</h2>
+<div class="outline-text-2" id="text-orgf4c83ea">
 <pre class="example">
 Cite: [[https://unix.stackexchange.com/a/50613]]
 </pre>
@@ -1770,9 +1862,9 @@ Cite: [[https://unix.stackexchange.com/a/50613]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgd28937b" class="outline-2">
-<h2 id="orgd28937b">The documentation for the Emacs youtube-dl frontend is available on GitLab.</h2>
-<div class="outline-text-2" id="text-orgd28937b">
+<div id="outline-container-org1685846" class="outline-2">
+<h2 id="org1685846">The documentation for the Emacs youtube-dl frontend is available on GitLab.</h2>
+<div class="outline-text-2" id="text-org1685846">
 <pre class="example">
 Cite: [[https://gitlab.com/tuedachu/ytdl]]
 </pre>
@@ -1781,9 +1873,9 @@ Cite: [[https://gitlab.com/tuedachu/ytdl]]
 </p>
 </div>
 </div>
-<div id="outline-container-org66ffa2e" class="outline-2">
-<h2 id="org66ffa2e">An interesting Hledger budgeting strategy.</h2>
-<div class="outline-text-2" id="text-org66ffa2e">
+<div id="outline-container-org5e82ace" class="outline-2">
+<h2 id="org5e82ace">An interesting Hledger budgeting strategy.</h2>
+<div class="outline-text-2" id="text-org5e82ace">
 <pre class="example">
 Cite: [[https://gist.github.com/ony/bbec599c0893e676b772559909b81de6]]
 </pre>
@@ -1792,9 +1884,9 @@ Cite: [[https://gist.github.com/ony/bbec599c0893e676b772559909b81de6]]
 </p>
 </div>
 </div>
-<div id="outline-container-orga97fe2e" class="outline-2">
-<h2 id="orga97fe2e">A CSV importer for Ledger written in Elisp.</h2>
-<div class="outline-text-2" id="text-orga97fe2e">
+<div id="outline-container-orge791568" class="outline-2">
+<h2 id="orge791568">A CSV importer for Ledger written in Elisp.</h2>
+<div class="outline-text-2" id="text-orge791568">
 <pre class="example">
 Cite: [[https://codeberg.org/joostkremers/csv2ledger]]
 </pre>
@@ -1803,9 +1895,9 @@ Cite: [[https://codeberg.org/joostkremers/csv2ledger]]
 </p>
 </div>
 </div>
-<div id="outline-container-org3096b65" class="outline-2">
-<h2 id="org3096b65">This is an interesting strategy for budgeting with org mode and Ledger.</h2>
-<div class="outline-text-2" id="text-org3096b65">
+<div id="outline-container-org0815f0f" class="outline-2">
+<h2 id="org0815f0f">This is an interesting strategy for budgeting with org mode and Ledger.</h2>
+<div class="outline-text-2" id="text-org0815f0f">
 <pre class="example">
 Cite: [[https://orgmode.org/worg/org-tutorials/weaving-a-budget.html]]
 </pre>
@@ -1814,9 +1906,9 @@ Cite: [[https://orgmode.org/worg/org-tutorials/weaving-a-budget.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgde5e511" class="outline-2">
-<h2 id="orgde5e511">Union Square and Co. is a publisher that has book designs which are an interesting blend of classic and modern.</h2>
-<div class="outline-text-2" id="text-orgde5e511">
+<div id="outline-container-org2a38a94" class="outline-2">
+<h2 id="org2a38a94">Union Square and Co. is a publisher that has book designs which are an interesting blend of classic and modern.</h2>
+<div class="outline-text-2" id="text-org2a38a94">
 <pre class="example">
 Cite: [[https://www.hachettebookgroup.com/imprint/union-square-co/]]
 </pre>
@@ -1825,9 +1917,9 @@ Cite: [[https://www.hachettebookgroup.com/imprint/union-square-co/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orga384a82" class="outline-2">
-<h2 id="orga384a82">In Emacs, track stats on <code>use-package</code> load times at init.</h2>
-<div class="outline-text-2" id="text-orga384a82">
+<div id="outline-container-orgd4d4fd9" class="outline-2">
+<h2 id="orgd4d4fd9">In Emacs, track stats on <code>use-package</code> load times at init.</h2>
+<div class="outline-text-2" id="text-orgd4d4fd9">
 <pre class="example">
 Cite: [[https://www.gnu.org/software/emacs/manual/html_node/use-package/Gathering-Statistics.html]]
 </pre>
@@ -1836,9 +1928,9 @@ Cite: [[https://www.gnu.org/software/emacs/manual/html_node/use-package/Gatherin
 </p>
 </div>
 </div>
-<div id="outline-container-org79c366a" class="outline-2">
-<h2 id="org79c366a">This video is a must watch on containerizing with Guix.</h2>
-<div class="outline-text-2" id="text-org79c366a">
+<div id="outline-container-orgf38ec30" class="outline-2">
+<h2 id="orgf38ec30">This video is a must watch on containerizing with Guix.</h2>
+<div class="outline-text-2" id="text-orgf38ec30">
 <pre class="example">
 Cite: [[https://archive.fosdem.org/2020/schedule/event/guix/]]
 </pre>
@@ -1847,9 +1939,9 @@ Cite: [[https://archive.fosdem.org/2020/schedule/event/guix/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org80fca8b" class="outline-2">
-<h2 id="org80fca8b">In Emacs org-publish, use the prefix argument to force-rebuild.</h2>
-<div class="outline-text-2" id="text-org80fca8b">
+<div id="outline-container-org11b256e" class="outline-2">
+<h2 id="org11b256e">In Emacs org-publish, use the prefix argument to force-rebuild.</h2>
+<div class="outline-text-2" id="text-org11b256e">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/21259718/28799158]]
 </pre>
@@ -1858,9 +1950,9 @@ Cite: [[https://stackoverflow.com/a/21259718/28799158]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgeb49cf8" class="outline-2">
-<h2 id="orgeb49cf8">Skribe and Skribilo may be the scheme markup language I have been looking for.</h2>
-<div class="outline-text-2" id="text-orgeb49cf8">
+<div id="outline-container-orgf0d7e48" class="outline-2">
+<h2 id="orgf0d7e48">Skribe and Skribilo may be the scheme markup language I have been looking for.</h2>
+<div class="outline-text-2" id="text-orgf0d7e48">
 <pre class="example">
 Cite: [[https://www.nongnu.org/skribilo/]]
 </pre>
@@ -1869,9 +1961,9 @@ Cite: [[https://www.nongnu.org/skribilo/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org4b66358" class="outline-2">
-<h2 id="org4b66358">In Emacs org mode, some useful tips for big tables (like this one) are available in the manual.</h2>
-<div class="outline-text-2" id="text-org4b66358">
+<div id="outline-container-org28c2a60" class="outline-2">
+<h2 id="org28c2a60">In Emacs org mode, some useful tips for big tables (like this one) are available in the manual.</h2>
+<div class="outline-text-2" id="text-org28c2a60">
 <pre class="example">
 Cite: [[info:org#Column Width and Alignment]]
 </pre>
@@ -1880,9 +1972,9 @@ Cite: [[info:org#Column Width and Alignment]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgb0d7c19" class="outline-2">
-<h2 id="orgb0d7c19">Some good pointers on publishing notes from <i>org-roam</i> via <i>org-publish</i>.</h2>
-<div class="outline-text-2" id="text-orgb0d7c19">
+<div id="outline-container-org9e3d728" class="outline-2">
+<h2 id="org9e3d728">Some good pointers on publishing notes from <i>org-roam</i> via <i>org-publish</i>.</h2>
+<div class="outline-text-2" id="text-org9e3d728">
 <pre class="example">
 Cite: [[https://commonplace.doubleloop.net/how-i-publish-my-wiki-with-org-publish]]
 </pre>
@@ -1891,9 +1983,9 @@ Cite: [[https://commonplace.doubleloop.net/how-i-publish-my-wiki-with-org-publis
 </p>
 </div>
 </div>
-<div id="outline-container-orgbce4ffe" class="outline-2">
-<h2 id="orgbce4ffe">In Emacs, this is a simple workflow for find/replace across files.</h2>
-<div class="outline-text-2" id="text-orgbce4ffe">
+<div id="outline-container-orgf2b38ef" class="outline-2">
+<h2 id="orgf2b38ef">In Emacs, this is a simple workflow for find/replace across files.</h2>
+<div class="outline-text-2" id="text-orgf2b38ef">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/271136/28799158]]
 </pre>
@@ -1902,9 +1994,9 @@ Cite: [[https://stackoverflow.com/a/271136/28799158]]
 </p>
 </div>
 </div>
-<div id="outline-container-org8186fdb" class="outline-2">
-<h2 id="org8186fdb">Some useful references for future exploration of Gnus for email.</h2>
-<div class="outline-text-2" id="text-org8186fdb">
+<div id="outline-container-orgba36ed3" class="outline-2">
+<h2 id="orgba36ed3">Some useful references for future exploration of Gnus for email.</h2>
+<div class="outline-text-2" id="text-orgba36ed3">
 <pre class="example">
 Cite: [[https://baty.net/posts/2025/03/using-gnus-for-email/]]
 Cite: [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org]]
@@ -1915,9 +2007,9 @@ Cite: [[https://github.com/jwiegley/dot-emacs/blob/master/init.org]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgbd851ae" class="outline-2">
-<h2 id="orgbd851ae">In Emacs, <code>C-x C-v</code> kills the current buffer, replacing it with the new file/directory.</h2>
-<div class="outline-text-2" id="text-orgbd851ae">
+<div id="outline-container-org322335b" class="outline-2">
+<h2 id="org322335b">In Emacs, <code>C-x C-v</code> kills the current buffer, replacing it with the new file/directory.</h2>
+<div class="outline-text-2" id="text-org322335b">
 <pre class="example">
 Cite: [[=C-h k C-x C-v=]]
 </pre>
@@ -1926,9 +2018,9 @@ Cite: [[=C-h k C-x C-v=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgb40fdf6" class="outline-2">
-<h2 id="orgb40fdf6">This is a good introduction to completions in Emacs (with keybinds).</h2>
-<div class="outline-text-2" id="text-orgb40fdf6">
+<div id="outline-container-org195943e" class="outline-2">
+<h2 id="org195943e">This is a good introduction to completions in Emacs (with keybinds).</h2>
+<div class="outline-text-2" id="text-org195943e">
 <pre class="example">
 Cite: [[https://www.masteringemacs.org/article/understanding-minibuffer-completion]]
 </pre>
@@ -1937,9 +2029,9 @@ Cite: [[https://www.masteringemacs.org/article/understanding-minibuffer-completi
 </p>
 </div>
 </div>
-<div id="outline-container-org20eb268" class="outline-2">
-<h2 id="org20eb268">macOS has massive overlap with Emacs keybindings.</h2>
-<div class="outline-text-2" id="text-org20eb268">
+<div id="outline-container-org9f3a519" class="outline-2">
+<h2 id="org9f3a519">macOS has massive overlap with Emacs keybindings.</h2>
+<div class="outline-text-2" id="text-org9f3a519">
 <pre class="example">
 Cite: [[https://jblevins.org/log/kbd]]
 </pre>
@@ -1948,9 +2040,9 @@ Cite: [[https://jblevins.org/log/kbd]]
 </p>
 </div>
 </div>
-<div id="outline-container-orga6dd324" class="outline-2">
-<h2 id="orga6dd324">Google Docs utilizes the <i>RE2</i> REGEX standard.</h2>
-<div class="outline-text-2" id="text-orga6dd324">
+<div id="outline-container-org01816dd" class="outline-2">
+<h2 id="org01816dd">Google Docs utilizes the <i>RE2</i> REGEX standard.</h2>
+<div class="outline-text-2" id="text-org01816dd">
 <pre class="example">
 Cite: [[https://support.google.com/docs/answer/62754#regular_expressions&zippy=%2Csee-an-example]]
 Cite: [[https://github.com/google/re2/blob/main/doc/syntax.txt]]
@@ -1960,9 +2052,9 @@ Cite: [[https://github.com/google/re2/blob/main/doc/syntax.txt]]
 </p>
 </div>
 </div>
-<div id="outline-container-org17ba8df" class="outline-2">
-<h2 id="org17ba8df">In Google Docs, <code>\v</code> is the REGEX pattern for soft returns.</h2>
-<div class="outline-text-2" id="text-org17ba8df">
+<div id="outline-container-org33353fb" class="outline-2">
+<h2 id="org33353fb">In Google Docs, <code>\v</code> is the REGEX pattern for soft returns.</h2>
+<div class="outline-text-2" id="text-org33353fb">
 <pre class="example">
 Cite: [[https://appiphony.com/blog/create-a-hard-or-soft-return-in-google-docs#:~:text=You%20can%20also%20quickly%20identify,returns%2C%20search%20for%20%5Cv.]]
 </pre>
@@ -1971,9 +2063,9 @@ Cite: [[https://appiphony.com/blog/create-a-hard-or-soft-return-in-google-docs#:
 </p>
 </div>
 </div>
-<div id="outline-container-orgc63b6b1" class="outline-2">
-<h2 id="orgc63b6b1">In InDesign, use a paragraph rule to add offset before the first paragraph in a text frame.</h2>
-<div class="outline-text-2" id="text-orgc63b6b1">
+<div id="outline-container-org25d7466" class="outline-2">
+<h2 id="org25d7466">In InDesign, use a paragraph rule to add offset before the first paragraph in a text frame.</h2>
+<div class="outline-text-2" id="text-org25d7466">
 <pre class="example">
 Cite: [[https://graphicdesign.stackexchange.com/a/70460/211504]]
 </pre>
@@ -1982,9 +2074,9 @@ Cite: [[https://graphicdesign.stackexchange.com/a/70460/211504]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgd87f460" class="outline-2">
-<h2 id="orgd87f460">A some great instructions on loading <i>SICP</i> into Emacs info mode.</h2>
-<div class="outline-text-2" id="text-orgd87f460">
+<div id="outline-container-org0b0dfb1" class="outline-2">
+<h2 id="org0b0dfb1">A some great instructions on loading <i>SICP</i> into Emacs info mode.</h2>
+<div class="outline-text-2" id="text-org0b0dfb1">
 <pre class="example">
 Cite: [[https://zv.github.io/sicp-in-texinfo]]
 </pre>
@@ -1993,9 +2085,9 @@ Cite: [[https://zv.github.io/sicp-in-texinfo]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgf31a398" class="outline-2">
-<h2 id="orgf31a398">Emacs has a native tab mode! Type <code>C-x t 2</code> to create a new tab.</h2>
-<div class="outline-text-2" id="text-orgf31a398">
+<div id="outline-container-orgf2f05bd" class="outline-2">
+<h2 id="orgf2f05bd">Emacs has a native tab mode! Type <code>C-x t 2</code> to create a new tab.</h2>
+<div class="outline-text-2" id="text-orgf2f05bd">
 <pre class="example">
 Cite: [[info:emacs#Tab Bars]]
 </pre>
@@ -2004,9 +2096,9 @@ Cite: [[info:emacs#Tab Bars]]
 </p>
 </div>
 </div>
-<div id="outline-container-org8f1b844" class="outline-2">
-<h2 id="org8f1b844">This is a great introduction to <i>xargs</i> in Bash.</h2>
-<div class="outline-text-2" id="text-org8f1b844">
+<div id="outline-container-org21ce028" class="outline-2">
+<h2 id="org21ce028">This is a great introduction to <i>xargs</i> in Bash.</h2>
+<div class="outline-text-2" id="text-org21ce028">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/76130645/28799158]]
 </pre>
@@ -2015,9 +2107,9 @@ Cite: [[https://stackoverflow.com/a/76130645/28799158]]
 </p>
 </div>
 </div>
-<div id="outline-container-org775de3a" class="outline-2">
-<h2 id="org775de3a">Emacs has some text object marking capabilities by default.</h2>
-<div class="outline-text-2" id="text-org775de3a">
+<div id="outline-container-org7f19bc0" class="outline-2">
+<h2 id="org7f19bc0">Emacs has some text object marking capabilities by default.</h2>
+<div class="outline-text-2" id="text-org7f19bc0">
 <pre class="example">
 Cite: [[info:emacs#Marking Objects]]
 </pre>
@@ -2026,9 +2118,9 @@ Cite: [[info:emacs#Marking Objects]]
 </p>
 </div>
 </div>
-<div id="outline-container-orge83f1cd" class="outline-2">
-<h2 id="orge83f1cd">In Emacs, launch a new eshell from the current dired directory via <code>C-u M-x eshell</code>. Navigate between these eshells by number: <code>C-3 M-x eshell</code> will open <code>*eshell*&lt;3&gt;</code>.</h2>
-<div class="outline-text-2" id="text-orge83f1cd">
+<div id="outline-container-org6f3b0a0" class="outline-2">
+<h2 id="org6f3b0a0">In Emacs, launch a new eshell from the current dired directory via <code>C-u M-x eshell</code>. Navigate between these eshells by number: <code>C-3 M-x eshell</code> will open <code>*eshell*&lt;3&gt;</code>.</h2>
+<div class="outline-text-2" id="text-org6f3b0a0">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/6533447]]
 </pre>
@@ -2037,9 +2129,9 @@ Cite: [[https://stackoverflow.com/a/6533447]]
 </p>
 </div>
 </div>
-<div id="outline-container-org98ee6d5" class="outline-2">
-<h2 id="org98ee6d5">In Emacs, org-roam has an Obsidian-style graph visualization.</h2>
-<div class="outline-text-2" id="text-org98ee6d5">
+<div id="outline-container-orgcdc30d4" class="outline-2">
+<h2 id="orgcdc30d4">In Emacs, org-roam has an Obsidian-style graph visualization.</h2>
+<div class="outline-text-2" id="text-orgcdc30d4">
 <pre class="example">
 Cite: [[https://github.com/org-roam/org-roam-ui?tab=readme-ov-file#usage]]
 </pre>
@@ -2048,9 +2140,9 @@ Cite: [[https://github.com/org-roam/org-roam-ui?tab=readme-ov-file#usage]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgd186ff7" class="outline-2">
-<h2 id="orgd186ff7">In Emacs, <code>C-o</code> <i>opens</i> a new line after the point. This is a close as Emacs gets to Vim's <code>C-o</code> and <code>C-O</code>.</h2>
-<div class="outline-text-2" id="text-orgd186ff7">
+<div id="outline-container-org29ee7c3" class="outline-2">
+<h2 id="org29ee7c3">In Emacs, <code>C-o</code> <i>opens</i> a new line after the point. This is a close as Emacs gets to Vim's <code>C-o</code> and <code>C-O</code>.</h2>
+<div class="outline-text-2" id="text-org29ee7c3">
 <pre class="example">
 Cite: [[=C-h k C-o=]]
 </pre>
@@ -2059,9 +2151,9 @@ Cite: [[=C-h k C-o=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgbd4a3ce" class="outline-2">
-<h2 id="orgbd4a3ce">In Emacs on macOS, the tile bar can be disabled for a cleaner look.</h2>
-<div class="outline-text-2" id="text-orgbd4a3ce">
+<div id="outline-container-org380f99c" class="outline-2">
+<h2 id="org380f99c">In Emacs on macOS, the tile bar can be disabled for a cleaner look.</h2>
+<div class="outline-text-2" id="text-org380f99c">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/72426586]]
 </pre>
@@ -2070,9 +2162,9 @@ Cite: [[https://stackoverflow.com/a/72426586]]
 </p>
 </div>
 </div>
-<div id="outline-container-org86e7223" class="outline-2">
-<h2 id="org86e7223">The Inscape CLI does great conversions from SVG to image formats.</h2>
-<div class="outline-text-2" id="text-org86e7223">
+<div id="outline-container-org5b62a41" class="outline-2">
+<h2 id="org5b62a41">The Inscape CLI does great conversions from SVG to image formats.</h2>
+<div class="outline-text-2" id="text-org5b62a41">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/14174624]]
 </pre>
@@ -2081,9 +2173,9 @@ Cite: [[https://stackoverflow.com/a/14174624]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgc61935a" class="outline-2">
-<h2 id="orgc61935a">In Guix, the <i>sops-guix</i> package is an interesting way to manage secrets.</h2>
-<div class="outline-text-2" id="text-orgc61935a">
+<div id="outline-container-org86dcf1d" class="outline-2">
+<h2 id="org86dcf1d">In Guix, the <i>sops-guix</i> package is an interesting way to manage secrets.</h2>
+<div class="outline-text-2" id="text-org86dcf1d">
 <pre class="example">
 Cite: [[https://fishinthecalculator.me/blog/secrets-management-with-sops-guix.html]]
 </pre>
@@ -2092,9 +2184,9 @@ Cite: [[https://fishinthecalculator.me/blog/secrets-management-with-sops-guix.ht
 </p>
 </div>
 </div>
-<div id="outline-container-org4be8a91" class="outline-2">
-<h2 id="org4be8a91">In Lisp, comment convention recommends <code>;</code> for end-of-line comments and <code>;;</code> for comments on their own lines.</h2>
-<div class="outline-text-2" id="text-org4be8a91">
+<div id="outline-container-org916f693" class="outline-2">
+<h2 id="org916f693">In Lisp, comment convention recommends <code>;</code> for end-of-line comments and <code>;;</code> for comments on their own lines.</h2>
+<div class="outline-text-2" id="text-org916f693">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/6365579]]
 Cite: [[https://www.lispworks.com/documentation/HyperSpec/Body/02_ddb.htm]]
@@ -2104,9 +2196,9 @@ Cite: [[https://www.lispworks.com/documentation/HyperSpec/Body/02_ddb.htm]]
 </p>
 </div>
 </div>
-<div id="outline-container-orge6e815e" class="outline-2">
-<h2 id="orge6e815e">In Emacs, type <code>C-q</code> to insert a literal character regardless of bindings. (Think of it at the interactive equivalent of quoting symbols in Lisp.)</h2>
-<div class="outline-text-2" id="text-orge6e815e">
+<div id="outline-container-orgb2740ec" class="outline-2">
+<h2 id="orgb2740ec">In Emacs, type <code>C-q</code> to insert a literal character regardless of bindings. (Think of it at the interactive equivalent of quoting symbols in Lisp.)</h2>
+<div class="outline-text-2" id="text-orgb2740ec">
 <pre class="example">
 Cite: [[=C-h k C-q=]]
 </pre>
@@ -2115,17 +2207,17 @@ Cite: [[=C-h k C-q=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org64734e4" class="outline-2">
-<h2 id="org64734e4">In Emacs, evaluate <code>(insert (format-time-string "%Y-%m-%d"))</code> to insert the current date in <i>YYYY-MM-DD</i> format.</h2>
-<div class="outline-text-2" id="text-org64734e4">
+<div id="outline-container-org8ac64d3" class="outline-2">
+<h2 id="org8ac64d3">In Emacs, evaluate <code>(insert (format-time-string "%Y-%m-%d"))</code> to insert the current date in <i>YYYY-MM-DD</i> format.</h2>
+<div class="outline-text-2" id="text-org8ac64d3">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2025-08-22 Fri]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-org3524b41" class="outline-2">
-<h2 id="org3524b41">In Emacs, <i>devil-mode</i> may be the best modifier-less minor mode.</h2>
-<div class="outline-text-2" id="text-org3524b41">
+<div id="outline-container-org7134e69" class="outline-2">
+<h2 id="org7134e69">In Emacs, <i>devil-mode</i> may be the best modifier-less minor mode.</h2>
+<div class="outline-text-2" id="text-org7134e69">
 <pre class="example">
 Cite: [[https://github.com/susam/devil]]
 Cite: [[https://susam.github.io/devil/]]
@@ -2135,9 +2227,9 @@ Cite: [[https://susam.github.io/devil/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgda8373f" class="outline-2">
-<h2 id="orgda8373f">In Emacs, <i>god-mode</i> beautifully addresses modifier fatigue.</h2>
-<div class="outline-text-2" id="text-orgda8373f">
+<div id="outline-container-orgcf61827" class="outline-2">
+<h2 id="orgcf61827">In Emacs, <i>god-mode</i> beautifully addresses modifier fatigue.</h2>
+<div class="outline-text-2" id="text-orgcf61827">
 <pre class="example">
 Cite: [[https://chrisdone.com/posts/god-mode/]]
 Cite: [[https://github.com/emacsorphanage/god-mode]]
@@ -2147,9 +2239,9 @@ Cite: [[https://github.com/emacsorphanage/god-mode]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgf0cae3c" class="outline-2">
-<h2 id="orgf0cae3c">In Vim insert mode, <code>ga</code> will reveal information about the character under the cursor, including its Vim digraph.</h2>
-<div class="outline-text-2" id="text-orgf0cae3c">
+<div id="outline-container-orge4bd223" class="outline-2">
+<h2 id="orge4bd223">In Vim insert mode, <code>ga</code> will reveal information about the character under the cursor, including its Vim digraph.</h2>
+<div class="outline-text-2" id="text-orge4bd223">
 <pre class="example">
 Cite: [[=:help ga=]]
 </pre>
@@ -2158,9 +2250,9 @@ Cite: [[=:help ga=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org1b20b93" class="outline-2">
-<h2 id="org1b20b93">This author has an interesting perspective on prepress via CSS paged media module.</h2>
-<div class="outline-text-2" id="text-org1b20b93">
+<div id="outline-container-orgd04e57b" class="outline-2">
+<h2 id="orgd04e57b">This author has an interesting perspective on prepress via CSS paged media module.</h2>
+<div class="outline-text-2" id="text-orgd04e57b">
 <pre class="example">
 Cite: [[https://iangmcdowell.com/blog/posts/laying-out-a-book-with-css/]]
 </pre>
@@ -2169,9 +2261,9 @@ Cite: [[https://iangmcdowell.com/blog/posts/laying-out-a-book-with-css/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgbfad1e4" class="outline-2">
-<h2 id="orgbfad1e4">SXML is a Guile Scheme standard for representing XML.</h2>
-<div class="outline-text-2" id="text-orgbfad1e4">
+<div id="outline-container-org0dd471d" class="outline-2">
+<h2 id="org0dd471d">SXML is a Guile Scheme standard for representing XML.</h2>
+<div class="outline-text-2" id="text-org0dd471d">
 <pre class="example">
 Cite: [[https://www.gnu.org/software/guile/manual/html_node/SXML.html]]
 </pre>
@@ -2180,9 +2272,9 @@ Cite: [[https://www.gnu.org/software/guile/manual/html_node/SXML.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org7a64895" class="outline-2">
-<h2 id="org7a64895">A potentially useful guide on setting up Gnus in Emacs.</h2>
-<div class="outline-text-2" id="text-org7a64895">
+<div id="outline-container-org2a76502" class="outline-2">
+<h2 id="org2a76502">A potentially useful guide on setting up Gnus in Emacs.</h2>
+<div class="outline-text-2" id="text-org2a76502">
 <pre class="example">
 Cite: [[https://www.bounga.org/tips/2020/05/03/multiple-smtp-accounts-in-gnus-without-external-tools/]]
 </pre>
@@ -2191,9 +2283,9 @@ Cite: [[https://www.bounga.org/tips/2020/05/03/multiple-smtp-accounts-in-gnus-wi
 </p>
 </div>
 </div>
-<div id="outline-container-orgba2a3b2" class="outline-2">
-<h2 id="orgba2a3b2">50# offset (uncoated) paper stock has an average thickness of 0.004 in.</h2>
-<div class="outline-text-2" id="text-orgba2a3b2">
+<div id="outline-container-org0c9803e" class="outline-2">
+<h2 id="org0c9803e">50# offset (uncoated) paper stock has an average thickness of 0.004 in.</h2>
+<div class="outline-text-2" id="text-org0c9803e">
 <pre class="example">
 Cite: [[https://www.hollandlitho.com/paper_thickness_and_weight_cutting_through_the_confusion.html]]
 </pre>
@@ -2202,9 +2294,9 @@ Cite: [[https://www.hollandlitho.com/paper_thickness_and_weight_cutting_through_
 </p>
 </div>
 </div>
-<div id="outline-container-orgdbbbb11" class="outline-2">
-<h2 id="orgdbbbb11">In Vim <i>and</i> Emacs evil, <code>CTRL-B</code> is bound to <code>&lt;PageUp&gt;</code>.</h2>
-<div class="outline-text-2" id="text-orgdbbbb11">
+<div id="outline-container-orgd85b0ee" class="outline-2">
+<h2 id="orgd85b0ee">In Vim <i>and</i> Emacs evil, <code>CTRL-B</code> is bound to <code>&lt;PageUp&gt;</code>.</h2>
+<div class="outline-text-2" id="text-orgd85b0ee">
 <pre class="example">
 Cite: [[=:help CTRL-B=]]
 Cite: [[=C-h f evil-scroll-page-up=]]
@@ -2214,9 +2306,9 @@ Cite: [[=C-h f evil-scroll-page-up=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgc093b1b" class="outline-2">
-<h2 id="orgc093b1b">In Emacs ELisp buffers, tab autocompletion of procedures can be enabled.</h2>
-<div class="outline-text-2" id="text-orgc093b1b">
+<div id="outline-container-org74ef620" class="outline-2">
+<h2 id="org74ef620">In Emacs ELisp buffers, tab autocompletion of procedures can be enabled.</h2>
+<div class="outline-text-2" id="text-org74ef620">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/7023515]]
 </pre>
@@ -2225,9 +2317,9 @@ Cite: [[https://stackoverflow.com/a/7023515]]
 </p>
 </div>
 </div>
-<div id="outline-container-org3a12e72" class="outline-2">
-<h2 id="org3a12e72">This is a good place to start when learning Emacs.</h2>
-<div class="outline-text-2" id="text-org3a12e72">
+<div id="outline-container-org0aef56a" class="outline-2">
+<h2 id="org0aef56a">This is a good place to start when learning Emacs.</h2>
+<div class="outline-text-2" id="text-org0aef56a">
 <pre class="example">
 Cite: [[https://protesilaos.com/codelog/2019-12-20-vlog-switch-emacs/]]
 </pre>
@@ -2236,9 +2328,9 @@ Cite: [[https://protesilaos.com/codelog/2019-12-20-vlog-switch-emacs/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgab7ab7a" class="outline-2">
-<h2 id="orgab7ab7a">Protesilaos Stavrou is a Greek thinker with potential insights on FOSS and Emacs.</h2>
-<div class="outline-text-2" id="text-orgab7ab7a">
+<div id="outline-container-org8b653db" class="outline-2">
+<h2 id="org8b653db">Protesilaos Stavrou is a Greek thinker with potential insights on FOSS and Emacs.</h2>
+<div class="outline-text-2" id="text-org8b653db">
 <pre class="example">
 Cite: [[https://protesilaos.com/about/]]
 </pre>
@@ -2247,9 +2339,9 @@ Cite: [[https://protesilaos.com/about/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org978e4dd" class="outline-2">
-<h2 id="org978e4dd">This paper explains the rationale behind LAML.</h2>
-<div class="outline-text-2" id="text-org978e4dd">
+<div id="outline-container-orgd2364e8" class="outline-2">
+<h2 id="orgd2364e8">This paper explains the rationale behind LAML.</h2>
+<div class="outline-text-2" id="text-orgd2364e8">
 <pre class="example">
 Cite: [[https://archives.iw3c2.org/www2002/_normark/laml/papers/lugm-laml.pdf]]
 </pre>
@@ -2258,9 +2350,9 @@ Cite: [[https://archives.iw3c2.org/www2002/_normark/laml/papers/lugm-laml.pdf]]
 </p>
 </div>
 </div>
-<div id="outline-container-org4d625d6" class="outline-2">
-<h2 id="org4d625d6">LAML is perhaps the nicest Lisp markup language.</h2>
-<div class="outline-text-2" id="text-org4d625d6">
+<div id="outline-container-orgdef9533" class="outline-2">
+<h2 id="orgdef9533">LAML is perhaps the nicest Lisp markup language.</h2>
+<div class="outline-text-2" id="text-orgdef9533">
 <pre class="example">
 Cite: [[https://people.cs.aau.dk/~normark/laml-distributions/laml/index.html]]
 </pre>
@@ -2269,9 +2361,9 @@ Cite: [[https://people.cs.aau.dk/~normark/laml-distributions/laml/index.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org8ad6398" class="outline-2">
-<h2 id="org8ad6398">I guess I should not be surprised that there are many attempts at Lisp-as-markup.</h2>
-<div class="outline-text-2" id="text-org8ad6398">
+<div id="outline-container-orgf944ddd" class="outline-2">
+<h2 id="orgf944ddd">I guess I should not be surprised that there are many attempts at Lisp-as-markup.</h2>
+<div class="outline-text-2" id="text-orgf944ddd">
 <pre class="example">
 Cite: [[https://www.cliki.net/Lisp+Markup+Languages]]
 </pre>
@@ -2280,9 +2372,9 @@ Cite: [[https://www.cliki.net/Lisp+Markup+Languages]]
 </p>
 </div>
 </div>
-<div id="outline-container-org0a3487c" class="outline-2">
-<h2 id="org0a3487c">Guix channels may be embedded in the system and home config files.</h2>
-<div class="outline-text-2" id="text-org0a3487c">
+<div id="outline-container-org4a02e5b" class="outline-2">
+<h2 id="org4a02e5b">Guix channels may be embedded in the system and home config files.</h2>
+<div class="outline-text-2" id="text-org4a02e5b">
 <pre class="example">
 Cite: [[https://guix.gnu.org/manual/devel/en/html_node/Customizing-the-System_002dWide-Guix.html]]
 Cite: [[https://guix.gnu.org/manual/en/html_node/Guix-Home-Services.html]]
@@ -2292,9 +2384,9 @@ Cite: [[https://guix.gnu.org/manual/en/html_node/Guix-Home-Services.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org25dacb2" class="outline-2">
-<h2 id="org25dacb2">In Bash, use <code>du -hs .</code> to get the size of the current directory.</h2>
-<div class="outline-text-2" id="text-org25dacb2">
+<div id="outline-container-orga0626b2" class="outline-2">
+<h2 id="orga0626b2">In Bash, use <code>du -hs .</code> to get the size of the current directory.</h2>
+<div class="outline-text-2" id="text-orga0626b2">
 <pre class="example">
 Cite: [[=man du=]]
 Cite: [[https://stackoverflow.com/a/16662027]]
@@ -2304,9 +2396,9 @@ Cite: [[https://stackoverflow.com/a/16662027]]
 </p>
 </div>
 </div>
-<div id="outline-container-org73ca36e" class="outline-2">
-<h2 id="org73ca36e">In Emacs, <code>M-n</code> to access minibuffer future history moving files between dired buffers.</h2>
-<div class="outline-text-2" id="text-org73ca36e">
+<div id="outline-container-orgcc6a268" class="outline-2">
+<h2 id="orgcc6a268">In Emacs, <code>M-n</code> to access minibuffer future history moving files between dired buffers.</h2>
+<div class="outline-text-2" id="text-orgcc6a268">
 <pre class="example">
 Cite: [[https://www.reddit.com/r/emacs/comments/1hevtrx/dired_faster_way_to_move_files/]]
 Cite: [[https://engineering.collbox.co/post/working-faster-in-emacs-by-reading-the-future/]]
@@ -2316,9 +2408,9 @@ Cite: [[https://engineering.collbox.co/post/working-faster-in-emacs-by-reading-t
 </p>
 </div>
 </div>
-<div id="outline-container-orgf67003e" class="outline-2">
-<h2 id="orgf67003e">In Emacs, <code>C-x 4 0</code> closes the current window <i>and</i> buffer.</h2>
-<div class="outline-text-2" id="text-orgf67003e">
+<div id="outline-container-org82646ee" class="outline-2">
+<h2 id="org82646ee">In Emacs, <code>C-x 4 0</code> closes the current window <i>and</i> buffer.</h2>
+<div class="outline-text-2" id="text-org82646ee">
 <pre class="example">
 Cite: [[https://superuser.com/q/1309765/2465866]]
 </pre>
@@ -2327,9 +2419,9 @@ Cite: [[https://superuser.com/q/1309765/2465866]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgc802f22" class="outline-2">
-<h2 id="orgc802f22">This is a great introduction into Vim-comparable motions in Emacs.</h2>
-<div class="outline-text-2" id="text-orgc802f22">
+<div id="outline-container-org5e6574d" class="outline-2">
+<h2 id="org5e6574d">This is a great introduction into Vim-comparable motions in Emacs.</h2>
+<div class="outline-text-2" id="text-org5e6574d">
 <pre class="example">
 Cite: [[https://www.masteringemacs.org/article/effective-editing-movement]]
 </pre>
@@ -2338,9 +2430,9 @@ Cite: [[https://www.masteringemacs.org/article/effective-editing-movement]]
 </p>
 </div>
 </div>
-<div id="outline-container-org81a4316" class="outline-2">
-<h2 id="org81a4316">A potentially useful plugin for batching various InDesign exports.</h2>
-<div class="outline-text-2" id="text-org81a4316">
+<div id="outline-container-orgbc95b9f" class="outline-2">
+<h2 id="orgbc95b9f">A potentially useful plugin for batching various InDesign exports.</h2>
+<div class="outline-text-2" id="text-orgbc95b9f">
 <pre class="example">
 Cite: [[https://creativepro.com/files/kahrel/indesign/batch_convert.html]]
 </pre>
@@ -2349,9 +2441,9 @@ Cite: [[https://creativepro.com/files/kahrel/indesign/batch_convert.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org3f1cfac" class="outline-2">
-<h2 id="org3f1cfac">This is a very provocative talk about interactive and visual programming.</h2>
-<div class="outline-text-2" id="text-org3f1cfac">
+<div id="outline-container-org0396991" class="outline-2">
+<h2 id="org0396991">This is a very provocative talk about interactive and visual programming.</h2>
+<div class="outline-text-2" id="text-org0396991">
 <pre class="example">
 Cite: [[https://jackrusher.com/strange-loop-2022/]]
 </pre>
@@ -2360,9 +2452,9 @@ Cite: [[https://jackrusher.com/strange-loop-2022/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org9000272" class="outline-2">
-<h2 id="org9000272"><i>Interactive programming</i> is what I have been looking for regarding the <i>correct</i> way to interface with computers.</h2>
-<div class="outline-text-2" id="text-org9000272">
+<div id="outline-container-orgfafdd6b" class="outline-2">
+<h2 id="orgfafdd6b"><i>Interactive programming</i> is what I have been looking for regarding the <i>correct</i> way to interface with computers.</h2>
+<div class="outline-text-2" id="text-orgfafdd6b">
 <pre class="example">
 Cite: [[https://en.wikipedia.org/wiki/Interactive_programming]]
 </pre>
@@ -2371,9 +2463,9 @@ Cite: [[https://en.wikipedia.org/wiki/Interactive_programming]]
 </p>
 </div>
 </div>
-<div id="outline-container-org73ee3d8" class="outline-2">
-<h2 id="org73ee3d8">In Vim insert mode, type <code>&lt;C-o&gt;</code> to use one normal mode command without leaving insert mode.</h2>
-<div class="outline-text-2" id="text-org73ee3d8">
+<div id="outline-container-orgd7e2717" class="outline-2">
+<h2 id="orgd7e2717">In Vim insert mode, type <code>&lt;C-o&gt;</code> to use one normal mode command without leaving insert mode.</h2>
+<div class="outline-text-2" id="text-orgd7e2717">
 <pre class="example">
 Cite: [[=:help i_CTRL-O=]]
 </pre>
@@ -2382,9 +2474,9 @@ Cite: [[=:help i_CTRL-O=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgd91dccc" class="outline-2">
-<h2 id="orgd91dccc">Guix has a handy reference card for frequent commands.</h2>
-<div class="outline-text-2" id="text-orgd91dccc">
+<div id="outline-container-org5629fb2" class="outline-2">
+<h2 id="org5629fb2">Guix has a handy reference card for frequent commands.</h2>
+<div class="outline-text-2" id="text-org5629fb2">
 <pre class="example">
 Cite: [[https://guix.gnu.org/guix-refcard.pdf]]
 </pre>
@@ -2393,9 +2485,9 @@ Cite: [[https://guix.gnu.org/guix-refcard.pdf]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgae9f56f" class="outline-2">
-<h2 id="orgae9f56f">LispKit is a library for developing Scheme on Apple devices. It has some interesting graphing capabilities.</h2>
-<div class="outline-text-2" id="text-orgae9f56f">
+<div id="outline-container-org7644762" class="outline-2">
+<h2 id="org7644762">LispKit is a library for developing Scheme on Apple devices. It has some interesting graphing capabilities.</h2>
+<div class="outline-text-2" id="text-org7644762">
 <pre class="example">
 Cite: [[https://www.lisppad.app/libraries/lispkit/lispkit-draw-chart-bar]]
 </pre>
@@ -2404,9 +2496,9 @@ Cite: [[https://www.lisppad.app/libraries/lispkit/lispkit-draw-chart-bar]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgc80362e" class="outline-2">
-<h2 id="orgc80362e">These posts give the most detailed explanation of the InDesign MathML implementation than I have found to-date.</h2>
-<div class="outline-text-2" id="text-orgc80362e">
+<div id="outline-container-org8d826cd" class="outline-2">
+<h2 id="org8d826cd">These posts give the most detailed explanation of the InDesign MathML implementation than I have found to-date.</h2>
+<div class="outline-text-2" id="text-org8d826cd">
 <pre class="example">
 Cite: [[https://indiscripts.com/post/2024/10/indesign-20-goes-to-mathml-1]]
 Cite: [[https://indiscripts.com/post/2025/03/indesign-20-goes-to-mathml-2]]
@@ -2416,9 +2508,9 @@ Cite: [[https://indiscripts.com/post/2025/03/indesign-20-goes-to-mathml-2]]
 </p>
 </div>
 </div>
-<div id="outline-container-org8b7f20a" class="outline-2">
-<h2 id="org8b7f20a">This is a great basic usage of Guix Deploy.</h2>
-<div class="outline-text-2" id="text-org8b7f20a">
+<div id="outline-container-org137f580" class="outline-2">
+<h2 id="org137f580">This is a great basic usage of Guix Deploy.</h2>
+<div class="outline-text-2" id="text-org137f580">
 <pre class="example">
 Cite: [[https://stumbles.id.au/getting-started-with-guix-deploy.html]]
 </pre>
@@ -2427,9 +2519,9 @@ Cite: [[https://stumbles.id.au/getting-started-with-guix-deploy.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org6f730fc" class="outline-2">
-<h2 id="org6f730fc">Gimp supports automated workflows via scripting in Scheme!</h2>
-<div class="outline-text-2" id="text-org6f730fc">
+<div id="outline-container-orgc76ef3d" class="outline-2">
+<h2 id="orgc76ef3d">Gimp supports automated workflows via scripting in Scheme!</h2>
+<div class="outline-text-2" id="text-orgc76ef3d">
 <pre class="example">
 Cite: [[https://www.gimp.org/tutorials/Basic_Batch/]]
 </pre>
@@ -2438,9 +2530,9 @@ Cite: [[https://www.gimp.org/tutorials/Basic_Batch/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org1a2f669" class="outline-2">
-<h2 id="org1a2f669">In Vim, type <code>U</code> to toggle undo line.</h2>
-<div class="outline-text-2" id="text-org1a2f669">
+<div id="outline-container-orgabef868" class="outline-2">
+<h2 id="orgabef868">In Vim, type <code>U</code> to toggle undo line.</h2>
+<div class="outline-text-2" id="text-orgabef868">
 <pre class="example">
 Cite: [[=:help U=]]
 </pre>
@@ -2449,9 +2541,9 @@ Cite: [[=:help U=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org74a2e44" class="outline-2">
-<h2 id="org74a2e44">In Vim, <code>ZZ</code> is equivalent to <code>:x</code>.</h2>
-<div class="outline-text-2" id="text-org74a2e44">
+<div id="outline-container-orgd6fb596" class="outline-2">
+<h2 id="orgd6fb596">In Vim, <code>ZZ</code> is equivalent to <code>:x</code>.</h2>
+<div class="outline-text-2" id="text-orgd6fb596">
 <pre class="example">
 Cite: [[=:help ZZ=]]
 </pre>
@@ -2460,9 +2552,9 @@ Cite: [[=:help ZZ=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgf506603" class="outline-2">
-<h2 id="orgf506603">In Vim, <code>&lt;C-d&gt;</code> will show all matching help topics for an incomplete help command.</h2>
-<div class="outline-text-2" id="text-orgf506603">
+<div id="outline-container-org0922c5f" class="outline-2">
+<h2 id="org0922c5f">In Vim, <code>&lt;C-d&gt;</code> will show all matching help topics for an incomplete help command.</h2>
+<div class="outline-text-2" id="text-org0922c5f">
 <pre class="example">
 Cite: [[=:help c_CTRL-D=]]
 </pre>
@@ -2471,9 +2563,9 @@ Cite: [[=:help c_CTRL-D=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgf9fc2d0" class="outline-2">
-<h2 id="orgf9fc2d0">In Vim, type <code>&lt;C-w&gt;p</code> to go to the previous window.</h2>
-<div class="outline-text-2" id="text-orgf9fc2d0">
+<div id="outline-container-orgee68e3d" class="outline-2">
+<h2 id="orgee68e3d">In Vim, type <code>&lt;C-w&gt;p</code> to go to the previous window.</h2>
+<div class="outline-text-2" id="text-orgee68e3d">
 <pre class="example">
 Cite: [[=:help CTRL-W_p=]]
 </pre>
@@ -2482,9 +2574,9 @@ Cite: [[=:help CTRL-W_p=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org28bb04d" class="outline-2">
-<h2 id="org28bb04d">GUI apps can be started from the Linux virtual terminal via a number of methods.</h2>
-<div class="outline-text-2" id="text-org28bb04d">
+<div id="outline-container-org5c4bb9b" class="outline-2">
+<h2 id="org5c4bb9b">GUI apps can be started from the Linux virtual terminal via a number of methods.</h2>
+<div class="outline-text-2" id="text-org5c4bb9b">
 <pre class="example">
 Cite: [[https://linuxconfig.org/how-to-run-x-applications-without-a-desktop-or-a-wm]]
 Cite: [[https://superuser.com/q/550020]]
@@ -2495,9 +2587,9 @@ Cite: [[https://superuser.com/q/606811]]
 </p>
 </div>
 </div>
-<div id="outline-container-org04b4ea8" class="outline-2">
-<h2 id="org04b4ea8">David Thompson, a Guix contributor, gives some helpful perspective on hardware compatibility with Guix's FOSS stance.</h2>
-<div class="outline-text-2" id="text-org04b4ea8">
+<div id="outline-container-org07cb60b" class="outline-2">
+<h2 id="org07cb60b">David Thompson, a Guix contributor, gives some helpful perspective on hardware compatibility with Guix's FOSS stance.</h2>
+<div class="outline-text-2" id="text-org07cb60b">
 <pre class="example">
 Cite: [[https://dthompson.us/posts/installing-guix-on-a-10th-gen-thinkpad-x1.html]]
 </pre>
@@ -2506,9 +2598,9 @@ Cite: [[https://dthompson.us/posts/installing-guix-on-a-10th-gen-thinkpad-x1.htm
 </p>
 </div>
 </div>
-<div id="outline-container-org6acca05" class="outline-2">
-<h2 id="org6acca05">In Vim, type <code>g&lt;C-g&gt;</code> to see information about the cursor position.</h2>
-<div class="outline-text-2" id="text-org6acca05">
+<div id="outline-container-org3bafdd9" class="outline-2">
+<h2 id="org3bafdd9">In Vim, type <code>g&lt;C-g&gt;</code> to see information about the cursor position.</h2>
+<div class="outline-text-2" id="text-org3bafdd9">
 <pre class="example">
 Cite: [[=:help g_CTRL-G=]]
 Cite: [[=:help word-count=]]
@@ -2518,9 +2610,9 @@ Cite: [[=:help word-count=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org066c925" class="outline-2">
-<h2 id="org066c925">In Vim, type <code>:set ruler</code> to enable line/column/relative position info for the cursor in the bottom left of the window.</h2>
-<div class="outline-text-2" id="text-org066c925">
+<div id="outline-container-orgb37ec1d" class="outline-2">
+<h2 id="orgb37ec1d">In Vim, type <code>:set ruler</code> to enable line/column/relative position info for the cursor in the bottom left of the window.</h2>
+<div class="outline-text-2" id="text-orgb37ec1d">
 <pre class="example">
 Cite: [[=:help ruler=]]
 Cite: [[https://unix.stackexchange.com/a/335468/727998]]
@@ -2530,9 +2622,9 @@ Cite: [[https://unix.stackexchange.com/a/335468/727998]]
 </p>
 </div>
 </div>
-<div id="outline-container-org773b0eb" class="outline-2">
-<h2 id="org773b0eb">In Vim insert mode, type <code>&lt;C-k&gt;Co</code> for the copyright symbol: ©.</h2>
-<div class="outline-text-2" id="text-org773b0eb">
+<div id="outline-container-orga780a36" class="outline-2">
+<h2 id="orga780a36">In Vim insert mode, type <code>&lt;C-k&gt;Co</code> for the copyright symbol: ©.</h2>
+<div class="outline-text-2" id="text-orga780a36">
 <pre class="example">
 Cite: [[=:digraphs=]]
 Cite: [[=:help digraph=]]
@@ -2542,9 +2634,9 @@ Cite: [[=:help digraph=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org0f471a3" class="outline-2">
-<h2 id="org0f471a3">In Vim command mode, type <code>:e &lt;cfile&gt;</code> to create a new file at the path under the cursor.</h2>
-<div class="outline-text-2" id="text-org0f471a3">
+<div id="outline-container-org0275a71" class="outline-2">
+<h2 id="org0275a71">In Vim command mode, type <code>:e &lt;cfile&gt;</code> to create a new file at the path under the cursor.</h2>
+<div class="outline-text-2" id="text-org0275a71">
 <pre class="example">
 Cite: [[=:help <cfile>=]]
 </pre>
@@ -2553,9 +2645,9 @@ Cite: [[=:help <cfile>=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org54aac51" class="outline-2">
-<h2 id="org54aac51">This devlog has some helpful info about an initial Guix setup.</h2>
-<div class="outline-text-2" id="text-org54aac51">
+<div id="outline-container-org1f11fc2" class="outline-2">
+<h2 id="org1f11fc2">This devlog has some helpful info about an initial Guix setup.</h2>
+<div class="outline-text-2" id="text-org1f11fc2">
 <pre class="example">
 Cite: [[https://simendsjo.me/blog/20240712085803-initial_guix_home_setup.html]]
 </pre>
@@ -2564,9 +2656,9 @@ Cite: [[https://simendsjo.me/blog/20240712085803-initial_guix_home_setup.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgac021be" class="outline-2">
-<h2 id="orgac021be">Guix deploy is a built-in feature for managing Guix on remote hardware.</h2>
-<div class="outline-text-2" id="text-orgac021be">
+<div id="outline-container-orgde35235" class="outline-2">
+<h2 id="orgde35235">Guix deploy is a built-in feature for managing Guix on remote hardware.</h2>
+<div class="outline-text-2" id="text-orgde35235">
 <pre class="example">
 Cite: [[https://guix.gnu.org/manual/en/html_node/Invoking-guix-deploy.html]]
 </pre>
@@ -2575,9 +2667,9 @@ Cite: [[https://guix.gnu.org/manual/en/html_node/Invoking-guix-deploy.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org892164f" class="outline-2">
-<h2 id="org892164f">Haunt is a static site generator written in Guile Scheme.</h2>
-<div class="outline-text-2" id="text-org892164f">
+<div id="outline-container-orga029a6d" class="outline-2">
+<h2 id="orga029a6d">Haunt is a static site generator written in Guile Scheme.</h2>
+<div class="outline-text-2" id="text-orga029a6d">
 <pre class="example">
 Cite: [[https://dthompson.us/projects/haunt.html]]
 </pre>
@@ -2586,9 +2678,9 @@ Cite: [[https://dthompson.us/projects/haunt.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-org628e2e7" class="outline-2">
-<h2 id="org628e2e7">The man page for bash has a whole section about the readline (with keybinds.</h2>
-<div class="outline-text-2" id="text-org628e2e7">
+<div id="outline-container-org1bcc8df" class="outline-2">
+<h2 id="org1bcc8df">The man page for bash has a whole section about the readline (with keybinds.</h2>
+<div class="outline-text-2" id="text-org1bcc8df">
 <pre class="example">
 Cite: [[=man bash=]]
 </pre>
@@ -2597,9 +2689,9 @@ Cite: [[=man bash=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgb383867" class="outline-2">
-<h2 id="orgb383867">In Vim, Netrw cannot copy directories.</h2>
-<div class="outline-text-2" id="text-orgb383867">
+<div id="outline-container-org1d1c1b0" class="outline-2">
+<h2 id="org1d1c1b0">In Vim, Netrw cannot copy directories.</h2>
+<div class="outline-text-2" id="text-org1d1c1b0">
 <pre class="example">
 Cite: [[https://vi.stackexchange.com/questions/12095/is-it-possible-to-clone-a-directory-with-netrw]]
 Cite: [[https://stackoverflow.com/questions/26958059/vim-netrw-copy-commands]]
@@ -2609,9 +2701,9 @@ Cite: [[https://stackoverflow.com/questions/26958059/vim-netrw-copy-commands]]
 </p>
 </div>
 </div>
-<div id="outline-container-org4a6be0c" class="outline-2">
-<h2 id="org4a6be0c">Vim can be configured to run as a command server when GUI support is enabled.</h2>
-<div class="outline-text-2" id="text-org4a6be0c">
+<div id="outline-container-org08222fc" class="outline-2">
+<h2 id="org08222fc">Vim can be configured to run as a command server when GUI support is enabled.</h2>
+<div class="outline-text-2" id="text-org08222fc">
 <pre class="example">
 Cite: [[=:help clientserver=]]
 Cite: [[https://subvisual.com/blog/posts/119-open-files-on-existing-vim-sessions/]]
@@ -2621,9 +2713,9 @@ Cite: [[https://subvisual.com/blog/posts/119-open-files-on-existing-vim-sessions
 </p>
 </div>
 </div>
-<div id="outline-container-orgf85e0ae" class="outline-2">
-<h2 id="orgf85e0ae">This is a great quick-start guide by the founder of Guix about using Guix Home.</h2>
-<div class="outline-text-2" id="text-orgf85e0ae">
+<div id="outline-container-org064b9bc" class="outline-2">
+<h2 id="org064b9bc">This is a great quick-start guide by the founder of Guix about using Guix Home.</h2>
+<div class="outline-text-2" id="text-org064b9bc">
 <pre class="example">
 Cite: [[https://guix.gnu.org/blog/2022/keeping-ones-home-tidy/]]
 </pre>
@@ -2632,9 +2724,9 @@ Cite: [[https://guix.gnu.org/blog/2022/keeping-ones-home-tidy/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgd6a972f" class="outline-2">
-<h2 id="orgd6a972f">This guy, Podiki, built a gaming rig with Guix System. He is also a major contributor to NonGuix.</h2>
-<div class="outline-text-2" id="text-orgd6a972f">
+<div id="outline-container-org01a990f" class="outline-2">
+<h2 id="org01a990f">This guy, Podiki, built a gaming rig with Guix System. He is also a major contributor to NonGuix.</h2>
+<div class="outline-text-2" id="text-org01a990f">
 <pre class="example">
 Cite: [[https://boilingsteam.com/how-i-built-my-new-linux-gaming-desktop-in-2021-with-amd-cpugpu-and-gnu-guix/]]
 </pre>
@@ -2643,9 +2735,9 @@ Cite: [[https://boilingsteam.com/how-i-built-my-new-linux-gaming-desktop-in-2021
 </p>
 </div>
 </div>
-<div id="outline-container-orgfcad1e5" class="outline-2">
-<h2 id="orgfcad1e5">In Vim, use <code>:helpg /pattern/</code> to search the Vim help via grep. Use <code>:cn</code> and <code>:cp</code> to navigate matches.</h2>
-<div class="outline-text-2" id="text-orgfcad1e5">
+<div id="outline-container-org4351c8f" class="outline-2">
+<h2 id="org4351c8f">In Vim, use <code>:helpg /pattern/</code> to search the Vim help via grep. Use <code>:cn</code> and <code>:cp</code> to navigate matches.</h2>
+<div class="outline-text-2" id="text-org4351c8f">
 <pre class="example">
 Cite: [[=:help helpg=]]
 </pre>
@@ -2654,9 +2746,9 @@ Cite: [[=:help helpg=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org97b0fc5" class="outline-2">
-<h2 id="org97b0fc5">System Crafters is a great community with info about Guix and Emacs.</h2>
-<div class="outline-text-2" id="text-org97b0fc5">
+<div id="outline-container-orgb5d3e66" class="outline-2">
+<h2 id="orgb5d3e66">System Crafters is a great community with info about Guix and Emacs.</h2>
+<div class="outline-text-2" id="text-orgb5d3e66">
 <pre class="example">
 Cite: [[https://systemcrafters.net/]]
 </pre>
@@ -2665,9 +2757,9 @@ Cite: [[https://systemcrafters.net/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgd921898" class="outline-2">
-<h2 id="orgd921898">Guix is a better, GNU clone of NixOS configured in Guile Scheme.</h2>
-<div class="outline-text-2" id="text-orgd921898">
+<div id="outline-container-orgcbc5b58" class="outline-2">
+<h2 id="orgcbc5b58">Guix is a better, GNU clone of NixOS configured in Guile Scheme.</h2>
+<div class="outline-text-2" id="text-orgcbc5b58">
 <pre class="example">
 Cite: [[https://guix.gnu.org/]]
 </pre>
@@ -2676,9 +2768,9 @@ Cite: [[https://guix.gnu.org/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org46d5e84" class="outline-2">
-<h2 id="org46d5e84">Literate programming is a way of documenting high-level code approaches by structuring the code files with prose.</h2>
-<div class="outline-text-2" id="text-org46d5e84">
+<div id="outline-container-org208bfc4" class="outline-2">
+<h2 id="org208bfc4">Literate programming is a way of documenting high-level code approaches by structuring the code files with prose.</h2>
+<div class="outline-text-2" id="text-org208bfc4">
 <pre class="example">
 Cite: [[https://en.wikipedia.org/wiki/Literate_programming]]
 </pre>
@@ -2687,25 +2779,25 @@ Cite: [[https://en.wikipedia.org/wiki/Literate_programming]]
 </p>
 </div>
 </div>
-<div id="outline-container-org28f4d87" class="outline-2">
-<h2 id="org28f4d87">In Zsh, <code>$OLDPWD</code> stores the value of the previous pwd. This is hugely useful for moving files around.</h2>
-<div class="outline-text-2" id="text-org28f4d87">
+<div id="outline-container-org1c76318" class="outline-2">
+<h2 id="org1c76318">In Zsh, <code>$OLDPWD</code> stores the value of the previous pwd. This is hugely useful for moving files around.</h2>
+<div class="outline-text-2" id="text-org1c76318">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2025-05-30 Fri]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-org888d70f" class="outline-2">
-<h2 id="org888d70f">In Zsh, adding a glob to an expression makes the whole expression a glob. Make sure you are postfixing <code>*</code> if you want to see all matches for a that begin with the glob.</h2>
-<div class="outline-text-2" id="text-org888d70f">
+<div id="outline-container-org7f0ba38" class="outline-2">
+<h2 id="org7f0ba38">In Zsh, adding a glob to an expression makes the whole expression a glob. Make sure you are postfixing <code>*</code> if you want to see all matches for a that begin with the glob.</h2>
+<div class="outline-text-2" id="text-org7f0ba38">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2025-05-30 Fri]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-orge90a64b" class="outline-2">
-<h2 id="orge90a64b">In Vim, use <code>&lt;C-w&gt;T</code> to move the current window to a new tab.</h2>
-<div class="outline-text-2" id="text-orge90a64b">
+<div id="outline-container-org0d23a9c" class="outline-2">
+<h2 id="org0d23a9c">In Vim, use <code>&lt;C-w&gt;T</code> to move the current window to a new tab.</h2>
+<div class="outline-text-2" id="text-org0d23a9c">
 <pre class="example">
 Cite: [[=CTRL-W_T=]]
 </pre>
@@ -2714,9 +2806,9 @@ Cite: [[=CTRL-W_T=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgbb89f88" class="outline-2">
-<h2 id="orgbb89f88">In Zsh, use <code>exec zsh</code> to totally reload Zsh (including environment variables).</h2>
-<div class="outline-text-2" id="text-orgbb89f88">
+<div id="outline-container-org8a94ec2" class="outline-2">
+<h2 id="org8a94ec2">In Zsh, use <code>exec zsh</code> to totally reload Zsh (including environment variables).</h2>
+<div class="outline-text-2" id="text-org8a94ec2">
 <pre class="example">
 Cite: [[https://batsov.com/articles/2022/09/15/reload-zsh-configuration/]]
 </pre>
@@ -2725,9 +2817,9 @@ Cite: [[https://batsov.com/articles/2022/09/15/reload-zsh-configuration/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org7c1c007" class="outline-2">
-<h2 id="org7c1c007">top is way better than Activity Monitor.</h2>
-<div class="outline-text-2" id="text-org7c1c007">
+<div id="outline-container-org8fc9077" class="outline-2">
+<h2 id="org8fc9077">top is way better than Activity Monitor.</h2>
+<div class="outline-text-2" id="text-org8fc9077">
 <pre class="example">
 Cite: [[=man top=]]
 </pre>
@@ -2736,9 +2828,9 @@ Cite: [[=man top=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org99aa37e" class="outline-2">
-<h2 id="org99aa37e">In Vim, <code>nrformats+=alpha</code> must be set to increment/decrement letters with the below two commands.</h2>
-<div class="outline-text-2" id="text-org99aa37e">
+<div id="outline-container-org7945c7e" class="outline-2">
+<h2 id="org7945c7e">In Vim, <code>nrformats+=alpha</code> must be set to increment/decrement letters with the below two commands.</h2>
+<div class="outline-text-2" id="text-org7945c7e">
 <pre class="example">
 Cite: [[=:help nrformats=]]
 </pre>
@@ -2747,9 +2839,9 @@ Cite: [[=:help nrformats=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgdb82d7e" class="outline-2">
-<h2 id="orgdb82d7e">In Vim visual modes, use <code>g&lt;C-x&gt;</code> to decrement.</h2>
-<div class="outline-text-2" id="text-orgdb82d7e">
+<div id="outline-container-orgbe542d6" class="outline-2">
+<h2 id="orgbe542d6">In Vim visual modes, use <code>g&lt;C-x&gt;</code> to decrement.</h2>
+<div class="outline-text-2" id="text-orgbe542d6">
 <pre class="example">
 Cite: [[=:help v_g_CTRL-X=]]
 </pre>
@@ -2758,9 +2850,9 @@ Cite: [[=:help v_g_CTRL-X=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org9be36bd" class="outline-2">
-<h2 id="org9be36bd">In Vim visual modes, use <code>g&lt;C-a&gt;</code> to increment numbers on all lines.</h2>
-<div class="outline-text-2" id="text-org9be36bd">
+<div id="outline-container-org53de86e" class="outline-2">
+<h2 id="org53de86e">In Vim visual modes, use <code>g&lt;C-a&gt;</code> to increment numbers on all lines.</h2>
+<div class="outline-text-2" id="text-org53de86e">
 <pre class="example">
 Cite: [[=:help v_g_CTRL-A=]]
 Cite: [[https://www.joshmorony.com/totw/28/]]
@@ -2770,9 +2862,9 @@ Cite: [[https://www.joshmorony.com/totw/28/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org73e306f" class="outline-2">
-<h2 id="org73e306f">In Vim, use <code>`&lt;</code> and <code>`&gt;</code> to go to the beginning and end of the previous visual selection.</h2>
-<div class="outline-text-2" id="text-org73e306f">
+<div id="outline-container-org55ef2f2" class="outline-2">
+<h2 id="org55ef2f2">In Vim, use <code>`&lt;</code> and <code>`&gt;</code> to go to the beginning and end of the previous visual selection.</h2>
+<div class="outline-text-2" id="text-org55ef2f2">
 <pre class="example">
 Cite: [[=:help `<=]]
 Cite: [[=:help `>=]]
@@ -2783,9 +2875,9 @@ Cite: [[https://stackoverflow.com/questions/11176159/how-to-jump-to-the-start-or
 </p>
 </div>
 </div>
-<div id="outline-container-org75b03d8" class="outline-2">
-<h2 id="org75b03d8">In Vim, <code>&lt;C-r&gt;&lt;C-r&gt;register</code> will paste from a register without executing special characters.</h2>
-<div class="outline-text-2" id="text-org75b03d8">
+<div id="outline-container-org5723809" class="outline-2">
+<h2 id="org5723809">In Vim, <code>&lt;C-r&gt;&lt;C-r&gt;register</code> will paste from a register without executing special characters.</h2>
+<div class="outline-text-2" id="text-org5723809">
 <pre class="example">
 Cite: [[=:help i_CTRL-R_CTRL-R=]]
 Cite: [[https://vim.fandom.com/wiki/Pasting_registers]]
@@ -2795,9 +2887,9 @@ Cite: [[https://vim.fandom.com/wiki/Pasting_registers]]
 </p>
 </div>
 </div>
-<div id="outline-container-org28565ab" class="outline-2">
-<h2 id="org28565ab">In Vim, you can execute arbitrary edits with <code>:g/pattern/normal somecommand</code>.</h2>
-<div class="outline-text-2" id="text-org28565ab">
+<div id="outline-container-org38382db" class="outline-2">
+<h2 id="org38382db">In Vim, you can execute arbitrary edits with <code>:g/pattern/normal somecommand</code>.</h2>
+<div class="outline-text-2" id="text-org38382db">
 <pre class="example">
 Cite: [[=:help :g=]]
 Cite: [[https://learnvim.irian.to/basics/the_global_command]]
@@ -2807,9 +2899,9 @@ Cite: [[https://learnvim.irian.to/basics/the_global_command]]
 </p>
 </div>
 </div>
-<div id="outline-container-org50535a4" class="outline-2">
-<h2 id="org50535a4">In double entry accounting, payments made with credit cards and other liabilities are represented as outgoing (negative) values.</h2>
-<div class="outline-text-2" id="text-org50535a4">
+<div id="outline-container-org32c4722" class="outline-2">
+<h2 id="org32c4722">In double entry accounting, payments made with credit cards and other liabilities are represented as outgoing (negative) values.</h2>
+<div class="outline-text-2" id="text-org32c4722">
 <pre class="example">
 Cite: [[https://www.reddit.com/r/plaintextaccounting/comments/eh9bz7/yet_another_question_about_credit_cards_and/]]
 </pre>
@@ -2818,17 +2910,17 @@ Cite: [[https://www.reddit.com/r/plaintextaccounting/comments/eh9bz7/yet_another
 </p>
 </div>
 </div>
-<div id="outline-container-orgb296e9b" class="outline-2">
-<h2 id="orgb296e9b">In Zsh use <code>bindkey -v</code> to enable Vi mode. (Insert mode is the default.</h2>
-<div class="outline-text-2" id="text-orgb296e9b">
+<div id="outline-container-orgf5ca850" class="outline-2">
+<h2 id="orgf5ca850">In Zsh use <code>bindkey -v</code> to enable Vi mode. (Insert mode is the default.</h2>
+<div class="outline-text-2" id="text-orgf5ca850">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2025-05-02 Fri]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-org4fbd6fb" class="outline-2">
-<h2 id="org4fbd6fb">In Zsh use <code>setopt extended_glob; yourcmdhere (^negativepattern)</code> to apply a command via an exclusion.</h2>
-<div class="outline-text-2" id="text-org4fbd6fb">
+<div id="outline-container-org9aeffc1" class="outline-2">
+<h2 id="org9aeffc1">In Zsh use <code>setopt extended_glob; yourcmdhere (^negativepattern)</code> to apply a command via an exclusion.</h2>
+<div class="outline-text-2" id="text-org9aeffc1">
 <pre class="example">
 Cite: [[https://unix.stackexchange.com/a/541787/727998]]
 </pre>
@@ -2837,9 +2929,9 @@ Cite: [[https://unix.stackexchange.com/a/541787/727998]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgd263b42" class="outline-2">
-<h2 id="orgd263b42">In Vim insert mode, type <code>&lt;C-v&gt;160</code> to insert a no-break space.</h2>
-<div class="outline-text-2" id="text-orgd263b42">
+<div id="outline-container-orge967238" class="outline-2">
+<h2 id="orge967238">In Vim insert mode, type <code>&lt;C-v&gt;160</code> to insert a no-break space.</h2>
+<div class="outline-text-2" id="text-orge967238">
 <pre class="example">
 Cite: [[https://vimtricks.com/p/vimtrick-non-printable-characters/]]
 </pre>
@@ -2848,9 +2940,9 @@ Cite: [[https://vimtricks.com/p/vimtrick-non-printable-characters/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org6aadc99" class="outline-2">
-<h2 id="org6aadc99">In Vim, you can set various white space characters and markers with <code>listchars</code>.</h2>
-<div class="outline-text-2" id="text-org6aadc99">
+<div id="outline-container-org35ef74b" class="outline-2">
+<h2 id="org35ef74b">In Vim, you can set various white space characters and markers with <code>listchars</code>.</h2>
+<div class="outline-text-2" id="text-org35ef74b">
 <pre class="example">
 Cite: [[=:help listchars=]]
 </pre>
@@ -2859,9 +2951,9 @@ Cite: [[=:help listchars=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgb61da87" class="outline-2">
-<h2 id="orgb61da87">In Vim <code>R</code> replace mode, type <code>&lt;C-r&gt;"</code> to paste yanked contents.</h2>
-<div class="outline-text-2" id="text-orgb61da87">
+<div id="outline-container-org09e7363" class="outline-2">
+<h2 id="org09e7363">In Vim <code>R</code> replace mode, type <code>&lt;C-r&gt;"</code> to paste yanked contents.</h2>
+<div class="outline-text-2" id="text-org09e7363">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/25413808/28799158]]
 </pre>
@@ -2870,9 +2962,9 @@ Cite: [[https://stackoverflow.com/a/25413808/28799158]]
 </p>
 </div>
 </div>
-<div id="outline-container-org3414e1c" class="outline-2">
-<h2 id="org3414e1c">In Vim GREP, <code>\_.</code> matches any character <i>including a newline</i>.</h2>
-<div class="outline-text-2" id="text-org3414e1c">
+<div id="outline-container-orgfff8e3f" class="outline-2">
+<h2 id="orgfff8e3f">In Vim GREP, <code>\_.</code> matches any character <i>including a newline</i>.</h2>
+<div class="outline-text-2" id="text-orgfff8e3f">
 <pre class="example">
 Cite: [[=:help /\_.=]]
 Cite: [[https://stackoverflow.com/a/784203/28799158]]
@@ -2882,9 +2974,9 @@ Cite: [[https://stackoverflow.com/a/784203/28799158]]
 </p>
 </div>
 </div>
-<div id="outline-container-org485f50c" class="outline-2">
-<h2 id="org485f50c">In Vim, use <code>:%s//~/</code> to redo the last substitution.</h2>
-<div class="outline-text-2" id="text-org485f50c">
+<div id="outline-container-orgb1e0d49" class="outline-2">
+<h2 id="orgb1e0d49">In Vim, use <code>:%s//~/</code> to redo the last substitution.</h2>
+<div class="outline-text-2" id="text-orgb1e0d49">
 <pre class="example">
 Cite: [[=:help g&=]]
 Cite: [[https://vi.stackexchange.com/a/18107/54693]]
@@ -2894,9 +2986,9 @@ Cite: [[https://vi.stackexchange.com/a/18107/54693]]
 </p>
 </div>
 </div>
-<div id="outline-container-org5dee1c3" class="outline-2">
-<h2 id="org5dee1c3">Pandoc can translate markdown fenced divs to ICML paragraph and character styles.</h2>
-<div class="outline-text-2" id="text-org5dee1c3">
+<div id="outline-container-org06b1edc" class="outline-2">
+<h2 id="org06b1edc">Pandoc can translate markdown fenced divs to ICML paragraph and character styles.</h2>
+<div class="outline-text-2" id="text-org06b1edc">
 <pre class="example">
 Cite: [[https://github.com/jgm/pandoc/wiki/Importing-Markdown-in-InDesign]]
 </pre>
@@ -2905,9 +2997,9 @@ Cite: [[https://github.com/jgm/pandoc/wiki/Importing-Markdown-in-InDesign]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgf10f7ac" class="outline-2">
-<h2 id="orgf10f7ac">Processing manuscripts as XML may dramatically reduce the InDesign workload.</h2>
-<div class="outline-text-2" id="text-orgf10f7ac">
+<div id="outline-container-org61e4baf" class="outline-2">
+<h2 id="org61e4baf">Processing manuscripts as XML may dramatically reduce the InDesign workload.</h2>
+<div class="outline-text-2" id="text-org61e4baf">
 <pre class="example">
 Cite: [[https://helpx.adobe.com/indesign/using/importing-xml.html]]
 Cite: [[https://carijansen.com/indesign-xml-reference-guide/]]
@@ -2918,9 +3010,9 @@ Cite: [[https://stackoverflow.com/a/66267474/28799158]]
 </p>
 </div>
 </div>
-<div id="outline-container-org08c274b" class="outline-2">
-<h2 id="org08c274b">In Vim, <code>gq{motion}</code> will format the text. This is particularly useful for aligning text to a tab stop.</h2>
-<div class="outline-text-2" id="text-org08c274b">
+<div id="outline-container-org2d9b68b" class="outline-2">
+<h2 id="org2d9b68b">In Vim, <code>gq{motion}</code> will format the text. This is particularly useful for aligning text to a tab stop.</h2>
+<div class="outline-text-2" id="text-org2d9b68b">
 <pre class="example">
 Cite: [[=:help gq=]]
 </pre>
@@ -2929,9 +3021,9 @@ Cite: [[=:help gq=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgc2a05cd" class="outline-2">
-<h2 id="orgc2a05cd">In Vim <code>@%</code> is the register for the current file (absolute path).</h2>
-<div class="outline-text-2" id="text-orgc2a05cd">
+<div id="outline-container-orge26cae4" class="outline-2">
+<h2 id="orge26cae4">In Vim <code>@%</code> is the register for the current file (absolute path).</h2>
+<div class="outline-text-2" id="text-orge26cae4">
 <pre class="example">
 Cite: [[=:help quote%=]]
 </pre>
@@ -2940,9 +3032,9 @@ Cite: [[=:help quote%=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgf3b9530" class="outline-2">
-<h2 id="orgf3b9530">In Vim, <code>:call delete(@%)</code> deletes the current (but leaves the buffer intact.</h2>
-<div class="outline-text-2" id="text-orgf3b9530">
+<div id="outline-container-orgea786d8" class="outline-2">
+<h2 id="orgea786d8">In Vim, <code>:call delete(@%)</code> deletes the current (but leaves the buffer intact.</h2>
+<div class="outline-text-2" id="text-orgea786d8">
 <pre class="example">
 Cite: [[=:help delete()=]]
 Cite: [[https://stackoverflow.com/a/16679182]]
@@ -2952,9 +3044,9 @@ Cite: [[https://stackoverflow.com/a/16679182]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgc4204e3" class="outline-2">
-<h2 id="orgc4204e3">In Vim GREP, <code>\c</code> makes the selection case insensitive.</h2>
-<div class="outline-text-2" id="text-orgc4204e3">
+<div id="outline-container-orgbe32494" class="outline-2">
+<h2 id="orgbe32494">In Vim GREP, <code>\c</code> makes the selection case insensitive.</h2>
+<div class="outline-text-2" id="text-orgbe32494">
 <pre class="example">
 Cite: [[=:help /\c=]]
 Cite: [[https://superuser.com/a/713957]]
@@ -2964,9 +3056,9 @@ Cite: [[https://superuser.com/a/713957]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgdd685b8" class="outline-2">
-<h2 id="orgdd685b8">In Vim, <code>_</code> is the <i>current line</i> motion.</h2>
-<div class="outline-text-2" id="text-orgdd685b8">
+<div id="outline-container-org07e72b4" class="outline-2">
+<h2 id="org07e72b4">In Vim, <code>_</code> is the <i>current line</i> motion.</h2>
+<div class="outline-text-2" id="text-org07e72b4">
 <pre class="example">
 Cite: [[=:help _=]]
 Cite: [[https://stackoverflow.com/a/47864035/28799158]]
@@ -2976,9 +3068,9 @@ Cite: [[https://stackoverflow.com/a/47864035/28799158]]
 </p>
 </div>
 </div>
-<div id="outline-container-org0452aae" class="outline-2">
-<h2 id="org0452aae">This video explores the importance of experience/familiarity/practice in learning at pace.</h2>
-<div class="outline-text-2" id="text-org0452aae">
+<div id="outline-container-orgdc1c475" class="outline-2">
+<h2 id="orgdc1c475">This video explores the importance of experience/familiarity/practice in learning at pace.</h2>
+<div class="outline-text-2" id="text-orgdc1c475">
 <pre class="example">
 Cite: [[https://www.youtube.com/watch?v=bSDprg24pEA]]
 </pre>
@@ -2987,9 +3079,9 @@ Cite: [[https://www.youtube.com/watch?v=bSDprg24pEA]]
 </p>
 </div>
 </div>
-<div id="outline-container-org48d1457" class="outline-2">
-<h2 id="org48d1457">Vim has a built in print feature: <code>:hardcopy</code></h2>
-<div class="outline-text-2" id="text-org48d1457">
+<div id="outline-container-org7d75e9b" class="outline-2">
+<h2 id="org7d75e9b">Vim has a built in print feature: <code>:hardcopy</code></h2>
+<div class="outline-text-2" id="text-org7d75e9b">
 <pre class="example">
 Cite: [[=:help :hardcopy=]]
 Cite: [[https://stackoverflow.com/a/9693079]]
@@ -2999,9 +3091,9 @@ Cite: [[https://stackoverflow.com/a/9693079]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgc5f662e" class="outline-2">
-<h2 id="orgc5f662e">lpr is a shell service for printing files.</h2>
-<div class="outline-text-2" id="text-orgc5f662e">
+<div id="outline-container-orgd65bb76" class="outline-2">
+<h2 id="orgd65bb76">lpr is a shell service for printing files.</h2>
+<div class="outline-text-2" id="text-orgd65bb76">
 <pre class="example">
 Cite: [[=man lpr=]]
 Cite: [[https://superuser.com/a/607380]]
@@ -3011,9 +3103,9 @@ Cite: [[https://superuser.com/a/607380]]
 </p>
 </div>
 </div>
-<div id="outline-container-org5e255e9" class="outline-2">
-<h2 id="org5e255e9">In Vim command mode, <code>&lt;cfile&gt;</code> is replaced with the filename under the cursor.</h2>
-<div class="outline-text-2" id="text-org5e255e9">
+<div id="outline-container-orgea4da6b" class="outline-2">
+<h2 id="orgea4da6b">In Vim command mode, <code>&lt;cfile&gt;</code> is replaced with the filename under the cursor.</h2>
+<div class="outline-text-2" id="text-orgea4da6b">
 <pre class="example">
 Cite: [[=:help <cfile>=]]
 </pre>
@@ -3022,9 +3114,9 @@ Cite: [[=:help <cfile>=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org7179466" class="outline-2">
-<h2 id="org7179466">Lilypond is a musical markup language based on ABC and LaTeX. There is a (depreciated) Pandoc Lua filter for it already.</h2>
-<div class="outline-text-2" id="text-org7179466">
+<div id="outline-container-org6821dbf" class="outline-2">
+<h2 id="org6821dbf">Lilypond is a musical markup language based on ABC and LaTeX. There is a (depreciated) Pandoc Lua filter for it already.</h2>
+<div class="outline-text-2" id="text-org6821dbf">
 <pre class="example">
 Cite: [[https://lilypond.org]]
 Cite: [[https://abcnotation.com]]
@@ -3035,9 +3127,9 @@ Cite: [[https://github.com/pandoc/lua-filters/tree/master/lilypond]]
 </p>
 </div>
 </div>
-<div id="outline-container-org01b1128" class="outline-2">
-<h2 id="org01b1128">In Vim GREP, the <code>\%V</code> atom restricts the search to the last visual mode selection.</h2>
-<div class="outline-text-2" id="text-org01b1128">
+<div id="outline-container-orgeccaa9f" class="outline-2">
+<h2 id="orgeccaa9f">In Vim GREP, the <code>\%V</code> atom restricts the search to the last visual mode selection.</h2>
+<div class="outline-text-2" id="text-orgeccaa9f">
 <pre class="example">
 Cite: [[=help /\%V=]]
 Cite: [[https://vim.fandom.com/wiki/Search_and_replace_in_a_visual_selection#Substituting_in_a_visual_selection]]
@@ -3047,9 +3139,9 @@ Cite: [[https://vim.fandom.com/wiki/Search_and_replace_in_a_visual_selection#Sub
 </p>
 </div>
 </div>
-<div id="outline-container-org0e5b30f" class="outline-2">
-<h2 id="org0e5b30f">In Vim command mode, use <code>&lt;Up&gt;</code> and <code>&lt;Down&gt;</code> to scroll through history just like in the shell.</h2>
-<div class="outline-text-2" id="text-org0e5b30f">
+<div id="outline-container-org28bef95" class="outline-2">
+<h2 id="org28bef95">In Vim command mode, use <code>&lt;Up&gt;</code> and <code>&lt;Down&gt;</code> to scroll through history just like in the shell.</h2>
+<div class="outline-text-2" id="text-org28bef95">
 <pre class="example">
 Cite: [[=:help c_<Up>=]]
 Cite: [[=:help c_<Down>=]]
@@ -3059,9 +3151,9 @@ Cite: [[=:help c_<Down>=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org2ecc323" class="outline-2">
-<h2 id="org2ecc323">In Vim, use <code>:ene=/</code>:enew= to begin editing a new file in the pwd.</h2>
-<div class="outline-text-2" id="text-org2ecc323">
+<div id="outline-container-orgfcc2fd9" class="outline-2">
+<h2 id="orgfcc2fd9">In Vim, use <code>:ene=/</code>:enew= to begin editing a new file in the pwd.</h2>
+<div class="outline-text-2" id="text-orgfcc2fd9">
 <pre class="example">
 Cite: [[=:help :enew=]]
 </pre>
@@ -3070,9 +3162,9 @@ Cite: [[=:help :enew=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgd060c4a" class="outline-2">
-<h2 id="orgd060c4a">I finally remembered where I bought my favorite round thick-rimmed glasses.</h2>
-<div class="outline-text-2" id="text-orgd060c4a">
+<div id="outline-container-org444d1c8" class="outline-2">
+<h2 id="org444d1c8">I finally remembered where I bought my favorite round thick-rimmed glasses.</h2>
+<div class="outline-text-2" id="text-org444d1c8">
 <pre class="example">
 Cite: [[https://www.fytoo.com/product/FT0969?id=2239]]
 </pre>
@@ -3081,9 +3173,9 @@ Cite: [[https://www.fytoo.com/product/FT0969?id=2239]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgbac3b2d" class="outline-2">
-<h2 id="orgbac3b2d">Language is provably ambiguous.</h2>
-<div class="outline-text-2" id="text-orgbac3b2d">
+<div id="outline-container-org0af650f" class="outline-2">
+<h2 id="org0af650f">Language is provably ambiguous.</h2>
+<div class="outline-text-2" id="text-org0af650f">
 <pre class="example">
 Cite: [[https://youtu.be/rWjUS2h2BfU?si=pITI0xi3Fq0LUz8p]]
 </pre>
@@ -3092,9 +3184,9 @@ Cite: [[https://youtu.be/rWjUS2h2BfU?si=pITI0xi3Fq0LUz8p]]
 </p>
 </div>
 </div>
-<div id="outline-container-org4a7e3b2" class="outline-2">
-<h2 id="org4a7e3b2">The <i>royal order of adjectives</i> is a standard order for chaining adjectives in English.</h2>
-<div class="outline-text-2" id="text-org4a7e3b2">
+<div id="outline-container-org1a22a2d" class="outline-2">
+<h2 id="org1a22a2d">The <i>royal order of adjectives</i> is a standard order for chaining adjectives in English.</h2>
+<div class="outline-text-2" id="text-org1a22a2d">
 <pre class="example">
 Cite: [[https://dictionary.cambridge.org/us/grammar/british-grammar/adjectives-order]]
 </pre>
@@ -3103,9 +3195,9 @@ Cite: [[https://dictionary.cambridge.org/us/grammar/british-grammar/adjectives-o
 </p>
 </div>
 </div>
-<div id="outline-container-orgdea8c5c" class="outline-2">
-<h2 id="orgdea8c5c">ShellCheck is a Haskell shell script validator.</h2>
-<div class="outline-text-2" id="text-orgdea8c5c">
+<div id="outline-container-org93f0e41" class="outline-2">
+<h2 id="org93f0e41">ShellCheck is a Haskell shell script validator.</h2>
+<div class="outline-text-2" id="text-org93f0e41">
 <pre class="example">
 Cite: [[https://hackage.haskell.org/package/ShellCheck]]
 </pre>
@@ -3114,9 +3206,9 @@ Cite: [[https://hackage.haskell.org/package/ShellCheck]]
 </p>
 </div>
 </div>
-<div id="outline-container-org24a4c74" class="outline-2">
-<h2 id="org24a4c74">GitHub CLI extension leaves much to be desired. Currently, it can only process shell commands.</h2>
-<div class="outline-text-2" id="text-org24a4c74">
+<div id="outline-container-orgd99e026" class="outline-2">
+<h2 id="orgd99e026">GitHub CLI extension leaves much to be desired. Currently, it can only process shell commands.</h2>
+<div class="outline-text-2" id="text-orgd99e026">
 <pre class="example">
 Cite: [[https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line]]
 </pre>
@@ -3125,9 +3217,9 @@ Cite: [[https://docs.github.com/en/copilot/using-github-copilot/using-github-cop
 </p>
 </div>
 </div>
-<div id="outline-container-org79c8d05" class="outline-2">
-<h2 id="org79c8d05">API keys are not a part of the ChatGPT Plus subscription. They are served by the OpenAI API platform.</h2>
-<div class="outline-text-2" id="text-org79c8d05">
+<div id="outline-container-org8030b26" class="outline-2">
+<h2 id="org8030b26">API keys are not a part of the ChatGPT Plus subscription. They are served by the OpenAI API platform.</h2>
+<div class="outline-text-2" id="text-org8030b26">
 <pre class="example">
 Cite: [[https://community.openai.com/t/api-access-as-a-chatgpt-plus-subscriber/573409/2]]
 </pre>
@@ -3136,9 +3228,9 @@ Cite: [[https://community.openai.com/t/api-access-as-a-chatgpt-plus-subscriber/5
 </p>
 </div>
 </div>
-<div id="outline-container-org3f7b335" class="outline-2">
-<h2 id="org3f7b335">InDesign's GREP supports word boundaries: <code>\b</code>. (It also supports the opening/closing boundaries: <code>\&lt;</code> and <code>\&gt;</code>.)</h2>
-<div class="outline-text-2" id="text-org3f7b335">
+<div id="outline-container-orgd8820a8" class="outline-2">
+<h2 id="orgd8820a8">InDesign's GREP supports word boundaries: <code>\b</code>. (It also supports the opening/closing boundaries: <code>\&lt;</code> and <code>\&gt;</code>.)</h2>
+<div class="outline-text-2" id="text-orgd8820a8">
 <pre class="example">
 Cite: [[https://www.oreilly.com/library/view/grep-in-indesign/9780596157173/ch04.html]]
 </pre>
@@ -3147,9 +3239,9 @@ Cite: [[https://www.oreilly.com/library/view/grep-in-indesign/9780596157173/ch04
 </p>
 </div>
 </div>
-<div id="outline-container-org9cbd912" class="outline-2">
-<h2 id="org9cbd912">Zenburn is a Vim color scheme used natively for Pandoc syntax highlighting. It is so good, I am using it in my .vimrc.</h2>
-<div class="outline-text-2" id="text-org9cbd912">
+<div id="outline-container-org1f7d88c" class="outline-2">
+<h2 id="org1f7d88c">Zenburn is a Vim color scheme used natively for Pandoc syntax highlighting. It is so good, I am using it in my .vimrc.</h2>
+<div class="outline-text-2" id="text-org1f7d88c">
 <pre class="example">
 Cite: [[https://github.com/jnurmine/Zenburn]]
 </pre>
@@ -3158,9 +3250,9 @@ Cite: [[https://github.com/jnurmine/Zenburn]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgf04a86f" class="outline-2">
-<h2 id="orgf04a86f">SVG favicons are now a thing.</h2>
-<div class="outline-text-2" id="text-orgf04a86f">
+<div id="outline-container-orgd7f1eec" class="outline-2">
+<h2 id="orgd7f1eec">SVG favicons are now a thing.</h2>
+<div class="outline-text-2" id="text-orgd7f1eec">
 <pre class="example">
 Cite: [[https://css-tricks.com/svg-favicons-and-all-the-fun-things-we-can-do-with-them/]]
 </pre>
@@ -3169,9 +3261,9 @@ Cite: [[https://css-tricks.com/svg-favicons-and-all-the-fun-things-we-can-do-wit
 </p>
 </div>
 </div>
-<div id="outline-container-orgf4078f4" class="outline-2">
-<h2 id="orgf4078f4">In CSS, use <code>display: flow-root;</code> to ensure parent elements min size accounts for floated elements.</h2>
-<div class="outline-text-2" id="text-orgf4078f4">
+<div id="outline-container-org95a4745" class="outline-2">
+<h2 id="org95a4745">In CSS, use <code>display: flow-root;</code> to ensure parent elements min size accounts for floated elements.</h2>
+<div class="outline-text-2" id="text-org95a4745">
 <pre class="example">
 Cite: [[https://www.digitalocean.com/community/tutorials/css-no-more-clearfix-flow-root]]
 </pre>
@@ -3180,9 +3272,9 @@ Cite: [[https://www.digitalocean.com/community/tutorials/css-no-more-clearfix-fl
 </p>
 </div>
 </div>
-<div id="outline-container-orgb950c1b" class="outline-2">
-<h2 id="orgb950c1b">In Vim insert mode, evaluate expressions (e.g. math) by typing <code>&lt;C-R&gt;=yourexpression&lt;CR&gt;</code>.</h2>
-<div class="outline-text-2" id="text-orgb950c1b">
+<div id="outline-container-orgfe7d392" class="outline-2">
+<h2 id="orgfe7d392">In Vim insert mode, evaluate expressions (e.g. math) by typing <code>&lt;C-R&gt;=yourexpression&lt;CR&gt;</code>.</h2>
+<div class="outline-text-2" id="text-orgfe7d392">
 <pre class="example">
 Cite: [[=:help c_CTRL-R_==]]
 Cite: [[https://vimtricks.com/p/vim-calculator/]]
@@ -3192,9 +3284,9 @@ Cite: [[https://vimtricks.com/p/vim-calculator/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org992c76e" class="outline-2">
-<h2 id="org992c76e">In Vim, open file under the cursor in a new split with <code>CTRL-W_f</code>.</h2>
-<div class="outline-text-2" id="text-org992c76e">
+<div id="outline-container-org75a93d2" class="outline-2">
+<h2 id="org75a93d2">In Vim, open file under the cursor in a new split with <code>CTRL-W_f</code>.</h2>
+<div class="outline-text-2" id="text-org75a93d2">
 <pre class="example">
 Cite: [[=:help CTRL-W_f=]]
 Cite: [[https://vimtricks.com/p/open-file-in-a-split/]]
@@ -3204,9 +3296,9 @@ Cite: [[https://vimtricks.com/p/open-file-in-a-split/]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgb66a7bf" class="outline-2">
-<h2 id="orgb66a7bf">In Vim, quickly switch to a one-time shell with <code>:shell</code> or <code>:sh</code>.</h2>
-<div class="outline-text-2" id="text-orgb66a7bf">
+<div id="outline-container-orgf6506ee" class="outline-2">
+<h2 id="orgf6506ee">In Vim, quickly switch to a one-time shell with <code>:shell</code> or <code>:sh</code>.</h2>
+<div class="outline-text-2" id="text-orgf6506ee">
 <pre class="example">
 Cite: [[=:help :shell=]]
 </pre>
@@ -3215,9 +3307,9 @@ Cite: [[=:help :shell=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org212da51" class="outline-2">
-<h2 id="org212da51">In Git, ** use <code>git reset</code> to clear local changes since last commit.</h2>
-<div class="outline-text-2" id="text-org212da51">
+<div id="outline-container-org3e06b81" class="outline-2">
+<h2 id="org3e06b81">In Git, ** use <code>git reset</code> to clear local changes since last commit.</h2>
+<div class="outline-text-2" id="text-org3e06b81">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/1146981/28799158]]
 </pre>
@@ -3226,9 +3318,9 @@ Cite: [[https://stackoverflow.com/a/1146981/28799158]]
 </p>
 </div>
 </div>
-<div id="outline-container-org5c299aa" class="outline-2">
-<h2 id="org5c299aa">In Vim, use <code>g&amp;</code> to repeat last substitution.</h2>
-<div class="outline-text-2" id="text-org5c299aa">
+<div id="outline-container-org684279c" class="outline-2">
+<h2 id="org684279c">In Vim, use <code>g&amp;</code> to repeat last substitution.</h2>
+<div class="outline-text-2" id="text-org684279c">
 <pre class="example">
 Cite: [[=:help g&=]]
 Cite: [[https://vi.stackexchange.com/a/18107/54693]]
@@ -3238,9 +3330,9 @@ Cite: [[https://vi.stackexchange.com/a/18107/54693]]
 </p>
 </div>
 </div>
-<div id="outline-container-org5b535f1" class="outline-2">
-<h2 id="org5b535f1">In Git, safely undo up to a prior commit without destroying history: <code>git revert --no-commit 0d1d7fc3..HEAD</code></h2>
-<div class="outline-text-2" id="text-org5b535f1">
+<div id="outline-container-orgd7f4bcb" class="outline-2">
+<h2 id="orgd7f4bcb">In Git, safely undo up to a prior commit without destroying history: <code>git revert --no-commit 0d1d7fc3..HEAD</code></h2>
+<div class="outline-text-2" id="text-orgd7f4bcb">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/21718540/28799158]]
 </pre>
@@ -3249,9 +3341,9 @@ Cite: [[https://stackoverflow.com/a/21718540/28799158]]
 </p>
 </div>
 </div>
-<div id="outline-container-org21f1934" class="outline-2">
-<h2 id="org21f1934">Pandoc will treat iframes and other plain HTML as code blocks if there are more than four spaces worth of indentation.</h2>
-<div class="outline-text-2" id="text-org21f1934">
+<div id="outline-container-orga128d2d" class="outline-2">
+<h2 id="orga128d2d">Pandoc will treat iframes and other plain HTML as code blocks if there are more than four spaces worth of indentation.</h2>
+<div class="outline-text-2" id="text-orga128d2d">
 <pre class="example">
 Cite: [[https://github.com/jgm/pandoc/issues/2244]]
 </pre>
@@ -3260,9 +3352,9 @@ Cite: [[https://github.com/jgm/pandoc/issues/2244]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgf569089" class="outline-2">
-<h2 id="orgf569089">In Vim, delete all but current buffer with <code>%bd\verte#</code></h2>
-<div class="outline-text-2" id="text-orgf569089">
+<div id="outline-container-org5133f8b" class="outline-2">
+<h2 id="org5133f8b">In Vim, delete all but current buffer with <code>%bd\verte#</code></h2>
+<div class="outline-text-2" id="text-org5133f8b">
 <pre class="example">
 Cite: [[https://stackoverflow.com/a/34050776/28799158]]
 </pre>
@@ -3271,17 +3363,17 @@ Cite: [[https://stackoverflow.com/a/34050776/28799158]]
 </p>
 </div>
 </div>
-<div id="outline-container-org2196500" class="outline-2">
-<h2 id="org2196500">Quickly create a PDF with a subset of the pages of another PDF by selecting the pages in the sidebar right-clicking and selecting <i>Extract Pages&#x2026;</i>.</h2>
-<div class="outline-text-2" id="text-org2196500">
+<div id="outline-container-orgde5fad9" class="outline-2">
+<h2 id="orgde5fad9">Quickly create a PDF with a subset of the pages of another PDF by selecting the pages in the sidebar right-clicking and selecting <i>Extract Pages&hellip;</i>.</h2>
+<div class="outline-text-2" id="text-orgde5fad9">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2025-04-08 Tue]</span></span>
 </p>
 </div>
 </div>
-<div id="outline-container-org7445b9f" class="outline-2">
-<h2 id="org7445b9f">A joke about how deep the rabbit hole goes for solving computer problems.</h2>
-<div class="outline-text-2" id="text-org7445b9f">
+<div id="outline-container-org6fdae4e" class="outline-2">
+<h2 id="org6fdae4e">A joke about how deep the rabbit hole goes for solving computer problems.</h2>
+<div class="outline-text-2" id="text-org6fdae4e">
 <pre class="example">
 Cite: [[https://people.willamette.edu/~fruehr/haskell/evolution.html]]
 </pre>
@@ -3290,9 +3382,9 @@ Cite: [[https://people.willamette.edu/~fruehr/haskell/evolution.html]]
 </p>
 </div>
 </div>
-<div id="outline-container-orgbc01d3e" class="outline-2">
-<h2 id="orgbc01d3e">The T2 chip on Apple computers can make installing Linux difficult.</h2>
-<div class="outline-text-2" id="text-orgbc01d3e">
+<div id="outline-container-org2f39361" class="outline-2">
+<h2 id="org2f39361">The T2 chip on Apple computers can make installing Linux difficult.</h2>
+<div class="outline-text-2" id="text-org2f39361">
 <pre class="example">
 Cite: [[https://wiki.t2linux.org]]
 </pre>
@@ -3301,9 +3393,9 @@ Cite: [[https://wiki.t2linux.org]]
 </p>
 </div>
 </div>
-<div id="outline-container-org6c530cd" class="outline-2">
-<h2 id="org6c530cd">Tufte CSS is a CSS styling philosophy derived from Edward Tufte's books and handouts. (It is very elegant.)</h2>
-<div class="outline-text-2" id="text-org6c530cd">
+<div id="outline-container-org69e7578" class="outline-2">
+<h2 id="org69e7578">Tufte CSS is a CSS styling philosophy derived from Edward Tufte's books and handouts. (It is very elegant.)</h2>
+<div class="outline-text-2" id="text-org69e7578">
 <pre class="example">
 Cite: [[https://edwardtufte.github.io/tufte-css/]]
 </pre>
@@ -3312,9 +3404,9 @@ Cite: [[https://edwardtufte.github.io/tufte-css/]]
 </p>
 </div>
 </div>
-<div id="outline-container-org779574d" class="outline-2">
-<h2 id="org779574d"><code>git checkout -b [&lt;name-of-new-branch&gt;]</code> is a composition of <code>git branch</code> and <code>git checkout</code>.</h2>
-<div class="outline-text-2" id="text-org779574d">
+<div id="outline-container-orgb874ab2" class="outline-2">
+<h2 id="orgb874ab2"><code>git checkout -b [&lt;name-of-new-branch&gt;]</code> is a composition of <code>git branch</code> and <code>git checkout</code>.</h2>
+<div class="outline-text-2" id="text-orgb874ab2">
 <pre class="example">
 Cite: [[https://stackoverflow.com/questions/66882952/how-to-create-new-local-branch-and-switch-between-branches-in-git]]
 </pre>
@@ -3323,9 +3415,9 @@ Cite: [[https://stackoverflow.com/questions/66882952/how-to-create-new-local-bra
 </p>
 </div>
 </div>
-<div id="outline-container-orga6a455b" class="outline-2">
-<h2 id="orga6a455b">Pandoc multiline tables best fit my needs for note taking. NOTE: They still convert to single-line.</h2>
-<div class="outline-text-2" id="text-orga6a455b">
+<div id="outline-container-orge440d81" class="outline-2">
+<h2 id="orge440d81">Pandoc multiline tables best fit my needs for note taking. NOTE: They still convert to single-line.</h2>
+<div class="outline-text-2" id="text-orge440d81">
 <pre class="example">
 Cite: [[https://pandoc.org/MANUAL.html#extension-multiline_tables]]
 </pre>
@@ -3334,9 +3426,9 @@ Cite: [[https://pandoc.org/MANUAL.html#extension-multiline_tables]]
 </p>
 </div>
 </div>
-<div id="outline-container-org2bf9360" class="outline-2">
-<h2 id="org2bf9360">In Vim, use <code>:echo expand("%:h")</code> to show the path of the current file.</h2>
-<div class="outline-text-2" id="text-org2bf9360">
+<div id="outline-container-org246c87d" class="outline-2">
+<h2 id="org246c87d">In Vim, use <code>:echo expand("%:h")</code> to show the path of the current file.</h2>
+<div class="outline-text-2" id="text-org246c87d">
 <pre class="example">
 Cite: [[=:help :echo=]]
 Cite: [[=:help expand()=]]
@@ -3346,9 +3438,9 @@ Cite: [[=:help expand()=]]
 </p>
 </div>
 </div>
-<div id="outline-container-org1ef61bd" class="outline-2">
-<h2 id="org1ef61bd">In Vim, <code>%</code> refers to the complete file path <code>%:h</code> gets the head (path minus filename).</h2>
-<div class="outline-text-2" id="text-org1ef61bd">
+<div id="outline-container-orgb53ce9d" class="outline-2">
+<h2 id="orgb53ce9d">In Vim, <code>%</code> refers to the complete file path <code>%:h</code> gets the head (path minus filename).</h2>
+<div class="outline-text-2" id="text-orgb53ce9d">
 <pre class="example">
 Cite: [[=:help %:h=]]
 </pre>
@@ -3357,9 +3449,9 @@ Cite: [[=:help %:h=]]
 </p>
 </div>
 </div>
-<div id="outline-container-orge48ca98" class="outline-2">
-<h2 id="orge48ca98">In Vim, insert current time insert mode with <code>&lt;C-r&gt;=strftime('%F')&lt;CR&gt;</code>.</h2>
-<div class="outline-text-2" id="text-orge48ca98">
+<div id="outline-container-org9952337" class="outline-2">
+<h2 id="org9952337">In Vim, insert current time insert mode with <code>&lt;C-r&gt;=strftime('%F')&lt;CR&gt;</code>.</h2>
+<div class="outline-text-2" id="text-org9952337">
 <pre class="example">
 Cite: [[https://superuser.com/questions/451340/how-to-insert-the-date-into-vim]]
 </pre>
@@ -3371,7 +3463,7 @@ Cite: [[https://superuser.com/questions/451340/how-to-insert-the-date-into-vim]]
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Roger Farrell</p>
-<p class="date">Created: 2026-05-02 Sat 00:30</p>
+<p class="date">Created: 2026-05-23 Sat 07:58</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

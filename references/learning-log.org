@@ -2,6 +2,47 @@
 #+STARTUP: overview
 #+OPTIONS: toc:nil num:nil prop:Cite
 #+COLUMNS: %TIMESTAMP_IA(time) %125ITEM(entry) %75Cite(citation)
+* In bash, upload data directly from stdin: ~curl -F "file=@"<(cat -) URL~
+:PROPERTIES:
+:Cite: 
+:END:
+[2026-05-23]
+* Use process substitution to pipe together commands that write to files instead of stdout: =cmd1 --output-file >(cmd2 -)=
+:PROPERTIES:
+:Cite: [[https://linuxhandbook.com/bash-process-substitution/]]
+:END:
+[2026-05-23]
+* In Emacs, run shell command on region with =M-|=.
+:PROPERTIES:
+:Cite: [[info:emacs#Shell][info "(emacs) Shell"]]
+:END:
+[2026-05-23]
+* The place to find old bitmap fonts
+:PROPERTIES:
+:Cite: [[https://int10h.org/oldschool-pc-fonts/]]
+:END:
+[2026-05-19]
+* Guix has the variable /Recursive/ font.
+:PROPERTIES:
+:Cite: [[shell:guix show font-recursive]]
+:END:
+[2026-05-18]
+* In Emacs dired, type =@= to open marked files with sudo.
+:PROPERTIES:
+:Cite: [[help:tramp-dired-find-file-with-sudo]]
+:END:
+[2026-05-15]
+* Kill the Emacs daemon from within Emacs Client with ~kill-emacs~.
+:PROPERTIES:
+:Cite: [[info:emacs#Exiting][info "(emacs) Exiting"]]
+:END:
+[2026-05-14]
+* The motivation for my note taking experiments may be /incremental static emergence/.
+[2026-05-13]
+
+I coined this term to describe encoding relationships between
+information primitives in a static format, where the structure emerges
+incrementally without dynamic querying.
 * The Meshtastic CLI and utils are already packaged for Guix.
 :PROPERTIES:
 :Cite: [[shell:guix show python-meshtastic]]
