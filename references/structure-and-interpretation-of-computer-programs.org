@@ -1,0 +1,17 @@
+#+TITLE: Structure and Interpretation of Computer Programs
+
+by Harold Abelson and Gerald Jay Sussman, with Julie Sussman
+
+* [[info:sicp#3-2][sicp#3-2]]
+
+Lexical scope is derived from the idea of environment model of
+evaluation, where symbols are replaced with values from the most
+immediate environment frame with a binding for the symbol.
+
+** [[info:sicp#3-2-1][sicp#3-2-1]]
+
+~define~ is a special form that binds symbols to environments (scopes).
+
+-----
+
+- [[info:sicp#Top][sicp#Top]]

@@ -5,3 +5,7 @@
 - [[file:software.org]]
 - [[file:typing.org]]
 - [[file:shells.org]]
+
+-----
+
+- [[file:references/structure-and-interpretation-of-computer-programs.org]]

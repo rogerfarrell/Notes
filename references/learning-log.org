@@ -2,6 +2,68 @@
 #+STARTUP: overview
 #+OPTIONS: toc:nil num:nil prop:Cite
 #+COLUMNS: %TIMESTAMP_IA(time) %125ITEM(entry) %75Cite(citation)
+* A superb quickstart tutorial for Emacs Gnus email setup
+:PROPERTIES:
+:Cite: [[https://kelar.org/~bandali/gnu/emacs/emacsconf-2025-gnus.html]]
+:END:
+[2026-06-01]
+* A meshtastic client for Emacs
+:PROPERTIES:
+:Cite: [[https://git.andros.dev/andros/meshtastic.el]]
+:END:
+[2026-06-01]
+* Guixotic publishes their machine configs.
+:PROPERTIES:
+:Cite: [[https://codeberg.org/guixotic/configs/src/branch/main/machines]]
+:END:
+[2026-06-01]
+* A simple guide for a Guix VM on macOS
+:PROPERTIES:
+:Cite: [[https://refarer.com/posts/macos-guix/]]
+:END:
+[2026-06-01]
+* A good entry point for writing Guix packages
+:PROPERTIES:
+:Cite: [[https://enge.math.u-bordeaux.fr/publications/packaging.pdf]]
+:Cite: [[https://p2r.felsoci.sk]]
+:END:
+[2026-06-01]
+* Guix is packaged with hardware inspection commands ~lscpu~ and ~lspci~.
+:PROPERTIES:
+:Cite: [[shell:lscpu --help]]
+:Cite: [[shell:lspci help]]
+:END:
+[2026-06-01]
+* In Emacs, =C-u C-h i= to open info manual at arbitrary path.
+:PROPERTIES:
+:Cite: [[info:emacs#Misc Help][info "(emacs) Misc Help"]]
+:END:
+[2026-05-29]
+* Using ffmpeg, convert to Mac-friendly video: ~ffmpeg -i <input-file>.ext -c:v h264_videotoolbox -c:a aac_at <output-file>.mp4~
+:PROPERTIES:
+:Cite: [[shell:ffmpeg -encoders]]
+:END:
+[2026-05-28]
+* In Emacs, =vc-clone= does what you think.
+:PROPERTIES:
+:Cite: [[help:vc-clone]]
+:END:
+[2026-05-28]
+* In Emacs, =M-x vc-create-repo= to git init.
+:PROPERTIES:
+:Cite: [[help:vc-create-repo]]
+:END:
+[2026-05-28]
+* Self-hosted git repositories do not require any special services like forgejo.
+:PROPERTIES:
+:Cite: [[https://kflu.github.io/2022/04/25/2022-04-25-git-http/]]
+:END:
+[2026-05-26]
+* In Emacs =M-x disable-theme= to unload a theme.
+:PROPERTIES:
+:Cite: [[info:emacs#Custom Themes][info "(emacs) Custom Themes"]]
+:END:
+[2026-05-26]
 * In bash, upload data directly from stdin: ~curl -F "file=@"<(cat -) URL~
 :PROPERTIES:
 :Cite: 
