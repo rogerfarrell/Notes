@@ -2,6 +2,16 @@
 #+STARTUP: overview
 #+OPTIONS: toc:nil num:nil prop:Cite
 #+COLUMNS: %TIMESTAMP_IA(time) %125ITEM(entry) %75Cite(citation)
+* On macOS, get system information with =system_profiler=.
+:PROPERTIES:
+:Cite: [[shell:man system_profiler]]
+:END:
+[2026-06-02]
+* Guix has an unattended upgrades service.
+:PROPERTIES:
+:Cite: [[info:guix#Unattended Upgrades][info "(guix) Unattended Upgrades"]]
+:END:
+[2026-06-01]
 * A superb quickstart tutorial for Emacs Gnus email setup
 :PROPERTIES:
 :Cite: [[https://kelar.org/~bandali/gnu/emacs/emacsconf-2025-gnus.html]]
