@@ -1,0 +1,43 @@
+#+TITLE: Decentralized message protocol idea
+
+It seems the FOSS community is still without a universal protocol for
+decentralized messaging. IRC has the most adoption. XMPP is also
+popular. Matrix is gathering momentum. All of these are
+client/server. None of them fully satisfy modern needs.
+
+Here is the wishlist:
+
+- E2EE
+- peer/peer architecture
+- identity-based (instead of address-based)
+- simple and easy to understand
+- group messaging support
+
+I am envisioning a simple protocol which uses message content and
+basic metadata to maintain approximate continuity with reasonable
+qualifiers. A message should consist of the following:
+
+- sender (public key)
+- recipients (public keys)
+- timestamp
+- message content
+
+When a message is sent, the sender's instance sends a copy of the
+message to each recipient encrypted with that user's public key. This
+protocol is agnostic about the transport method. The recipient's
+address can be determined on a per-network basis.
+
+Recipients decrypt the message and check the recipients line to
+determine what conversation this message belongs to. This has the
+effect of making one group per list of recipients. If more than one
+group is required for the same recipient list, a dummy recipient may
+be added. Messages will not be sent to the dummy.
+
+A special type of message may be sent to add a recipient to a
+group. This effectively archives the conversation. Future messages
+that omit the new recipients will trigger a resubmission of the
+add-recipient message.
+
+Messages are sorted by timestamp (send time). Peers can send requests
+to one another for message history to compare for missing
+messages.

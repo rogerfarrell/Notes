@@ -1,5 +1,6 @@
 #+title: Software
 
+- [[file:decentralized-message-protocol-idea.org]]
 - [[file:emacs.org]]
 - [[file:foss-compliments-functional-configuration.org]]
 - [[file:internalized-vs-externalized-config.org]]

@@ -2,6 +2,31 @@
 #+STARTUP: overview
 #+OPTIONS: toc:nil num:nil prop:Cite
 #+COLUMNS: %TIMESTAMP_IA(time) %125ITEM(entry) %75Cite(citation)
+* sftp is the way for remote file access.
+:PROPERTIES:
+:Cite: [[shell:man sftp]]
+:END:
+[2026-06-27]
+* On Codeberg (and likely elsewhere), =gitconfig= entries for user name and email must match signing key.
+:PROPERTIES:
+:Cite: [[https://codeberg.org/Codeberg/Community/issues/771]]
+:END:
+[2026-06-17]
+* In Emacs doc-view, =C-c C-t= opens PDF text in a new buffer.
+:PROPERTIES:
+:Cite: [[info:emacs#Document View][info "(emacs) Document View"]]
+:END:
+[2026-06-16]
+* A great entrypoint for video to GIF conversion with ffmpeg
+:PROPERTIES:
+:Cite: [[https://superuser.com/a/556031]]
+:END:
+[2026-06-08]
+* A great article on different paradigms for reproducibility
+:PROPERTIES:
+:Cite: [[https://flox.dev/blog/standardized-development-environments-explained/]]
+:END:
+[2026-06-04]
 * On macOS, get system information with =system_profiler=.
 :PROPERTIES:
 :Cite: [[shell:man system_profiler]]
