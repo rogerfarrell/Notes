@@ -2,6 +2,76 @@
 #+STARTUP: overview
 #+OPTIONS: toc:nil num:nil prop:Cite
 #+COLUMNS: %TIMESTAMP_IA(time) %125ITEM(entry) %75Cite(citation)
+* A helpful explanation of GPG subkeys
+:PROPERTIES:
+:Cite: [[https://wiki.debian.org/Subkeys]]
+:END:
+[2026-07-14]
+* Another good intro to mu4e with Gmail
+:PROPERTIES:
+:Cite: [[https://frostyx.cz/posts/synchronize-your-2fa-gmail-with-mbsync]]
+:END:
+[2026-07-14]
+* Probably the best entry point to PDF structure
+:PROPERTIES:
+:Cite: [[https://blog.loslab.com/en-us/pdf-structure/building-a-simple-pdf-document-from-scratch.html]]
+:END:
+[2026-07-13]
+* Fix Emacs tooltips in macOS dark mode with ~defaults write org.gnu.Emacs NSRequiresAquaSystemAppearance true~.
+:PROPERTIES:
+:Cite: [[https://github.com/d12frosted/homebrew-emacs-plus/issues/111#issuecomment-450083361]]
+:END:
+[2026-07-10]
+* Quickstart for mu4e on macOS for Gmail accounts
+:PROPERTIES:
+:Cite: [[https://thecloudlet.github.io/technical/emacs/mu4e-gmail-macos/]]
+:END:
+[2026-07-09]
+* YouTube livestream directly from OBS
+:PROPERTIES:
+:Cite: [[https://obsproject.com/forum/resources/how-to-stream-to-youtube-with-obs-studio.232/]]
+:END:
+[2026-07-09]
+* Some helpful introductions to wireguard concepts
+:PROPERTIES:
+:Cite: [[https://www.procustodibus.com/blog/2021/01/wireguard-endpoints-and-ip-addresses/]]
+:END:
+[2026-07-06]
+* A decent method of wrapping emacs for stdin.
+:PROPERTIES:
+:Cite: [[https://mina86.com/2021/emacs-stdin/]]
+:END:
+[2026-07-02]
+* Emacs does have commands for printing to stdout.
+:PROPERTIES:
+:Cite: [[https://stackoverflow.com/a/39154193/28799158]]
+:END:
+[2026-07-02]
+* Emacs does not like stdin, but ~emacs --insert /dev/stdin~ does work.
+:PROPERTIES:
+:Cite: [[https://superuser.com/a/1014317]]
+:END:
+[2026-07-02]
+* For interactive development with Guile web server, wrap the handler in a lambda.
+:PROPERTIES:
+:Cite: [[https://elmord.org/blog/?entry=20180219-parenthetical-blognir]]
+:END:
+[2026-06-28]
+* It is possible to do REPL testing for Guile scripts.
+:PROPERTIES:
+:Cite: [[https://box.matto.nl/start-guile-shell-script-that-listens-on-a-port-for-repl-client.html]]
+:END:
+[2026-06-28]
+* Elisp has some handy tools for scheduling jobs.
+:PROPERTIES:
+:Cite: [[http://yummymelon.com/devnull/scheduling-future-tasks-in-emacs.html]]
+:END:
+[2026-06-28]
+* A helpful summary of the theory behind Nix
+:PROPERTIES:
+:Cite: [[https://jonathanlorimer.dev/posts/nix-thesis.html]]
+:END:
+[2026-06-28]
 * sftp is the way for remote file access.
 :PROPERTIES:
 :Cite: [[shell:man sftp]]
