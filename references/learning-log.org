@@ -2,6 +2,46 @@
 #+STARTUP: overview
 #+OPTIONS: toc:nil num:nil prop:Cite
 #+COLUMNS: %TIMESTAMP_IA(time) %125ITEM(entry) %75Cite(citation)
+* VNC is a cross-platform remote desktop protocol that works on /macOS/ and Linux.
+:PROPERTIES:
+:Cite: [[https://tigervnc.org]]
+:END:
+[2026-07-29]
+* Helful info on the HEIC format from Adobe
+:PROPERTIES:
+:Cite: [[https://www.adobe.com/creativecloud/file-types/image/raster/heic-file.html]]
+:END:
+[2026-07-23]
+* PrintWiki is a handy resource for learning about book production.
+:PROPERTIES:
+:Cite: [[https://printwiki.org/]]
+:END:
+[2026-07-22]
+* chmod octal permissions are contrived so that the sum of any combination (of r,w,x/4,2,1) is unique.
+:PROPERTIES:
+:Cite: [[https://unix.stackexchange.com/a/183999]]
+:END:
+[2026-07-18]
+* Guile has built-in procedures for getting info about users.
+:PROPERTIES:
+:Cite: [[info:guile#User Information][info "(guile) User Information"]]
+:END:
+[2026-07-18]
+* DIY open source OBD2 scanners and libraries are a thing.
+:PROPERTIES:
+:Cite: [[https://github.com/brendan-w/python-OBD]]
+:END:
+[2026-07-16]
+* 8th gen Honda Accords have the same /cam phaser/ problem as F150s.
+:PROPERTIES:
+:Cite: [[https://www.reddit.com/r/accord/comments/tokhvw/08_accord_61000_miles_makes_this_noise_on_cold/]]
+:END:
+[2026-07-16]
+* A very helpful primer on book binderys (especially smyth sewn)
+:PROPERTIES:
+:Cite: [[https://www.walsworth.com/blog/sewn-binding-smyth-bound]]
+:END:
+[2026-07-16]
 * A helpful explanation of GPG subkeys
 :PROPERTIES:
 :Cite: [[https://wiki.debian.org/Subkeys]]
