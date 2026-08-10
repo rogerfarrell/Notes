@@ -2,6 +2,18 @@
 #+STARTUP: overview
 #+OPTIONS: toc:nil num:nil prop:Cite
 #+COLUMNS: %TIMESTAMP_IA(time) %125ITEM(entry) %75Cite(citation)
+* Cairo is a 2D graphics library for PDF, SVG, X, etc.. (It has Guile bindings.)
+:PROPERTIES:
+:Cite: [[https://www.cairographics.org/]]
+:Cite: [[https://www.nongnu.org/guile-cairo/]]
+:END:
+[2026-08-09]
+* Pango is the text layout library used by Weasyprint. (It has Guile bindings.)
+:PROPERTIES:
+:Cite: [[https://www.gtk.org/docs/architecture/pango]]
+:Cite: [[https://www.gnu.org/software/guile-gnome/docs/pango/]]
+:END:
+[2026-08-09]
 * VNC is a cross-platform remote desktop protocol that works on /macOS/ and Linux.
 :PROPERTIES:
 :Cite: [[https://tigervnc.org]]
