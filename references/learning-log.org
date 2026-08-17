@@ -2,6 +2,11 @@
 #+STARTUP: overview
 #+OPTIONS: toc:nil num:nil prop:Cite
 #+COLUMNS: %TIMESTAMP_IA(time) %125ITEM(entry) %75Cite(citation)
+* A great writeup on hardening ssh access for macOS
+:PROPERTIES:
+:Cite: [[https://github.com/davidwhittington/mac-security/blob/main/docs/guides/ssh-pubkey-auth.md]]
+:END:
+[2026-07-29]
 * VNC is a cross-platform remote desktop protocol that works on /macOS/ and Linux.
 :PROPERTIES:
 :Cite: [[https://tigervnc.org]]
