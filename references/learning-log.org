@@ -2,6 +2,11 @@
 #+STARTUP: overview
 #+OPTIONS: toc:nil num:nil prop:Cite
 #+COLUMNS: %TIMESTAMP_IA(time) %125ITEM(entry) %75Cite(citation)
+* Set Emacs registers directly with =M-: (set-register ?REGISTER TEXT)=. Evil uses the same ~register-alist~, so this works in both native and evil-mode. Note that REGISTER must be entered as an elisp character using the =?CHAR= syntax.
+:PROPERTIES:
+:Cite: [[help:set-register]]
+:END:
+[2026-08-17]
 * Cairo is a 2D graphics library for PDF, SVG, X, etc.. (It has Guile bindings.)
 :PROPERTIES:
 :Cite: [[https://www.cairographics.org/]]
