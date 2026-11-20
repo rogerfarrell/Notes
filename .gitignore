@@ -1,3 +1,5 @@
+# -*- mode: conf -*-
+
 .DS_Store
 
 # Private notes
@@ -9,4 +11,5 @@ local/
 
 # Ignore Emacs files
 *~
-\#*#
+\#*\#
+.\#*

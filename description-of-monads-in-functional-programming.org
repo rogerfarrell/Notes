@@ -1,0 +1,59 @@
+#+TITLE: Description of monads in functional programming
+
+Monads are a simple concept to express, but difficult to comprehend in
+a satisfactorily intuitive manner. I believe this is because the
+details they abstract are difficult to isolate without first having a
+significant amount of hands-on time solving the problems they
+address. In acknowledgment of this premise, I will not attempt an
+/explanation/. The following is merely a description of my intuitive
+understanding based on the context I have already amassed from my own
+trial and error.
+
+* Informal summation of the formal definition
+The formal definition is surprisingly straightforward. The gist of it
+is that a monad consists of three things:
+
+- a type :: There is not much to say about this. It is simply a shape
+  for monadic data. Typically, this would be a type class.
+- a unit function (also called return) :: This is a simple function
+  that takes non-monadic data and transforms it into the monadic type.
+- a bind function :: This is the meat and potatoes of monads. It takes
+  monadic data, transforms it into regular data, and passes it to some
+  function that will return monadic data again.
+
+There are also three rules that further constrain the parts of a
+monad.
+
+- left identity :: Applying unit to =x= then passing it to =bind= with
+  a function that returns monadic data =f= is the same as directly
+  applying =f= to =x=.
+- right identity :: Applying a monadic value =a= and the unit function
+  to bind leaves =a= unchanged.
+- associativity :: As in algebra, chained binds can be evaluated using
+  any associative precedence without altering the output.
+
+* The intuitive description
+The above not-so-formal description really does have all the pieces to
+build an intuitive understanding, but I will describe mine here to
+save the headache of re-engineering it later. As I see it, the main
+utility of monads in functional programming is the ability to apply
+the concept of composition where extra steps are required. Everyone
+starts with the maybe type, and for good reason. It illustrates this
+point perfectly.
+
+In the case of optional values, composition cannot occur without a
+validation check between operations. This concept of extra steps is
+found all over the place in functional programming scenarios. (E.g.
+state, emitting side-effects, etc..) Monads extend the concept of
+composition to include these extra steps. They are contained in
+bind. Bind is effectively an =apply= function that pre-processes the
+argument before sending it to the function.
+
+That means that functions returning monadic data need only be wrapped
+with bind to take monadic data as their input as well. The result of
+partially applying bind with a function that returns monadic data is
+composable with itself!
+
+Thus it becomes easy to compose computations with intermediate
+logic. The final composition is ready to receive the output of unit as
+its argument.
